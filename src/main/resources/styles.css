@@ -1,0 +1,11 @@
+.text-area {
+	-fx-background-color: #333;
+	-fx-control-inner-background: #333;
+	-fx-highlight-text-fill: #333;
+	-fx-text-fill: #0f0;
+	-fx-font-family: Consolas;
+}
+
+.text-field {
+	-fx-font-family: Consolas;	
+}
