@@ -9,3 +9,8 @@
 .text-field {
 	-fx-font-family: Consolas;	
 }
+
+.context-menu {
+	-fx-background-color: #cccccc;
+	-fx-text-fill: #333333;
+  }

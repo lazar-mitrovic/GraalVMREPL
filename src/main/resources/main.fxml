@@ -8,7 +8,7 @@
 
 <VBox maxHeight="+Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="375.0" stylesheets="@styles.css" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Repl.Controller">
    <children>
-      <TextArea fx:id="terminal" editable="false" maxHeight="1.7976931348623157E308" prefHeight="610.0" prefWidth="375.0" VBox.vgrow="ALWAYS" />
+      <TextArea fx:id="terminal" editable="false" focusTraversable="false" maxHeight="1.7976931348623157E308" prefHeight="610.0" prefWidth="375.0" VBox.vgrow="ALWAYS" />
       <HBox prefHeight="80.0" HBox.hgrow="ALWAYS">
          <children>
             <TextField fx:id="currentCode" prefHeight="80.0" prefWidth="319.0" promptText="Enter code..." HBox.hgrow="ALWAYS" />

@@ -4,12 +4,15 @@ import java.io.OutputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.function.IntSupplier;
+import java.time.Year;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
+import javafx.application.Platform;
 
 import org.graalvm.polyglot.Context;
 import org.graalvm.polyglot.Context.Builder;
@@ -40,9 +43,34 @@ public class Controller {
             out = new ByteArrayOutputStream();
             log = new ByteArrayOutputStream();
             err = new ByteArrayOutputStream();
-            polyglot = Context.newBuilder("js").out(out).logHandler(log).err(err).build();
+            polyglot = Context.newBuilder("js").out(out).logHandler(log).err(err).allowAllAccess(true).build();
 
-            TerminalWrite("Graal REPL Prompt");
+            Value bindings = polyglot.getBindings("js");
+            bindings.putMember("quit", new IntSupplier() {
+                @Override
+                public int getAsInt() {
+                    Platform.exit();
+                    return 0;
+                }
+            });
+            bindings.putMember("exit", new IntSupplier() {
+                @Override
+                public int getAsInt() {
+                    Platform.exit();
+                    return 0;
+                }
+            });
+            bindings.putMember("clear", new IntSupplier() {
+                @Override
+                public int getAsInt() {
+                    TerminalClear();
+                    return 0;
+                }
+            });
+
+            TerminalWrite("GraalVM REPL Prompt");
+            TerminalWrite(
+                    "Copyright (c) 2013-" + String.valueOf(Year.now().getValue()) + ", Oracle and/or its affiliates");
             TerminalWrite("");
             TerminalWrite("GraalJS " + eval("Graal.versionJS"));
             TerminalWrite("GraalVM " + eval("Graal.versionGraalVM"));
@@ -51,10 +79,6 @@ public class Controller {
     }
 
     public String eval(String code) {
-        if ("clear()".equals(code.trim())) {
-            return TerminalClear();
-        }
-
         String result = "", exception = "";
 
         out.reset();
@@ -104,7 +128,7 @@ public class Controller {
         currentCode.setText("");
         TerminalWrite(code);
         String resp = eval(code);
-        TerminalWrite(resp+"\n", "js>");
+        TerminalWrite(resp + "\n", "js>");
     }
 
     public void initialize() {
