@@ -46,7 +46,7 @@ public class Controller {
             TerminalWrite("");
             TerminalWrite("GraalJS " + eval("Graal.versionJS"));
             TerminalWrite("GraalVM " + eval("Graal.versionGraalVM"));
-            TerminalWrite("\n", ">");
+            TerminalWrite("\n", "js>");
         }
     }
 
@@ -104,7 +104,7 @@ public class Controller {
         currentCode.setText("");
         TerminalWrite(code);
         String resp = eval(code);
-        TerminalWrite(resp, "\n> ");
+        TerminalWrite(resp+"\n", "js>");
     }
 
     public void initialize() {
