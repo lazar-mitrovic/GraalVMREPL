@@ -15,7 +15,7 @@
         <maven.compiler.target>11</maven.compiler.target>
         <javafx.version>13.0.1</javafx.version>
         <attach.version>4.0.2</attach.version>
-        <graalvm.version>19.2.0</graalvm.version>
+        <graalvm.version>19.3.0</graalvm.version>
         <compiler.dir>${project.build.directory}/compiler</compiler.dir>
         <mainClassName>Repl.Main</mainClassName>
     </properties>
