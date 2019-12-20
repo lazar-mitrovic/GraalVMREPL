@@ -13,10 +13,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <javafx.version>13.0.1</javafx.version>
-        <attach.version>4.0.2</attach.version>
+        <javafx.version>14-ea+4</javafx.version>
         <graalvm.version>19.3.0</graalvm.version>
-        <compiler.dir>${project.build.directory}/compiler</compiler.dir>
         <mainClassName>Repl.Main</mainClassName>
     </properties>
 
@@ -73,50 +71,6 @@
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>2.10</version>
-                <executions>
-                    <execution>
-                        <id>copy</id>
-                        <phase>process-test-classes</phase>
-                        <goals>
-                            <goal>copy</goal>
-                        </goals>
-                        <configuration>
-                            <artifactItems>
-                                <artifactItem>
-                                    <groupId>org.graalvm.compiler</groupId>
-                                    <artifactId>compiler</artifactId>
-                                    <version>${graalvm.version}</version>
-                                    <type>jar</type>
-                                    <overWrite>true</overWrite>
-                                    <destFileName>compiler.jar</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.graalvm.truffle</groupId>
-                                    <artifactId>truffle-api</artifactId>
-                                    <version>${graalvm.version}</version>
-                                    <type>jar</type>
-                                    <overWrite>true</overWrite>
-                                    <destFileName>truffle-api.jar</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.graalvm.sdk</groupId>
-                                    <artifactId>graal-sdk</artifactId>
-                                    <version>${graalvm.version}</version>
-                                    <type>jar</type>
-                                    <overWrite>true</overWrite>
-                                    <destFileName>graal-sdk.jar</destFileName>
-                                </artifactItem>
-                            </artifactItems>
-                            <outputDirectory>${compiler.dir}</outputDirectory>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
@@ -137,16 +91,20 @@
             <plugin>
                 <groupId>com.gluonhq</groupId>
                 <artifactId>client-maven-plugin</artifactId>
-                <version>0.1.3</version>
+                <version>0.1.10-SNAPSHOT</version>
                 <configuration>
-                    <!-- Uncomment to run on iOS: -->
-                    <!-- <target>ios</target>-->
-                    <attachList>
-                        <list>display</list>
-                        <list>lifecycle</list>
-                        <list>statusbar</list>
-                        <list>storage</list>
-                    </attachList>
+                    <!-- Uncomment to run on android: -->
+                    <!--
+                    <target>android</target>
+                    <javafxStaticSdkVersion>14-ea+gvm3</javafxStaticSdkVersion>
+                    -->
+                    <nativeImageArgs>
+                        <list>--language:js</list>
+                        <list>-Dtruffle.TruffleRuntime=com.oracle.truffle.api.impl.DefaultTruffleRuntime</list>
+                        <list>-Dgraalvm.ForcePolyglotInvalid=false</list>
+                        <list>--verbose</list>
+                    </nativeImageArgs>
+
                     <reflectionList>
                         <list>javafx.fxml.FXMLLoader</list>
                         <list>Repl.Controller</list>
@@ -157,6 +115,7 @@
                         <list>javafx.scene.layout.VBox</list>
                         <list>javafx.scene.layout.Priority</list>
                     </reflectionList>
+                    
                     <mainClass>${mainClassName}</mainClass>
                 </configuration>
             </plugin>
