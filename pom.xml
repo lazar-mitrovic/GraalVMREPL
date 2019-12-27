@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.oracle.labs.GraalRepl</groupId>
-    <artifactId>GraalRepl</artifactId>
+    <artifactId>GraalREPL</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -94,10 +94,9 @@
                 <version>0.1.10-SNAPSHOT</version>
                 <configuration>
                     <!-- Uncomment to run on android: -->
-                    <!--
                     <target>android</target>
-                    <javafxStaticSdkVersion>14-ea+gvm3</javafxStaticSdkVersion>
-                    -->
+                    <javafxStaticSdkVersion>14-ea+gvm3a</javafxStaticSdkVersion>
+                    
                     <nativeImageArgs>
                         <list>--language:js</list>
                         <list>-Dtruffle.TruffleRuntime=com.oracle.truffle.api.impl.DefaultTruffleRuntime</list>
