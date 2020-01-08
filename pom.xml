@@ -91,17 +91,16 @@
             <plugin>
                 <groupId>com.gluonhq</groupId>
                 <artifactId>client-maven-plugin</artifactId>
-                <version>0.1.10-SNAPSHOT</version>
+                <version>0.1.12-SNAPSHOT</version>
                 <configuration>
                     <!-- Uncomment to run on android: -->
                     <target>android</target>
-                    <javafxStaticSdkVersion>14-ea+gvm3a</javafxStaticSdkVersion>
-                    
                     <nativeImageArgs>
                         <list>--language:js</list>
                         <list>-Dtruffle.TruffleRuntime=com.oracle.truffle.api.impl.DefaultTruffleRuntime</list>
                         <list>-Dgraalvm.ForcePolyglotInvalid=false</list>
                         <list>--verbose</list>
+			<list>-H:+ReportExceptionStackTraces</list>
                     </nativeImageArgs>
 
                     <reflectionList>
