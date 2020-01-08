@@ -1,0 +1,1591 @@
+[
+{
+  "name":"Repl.Controller",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"Repl.Controller$1",
+  "allPublicFields":true
+},
+{
+  "name":"Repl.Controller$2",
+  "allPublicFields":true
+},
+{
+  "name":"Repl.Controller$3",
+  "allPublicFields":true
+},
+{
+  "name":"Repl.Main"
+},
+{
+  "name":"com.oracle.truffle.api.LanguageAccessor$LanguageImpl",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.oracle.truffle.api.TruffleLanguage"
+},
+{
+  "name":"com.oracle.truffle.api.debug.impl.DebuggerInstrumentProvider",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.oracle.truffle.api.frame.FrameAccessor$FramesImpl",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.oracle.truffle.api.impl.DefaultDirectCallNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"inliningForced", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.api.instrumentation.InstrumentAccessor$InstrumentImpl",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.oracle.truffle.api.instrumentation.TruffleInstrument"
+},
+{
+  "name":"com.oracle.truffle.api.interop.DefaultBooleanExportsGen"
+},
+{
+  "name":"com.oracle.truffle.api.interop.DefaultByteExportsGen"
+},
+{
+  "name":"com.oracle.truffle.api.interop.DefaultCharacterExportsGen"
+},
+{
+  "name":"com.oracle.truffle.api.interop.DefaultDoubleExportsGen"
+},
+{
+  "name":"com.oracle.truffle.api.interop.DefaultFloatExportsGen"
+},
+{
+  "name":"com.oracle.truffle.api.interop.DefaultIntegerExportsGen"
+},
+{
+  "name":"com.oracle.truffle.api.interop.DefaultLongExportsGen"
+},
+{
+  "name":"com.oracle.truffle.api.interop.DefaultShortExportsGen"
+},
+{
+  "name":"com.oracle.truffle.api.interop.DefaultStringExportsGen"
+},
+{
+  "name":"com.oracle.truffle.api.interop.InteropAccessor$InteropImpl",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.oracle.truffle.api.interop.InteropLibrary",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.api.interop.InteropLibraryGen"
+},
+{
+  "name":"com.oracle.truffle.api.interop.InteropLibraryGen$CachedDispatch",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"library", "allowUnsafeAccess":true}, 
+    {"name":"next", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.api.interop.InteropLibraryGen$CachedDispatchFirst",
+  "allDeclaredFields":true,
+  "fields":[{"name":"limit_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.api.interop.InteropLibraryGen$CachedDispatchNext",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.api.io.IOAccessor$IOSupportImpl",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.oracle.truffle.api.library.DynamicDispatchLibrary",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.api.library.Library",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.api.nodes.DirectCallNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"callTarget", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.api.nodes.ExecutableNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"language", "allowUnsafeAccess":true}, 
+    {"name":"polyglotEngine", "allowUnsafeAccess":true}, 
+    {"name":"referenceCache", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.api.nodes.Node",
+  "allDeclaredFields":true,
+  "fields":[{"name":"parent", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.api.nodes.NodeAccessor$AccessNodes",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.oracle.truffle.api.nodes.RootNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"callTarget", "allowUnsafeAccess":true}, 
+    {"name":"frameDescriptor", "allowUnsafeAccess":true}, 
+    {"name":"instrumentationBits", "allowUnsafeAccess":true}, 
+    {"name":"lock", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.api.object.DynamicObject",
+  "fields":[{"name":"shape", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.api.object.DynamicObjectGen"
+},
+{
+  "name":"com.oracle.truffle.api.object.DynamicObjectGen$DynamicDispatchLibraryExports$Cached",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cachedShape", "allowUnsafeAccess":true}, 
+    {"name":"cachedTypeClass", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"receiverClass_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.api.source.SourceAccessor$SourceSupportImpl",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.oracle.truffle.js.lang.JavaScriptLanguage$1",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"contextReference", "allowUnsafeAccess":true}, 
+    {"name":"directCallNode", "allowUnsafeAccess":true}, 
+    {"name":"exportValueNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.JavaScriptBaseNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.JavaScriptNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"charIndex", "allowUnsafeAccess":true}, 
+    {"name":"charLength", "allowUnsafeAccess":true}, 
+    {"name":"source", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.CachedSetPropertyNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"context", "allowUnsafeAccess":true}, 
+    {"name":"setOwn", "allowUnsafeAccess":true}, 
+    {"name":"strict", "allowUnsafeAccess":true}, 
+    {"name":"superProperty", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.CachedSetPropertyNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arrayIndex_cache", "allowUnsafeAccess":true}, 
+    {"name":"cachedKey_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"generic_cache", "allowUnsafeAccess":true}, 
+    {"name":"intIndex_jsclassProfile_", "allowUnsafeAccess":true}, 
+    {"name":"proxy_proxySet_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.CachedSetPropertyNodeGen$CachedKeyData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cachedKey_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"propertyNode_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.CachedSetPropertyNodeGen$GenericData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"getType_", "allowUnsafeAccess":true}, 
+    {"name":"jsclassProfile_", "allowUnsafeAccess":true}, 
+    {"name":"toArrayIndexNode_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.FrameSlotNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"frameSlot", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.GetPrototypeNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.GetPrototypeNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cachedShape_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"proxy_jsclassProfile_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.GlobalPropertyNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cache", "allowUnsafeAccess":true}, 
+    {"name":"context", "allowUnsafeAccess":true}, 
+    {"name":"globalObjectNode", "allowUnsafeAccess":true}, 
+    {"name":"propertyName", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.GlobalScopeLookupNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"varName", "allowUnsafeAccess":true}, 
+    {"name":"write", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.GlobalScopeLookupNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"absent_assumption0_", "allowUnsafeAccess":true}, 
+    {"name":"absent_assumption_", "allowUnsafeAccess":true}, 
+    {"name":"cached_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"uncached_errorBranch_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.GlobalScopeNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"context", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.GlobalScopeVarWrapperNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"defaultDelegate", "allowUnsafeAccess":true}, 
+    {"name":"dynamicScopeNode", "allowUnsafeAccess":true}, 
+    {"name":"scopeAccessNode", "allowUnsafeAccess":true}, 
+    {"name":"scopeHasBinding", "allowUnsafeAccess":true}, 
+    {"name":"varName", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.HasHiddenKeyCacheNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"key", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.HasHiddenKeyCacheNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.IsArrayNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"fastAndTypedArray", "allowUnsafeAccess":true}, 
+    {"name":"fastArray", "allowUnsafeAccess":true}, 
+    {"name":"onlyArray", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.IsArrayNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"isArrayJSClass_cache", "allowUnsafeAccess":true}, 
+    {"name":"isArrayShape_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.IsJSObjectNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"includeNullUndefined", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.IsJSObjectNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"isObjectJSClass_cache", "allowUnsafeAccess":true}, 
+    {"name":"isObjectShape_cache", "allowUnsafeAccess":true}, 
+    {"name":"isObject_resultProfile_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.JSReadCurrentFrameSlotNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.JSReadCurrentFrameSlotNodeGen",
+  "allDeclaredFields":true,
+  "fields":[{"name":"state_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.JSReadFrameSlotNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.JSTargetableNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.JSWriteCurrentFrameSlotNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"rhsNode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.JSWriteCurrentFrameSlotNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.JSWriteFrameSlotNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.PropertyCacheNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cacheNode", "allowUnsafeAccess":true}, 
+    {"name":"context", "allowUnsafeAccess":true}, 
+    {"name":"invalidationAssumption", "allowUnsafeAccess":true}, 
+    {"name":"key", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.PropertyCacheNode$AbstractAssumptionShapeCheckNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"context", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.PropertyCacheNode$AbstractShapeCheckNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"shape", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.PropertyCacheNode$AssumptionShapeCheckNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"shapeValidAssumption", "allowUnsafeAccess":true}, 
+    {"name":"stablePrototypeAssumption", "allowUnsafeAccess":true}, 
+    {"name":"unchangedShapeAssumption", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.PropertyCacheNode$CacheNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"next", "allowUnsafeAccess":true}, 
+    {"name":"receiverCheck", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.PropertyCacheNode$PrototypeShapeCheckNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"notObsoletedAssumption", "allowUnsafeAccess":true}, 
+    {"name":"protoNotObsoletedAssumption", "allowUnsafeAccess":true}, 
+    {"name":"protoUnchangedAssumption", "allowUnsafeAccess":true}, 
+    {"name":"prototype", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.PropertyCacheNode$ReceiverCheckNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.PropertyCacheNode$ShapeCheckNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"shapeValidAssumption", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.PropertyGetNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"getOwnProperty", "allowUnsafeAccess":true}, 
+    {"name":"isGlobal", "allowUnsafeAccess":true}, 
+    {"name":"isMethod", "allowUnsafeAccess":true}, 
+    {"name":"propertyAssumptionCheckEnabled", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.PropertyGetNode$GetCacheNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.PropertyGetNode$LinkedPropertyGetNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.PropertyGetNode$ObjectPropertyGetNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"property", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.PropertyNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cache", "allowUnsafeAccess":true}, 
+    {"name":"target", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.PropertySetNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"attributeFlags", "allowUnsafeAccess":true}, 
+    {"name":"declaration", "allowUnsafeAccess":true}, 
+    {"name":"isGlobal", "allowUnsafeAccess":true}, 
+    {"name":"isStrict", "allowUnsafeAccess":true}, 
+    {"name":"propertyAssumptionCheckEnabled", "allowUnsafeAccess":true}, 
+    {"name":"setOwnProperty", "allowUnsafeAccess":true}, 
+    {"name":"superProperty", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.PropertySetNode$DataPropertySetNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"cache", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.PropertySetNode$LinkedPropertySetNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.PropertySetNode$SetCacheNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.RequireObjectCoercibleNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.RequireObjectCoercibleNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cachedJSClass_cachedClass_", "allowUnsafeAccess":true}, 
+    {"name":"cachedShape_cachedShape_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.WriteElementNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"context", "allowUnsafeAccess":true}, 
+    {"name":"indexNode", "allowUnsafeAccess":true}, 
+    {"name":"indexState", "allowUnsafeAccess":true}, 
+    {"name":"isStrict", "allowUnsafeAccess":true}, 
+    {"name":"requireObjectCoercibleNode", "allowUnsafeAccess":true}, 
+    {"name":"targetNode", "allowUnsafeAccess":true}, 
+    {"name":"toArrayIndexNode", "allowUnsafeAccess":true}, 
+    {"name":"typeCacheNode", "allowUnsafeAccess":true}, 
+    {"name":"valueNode", "allowUnsafeAccess":true}, 
+    {"name":"writeOwn", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.WriteElementNode$JSObjectWriteElementTypeCacheNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arrayProfile", "allowUnsafeAccess":true}, 
+    {"name":"arrayWriteElementNode", "allowUnsafeAccess":true}, 
+    {"name":"intOrStringIndexProfile", "allowUnsafeAccess":true}, 
+    {"name":"isArrayNode", "allowUnsafeAccess":true}, 
+    {"name":"isObjectNode", "allowUnsafeAccess":true}, 
+    {"name":"jsclassProfile", "allowUnsafeAccess":true}, 
+    {"name":"setPropertyCachedNode", "allowUnsafeAccess":true}, 
+    {"name":"toArrayIndexNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.WriteElementNode$WriteElementTypeCacheNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"typeCacheNext", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.binary.DualNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"left", "allowUnsafeAccess":true}, 
+    {"name":"right", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.cast.JSToObjectNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"allowForeign", "allowUnsafeAccess":true}, 
+    {"name":"checkForNullOrUndefined", "allowUnsafeAccess":true}, 
+    {"name":"context", "allowUnsafeAccess":true}, 
+    {"name":"fromWith", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.cast.JSToObjectNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"jSObjectCheckJSClass_cachedClass_", "allowUnsafeAccess":true}, 
+    {"name":"jSObjectCheckShape_cache", "allowUnsafeAccess":true}, 
+    {"name":"jSObjectNoCheckShape_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.cast.ToArrayIndexNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"convertToPropertyKey", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.cast.ToArrayIndexNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"convertFromString_cache", "allowUnsafeAccess":true}, 
+    {"name":"nonArrayIndex1_toPropertyKey_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.function.AbstractBodyNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.function.FunctionBodyNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"body", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.function.FunctionRootNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"body", "allowUnsafeAccess":true}, 
+    {"name":"functionData", "allowUnsafeAccess":true}, 
+    {"name":"internalFunctionName", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.function.JSFunctionCallNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cacheNode", "allowUnsafeAccess":true}, 
+    {"name":"flags", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.function.JSFunctionCallNode$AbstractCacheNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"nextNode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.function.JSFunctionCallNode$Call0Node",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.function.JSFunctionCallNode$CallNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"functionNode", "allowUnsafeAccess":true}, 
+    {"name":"targetNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.function.JSFunctionCallNode$ForeignCallNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exportArgumentsNode", "allowUnsafeAccess":true}, 
+    {"name":"functionClassProfile", "allowUnsafeAccess":true}, 
+    {"name":"typeConvertNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.function.JSFunctionCallNode$ForeignExecuteNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"interop", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.interop.ExportArgumentsNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.interop.ExportArgumentsNode$1FixedLength",
+  "allDeclaredFields":true,
+  "fields":[{"name":"exportNodes", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.interop.ExportValueNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.interop.ExportValueNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.interop.JSForeignToJSTypeNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.interop.JSForeignToJSTypeNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"javaScriptLanguageContextReference_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.interop.KeyInfoNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.interop.KeyInfoNodeGen",
+  "allDeclaredFields":true,
+  "fields":[{"name":"state_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.runtime.JSContext$1",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.runtime.JSContext$2",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.runtime.JSContext$3",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.runtime.JSContext$5",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.runtime.JSContext$6",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.runtime.JSContext$7",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"getPrototypeNode", "allowUnsafeAccess":true}, 
+    {"name":"toObjectNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.runtime.JSRealm$1",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.runtime.JavaScriptRealmBoundaryRootNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"seenException", "allowUnsafeAccess":true}, 
+    {"name":"seenNullRealm", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.runtime.JavaScriptRootNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"sourceSection", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.runtime.builtins.JSArrayBuffer$1",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"errorBranch", "allowUnsafeAccess":true}, 
+    {"name":"isArrayBuffer", "allowUnsafeAccess":true}, 
+    {"name":"isDirectByteBuffer", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.runtime.builtins.JSArrayBufferView$1",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"getterNode", "allowUnsafeAccess":true}, 
+    {"name":"realmRef", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.runtime.builtins.JSArrayBufferView$2",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.runtime.builtins.JSArrayBufferView$3",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.runtime.builtins.JSArrayBufferView$4",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.runtime.builtins.JSArrayBufferView$5",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.runtime.builtins.JSArrayBufferView$6",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.runtime.builtins.JSArrayBufferView$ArrayBufferViewGetter",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.runtime.builtins.JSClassGen"
+},
+{
+  "name":"com.oracle.truffle.js.runtime.builtins.JSClassGen$InteropLibraryExports$Cached",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"dynamicDispatch_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"executeNode__callNode_", "allowUnsafeAccess":true}, 
+    {"name":"exportValue", "allowUnsafeAccess":true}, 
+    {"name":"getMembers_nonArrayCached_cache", "allowUnsafeAccess":true}, 
+    {"name":"importValue", "allowUnsafeAccess":true}, 
+    {"name":"instantiateNode__callNode_", "allowUnsafeAccess":true}, 
+    {"name":"invokeMemberNode__callNode_", "allowUnsafeAccess":true}, 
+    {"name":"isExecutableNode__isCallable_", "allowUnsafeAccess":true}, 
+    {"name":"javaScriptLanguageContextReference_", "allowUnsafeAccess":true}, 
+    {"name":"javaScriptLanguageReference_", "allowUnsafeAccess":true}, 
+    {"name":"keyInfo", "allowUnsafeAccess":true}, 
+    {"name":"numberLib", "allowUnsafeAccess":true}, 
+    {"name":"readArrayElementNode__readNode_", "allowUnsafeAccess":true}, 
+    {"name":"readMemberNode__readNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"writeArrayElementNode__writeNode_", "allowUnsafeAccess":true}, 
+    {"name":"writeMemberNode__writeNode_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.runtime.builtins.JSCollator$1",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"realmRef", "allowUnsafeAccess":true}, 
+    {"name":"setBoundObjectNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.runtime.builtins.JSDataView$1",
+  "allDeclaredFields":true,
+  "fields":[{"name":"realmRef", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.runtime.builtins.JSDateTimeFormat$1",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"errorBranch", "allowUnsafeAccess":true}, 
+    {"name":"realmRef", "allowUnsafeAccess":true}, 
+    {"name":"setBoundObjectNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.runtime.builtins.JSFunction$2",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.runtime.builtins.JSMap$1",
+  "allDeclaredFields":true,
+  "fields":[{"name":"errorBranch", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.runtime.builtins.JSNumberFormat$1",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"errorBranch", "allowUnsafeAccess":true}, 
+    {"name":"realmRef", "allowUnsafeAccess":true}, 
+    {"name":"setBoundObjectNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.runtime.builtins.JSSegmenter$1",
+  "allDeclaredFields":true,
+  "fields":[{"name":"isSegmentIteratorNode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.runtime.builtins.JSSet$1",
+  "allDeclaredFields":true,
+  "fields":[{"name":"errorBranch", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.runtime.builtins.JSSharedArrayBuffer$1",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.runtime.builtins.JSSymbol$1",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"isJSSymbolProfile", "allowUnsafeAccess":true}, 
+    {"name":"isSymbolProfile", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.runtime.java.JavaPackage$1",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.runtime.objects.DynamicScopeWrapperGen"
+},
+{
+  "name":"com.oracle.truffle.polyglot.EngineAccessor$EngineImpl",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.oracle.truffle.polyglot.GuestToHostRootNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"boundaryName", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.polyglot.HostExecuteNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.HostExecuteNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"fixed_cache", "allowUnsafeAccess":true}, 
+    {"name":"hostMethodProfile", "allowUnsafeAccess":true}, 
+    {"name":"overloadedCached_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"toGuest", "allowUnsafeAccess":true}, 
+    {"name":"toHost", "allowUnsafeAccess":true}, 
+    {"name":"varArgsProfile", "allowUnsafeAccess":true}, 
+    {"name":"varArgs_cache", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.HostExecuteNodeGen$FixedData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cachedMethod_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"receiverProfile_", "allowUnsafeAccess":true}, 
+    {"name":"toGuest_", "allowUnsafeAccess":true}, 
+    {"name":"toJavaNodes_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.HostMethodDesc$SingleMethod$MHBase$1",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.HostObject$LookupFunctionalMethodNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.HostObjectFactory$LookupFunctionalMethodNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.HostObjectGen"
+},
+{
+  "name":"com.oracle.truffle.polyglot.HostObjectGen$InteropLibraryExports$Cached",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"hostExecute", "allowUnsafeAccess":true}, 
+    {"name":"instantiate_arrayCached_indexes_", "allowUnsafeAccess":true}, 
+    {"name":"invokeMemberNode__fieldValues_", "allowUnsafeAccess":true}, 
+    {"name":"isArray", "allowUnsafeAccess":true}, 
+    {"name":"isList", "allowUnsafeAccess":true}, 
+    {"name":"isMemberInternal_cached_cache", "allowUnsafeAccess":true}, 
+    {"name":"isMemberInvocable_cached_cache", "allowUnsafeAccess":true}, 
+    {"name":"isMemberModifiable_cached_cache", "allowUnsafeAccess":true}, 
+    {"name":"isMemberReadable_cached_cache", "allowUnsafeAccess":true}, 
+    {"name":"lookupConstructor", "allowUnsafeAccess":true}, 
+    {"name":"lookupField", "allowUnsafeAccess":true}, 
+    {"name":"lookupFunctionalMethod", "allowUnsafeAccess":true}, 
+    {"name":"lookupMethod", "allowUnsafeAccess":true}, 
+    {"name":"numbers", "allowUnsafeAccess":true}, 
+    {"name":"readArrayElement_array_arrayGet_", "allowUnsafeAccess":true}, 
+    {"name":"readField", "allowUnsafeAccess":true}, 
+    {"name":"readMemberNode__lookupInnerClass_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"toGuest", "allowUnsafeAccess":true}, 
+    {"name":"toHost", "allowUnsafeAccess":true}, 
+    {"name":"writeArrayElement_array_arraySet_", "allowUnsafeAccess":true}, 
+    {"name":"writeMemberNode__writeField_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.HostToGuestRootNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"engine", "allowUnsafeAccess":true}, 
+    {"name":"profile", "allowUnsafeAccess":true}, 
+    {"name":"seenEnter", "allowUnsafeAccess":true}, 
+    {"name":"seenNonEnter", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotLanguageBindingsGen"
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotLanguageBindingsGen$InteropLibraryExports$Cached",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"interop", "allowUnsafeAccess":true}, 
+    {"name":"lenghtProfile", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotLanguageContext$ToGuestValueNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotLanguageContextFactory$ToGuestValueNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotProxy$ArrayGetNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotProxy$ArrayRemoveNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotProxy$ArraySetNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotProxy$ArraySizeNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotProxy$AsDateNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotProxy$AsDurationNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotProxy$AsInstantNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotProxy$AsPointerNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotProxy$AsTimeNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotProxy$AsTimeZoneNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotProxy$ExecuteNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotProxy$GetMemberKeysNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotProxy$GetMemberNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotProxy$HasMemberNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotProxy$InstantiateNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotProxy$PutMemberNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotProxy$RemoveMemberNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$AbstractExecuteNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arity", "allowUnsafeAccess":true}, 
+    {"name":"executables", "allowUnsafeAccess":true}, 
+    {"name":"invalidArgument", "allowUnsafeAccess":true}, 
+    {"name":"toGuestValues", "allowUnsafeAccess":true}, 
+    {"name":"unsupported", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$AbstractInvokeNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arity", "allowUnsafeAccess":true}, 
+    {"name":"invalidArgument", "allowUnsafeAccess":true}, 
+    {"name":"objects", "allowUnsafeAccess":true}, 
+    {"name":"toHostValue", "allowUnsafeAccess":true}, 
+    {"name":"unknownIdentifier", "allowUnsafeAccess":true}, 
+    {"name":"unsupported", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$AbstractMemberInfoNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$AsClassLiteralNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"toHost", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$AsDateNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$AsDurationNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$AsInstantNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$AsNativePointerNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$AsTimeNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$AsTimeZoneNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$AsTypeLiteralNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"toHost", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$CanExecuteNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$CanInstantiateNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$CanInvokeNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$ExecuteNoArgsNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"toHostValue", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$ExecuteNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"toHostValue", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$ExecuteVoidNoArgsNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$ExecuteVoidNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$GetArrayElementNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$GetArraySizeNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$GetMemberKeysNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$GetMemberNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$HasArrayElementsNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$HasMemberNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$HasMembersNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$InvokeNoArgsNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$InvokeNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"toGuestValues", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$IsDateNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$IsDurationNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$IsExceptionNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$IsNativePointerNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$IsNullNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$IsTimeNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$IsTimeZoneNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$NewInstanceNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"toGuestValues", "allowUnsafeAccess":true}, 
+    {"name":"toHostValue", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$PutMemberNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$RemoveArrayElementNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$RemoveMemberNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$SetArrayElementNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$ThrowExceptionNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValue$InteropNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"polyglot", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$AsDateNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"cached1_unsupported_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$AsDurationNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"cached1_unsupported_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$AsInstantNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"cached1_unsupported_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$AsNativePointerNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"cached1_unsupported_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$AsTimeNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"cached1_unsupported_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$AsTimeZoneNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"cached1_unsupported_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$CanExecuteNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$CanInstantiateNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$CanInvokeNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$GetArrayElementNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"cached1_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$GetArraySizeNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"cached1_unsupported_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$GetMemberKeysNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"cached1_toHost_", "allowUnsafeAccess":true}, 
+    {"name":"cached1_unsupported_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$GetMemberNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"cached1_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$HasArrayElementsNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$HasMemberNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$HasMembersNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$IsDateNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$IsDurationNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$IsExceptionNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$IsNativePointerNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$IsNullNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$IsTimeNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$IsTimeZoneNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$NewInstanceNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"cached1_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$PutMemberNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$PutMemberNodeGen$CachedData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"invalidValue_", "allowUnsafeAccess":true}, 
+    {"name":"objects_", "allowUnsafeAccess":true}, 
+    {"name":"toGuestValue_", "allowUnsafeAccess":true}, 
+    {"name":"unknown_", "allowUnsafeAccess":true}, 
+    {"name":"unsupported_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$RemoveArrayElementNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"cached1_invalidIndex_", "allowUnsafeAccess":true}, 
+    {"name":"cached1_unsupported_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$RemoveMemberNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"cached1_unknown_", "allowUnsafeAccess":true}, 
+    {"name":"cached1_unsupported_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$SetArrayElementNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"cached1_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.PolyglotValueFactory$InteropCodeCacheFactory$ThrowExceptionNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"cached1_unsupported_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.polyglot.ToHostNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.polyglot.ToHostNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"cached1_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"generic_interop_", "allowUnsafeAccess":true}, 
+    {"name":"generic_targetMapping_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"java.lang.Object",
+  "allDeclaredFields":true,
+  "allPublicMethods":true
+},
+{
+  "name":"java.util.function.IntSupplier",
+  "allPublicMethods":true
+},
+{
+  "name":"javafx.scene.control.Button",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"javafx.scene.control.TextArea",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"javafx.scene.control.TextField",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"javafx.scene.layout.HBox",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"javafx.scene.layout.VBox",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"jdk.vm.ci.services.Services",
+  "methods":[{"name":"load","parameterTypes":["java.lang.Class"] }]
+},
+{
+  "name":"sun.misc.Unsafe",
+  "fields":[{"name":"theUnsafe"}]
+}
+]

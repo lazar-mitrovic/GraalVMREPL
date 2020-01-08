@@ -84,6 +84,11 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.3</version>
                 <configuration>
+                    <options>
+                        <option>-agentlib:native-image-agent=config-merge-dir=src/main/resources/META-INF/native-image</option>
+                        <option>-Dtruffle.TruffleRuntime=com.oracle.truffle.api.impl.DefaultTruffleRuntime</option>
+                        <option>-Dgraalvm.ForcePolyglotInvalid=false</option>
+                    </options>
                     <mainClass>${mainClassName}</mainClass>
                 </configuration>
             </plugin>
@@ -94,7 +99,7 @@
                 <version>0.1.12-SNAPSHOT</version>
                 <configuration>
                     <!-- Uncomment to run on android: -->
-                    <target>android</target>
+                    <!-- <target>android</target> -->
                     <nativeImageArgs>
                         <list>--language:js</list>
                         <list>-Dtruffle.TruffleRuntime=com.oracle.truffle.api.impl.DefaultTruffleRuntime</list>
