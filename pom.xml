@@ -14,7 +14,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <javafx.version>14-ea+4</javafx.version>
-        <graalvm.version>19.3.0</graalvm.version>
+        <graalvm.version>19.3.0.2</graalvm.version>
         <mainClassName>Repl.Main</mainClassName>
     </properties>
 
@@ -22,11 +22,6 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>${javafx.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-controls</artifactId>
             <version>${javafx.version}</version>
         </dependency>
         <dependency>
@@ -46,16 +41,9 @@
             <version>${graalvm.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.graalvm.tools</groupId>
-            <artifactId>profiler</artifactId>
-            <version>${graalvm.version}</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.graalvm.tools</groupId>
-            <artifactId>chromeinspector</artifactId>
-            <version>${graalvm.version}</version>
-            <scope>runtime</scope>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>${javafx.version}</version>
         </dependency>
     </dependencies>
 
@@ -105,7 +93,7 @@
                         <list>-Dtruffle.TruffleRuntime=com.oracle.truffle.api.impl.DefaultTruffleRuntime</list>
                         <list>-Dgraalvm.ForcePolyglotInvalid=false</list>
                         <list>--verbose</list>
-			<list>-H:+ReportExceptionStackTraces</list>
+                        <list>-H:+ReportExceptionStackTraces</list>
                     </nativeImageArgs>
 
                     <reflectionList>
@@ -118,7 +106,7 @@
                         <list>javafx.scene.layout.VBox</list>
                         <list>javafx.scene.layout.Priority</list>
                     </reflectionList>
-                    
+
                     <mainClass>${mainClassName}</mainClass>
                 </configuration>
             </plugin>

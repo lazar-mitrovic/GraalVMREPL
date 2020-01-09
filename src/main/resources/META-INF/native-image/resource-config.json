@@ -5,7 +5,9 @@
     {"pattern":"\\QMETA-INF/services/com.oracle.truffle.js.runtime.Evaluator\\E"}, 
     {"pattern":"\\QMETA-INF/services/java.nio.file.spi.FileSystemProvider\\E"}, 
     {"pattern":"\\QMETA-INF/services/org.graalvm.polyglot.impl.AbstractPolyglotImpl\\E"}, 
+    {"pattern":"\\Qcom/oracle/js/parser/resources/Messages.properties\\E"}, 
     {"pattern":"\\Qcom/oracle/truffle/nfi/impl/NFILanguageImpl.class\\E"}, 
-    {"pattern":"\\Qmain.fxml\\E"}
+    {"pattern":"\\Qmain.fxml\\E"}, 
+    {"pattern":"\\Qold.fxml\\E"}
   ]
 }

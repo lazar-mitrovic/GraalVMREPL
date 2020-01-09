@@ -27,13 +27,11 @@ public class Controller {
     private TextArea terminal;
 
     @FXML
-    private TextField currentCode;
-
-    @FXML
-    private Button evalButton;
-
-    @FXML
     private ResourceBundle resources;
+
+    private String currentCode = "";
+    private String terminalText = "";
+    private String oldVal = "";
 
     private Context polyglot = null;
     private ByteArrayOutputStream out, log, err;
@@ -75,6 +73,7 @@ public class Controller {
             TerminalWrite("GraalJS " + eval("Graal.versionJS"));
             TerminalWrite("GraalVM " + eval("Graal.versionGraalVM"));
             TerminalWrite("\n", "js>");
+            terminal.requestFocus();
         }
     }
 
@@ -115,28 +114,49 @@ public class Controller {
     }
 
     public void TerminalWrite(String s, String endl) {
-        terminal.setText(terminal.getText() + s + endl);
+        terminalText += s + endl;
+        TerminalUpdate();
     }
 
-    public String TerminalClear() {
-        terminal.setText("");
-        return "";
+    public void TerminalClear() {
+        terminalText = "";
+        TerminalUpdate();
+    }
+
+    public void TerminalUpdate() {
+        oldVal = terminalText + currentCode;
+        int pos = (terminal.getCaretPosition() < terminalText.length()) ? oldVal.length() : terminal.getCaretPosition();
+        terminal.clear();
+        terminal.setText(oldVal);
+        terminal.positionCaret(pos);
     }
 
     public void doEval() {
-        String code = currentCode.getText();
-        currentCode.setText("");
-        TerminalWrite(code);
-        String resp = eval(code);
+        TerminalWrite(currentCode);
+        String resp = eval(currentCode);
+        currentCode = "";
         TerminalWrite(resp + "\n", "js>");
     }
 
     public void initialize() {
         init();
-        evalButton.setOnAction(e -> doEval());
-        currentCode.setOnKeyReleased(event -> {
-            if (event.getCode() == KeyCode.ENTER)
+        terminal.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
                 doEval();
+                TerminalUpdate();
+            }
+        });
+        terminal.setOnKeyTyped(event -> {
+            String newVal = terminal.getText();
+            if (newVal == oldVal)
+                return;
+            if (!newVal.startsWith(terminalText)) {
+                TerminalUpdate(); // you cannot edit output!
+                return;
+            }
+            currentCode = newVal.substring(terminalText.length());
+            TerminalUpdate();
+
         });
     }
 
