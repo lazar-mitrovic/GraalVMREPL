@@ -21,14 +21,6 @@
   "name":"Repl.Main"
 },
 {
-  "name":"com.gluonhq.charm.glisten.control.BottomNavigation",
-  "methods":[{"name":"<init>","parameterTypes":[] }]
-},
-{
-  "name":"com.gluonhq.charm.glisten.control.BottomNavigationButton",
-  "methods":[{"name":"<init>","parameterTypes":[] }]
-},
-{
   "name":"com.oracle.truffle.api.LanguageAccessor$LanguageImpl",
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
@@ -282,11 +274,6 @@
   ]
 },
 {
-  "name":"com.oracle.truffle.js.nodes.access.GlobalObjectNode",
-  "allDeclaredFields":true,
-  "fields":[{"name":"context", "allowUnsafeAccess":true}]
-},
-{
   "name":"com.oracle.truffle.js.nodes.access.GlobalPropertyNode",
   "allDeclaredFields":true,
   "fields":[
@@ -413,10 +400,6 @@
   "allDeclaredFields":true
 },
 {
-  "name":"com.oracle.truffle.js.nodes.access.JSTargetableWriteNode",
-  "allDeclaredFields":true
-},
-{
   "name":"com.oracle.truffle.js.nodes.access.JSWriteCurrentFrameSlotNode",
   "allDeclaredFields":true,
   "fields":[{"name":"rhsNode", "allowUnsafeAccess":true}]
@@ -471,14 +454,6 @@
   ]
 },
 {
-  "name":"com.oracle.truffle.js.nodes.access.PropertyCacheNode$InstanceofCheckNode",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"toObject", "allowUnsafeAccess":true}, 
-    {"name":"type", "allowUnsafeAccess":true}
-  ]
-},
-{
   "name":"com.oracle.truffle.js.nodes.access.PropertyCacheNode$PrototypeShapeCheckNode",
   "allDeclaredFields":true,
   "fields":[
@@ -519,11 +494,6 @@
   "name":"com.oracle.truffle.js.nodes.access.PropertyGetNode$ObjectPropertyGetNode",
   "allDeclaredFields":true,
   "fields":[{"name":"property", "allowUnsafeAccess":true}]
-},
-{
-  "name":"com.oracle.truffle.js.nodes.access.PropertyGetNode$StringLengthPropertyGetNode",
-  "allDeclaredFields":true,
-  "fields":[{"name":"charSequenceClassProfile", "allowUnsafeAccess":true}]
 },
 {
   "name":"com.oracle.truffle.js.nodes.access.PropertyGetNode$UndefinedPropertyErrorNode",
@@ -613,16 +583,6 @@
   "fields":[{"name":"typeCacheNext", "allowUnsafeAccess":true}]
 },
 {
-  "name":"com.oracle.truffle.js.nodes.access.WritePropertyNode",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"cache", "allowUnsafeAccess":true}, 
-    {"name":"rhsNode", "allowUnsafeAccess":true}, 
-    {"name":"targetNode", "allowUnsafeAccess":true}, 
-    {"name":"valueState", "allowUnsafeAccess":true}
-  ]
-},
-{
   "name":"com.oracle.truffle.js.nodes.arguments.AccessIndexedArgumentNode",
   "allDeclaredFields":true,
   "fields":[
@@ -701,18 +661,6 @@
   ]
 },
 {
-  "name":"com.oracle.truffle.js.nodes.control.DiscardResultNode",
-  "allDeclaredFields":true
-},
-{
-  "name":"com.oracle.truffle.js.nodes.control.EmptyNode",
-  "allDeclaredFields":true
-},
-{
-  "name":"com.oracle.truffle.js.nodes.control.StatementNode",
-  "allDeclaredFields":true
-},
-{
   "name":"com.oracle.truffle.js.nodes.function.AbstractBodyNode",
   "allDeclaredFields":true
 },
@@ -760,6 +708,11 @@
 {
   "name":"com.oracle.truffle.js.nodes.function.JSFunctionCallNode$Call0Node",
   "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.function.JSFunctionCallNode$Call1Node",
+  "allDeclaredFields":true,
+  "fields":[{"name":"argument0", "allowUnsafeAccess":true}]
 },
 {
   "name":"com.oracle.truffle.js.nodes.function.JSFunctionCallNode$CallNode",
@@ -811,18 +764,6 @@
   "fields":[{"name":"callNode", "allowUnsafeAccess":true}]
 },
 {
-  "name":"com.oracle.truffle.js.nodes.function.JSFunctionExpressionNode",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"functionData", "allowUnsafeAccess":true}, 
-    {"name":"functionNode", "allowUnsafeAccess":true}
-  ]
-},
-{
-  "name":"com.oracle.truffle.js.nodes.function.JSFunctionExpressionNode$AutonomousFunctionExpressionNode",
-  "allDeclaredFields":true
-},
-{
   "name":"com.oracle.truffle.js.nodes.interop.ExportArgumentsNode",
   "allDeclaredFields":true
 },
@@ -863,11 +804,6 @@
   "name":"com.oracle.truffle.js.nodes.interop.KeyInfoNodeGen",
   "allDeclaredFields":true,
   "fields":[{"name":"state_", "allowUnsafeAccess":true}]
-},
-{
-  "name":"com.oracle.truffle.js.nodes.unary.JSUnaryNode",
-  "allDeclaredFields":true,
-  "fields":[{"name":"operandNode", "allowUnsafeAccess":true}]
 },
 {
   "name":"com.oracle.truffle.js.runtime.JSContext$1",
@@ -1750,23 +1686,7 @@
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
-  "name":"javafx.scene.control.Tab",
-  "methods":[{"name":"<init>","parameterTypes":[] }]
-},
-{
-  "name":"javafx.scene.control.TabPane",
-  "methods":[{"name":"<init>","parameterTypes":[] }]
-},
-{
   "name":"javafx.scene.control.TextArea",
-  "methods":[{"name":"<init>","parameterTypes":[] }]
-},
-{
-  "name":"javafx.scene.control.TextField",
-  "methods":[{"name":"<init>","parameterTypes":[] }]
-},
-{
-  "name":"javafx.scene.layout.AnchorPane",
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {

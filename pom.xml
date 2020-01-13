@@ -13,7 +13,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <javafx.version>14-ea+4</javafx.version>
+        <javafx.version>14-ea+7</javafx.version>
         <graalvm.version>19.3.0.2</graalvm.version>
         <mainClassName>Repl.Main</mainClassName>
     </properties>
@@ -87,13 +87,15 @@
                 <version>0.1.12-SNAPSHOT</version>
                 <configuration>
                     <!-- Uncomment to run on android: -->
-                    <!-- <target>android</target> -->
+                    <target>android</target>
+                    <javafxStaticSdkVersion>14-ea+gvm4</javafxStaticSdkVersion>
                     <nativeImageArgs>
                         <list>--language:js</list>
                         <list>-Dtruffle.TruffleRuntime=com.oracle.truffle.api.impl.DefaultTruffleRuntime</list>
                         <list>-Dgraalvm.ForcePolyglotInvalid=false</list>
                         <list>--verbose</list>
                         <list>-H:+ReportExceptionStackTraces</list>
+                        <list>-H:+AllowIncompleteClasspath</list>
                     </nativeImageArgs>
 
                     <reflectionList>
