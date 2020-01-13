@@ -15,7 +15,7 @@
         <maven.compiler.target>11</maven.compiler.target>
         <javafx.version>14-ea+7</javafx.version>
         <graalvm.version>19.3.0.2</graalvm.version>
-        <mainClassName>Repl.Main</mainClassName>
+        <mainClassName>repl.Main</mainClassName>
     </properties>
 
     <dependencies>
@@ -73,7 +73,7 @@
                 <version>0.0.3</version>
                 <configuration>
                     <options>
-                        <option>-agentlib:native-image-agent=config-merge-dir=src/main/resources/META-INF/native-image</option>
+                        <!-- <option>-agentlib:native-image-agent=config-merge-dir=src/main/resources/META-INF/native-image</option> -->
                         <option>-Dtruffle.TruffleRuntime=com.oracle.truffle.api.impl.DefaultTruffleRuntime</option>
                         <option>-Dgraalvm.ForcePolyglotInvalid=false</option>
                     </options>
@@ -87,8 +87,8 @@
                 <version>0.1.12-SNAPSHOT</version>
                 <configuration>
                     <!-- Uncomment to run on android: -->
-                    <target>android</target>
-                    <javafxStaticSdkVersion>14-ea+gvm4</javafxStaticSdkVersion>
+                    <!--<target>android</target> -->
+                    <!--<javafxStaticSdkVersion>14-ea+gvm4</javafxStaticSdkVersion>-->
                     <nativeImageArgs>
                         <list>--language:js</list>
                         <list>-Dtruffle.TruffleRuntime=com.oracle.truffle.api.impl.DefaultTruffleRuntime</list>
@@ -100,9 +100,8 @@
 
                     <reflectionList>
                         <list>javafx.fxml.FXMLLoader</list>
-                        <list>Repl.Controller</list>
+                        <list>repl.Controller</list>
                         <list>javafx.scene.control.TextArea</list>
-                        <list>javafx.scene.control.TextField</list>
                         <list>javafx.scene.control.Button</list>
                         <list>javafx.scene.layout.HBox</list>
                         <list>javafx.scene.layout.VBox</list>

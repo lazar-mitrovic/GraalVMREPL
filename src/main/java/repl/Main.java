@@ -1,4 +1,4 @@
-package Repl;
+package repl;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +12,7 @@ public class Main extends Application {
 
     @Override
     public void start(final Stage stage) throws IOException {
-        final Parent root = FXMLLoader.load(Main.class.getResource("/old.fxml"));
+        final Parent root = FXMLLoader.load(Main.class.getResource("/main.fxml"));
         final Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -21,5 +21,5 @@ public class Main extends Application {
     public static void main(final String[] args) {
         launch(args);
     }
-
+    
 }
