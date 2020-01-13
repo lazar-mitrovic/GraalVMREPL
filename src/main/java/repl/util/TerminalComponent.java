@@ -36,7 +36,7 @@ public class TerminalComponent {
         log = new ByteArrayOutputStream();
         err = new ByteArrayOutputStream();
 
-        Timer timer = new Timer(true);
+        Timer timer = new Timer(false);
         TimerTask streamListener = new TimerTask() {
             @Override
             public void run() {
@@ -53,7 +53,7 @@ public class TerminalComponent {
                 err.reset();
             }
         };
-        timer.scheduleAtFixedRate(streamListener, 100, 100);
+        timer.scheduleAtFixedRate(streamListener, 0, 100);
     }
 
     public void write(String s) {
@@ -91,5 +91,5 @@ public class TerminalComponent {
     public String getCurrentCode() {
         return currentCode;
     }
-    
+
 }
