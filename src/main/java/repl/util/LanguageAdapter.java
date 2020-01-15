@@ -1,5 +1,6 @@
 package repl.util;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.function.IntSupplier;
 
@@ -7,6 +8,7 @@ import org.graalvm.polyglot.Context;
 import org.graalvm.polyglot.Context.Builder;
 
 import javafx.application.Platform;
+import javafx.concurrent.Task;
 
 import org.graalvm.polyglot.PolyglotException;
 import org.graalvm.polyglot.Value;
@@ -19,11 +21,20 @@ public class LanguageAdapter {
     private Context polyglot = null;
     private String languageName;
     private TerminalComponent term;
+    private EvalTask runningTask;
+    private Boolean blocked;
+
+    private ByteArrayOutputStream out, log, err;
 
     public LanguageAdapter(String languageName, TerminalComponent term) {
 
         this.languageName = languageName;
         this.term = term;
+        this.blocked = false;
+
+        this.out = term.out;
+        this.log = term.log;
+        this.err = term.err;
 
         polyglot = Context.newBuilder(languageName).out(term.out).logHandler(term.log).err(term.err)
                 .allowAllAccess(true).build();
@@ -57,49 +68,56 @@ public class LanguageAdapter {
         });
     }
 
+    public void showPrompt() {
+        String prompt = languageName + ">";
+        try {
+            out.write(prompt.getBytes());
+        } catch (Exception e) {
+        }
+    }
+
     public Value eval(String code) throws IOException {
         return eval(code, false);
     }
 
     public Value eval(String code, Boolean interactive) throws IOException {
         Source source = Source.newBuilder(languageName, code, "<shell>").interactive(interactive).build();
-        
-        EvalThread e = new EvalThread(source);
-        try {
-            e.start();
-            e.join();
-        } catch(InterruptedException exception) {}
-        Value result =  e.getResult();
-        if (e.getException() != null)
-            term.err.write(e.getException().getMessage().getBytes());
-        return result;
+
+        if (interactive) {
+            EvalTask e = new EvalTask(source);
+            new Thread(e).start();
+            return Value.asValue(null);
+        }
+        return polyglot.eval(source);
     }
 
-    protected class EvalThread extends Thread {
+    protected class EvalTask extends Task {
         private Source source;
         private Value result;
-        private PolyglotException exception;
 
-        public EvalThread(Source source){
+        public EvalTask(Source source) {
             this.source = source;
         }
 
-        public void run() {
+        @Override
+        protected Object call() {
+            blocked = true;
             try {
                 result = polyglot.eval(source);
+            } catch (PolyglotException exception) {
+                try {
+                    err.write(exception.getMessage().getBytes());
+                } catch (IOException exception2) {
+                }
             }
-            catch(PolyglotException exception) {
-                this.exception = exception;
-            }
+            showPrompt();
+            blocked = false;
+            return null;
         }
 
         public Value getResult() {
             return result;
         }
-        
-        public PolyglotException getException() {
-            return exception;
-        } 
     }
 
     public String getLanguageName() {
@@ -110,5 +128,5 @@ public class LanguageAdapter {
     public String toString() {
         return "LanguageAdapter [languageName=" + languageName + "]";
     }
-    
+
 }

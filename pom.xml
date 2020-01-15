@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.oracle.labs.GraalRepl</groupId>
+    <groupId>com.oracle.labs</groupId>
     <artifactId>GraalREPL</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -73,7 +73,7 @@
                 <version>0.0.3</version>
                 <configuration>
                     <options>
-                        <!-- <option>-agentlib:native-image-agent=config-merge-dir=src/main/resources/META-INF/native-image</option> -->
+                        <!--<option>-agentlib:native-image-agent=config-merge-dir=src/main/resources/META-INF/native-image</option>-->
                         <option>-Dtruffle.TruffleRuntime=com.oracle.truffle.api.impl.DefaultTruffleRuntime</option>
                         <option>-Dgraalvm.ForcePolyglotInvalid=false</option>
                     </options>
@@ -87,8 +87,8 @@
                 <version>0.1.12-SNAPSHOT</version>
                 <configuration>
                     <!-- Uncomment to run on android: -->
-                    <!--<target>android</target> -->
-                    <!--<javafxStaticSdkVersion>14-ea+gvm4</javafxStaticSdkVersion>-->
+                    <target>android</target>
+                    <javafxStaticSdkVersion>14-ea+gvmandroidkeyboard</javafxStaticSdkVersion>
                     <nativeImageArgs>
                         <list>--language:js</list>
                         <list>-Dtruffle.TruffleRuntime=com.oracle.truffle.api.impl.DefaultTruffleRuntime</list>

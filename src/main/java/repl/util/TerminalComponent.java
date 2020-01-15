@@ -15,12 +15,14 @@ public class TerminalComponent {
     private String currentCode = "";
     private String terminalText = "";
     private String oldVal = "";
-    int i = 0;
+
+    private Boolean changed;
 
     public ByteArrayOutputStream out, log, err;
 
     public TerminalComponent(TextArea terminal) {
         this.terminal = terminal;
+        this.changed = false;
 
         terminal.setOnKeyTyped(event -> {
             String newVal = terminal.getText();
@@ -45,24 +47,29 @@ public class TerminalComponent {
             public void run() {
                 Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
                 updateStreams();
-                System.out.println(terminalText.length());
             }
         };
-        timer.scheduleAtFixedRate(streamListener, 100, 1000);
+        timer.scheduleAtFixedRate(streamListener, 100, 100);
     }
 
     public synchronized void updateStreams() {
-        if (!out.toString().isEmpty())
-            write(out.toString());
-        out.reset();
-
-        if (!log.toString().isEmpty())
-            write("log>" + log.toString());
-        log.reset();
-
-        if (!err.toString().isEmpty())
+        if (!err.toString().isEmpty()) {
             write("err>" + err.toString());
-        err.reset();
+            changed = true;
+            err.reset();
+        }
+
+        if (!log.toString().isEmpty()) {
+            write("log>" + log.toString());
+            changed = true;
+            log.reset();
+        }
+
+        if (!out.toString().isEmpty()) {
+            write(out.toString(), "");
+            changed = true;
+            out.reset();
+        }
     }
 
     public void write(String s) {
@@ -72,6 +79,7 @@ public class TerminalComponent {
     public void write(String s, String endl) {
         terminalText += s + endl;
         terminalText = terminalText.substring(Math.max(terminalText.length() - 1000, 0));
+        changed = true;
         update();
     }
 
@@ -86,6 +94,10 @@ public class TerminalComponent {
         terminal.clear();
         terminal.setText(oldVal);
         terminal.positionCaret(pos);
+        if (changed) {
+            terminal.setScrollTop(Double.MAX_VALUE);
+            changed = false;
+        }
     }
 
     public void commitCurrent() {

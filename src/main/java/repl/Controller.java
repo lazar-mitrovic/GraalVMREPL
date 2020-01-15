@@ -35,6 +35,13 @@ public class Controller {
 
     private int currentLangIndex = 0;
 
+    enum GUI_STATE {
+        INTERPRETER,
+        CODE_EDITOR,
+    }
+
+    private GUI_STATE state = GUI_STATE.INTERPRETER; 
+
     public void init() {
         term = new TerminalComponent(terminal);
 
@@ -46,7 +53,7 @@ public class Controller {
         term.write("GraalVM REPL Prompt");
         term.write("Copyright (c) 2013-" + String.valueOf(Year.now().getValue()) + ", Oracle and/or its affiliates");
         term.write("");
-        term.write("\n", languages[currentLangIndex].getLanguageName() + ">");
+        languages[currentLangIndex].showPrompt();
         terminal.requestFocus();
     }
 
@@ -56,7 +63,6 @@ public class Controller {
         term.commitCurrent();
         languages[currentLangIndex].eval(code, true);
         term.updateStreams();
-        term.write("\n", languages[currentLangIndex].getLanguageName() + ">");
     }
 
     public void initialize() {
@@ -68,11 +74,18 @@ public class Controller {
         });
         mainsplit.setDividerPositions(0);
 
+        mainsplit.getDividers().get(0).positionProperty().addListener( e -> {
+            if (state == GUI_STATE.INTERPRETER)
+                mainsplit.setDividerPositions(0);
+        });
+
         interpreterButton.setOnAction(event ->{
+            state = GUI_STATE.INTERPRETER;
             mainsplit.setDividerPositions(0);
         });
 
         codeButton.setOnAction(event ->{
+            state = GUI_STATE.CODE_EDITOR;
             mainsplit.setDividerPositions(0.5);
         });
     }

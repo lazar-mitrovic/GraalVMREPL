@@ -1,55 +1,59 @@
-[{
-        "name": "repl.Controller",
-        "allDeclaredFields": true,
-        "allDeclaredMethods": true,
-        "methods": [{ "name": "<init>", "parameterTypes": [] }]
-    },
-    {
-        "name": "repl.Controller$1",
-        "allPublicFields": true
-    },
-    {
-        "name": "repl.Controller$2",
-        "allPublicFields": true
-    },
-    {
-        "name": "repl.Controller$3",
-        "allPublicFields": true
-    },
-    {
-        "name": "repl.Main"
-    },
-    {
-        "name": "java.lang.Object",
-        "allDeclaredFields": true,
-        "allPublicMethods": true
-    },
-    {
-        "name": "java.util.function.IntSupplier",
-        "allPublicMethods": true
-    },
-    {
-        "name": "javafx.scene.control.Button",
-        "methods": [{ "name": "<init>", "parameterTypes": [] }]
-    },
-    {
-        "name": "javafx.scene.control.TextArea",
-        "methods": [{ "name": "<init>", "parameterTypes": [] }]
-    },
-    {
-        "name": "javafx.scene.layout.HBox",
-        "methods": [{ "name": "<init>", "parameterTypes": [] }]
-    },
-    {
-        "name": "javafx.scene.layout.VBox",
-        "methods": [{ "name": "<init>", "parameterTypes": [] }]
-    },
-    {
-        "name": "jdk.vm.ci.services.Services",
-        "methods": [{ "name": "load", "parameterTypes": ["java.lang.Class"] }]
-    },
-    {
-        "name": "sun.misc.Unsafe",
-        "fields": [{ "name": "theUnsafe" }]
-    }
+[
+{
+  "name":"java.util.function.IntSupplier",
+  "allPublicMethods":true
+},
+{
+  "name":"javafx.scene.control.Button",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"javafx.scene.control.SplitPane",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"javafx.scene.control.TextArea",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"javafx.scene.layout.AnchorPane",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"javafx.scene.layout.HBox",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"javafx.scene.layout.VBox",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"jdk.vm.ci.services.Services",
+  "methods":[{"name":"load","parameterTypes":["java.lang.Class"] }]
+},
+{
+  "name":"repl.Controller",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"repl.Main"
+},
+{
+  "name":"repl.util.LanguageAdapter$1",
+  "allPublicFields":true
+},
+{
+  "name":"repl.util.LanguageAdapter$2",
+  "allPublicFields":true
+},
+{
+  "name":"repl.util.LanguageAdapter$3",
+  "allPublicFields":true
+},
+{
+  "name":"sun.misc.Unsafe",
+  "fields":[{"name":"theUnsafe"}]
+}
 ]
