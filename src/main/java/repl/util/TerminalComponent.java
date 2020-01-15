@@ -4,6 +4,8 @@ import java.io.ByteArrayOutputStream;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import java.lang.Thread;
+
 import javafx.scene.control.TextArea;
 
 public class TerminalComponent {
@@ -13,6 +15,7 @@ public class TerminalComponent {
     private String currentCode = "";
     private String terminalText = "";
     private String oldVal = "";
+    int i = 0;
 
     public ByteArrayOutputStream out, log, err;
 
@@ -40,20 +43,26 @@ public class TerminalComponent {
         TimerTask streamListener = new TimerTask() {
             @Override
             public void run() {
-                if (!out.toString().isEmpty())
-                    write(out.toString());
-                out.reset();
-
-                if (!log.toString().isEmpty())
-                    write("log>" + log.toString());
-                log.reset();
-
-                if (!err.toString().isEmpty())
-                    write("err>" + err.toString());
-                err.reset();
+                Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
+                updateStreams();
+                System.out.println(terminalText.length());
             }
         };
-        timer.scheduleAtFixedRate(streamListener, 0, 100);
+        timer.scheduleAtFixedRate(streamListener, 100, 1000);
+    }
+
+    public synchronized void updateStreams() {
+        if (!out.toString().isEmpty())
+            write(out.toString());
+        out.reset();
+
+        if (!log.toString().isEmpty())
+            write("log>" + log.toString());
+        log.reset();
+
+        if (!err.toString().isEmpty())
+            write("err>" + err.toString());
+        err.reset();
     }
 
     public void write(String s) {
@@ -62,6 +71,7 @@ public class TerminalComponent {
 
     public void write(String s, String endl) {
         terminalText += s + endl;
+        terminalText = terminalText.substring(Math.max(terminalText.length() - 1000, 0));
         update();
     }
 

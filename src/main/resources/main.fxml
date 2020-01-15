@@ -11,8 +11,8 @@
    <children>
       <HBox alignment="TOP_CENTER" focusTraversable="true" prefHeight="42.0">
          <children>
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Interpreter" HBox.hgrow="ALWAYS" />
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Code Editor" HBox.hgrow="ALWAYS" />
+            <Button fx:id="interpreterButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Interpreter" HBox.hgrow="ALWAYS" />
+            <Button fx:id="codeButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Code Editor" HBox.hgrow="ALWAYS" />
          </children>
       </HBox>
       <SplitPane fx:id="mainsplit" dividerPositions="0.2" orientation="VERTICAL" prefHeight="200.0" VBox.vgrow="ALWAYS">
@@ -20,7 +20,7 @@
           <AnchorPane minHeight="0.0" minWidth="0.0">
                <children>
                   <TextArea id="code" fx:id="code" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                  <Button mnemonicParsing="false" text="RUN" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                  <Button fx:id="runCodeButton" mnemonicParsing="false" text="RUN" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0">

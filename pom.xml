@@ -96,6 +96,7 @@
                         <list>--verbose</list>
                         <list>-H:+ReportExceptionStackTraces</list>
                         <list>-H:+AllowIncompleteClasspath</list>
+                        <list>--features=org.graalvm.home.HomeFinderFeature</list>
                     </nativeImageArgs>
 
                     <reflectionList>
