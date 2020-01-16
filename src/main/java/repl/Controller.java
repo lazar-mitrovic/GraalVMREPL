@@ -6,6 +6,9 @@ import repl.util.LanguageAdapter;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.KeyCode;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.VBox;
 import javafx.scene.control.Button;
 import javafx.scene.control.SplitPane;
 
@@ -27,7 +30,10 @@ public class Controller {
     private Button runCodeButton;
 
     @FXML
-    private SplitPane mainsplit;
+    private HBox buttonsBox;
+
+    @FXML
+    private SplitPane mainSplit;
 
     private TerminalComponent term;
 
@@ -46,8 +52,8 @@ public class Controller {
         term = new TerminalComponent(terminal);
 
         languages = new LanguageAdapter[]{ 
-            new LanguageAdapter("js", term), 
-            new LanguageAdapter("python", term)
+            new LanguageAdapter("js", term)
+            //, new LanguageAdapter("python", term)
         };
 
         term.write("GraalVM REPL Prompt");
@@ -72,21 +78,22 @@ public class Controller {
             if (event.getCode() == KeyCode.ENTER)
                 try{doEval();} catch(Exception e) {System.err.println(e);}
         });
-        mainsplit.setDividerPositions(0);
 
-        mainsplit.getDividers().get(0).positionProperty().addListener( e -> {
+        mainSplit.setDividerPositions(0);
+
+        mainSplit.getDividers().get(0).positionProperty().addListener( e -> {
             if (state == GUI_STATE.INTERPRETER)
-                mainsplit.setDividerPositions(0);
+                mainSplit.setDividerPositions(0);
         });
 
         interpreterButton.setOnAction(event ->{
             state = GUI_STATE.INTERPRETER;
-            mainsplit.setDividerPositions(0);
+            mainSplit.setDividerPositions(0);
         });
 
         codeButton.setOnAction(event ->{
             state = GUI_STATE.CODE_EDITOR;
-            mainsplit.setDividerPositions(0.5);
+            mainSplit.setDividerPositions(0.5);
         });
     }
 
