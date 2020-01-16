@@ -17,15 +17,15 @@ public class Main extends Application {
         final Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        
+
         stage.setOnCloseRequest(e -> {
-                Platform.exit();
-                System.exit(0);
+            Platform.exit();
+            System.exit(0);
         });
     }
 
     public static void main(final String[] args) {
         launch(args);
     }
-    
+
 }
