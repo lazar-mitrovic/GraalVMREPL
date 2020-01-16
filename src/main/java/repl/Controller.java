@@ -15,9 +15,6 @@ import java.time.Year;
 public class Controller {
 
     @FXML
-    private TextArea terminal;
-
-    @FXML
     private Button interpreterButton;
 
     @FXML
@@ -29,9 +26,19 @@ public class Controller {
     @FXML
     private SplitPane mainSplit;
 
-    private TerminalComponent term;
+    @FXML
+    private TextArea interpreterBox;
 
-    private LanguageAdapter[] languages;
+    @FXML
+    private TextArea executionBox;
+
+    private LanguageAdapter[] interpreterAdapters;
+
+    private LanguageAdapter[] executionAdapters;
+
+    private TerminalComponent interpreterComponent, executionComponent;
+
+    final String[] languages = new String[] { "js", "python" };
 
     private int currentLangIndex = 0;
 
@@ -42,39 +49,46 @@ public class Controller {
     private GUI_STATE state = GUI_STATE.INTERPRETER;
 
     public void init() {
-        term = new TerminalComponent(terminal);
+        interpreterComponent = new TerminalComponent(interpreterBox);
+        executionComponent = new TerminalComponent(executionBox);
 
-        languages = new LanguageAdapter[] { new LanguageAdapter("js", term)
-                // , new LanguageAdapter("python", term)
-        };
+        interpreterAdapters = new LanguageAdapter[languages.length];
+        executionAdapters = new LanguageAdapter[languages.length];
 
-        term.write("GraalVM REPL Prompt");
-        term.write("Copyright (c) 2013-" + String.valueOf(Year.now().getValue()) + ", Oracle and/or its affiliates");
-        term.write("");
-        languages[currentLangIndex].showPrompt();
-        terminal.requestFocus();
+        for (int i = 0; i < languages.length; i++) {
+            interpreterAdapters[i] = new LanguageAdapter(languages[i], interpreterComponent);
+            executionAdapters[i] = new LanguageAdapter(languages[i], executionComponent);
+        }
+
+        interpreterComponent.write("GraalVM REPL Prompt");
+        interpreterComponent.write(
+                "Copyright (c) 2013-" + String.valueOf(Year.now().getValue()) + ", Oracle and/or its affiliates");
+        interpreterComponent.write("");
+        interpreterAdapters[currentLangIndex].showPrompt();
+        interpreterBox.requestFocus();
     }
 
-    public void doEval() throws IOException {
-        String code = term.getCurrentCode();
-        term.commitCurrent();
-        languages[currentLangIndex].eval(code, true);
-        term.updateStreams();
+    public void doInterpreterEval() throws IOException {
+        String code = interpreterComponent.getCurrentCode();
+        interpreterComponent.commitCurrent(interpreterAdapters[currentLangIndex].getBlocked());
+        if (!interpreterAdapters[currentLangIndex].getBlocked())
+            interpreterAdapters[currentLangIndex].eval(code, true);
+        interpreterComponent.updateStreams();
     }
 
     public void initialize() {
         init();
 
-        terminal.setOnKeyPressed(event -> {
+        mainSplit.setDividerPositions(0);
+
+        interpreterBox.setOnKeyPressed(event -> {
             if (event.getCode() == KeyCode.ENTER)
                 try {
-                    doEval();
+                    doInterpreterEval();
                 } catch (Exception e) {
                     System.err.println(e);
                 }
         });
-
-        mainSplit.setDividerPositions(0);
 
         mainSplit.getDividers().get(0).positionProperty().addListener(e -> {
             if (state == GUI_STATE.INTERPRETER)
@@ -84,11 +98,15 @@ public class Controller {
         interpreterButton.setOnAction(event -> {
             state = GUI_STATE.INTERPRETER;
             mainSplit.setDividerPositions(0);
+            interpreterBox.setVisible(true);
+            executionBox.setVisible(false);
         });
 
         codeButton.setOnAction(event -> {
             state = GUI_STATE.CODE_EDITOR;
             mainSplit.setDividerPositions(0.5);
+            interpreterBox.setVisible(false);
+            executionBox.setVisible(true);
         });
     }
 

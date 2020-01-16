@@ -36,7 +36,7 @@ public class LanguageAdapter {
         this.log = term.log;
         this.err = term.err;
 
-        polyglot = Context.newBuilder(languageName).out(term.out).logHandler(term.log).err(term.err)
+        polyglot = Context.newBuilder(languageName).in(term.in).out(term.out).logHandler(term.log).err(term.err)
                 .allowAllAccess(true).build();
 
         Value bindings = polyglot.getBindings(languageName);
@@ -71,7 +71,7 @@ public class LanguageAdapter {
     public void showPrompt() {
         String prompt = languageName + ">";
         try {
-            out.write(prompt.getBytes());
+            out.write(prompt.getBytes(StandardCharsets.UTF_8));
         } catch (Exception e) {
         }
     }
@@ -100,15 +100,12 @@ public class LanguageAdapter {
         }
 
         @Override
-        protected Object call() {
+        protected Object call() throws IOException {
             blocked = true;
             try {
                 result = polyglot.eval(source);
             } catch (PolyglotException exception) {
-                try {
-                    err.write(exception.getMessage().getBytes());
-                } catch (IOException exception2) {
-                }
+                err.write(exception.getMessage().getBytes(StandardCharsets.UTF_8));
             }
             showPrompt();
             blocked = false;
@@ -122,6 +119,10 @@ public class LanguageAdapter {
 
     public String getLanguageName() {
         return languageName;
+    }
+
+    public Boolean getBlocked() {
+        return blocked;
     }
 
     @Override

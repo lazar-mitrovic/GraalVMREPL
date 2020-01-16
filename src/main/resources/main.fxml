@@ -25,7 +25,8 @@
             </AnchorPane>
             <AnchorPane minHeight="0.0" minWidth="0.0">
                <children>
-                  <TextArea id="terminal" fx:id="terminal" maxHeight="+Infinity" maxWidth="+Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <TextArea styleClass="terminal" visible="true" fx:id="interpreterBox" maxHeight="+Infinity" maxWidth="+Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <TextArea styleClass="terminal" visible="false" fx:id="executionBox" maxHeight="+Infinity" maxWidth="+Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                </children>
             </AnchorPane>
          </items>
