@@ -28,7 +28,7 @@ public class Controller {
     private SplitPane mainSplit;
 
     @FXML
-    private TextArea codeArea;
+    private TextArea codeBox;
 
     @FXML
     private TextArea interpreterBox;
@@ -45,9 +45,9 @@ public class Controller {
 
     private TerminalComponent interpreterComponent, executionComponent;
 
-    final String[] languages = new String[] { "js", "python" }; // };//,
+    final String[] languages = new String[] { "js" };//, "python" }; // ,
 
-    private int currentLangIndex = 1;
+    private int currentLangIndex = 0;
 
     enum GUI_STATE {
         INTERPRETER, CODE_EDITOR,
@@ -95,7 +95,7 @@ public class Controller {
     }
 
     public void doExecutionEval() throws IOException {
-        final String code = codeArea.getText();
+        final String code = codeBox.getText();
         executionAdapters[currentLangIndex].eval(code, true);
         executionComponent.updateStreams();
     }
@@ -112,6 +112,18 @@ public class Controller {
                 } catch (final Exception e) {
                     System.err.println(e);
                 }
+            else if (event.getCode() == KeyCode.ESCAPE) //Keyboard turned off.
+                interpreterBox.getParent().requestFocus();
+        });
+
+        executionBox.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ESCAPE) //Keyboard turned off.
+                executionBox.getParent().requestFocus();
+        });
+
+        codeBox.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ESCAPE) //Keyboard turned off.
+                codeBox.getParent().requestFocus();
         });
 
         mainSplit.getDividers().get(0).positionProperty().addListener(e -> {
