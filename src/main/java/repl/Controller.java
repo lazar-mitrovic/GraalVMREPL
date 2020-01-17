@@ -2,12 +2,13 @@ package repl;
 
 import repl.util.TerminalComponent;
 import repl.util.LanguageAdapter;
-
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.KeyCode;
 import javafx.scene.control.Button;
 import javafx.scene.control.SplitPane;
+import javafx.scene.control.ComboBox;
 
 import java.io.IOException;
 import java.time.Year;
@@ -27,10 +28,16 @@ public class Controller {
     private SplitPane mainSplit;
 
     @FXML
+    private TextArea codeArea;
+
+    @FXML
     private TextArea interpreterBox;
 
     @FXML
     private TextArea executionBox;
+
+    @FXML
+    private ComboBox<String> languageSelect;
 
     private LanguageAdapter[] interpreterAdapters;
 
@@ -38,9 +45,9 @@ public class Controller {
 
     private TerminalComponent interpreterComponent, executionComponent;
 
-    final String[] languages = new String[] { "js", "python" };
+    final String[] languages = new String[] { "js", "python" }; // };//,
 
-    private int currentLangIndex = 0;
+    private int currentLangIndex = 1;
 
     enum GUI_STATE {
         INTERPRETER, CODE_EDITOR,
@@ -60,6 +67,17 @@ public class Controller {
             executionAdapters[i] = new LanguageAdapter(languages[i], executionComponent);
         }
 
+        languageSelect.setItems(FXCollections.observableArrayList(languages));
+        languageSelect.setValue(languages[currentLangIndex]);
+
+        languageSelect.setOnAction(e -> {
+            currentLangIndex = languageSelect.getSelectionModel().getSelectedIndex();
+            interpreterAdapters[currentLangIndex].clear();
+            executionAdapters[currentLangIndex].clear();
+
+            interpreterAdapters[currentLangIndex].showPrompt();
+        });
+
         interpreterComponent.write("GraalVM REPL Prompt");
         interpreterComponent.write(
                 "Copyright (c) 2013-" + String.valueOf(Year.now().getValue()) + ", Oracle and/or its affiliates");
@@ -69,11 +87,17 @@ public class Controller {
     }
 
     public void doInterpreterEval() throws IOException {
-        String code = interpreterComponent.getCurrentCode();
+        final String code = interpreterComponent.getCurrentCode();
         interpreterComponent.commitCurrent(interpreterAdapters[currentLangIndex].getBlocked());
         if (!interpreterAdapters[currentLangIndex].getBlocked())
             interpreterAdapters[currentLangIndex].eval(code, true);
         interpreterComponent.updateStreams();
+    }
+
+    public void doExecutionEval() throws IOException {
+        final String code = codeArea.getText();
+        executionAdapters[currentLangIndex].eval(code, true);
+        executionComponent.updateStreams();
     }
 
     public void initialize() {
@@ -85,7 +109,7 @@ public class Controller {
             if (event.getCode() == KeyCode.ENTER)
                 try {
                     doInterpreterEval();
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     System.err.println(e);
                 }
         });
@@ -107,6 +131,13 @@ public class Controller {
             mainSplit.setDividerPositions(0.5);
             interpreterBox.setVisible(false);
             executionBox.setVisible(true);
+        });
+
+        runCodeButton.setOnAction(event -> {
+            try {
+                doExecutionEval();
+            } catch (IOException e) {
+            }
         });
     }
 

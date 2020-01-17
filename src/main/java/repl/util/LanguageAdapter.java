@@ -1,5 +1,6 @@
 package repl.util;
 
+import java.nio.charset.StandardCharsets;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.function.IntSupplier;
@@ -62,10 +63,14 @@ public class LanguageAdapter {
         bindings.putMember("clear", new IntSupplier() {
             @Override
             public int getAsInt() {
-                term.clear();
+                clear();
                 return 0;
             }
         });
+    }
+
+    public void clear() {
+        term.clear();
     }
 
     public void showPrompt() {
@@ -127,7 +132,7 @@ public class LanguageAdapter {
 
     @Override
     public String toString() {
-        return "LanguageAdapter [languageName=" + languageName + "]";
+        return getLanguageName();
     }
 
 }

@@ -1,11 +1,8 @@
 package repl.util;
 
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.PipedInputStream;
-import java.io.PipedOutputStream;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -113,8 +110,12 @@ public class TerminalComponent {
 
     public void commitCurrent(boolean input) {
         write(currentCode);
-        if (input)
+        if (input) {
             flushCode = currentCode;
+            synchronized (in) {
+                in.notifyAll();
+            }
+        }
         flushCurrent();
     }
 
@@ -144,8 +145,14 @@ public class TerminalComponent {
             public int read() throws IOException {
                 if (buffer == null) {
                     pos = 0;
-                    if (flushCode == null) {
-                        return -1;
+                    synchronized (this) {
+                        while (flushCode == null) {
+                            try {
+                                this.wait();
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                        }
                     }
                     buffer = flushCode.getBytes(StandardCharsets.UTF_8);
                     flushCode = null;
