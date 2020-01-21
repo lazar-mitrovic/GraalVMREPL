@@ -34,7 +34,8 @@ public class Controller {
     private TextArea interpreterBox;
 
     @FXML
-    private ComboBox<String> languageSelect;
+    private Button switchLanguage;
+
 
     private LanguageAdapter[] interpreterAdapters;
 
@@ -60,11 +61,8 @@ public class Controller {
             interpreterAdapters[i] = new LanguageAdapter(languages[i], interpreterComponent);
         }
 
-        languageSelect.setItems(FXCollections.observableArrayList(languages));
-        languageSelect.setValue(languages[currentLangIndex]);
-
-        languageSelect.setOnAction(e -> {
-            currentLangIndex = languageSelect.getSelectionModel().getSelectedIndex();
+        switchLanguage.setOnAction(e -> {
+            currentLangIndex = (currentLangIndex+1) % languages.length;
             interpreterAdapters[currentLangIndex].clear();
             interpreterAdapters[currentLangIndex].showPrompt();
         });

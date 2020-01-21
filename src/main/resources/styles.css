@@ -6,6 +6,19 @@
     -fx-font-family: Consolas;
 }
 
+.circ-button {
+    -fx-border-radius: 100;
+    -fx-background-radius: 100;
+    -fx-min-width: 40;
+    -fx-min-height: 40;
+    -fx-max-width: 40;
+    -fx-max-height: 40;
+    -fx-background-color: #03687f;
+    -fx-text-fill: #cccccc;
+    -fx-alignment: center;
+    -fx-font-family: Consolas;
+}
+
 .context-menu {
     -fx-background-color: #cccccc;
     -fx-text-fill: #333333;
