@@ -3,6 +3,7 @@ package repl.util;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -10,6 +11,7 @@ import java.lang.Thread;
 import java.nio.charset.StandardCharsets;
 
 import javafx.scene.control.TextArea;
+import javafx.scene.input.KeyCode;
 
 public class TerminalComponent {
 
@@ -21,6 +23,9 @@ public class TerminalComponent {
     private String terminalText = "";
     private String oldVal = "";
 
+    private ArrayList<String> history;
+    private int historyPosition;
+
     private Boolean changed;
 
     public ByteArrayOutputStream out, log, err;
@@ -29,12 +34,14 @@ public class TerminalComponent {
     public TerminalComponent(TextArea terminal) {
         this.terminal = terminal;
         this.changed = false;
+        history = new ArrayList<>();
+        historyPosition = 0;
 
         in = createInputStream();
 
         terminal.setOnKeyTyped(event -> {
             String newVal = terminal.getText();
-            if (newVal == oldVal)
+            if (newVal.equals(oldVal))
                 return;
             if (!newVal.startsWith(terminalText)) {
                 update(); // you cannot edit output!
@@ -42,7 +49,27 @@ public class TerminalComponent {
             }
             currentCode = newVal.substring(terminalText.length());
             update();
+        });
 
+        terminal.setOnKeyReleased(event -> {
+            if (event.getCode() == KeyCode.UP) {
+                historyPosition = Math.min(historyPosition + 1, history.size());
+                if (historyPosition > 0)
+                    currentCode = history.get(history.size() - historyPosition);
+                update();
+            }
+            if (event.getCode() == KeyCode.DOWN) {
+                historyPosition = Math.max(historyPosition - 1, 0);
+                if (historyPosition > 0)
+                    currentCode = history.get(history.size() - historyPosition);
+                else
+                    currentCode = "";
+                update();
+            }
+        });
+
+        terminal.anchorProperty().addListener(event -> {
+            this.fixCaretPosition();
         });
 
         out = new ByteArrayOutputStream();
@@ -62,13 +89,13 @@ public class TerminalComponent {
 
     public synchronized void updateStreams() {
         if (!err.toString().isEmpty()) {
-            write("err>" + err.toString());
+            write("err> " + err.toString());
             changed = true;
             err.reset();
         }
 
         if (!log.toString().isEmpty()) {
-            write("log>" + log.toString());
+            write("log> " + log.toString());
             changed = true;
             log.reset();
         }
@@ -85,10 +112,12 @@ public class TerminalComponent {
     }
 
     public void write(String s, String endl) {
-        terminalText += s + endl;
-        terminalText = terminalText.substring(Math.max(terminalText.length() - 1000, 0));
-        changed = true;
-        update();
+        synchronized (this) {
+            terminalText += s + endl;
+            terminalText = terminalText.substring(Math.max(terminalText.length() - 1000, 0));
+            changed = true;
+            update();
+        }
     }
 
     public void clear() {
@@ -97,18 +126,28 @@ public class TerminalComponent {
     }
 
     private void update() {
-        oldVal = terminalText + currentCode;
-        int pos = (terminal.getCaretPosition() < terminalText.length()) ? oldVal.length() : terminal.getCaretPosition();
-        terminal.clear();
-        terminal.setText(oldVal);
-        terminal.positionCaret(pos);
-        if (changed) {
-            terminal.setScrollTop(Double.MAX_VALUE);
-            changed = false;
+        synchronized (this) {
+            oldVal = terminalText + currentCode;
+            int pos = this.fixCaretPosition();
+            terminal.clear();
+            terminal.setText(oldVal);
+            terminal.positionCaret(pos);
+            if (changed) {
+                terminal.setScrollTop(Double.MAX_VALUE);
+                changed = false;
+            }
         }
     }
 
+    public int fixCaretPosition() {
+        int pos = (terminal.getCaretPosition() < terminalText.length()) ? terminalText.length()
+                : terminal.getCaretPosition();
+        terminal.selectRange(pos, pos);
+        return pos;
+    }
+
     public void commitCurrent(boolean input) {
+        history.add(currentCode);
         write(currentCode);
         if (input) {
             flushCode = currentCode;
@@ -166,5 +205,4 @@ public class TerminalComponent {
             }
         };
     }
-
 }

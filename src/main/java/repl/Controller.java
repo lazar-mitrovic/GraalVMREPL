@@ -34,18 +34,14 @@ public class Controller {
     private TextArea interpreterBox;
 
     @FXML
-    private TextArea executionBox;
-
-    @FXML
     private ComboBox<String> languageSelect;
 
     private LanguageAdapter[] interpreterAdapters;
 
-    private LanguageAdapter[] executionAdapters;
 
-    private TerminalComponent interpreterComponent, executionComponent;
+    private TerminalComponent interpreterComponent;
 
-    final String[] languages = new String[] { "js" };//, "python" }; // ,
+    final String[] languages = new String[] { "js" };// , "python" }; // ,
 
     private int currentLangIndex = 0;
 
@@ -57,14 +53,11 @@ public class Controller {
 
     public void init() {
         interpreterComponent = new TerminalComponent(interpreterBox);
-        executionComponent = new TerminalComponent(executionBox);
 
         interpreterAdapters = new LanguageAdapter[languages.length];
-        executionAdapters = new LanguageAdapter[languages.length];
 
         for (int i = 0; i < languages.length; i++) {
             interpreterAdapters[i] = new LanguageAdapter(languages[i], interpreterComponent);
-            executionAdapters[i] = new LanguageAdapter(languages[i], executionComponent);
         }
 
         languageSelect.setItems(FXCollections.observableArrayList(languages));
@@ -73,8 +66,6 @@ public class Controller {
         languageSelect.setOnAction(e -> {
             currentLangIndex = languageSelect.getSelectionModel().getSelectedIndex();
             interpreterAdapters[currentLangIndex].clear();
-            executionAdapters[currentLangIndex].clear();
-
             interpreterAdapters[currentLangIndex].showPrompt();
         });
 
@@ -96,13 +87,12 @@ public class Controller {
 
     public void doExecutionEval() throws IOException {
         final String code = codeBox.getText();
-        executionAdapters[currentLangIndex].eval(code, true);
-        executionComponent.updateStreams();
+        interpreterAdapters[currentLangIndex].eval(code, true);
+        interpreterComponent.updateStreams();
     }
 
     public void initialize() {
         init();
-
         mainSplit.setDividerPositions(0);
 
         interpreterBox.setOnKeyPressed(event -> {
@@ -112,17 +102,12 @@ public class Controller {
                 } catch (final Exception e) {
                     System.err.println(e);
                 }
-            else if (event.getCode() == KeyCode.ESCAPE) //Keyboard turned off.
+            else if (event.getCode() == KeyCode.ESCAPE) // Keyboard turned off.
                 interpreterBox.getParent().requestFocus();
         });
 
-        executionBox.setOnKeyPressed(event -> {
-            if (event.getCode() == KeyCode.ESCAPE) //Keyboard turned off.
-                executionBox.getParent().requestFocus();
-        });
-
         codeBox.setOnKeyPressed(event -> {
-            if (event.getCode() == KeyCode.ESCAPE) //Keyboard turned off.
+            if (event.getCode() == KeyCode.ESCAPE) // Keyboard turned off.
                 codeBox.getParent().requestFocus();
         });
 
@@ -134,19 +119,16 @@ public class Controller {
         interpreterButton.setOnAction(event -> {
             state = GUI_STATE.INTERPRETER;
             mainSplit.setDividerPositions(0);
-            interpreterBox.setVisible(true);
-            executionBox.setVisible(false);
         });
 
         codeButton.setOnAction(event -> {
             state = GUI_STATE.CODE_EDITOR;
             mainSplit.setDividerPositions(0.5);
-            interpreterBox.setVisible(false);
-            executionBox.setVisible(true);
         });
 
         runCodeButton.setOnAction(event -> {
             try {
+                interpreterAdapters[currentLangIndex].clear();
                 doExecutionEval();
             } catch (IOException e) {
             }

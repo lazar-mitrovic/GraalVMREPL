@@ -28,8 +28,7 @@
                <children>
                   <AnchorPane VBox.vgrow="ALWAYS">
                      <children>
-                        <TextArea fx:id="interpreterBox" maxHeight="+Infinity" maxWidth="+Infinity" styleClass="terminal" visible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                        <TextArea fx:id="executionBox" maxHeight="+Infinity" maxWidth="+Infinity" styleClass="terminal" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <TextArea fx:id="interpreterBox" maxHeight="+Infinity" maxWidth="+Infinity" styleClass="terminal" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                      </children>
                   </AnchorPane>
                   <ComboBox fx:id="languageSelect" maxWidth="+Infinity" prefHeight="26.0" promptText="test" />
