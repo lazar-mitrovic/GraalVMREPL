@@ -6,19 +6,6 @@
     -fx-font-family: Consolas;
 }
 
-.circ-button {
-    -fx-border-radius: 100;
-    -fx-background-radius: 100;
-    -fx-min-width: 40;
-    -fx-min-height: 40;
-    -fx-max-width: 40;
-    -fx-max-height: 40;
-    -fx-background-color: #03687f;
-    -fx-text-fill: #cccccc;
-    -fx-alignment: center;
-    -fx-font-family: Consolas;
-}
-
 .context-menu {
     -fx-background-color: #cccccc;
     -fx-text-fill: #333333;
@@ -44,28 +31,14 @@
     -fx-text-fill: -text-disabled;
 }
 
-.tab-pane .tab-header-background {
-    -fx-background-color: #03687f;
-}
-
-.tab-pane .headers-region .tab:closable {
-    -fx-border-color: rgba(255, 255, 255, .87);
-    -fx-border-insets: 8 8 8 8;
-    -fx-padding: 8;
-}
-
-.tab-pane .headers-region .tab .tab-container .tab-label {
+.circ-button {
+    -fx-background-radius: 40;
+    -fx-min-width: 40;
+    -fx-min-height: 40;
+    -fx-max-width: 40;
+    -fx-max-height: 40;
     -fx-background-color: #03687f;
     -fx-text-fill: #cccccc;
-    -fx-font-family: Consolas;
     -fx-alignment: center;
-    -fx-padding: 20 50;
-}
-
-.tab-pane .headers-region .tab:closable .tab-container .tab-label {
-    -fx-padding: 0 10;
-}
-
-.tab-pane .headers-region .tab:selected .tab-container .tab-label {
-    -fx-text-fill: #fff;
+    -fx-font-family: Consolas;
 }
