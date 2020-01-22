@@ -36,9 +36,7 @@ public class Controller {
     @FXML
     private Button switchLanguageButton;
 
-
     private LanguageAdapter[] interpreterAdapters;
-
 
     private TerminalComponent interpreterComponent;
 
@@ -62,7 +60,7 @@ public class Controller {
         }
 
         switchLanguageButton.setOnAction(e -> {
-            currentLangIndex = (currentLangIndex+1) % languages.length;
+            currentLangIndex = (currentLangIndex + 1) % languages.length;
             interpreterAdapters[currentLangIndex].clear();
             interpreterAdapters[currentLangIndex].showPrompt();
         });
@@ -76,8 +74,12 @@ public class Controller {
     }
 
     public void doInterpreterEval() throws IOException {
+        if (interpreterAdapters[currentLangIndex].getBlocked() && !interpreterComponent.isInputBlocked()) {
+            interpreterComponent.flushCurrent();
+            return;
+        }
         final String code = interpreterComponent.getCurrentCode();
-        interpreterComponent.commitCurrent(interpreterAdapters[currentLangIndex].getBlocked());
+        interpreterComponent.commitCurrent();
         if (!interpreterAdapters[currentLangIndex].getBlocked())
             interpreterAdapters[currentLangIndex].eval(code, true);
         interpreterComponent.updateStreams();
@@ -95,13 +97,13 @@ public class Controller {
         mainSplit.setDividerPositions(0);
 
         interpreterBox.setOnKeyPressed(event -> {
-            if (event.getCode() == KeyCode.ENTER)
+            if (event.getCode() == KeyCode.ENTER) {
                 try {
                     doInterpreterEval();
                 } catch (final Exception e) {
                     System.err.println(e);
                 }
-            else if (event.getCode() == KeyCode.ESCAPE) // Keyboard turned off.
+            } else if (event.getCode() == KeyCode.ESCAPE) // Keyboard turned off.
                 interpreterBox.getParent().requestFocus();
         });
 
