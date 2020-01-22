@@ -34,7 +34,7 @@ public class Controller {
     private TextArea interpreterBox;
 
     @FXML
-    private Button switchLanguage;
+    private Button switchLanguageButton;
 
 
     private LanguageAdapter[] interpreterAdapters;
@@ -61,7 +61,7 @@ public class Controller {
             interpreterAdapters[i] = new LanguageAdapter(languages[i], interpreterComponent);
         }
 
-        switchLanguage.setOnAction(e -> {
+        switchLanguageButton.setOnAction(e -> {
             currentLangIndex = (currentLangIndex+1) % languages.length;
             interpreterAdapters[currentLangIndex].clear();
             interpreterAdapters[currentLangIndex].showPrompt();
@@ -91,6 +91,7 @@ public class Controller {
 
     public void initialize() {
         init();
+
         mainSplit.setDividerPositions(0);
 
         interpreterBox.setOnKeyPressed(event -> {

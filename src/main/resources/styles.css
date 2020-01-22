@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'FreeMono';
+    src: url('FreeMono.ttf');
+}
+
 .terminal {
     -fx-background-color: #333;
     -fx-control-inner-background: #333;
@@ -14,7 +19,7 @@
 .button {
     -fx-background-radius: 0;
     -fx-background-color: #03687f;
-    -fx-text-fill: #cccccc;
+    -fx-text-fill: #fff;
     -fx-alignment: center;
     -fx-font-family: Consolas;
 }
@@ -38,7 +43,8 @@
     -fx-max-width: 40;
     -fx-max-height: 40;
     -fx-background-color: #03687f;
-    -fx-text-fill: #cccccc;
+    -fx-text-fill: #fff;
     -fx-alignment: center;
-    -fx-font-family: Consolas;
+    -fx-font-family: 'FreeMono';
+    -fx-font-size: 20;
 }
