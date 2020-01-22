@@ -43,17 +43,7 @@ public class TerminalComponent {
         in = createInputStream();
 
         terminal.setOnKeyTyped(event -> {
-            if (event.getCode() == KeyCode.ENTER)
-                return;
-            String newVal = terminal.getText();
-            if (newVal.equals(oldVal))
-                return;
-            if (!newVal.startsWith(terminalText)) {
-                update(); // you cannot edit output!
-                return;
-            }
-            currentCode = newVal.substring(terminalText.length());
-            safeUpdate();
+            checkInvalidState();
         });
 
         terminal.setOnKeyReleased(event -> {
@@ -63,8 +53,7 @@ public class TerminalComponent {
                     currentCode = history.get(history.size() - historyPosition);
                 changed = true;
                 safeUpdate();
-            }
-            if (event.getCode() == KeyCode.DOWN) {
+            } else if (event.getCode() == KeyCode.DOWN) {
                 historyPosition = Math.max(historyPosition - 1, 0);
                 if (historyPosition > 0)
                     currentCode = history.get(history.size() - historyPosition);
@@ -95,60 +84,82 @@ public class TerminalComponent {
         timer.scheduleAtFixedRate(streamListener, 100, 100);
     }
 
+    public synchronized void checkInvalidState() {
+        String newVal = terminal.getText();
+
+        changed = true;
+
+        if (newVal.length() == terminalText.length() && newVal.equals(oldVal)) {
+            safeUpdate(); // you cannot edit output!
+            return;
+        }
+
+        if (newVal.length() < terminalText.length() || !newVal.startsWith(terminalText)) {
+            safeUpdate(); // you cannot edit output!
+            return;
+        }
+
+        if (newVal.endsWith(System.lineSeparator()) && !oldVal.endsWith(System.lineSeparator())) {
+            safeUpdate(); // you cannot edit output!
+            return;
+        }
+
+        currentCode = newVal.substring(terminalText.length());
+        safeUpdate();
+    }
+
     public synchronized void updateStreams() {
-        synchronized (this) {
-            if (!err.toString().isEmpty()) {
-                write("err> " + err.toString());
-                changed = true;
-                err.reset();
-            }
-
-            if (!log.toString().isEmpty()) {
-                write("log> " + log.toString());
-                changed = true;
-                log.reset();
-            }
-
-            if (!out.toString().isEmpty()) {
-                write(out.toString(), "");
-                changed = true;
-                out.reset();
-            }
-        }
-    }
-
-    public void write(String s) {
-        write(s, "\n", true);
-    }
-
-    public void write(String s, String endl) {
-        write(s, endl, true);
-    }
-
-    public void write(String s, String endl, boolean update) {
-        synchronized (this) {
-            terminalText += s + endl;
-            terminalText = terminalText.substring(Math.max(terminalText.length() - 1000, 0));
+        if (!err.toString().isEmpty()) {
+            write(System.lineSeparator() + "err> " + err.toString(StandardCharsets.UTF_8), false);
             changed = true;
+            err.reset();
+        }
+
+        if (!log.toString().isEmpty()) {
+            write(System.lineSeparator() + "log> " + log.toString(StandardCharsets.UTF_8), false);
+            changed = true;
+            log.reset();
+        }
+
+        if (!out.toString().isEmpty()) {
+            write(System.lineSeparator() + out.toString(StandardCharsets.UTF_8), false);
+            changed = true;
+            out.reset();
         }
     }
 
-    public void clear() {
+    public synchronized void write(String s) {
+        write(s, true);
+    }
+
+    public synchronized void writeLine(String s) {
+        writeLine(s, true);
+    }
+
+    public synchronized void writeLine(String s, boolean update) {
+        write(s + System.lineSeparator(), true);
+    }
+
+    public synchronized void write(String s, boolean update) {
+        terminalText += s;
+        terminalText = terminalText.substring(Math.max(terminalText.length() - 1000, 0));
+        changed = true;
+    }
+
+    public synchronized void clear() {
         terminalText = "";
         update();
     }
 
-    private void update() {
-        synchronized (this) {
-            if (!changed)
-                return;
-            oldVal = terminalText + currentCode;
-            int pos = this.fixCaretPosition();
-            terminal.setText(oldVal);
-            terminal.positionCaret(pos);
-            terminal.setScrollTop(Double.MAX_VALUE);
-            changed = false;
-        }
+    private synchronized void update() {
+        if (!changed)
+            return;
+        oldVal = terminalText + currentCode;
+        int pos = this.fixCaretPosition();
+        terminal.setText(oldVal);
+        terminal.positionCaret(pos);
+        terminal.setScrollTop(Double.MAX_VALUE);
+        changed = false;
     }
 
     public void safeUpdate() {
@@ -160,15 +171,16 @@ public class TerminalComponent {
         });
     }
 
-    public int fixCaretPosition() {
+    public synchronized int fixCaretPosition() {
         int pos = Math.max(terminal.getCaretPosition(), terminalText.length());
         terminal.selectRange(pos, pos);
         return pos;
     }
 
-    public void commitCurrent() {
+    public synchronized void commitCurrent() {
         history.add(currentCode);
-        write(currentCode);
+        historyPosition = 0;
+        write(currentCode, false);
         if (inputBlocked) {
             flushCode = currentCode;
             synchronized (in) {
@@ -178,7 +190,7 @@ public class TerminalComponent {
         flushCurrent();
     }
 
-    public void flushCurrent() {
+    public synchronized void flushCurrent() {
         currentCode = "";
         update();
     }

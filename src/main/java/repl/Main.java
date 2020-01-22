@@ -16,6 +16,7 @@ public class Main extends Application {
         final Parent root = FXMLLoader.load(Main.class.getResource("/main.fxml"));
         final Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setTitle("GraalREPL");
         stage.show();
 
         stage.setOnCloseRequest(e -> {

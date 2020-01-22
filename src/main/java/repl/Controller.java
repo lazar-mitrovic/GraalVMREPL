@@ -65,10 +65,9 @@ public class Controller {
             interpreterAdapters[currentLangIndex].showPrompt();
         });
 
-        interpreterComponent.write("GraalVM REPL Prompt");
-        interpreterComponent.write(
+        interpreterComponent.writeLine("GraalVM REPL Prompt");
+        interpreterComponent.writeLine(
                 "Copyright (c) 2013-" + String.valueOf(Year.now().getValue()) + ", Oracle and/or its affiliates");
-        interpreterComponent.write("");
         interpreterAdapters[currentLangIndex].showPrompt();
         interpreterBox.requestFocus();
     }
@@ -105,6 +104,8 @@ public class Controller {
                 }
             } else if (event.getCode() == KeyCode.ESCAPE) // Keyboard turned off.
                 interpreterBox.getParent().requestFocus();
+            else 
+                interpreterComponent.checkInvalidState();
         });
 
         codeBox.setOnKeyPressed(event -> {
