@@ -15,7 +15,6 @@
         <maven.compiler.target>11</maven.compiler.target>
         <javafx.version>14-ea+7</javafx.version>
         <graalvm.version>19.3.0.2</graalvm.version>
-        <!-- <client.version>0.1.11</client.version> -->
         <client.version>0.1.13-SNAPSHOT</client.version>
         <mainClassName>repl.Main</mainClassName>
     </properties>

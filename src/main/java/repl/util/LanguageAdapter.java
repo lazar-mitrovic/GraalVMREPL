@@ -74,7 +74,7 @@ public class LanguageAdapter {
     }
 
     public void showPrompt() {
-        String prompt = "\n" + languageName + "> ";
+        String prompt = languageName + "> ";
         try {
             out.write(prompt.getBytes(StandardCharsets.UTF_8));
         } catch (Exception e) {

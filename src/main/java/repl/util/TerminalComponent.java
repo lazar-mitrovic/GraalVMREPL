@@ -180,7 +180,7 @@ public class TerminalComponent {
     public synchronized void commitCurrent() {
         history.add(currentCode);
         historyPosition = 0;
-        write(currentCode, false);
+        writeLine(currentCode, false);
         if (inputBlocked) {
             flushCode = currentCode;
             synchronized (in) {
