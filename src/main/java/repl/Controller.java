@@ -40,7 +40,7 @@ public class Controller {
 
     private TerminalComponent interpreterComponent;
 
-    final String[] languages = new String[] { "js" };// , "python" }; // ,
+    final String[] languages = new String[] { "js" }; // , "python" };
 
     private int currentLangIndex = 0;
 
@@ -61,7 +61,7 @@ public class Controller {
 
         switchLanguageButton.setOnAction(e -> {
             currentLangIndex = (currentLangIndex + 1) % languages.length;
-            interpreterAdapters[currentLangIndex].clear();
+            // interpreterAdapters[currentLangIndex].clear();
             interpreterAdapters[currentLangIndex].showPrompt();
         });
 
@@ -104,7 +104,7 @@ public class Controller {
                 }
             } else if (event.getCode() == KeyCode.ESCAPE) // Keyboard turned off.
                 interpreterBox.getParent().requestFocus();
-            else 
+            else
                 interpreterComponent.checkInvalidState();
         });
 

@@ -19,7 +19,7 @@ import repl.util.TerminalComponent;
 
 public class LanguageAdapter {
 
-    private Context polyglot = null;
+    private static Context polyglot = null;
     private String languageName;
     private TerminalComponent term;
     private EvalTask runningTask;
@@ -37,7 +37,8 @@ public class LanguageAdapter {
         this.log = term.log;
         this.err = term.err;
 
-        polyglot = Context.newBuilder(languageName).in(term.in).out(term.out).logHandler(term.log).err(term.err)
+        if (polyglot == null)
+            polyglot = Context.newBuilder().in(term.in).out(term.out).logHandler(term.log).err(term.err)
                 .allowAllAccess(true).build();
 
         Value bindings = polyglot.getBindings(languageName);
