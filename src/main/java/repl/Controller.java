@@ -130,7 +130,6 @@ public class Controller {
 
         runCodeButton.setOnAction(event -> {
             try {
-                interpreterAdapters[currentLangIndex].clear();
                 doExecutionEval();
             } catch (IOException e) {
             }
