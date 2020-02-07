@@ -1,2 +1,87 @@
 [
+{
+  "name":"com.oracle.truffle.api.CallTarget",
+  "methods":[{"name":"call","parameterTypes":["java.lang.Object[]"] }]
+},
+{
+  "name":"com.oracle.truffle.nfi.impl.LibFFIClosure$RetPatches",
+  "fields":[
+    {"name":"count"}, 
+    {"name":"objects"}, 
+    {"name":"patches"}
+  ]
+},
+{
+  "name":"com.oracle.truffle.nfi.impl.LibFFISignature",
+  "fields":[
+    {"name":"argTypes"}, 
+    {"name":"cif"}
+  ]
+},
+{
+  "name":"com.oracle.truffle.nfi.impl.LibFFIType",
+  "fields":[{"name":"type"}]
+},
+{
+  "name":"com.oracle.truffle.nfi.impl.LibFFIType$EnvType"
+},
+{
+  "name":"com.oracle.truffle.nfi.impl.LibFFIType$NullableType"
+},
+{
+  "name":"com.oracle.truffle.nfi.impl.LibFFIType$ObjectType"
+},
+{
+  "name":"com.oracle.truffle.nfi.impl.LibFFIType$StringType"
+},
+{
+  "name":"com.oracle.truffle.nfi.impl.NFIContext",
+  "fields":[
+    {"name":"RTLD_GLOBAL"}, 
+    {"name":"RTLD_LAZY"}, 
+    {"name":"RTLD_LOCAL"}, 
+    {"name":"RTLD_NOW"}
+  ],
+  "methods":[
+    {"name":"createClosureNativePointer","parameterTypes":["long","long","com.oracle.truffle.api.CallTarget","com.oracle.truffle.nfi.impl.LibFFISignature"] }, 
+    {"name":"getClosureObject","parameterTypes":["long"] }, 
+    {"name":"getNativeEnv","parameterTypes":[] }, 
+    {"name":"initializeSimpleType","parameterTypes":["com.oracle.truffle.nfi.spi.types.NativeSimpleType","int","int","long"] }, 
+    {"name":"newClosureRef","parameterTypes":["long"] }, 
+    {"name":"releaseClosureRef","parameterTypes":["long"] }
+  ]
+},
+{
+  "name":"com.oracle.truffle.nfi.impl.NFIUnsatisfiedLinkError"
+},
+{
+  "name":"com.oracle.truffle.nfi.impl.NativeString",
+  "fields":[{"name":"nativePointer"}]
+},
+{
+  "name":"com.oracle.truffle.nfi.spi.types.NativeSimpleType",
+  "fields":[
+    {"name":"DOUBLE"}, 
+    {"name":"FLOAT"}, 
+    {"name":"NULLABLE"}, 
+    {"name":"OBJECT"}, 
+    {"name":"POINTER"}, 
+    {"name":"SINT16"}, 
+    {"name":"SINT32"}, 
+    {"name":"SINT64"}, 
+    {"name":"SINT8"}, 
+    {"name":"STRING"}, 
+    {"name":"UINT16"}, 
+    {"name":"UINT32"}, 
+    {"name":"UINT64"}, 
+    {"name":"UINT8"}, 
+    {"name":"VOID"}
+  ]
+},
+{
+  "name":"java.lang.Object"
+},
+{
+  "name":"java.lang.String"
+}
 ]
