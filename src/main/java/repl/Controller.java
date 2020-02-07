@@ -40,8 +40,6 @@ public class Controller {
 
     private TerminalComponent interpreterComponent;
 
-    final String[] languages = new String[] { "js", "ruby" }; // , "python" };
-
     private int currentLangIndex = 0;
 
     enum GUI_STATE {
@@ -53,26 +51,20 @@ public class Controller {
     public void init() {
         interpreterComponent = new TerminalComponent(interpreterBox);
 
-        interpreterAdapters = new LanguageAdapter[languages.length];
-
         interpreterComponent.writeLine("GraalVM REPL Prompt");
         interpreterComponent.writeLine(
                 "Copyright (c) 2013-" + String.valueOf(Year.now().getValue()) + ", Oracle and/or its affiliates");
 
-        
-                for (int i = 0; i < languages.length; i++) {
-                    interpreterAdapters[i] = new LanguageAdapter(languages[i], interpreterComponent);
-                }
-        
-                switchLanguageButton.setOnAction(e -> {
-                    currentLangIndex = (currentLangIndex + 1) % languages.length;
-                    // interpreterAdapters[currentLangIndex].clear();
-                    interpreterAdapters[currentLangIndex].showPrompt();
-                });
+        interpreterAdapters = LanguageAdapter.generateAdapters(interpreterComponent);
+
+        switchLanguageButton.setOnAction(e -> {
+            currentLangIndex = (currentLangIndex + 1) % LanguageAdapter.getLanguages().length;
+            // interpreterAdapters[currentLangIndex].clear();
+            interpreterAdapters[currentLangIndex].showPrompt();
+        });
 
         interpreterAdapters[currentLangIndex].showPrompt();
         interpreterBox.requestFocus();
-        try { interpreterAdapters[0].eval("a=3");} catch(Exception e) {}
     }
 
     public void doInterpreterEval() throws IOException {
@@ -103,7 +95,7 @@ public class Controller {
                 try {
                     doInterpreterEval();
                 } catch (final Exception e) {
-                    System.err.println(e);
+                    e.printStackTrace();
                 }
             } else if (event.getCode() == KeyCode.ESCAPE) // Keyboard turned off.
                 interpreterBox.getParent().requestFocus();
@@ -135,8 +127,8 @@ public class Controller {
             try {
                 doExecutionEval();
             } catch (IOException e) {
+                e.printStackTrace();
             }
         });
     }
-
 }

@@ -75,9 +75,9 @@
                 <artifactId>client-maven-plugin</artifactId>
                 <version>${client.version}</version>
                 <configuration>
-                    <!-- Uncomment to run on android: -->
+                    <!-- Uncomment to run on android: 
                     <target>android</target>
-                    <javafxStaticSdkVersion>14-ea+gvmandroidkeyboard</javafxStaticSdkVersion>
+                    <javafxStaticSdkVersion>14-ea+gvmandroidkeyboard</javafxStaticSdkVersion>-->
 
                     <nativeImageArgs>
                         <list>--verbose</list>
@@ -99,6 +99,7 @@
                         <list>javafx.scene.layout.HBox</list>
                         <list>javafx.scene.layout.VBox</list>
                         <list>javafx.scene.layout.Priority</list>
+                        <list>javafx.scene.input.Clipboard</list>
                         <list>javafx.geometry.Orientation</list>
                         <list>repl.Controller</list>
                     </reflectionList>

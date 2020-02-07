@@ -3,7 +3,10 @@ package repl.util;
 import java.nio.charset.StandardCharsets;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
 import java.util.function.IntSupplier;
 
 import org.graalvm.polyglot.Context;
@@ -21,6 +24,7 @@ import repl.util.TerminalComponent;
 public class LanguageAdapter {
 
     private static Context polyglot = null;
+    private static String[] languages;
     private String languageName;
     private TerminalComponent term;
     private EvalTask runningTask;
@@ -28,7 +32,24 @@ public class LanguageAdapter {
 
     private ByteArrayOutputStream out, log, err;
 
-    public LanguageAdapter(String languageName, TerminalComponent term) {
+    public static LanguageAdapter[] generateAdapters(final TerminalComponent term) {
+        if (polyglot == null) {
+            polyglot = Context.newBuilder().in(term.in).out(term.out).logHandler(term.log).err(term.err)
+                    .allowAllAccess(true).build();
+            List<String> langNames = new ArrayList<>(polyglot.getEngine().getLanguages().keySet());
+            langNames.remove("llvm"); // llvm is not supported, of course
+            languages = (String[]) langNames.toArray(new String[0]);
+        }
+        final LanguageAdapter[] LanguageAdapters = new LanguageAdapter[languages.length];
+
+        for (int i = 0; i < languages.length; i++) {
+           // System.out.println("Lang:'"+languages[i]+"'");
+            LanguageAdapters[i] = new LanguageAdapter(languages[i], term);
+        }
+        return LanguageAdapters;
+    }  
+
+    public LanguageAdapter(final String languageName, final TerminalComponent term) {
 
         this.languageName = languageName;
         this.term = term;
@@ -37,10 +58,6 @@ public class LanguageAdapter {
         this.out = term.out;
         this.log = term.log;
         this.err = term.err;
-
-        if (polyglot == null)
-            polyglot = Context.newBuilder().in(term.in).out(term.out).logHandler(term.log).err(term.err)
-                    .allowAllAccess(true).build();
 
         Value bindings = polyglot.getBindings(languageName);
 
@@ -85,7 +102,7 @@ public class LanguageAdapter {
                 eval("import sys,polyglot", false, true);
                 eval("print('GraalPython {}'.format(sys.version.split()[0]))");
             }
-        } catch (IOException e) { e.printStackTrace();}
+        } catch (final IOException e) { e.printStackTrace();}
     }
 
     public void clear() {
@@ -93,22 +110,22 @@ public class LanguageAdapter {
     }
 
     public void showPrompt() {
-        String prompt = languageName + "> ";
+        final String prompt = languageName + "> ";
         try {
             out.write(prompt.getBytes(StandardCharsets.UTF_8));
-        } catch (Exception e) {
+        } catch (final Exception e) {
         }
     }
 
-    public Value eval(String code) throws IOException {
+    public Value eval(final String code) throws IOException {
         return eval(code, false, false);
     }
 
-    public Value eval(String code, Boolean longTask) throws IOException {
+    public Value eval(final String code, final Boolean longTask) throws IOException {
         return eval(code, longTask, true);
     }
 
-    public Value eval(String code, Boolean longTask, Boolean visible) throws IOException {
+    public Value eval(final String code, final Boolean longTask, final Boolean visible) throws IOException {
         Source source;
         
         if (visible)
@@ -117,7 +134,7 @@ public class LanguageAdapter {
             source = Source.create(languageName, code);
 
         if (longTask) {
-            EvalTask e = new EvalTask(source, visible);
+            final EvalTask e = new EvalTask(source, visible);
             new Thread(e).start();
             return Value.asValue(null);
         }
@@ -125,11 +142,11 @@ public class LanguageAdapter {
     }
 
     protected class EvalTask extends Task {
-        private Source source;
+        private final Source source;
         private Value result;
-        private boolean visible;
+        private final boolean visible;
 
-        public EvalTask(Source source, boolean visible) {
+        public EvalTask(final Source source, final boolean visible) {
             this.source = source;
             this.visible = visible;
         }
@@ -139,7 +156,7 @@ public class LanguageAdapter {
             blocked = true;
             try {
                 result = polyglot.eval(source);
-            } catch (PolyglotException exception) {
+            } catch (final PolyglotException exception) {
                 err.write(exception.getMessage().getBytes(StandardCharsets.UTF_8));
             }
             if (visible)
@@ -164,6 +181,10 @@ public class LanguageAdapter {
     @Override
     public String toString() {
         return getLanguageName();
+    }
+
+    public static String[] getLanguages() {
+        return languages;
     }
 
 }
