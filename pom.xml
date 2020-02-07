@@ -40,7 +40,7 @@
             <artifactId>truffle-api</artifactId>
             <version>SYSTEM</version>
             <scope>system</scope>
-            <systemPath>${java.home}/lib/truffle/truffle-api.jar</systemPath>
+            <systemPath>${env.GRAALVM_HOME}/lib/truffle/truffle-api.jar</systemPath>
         </dependency>
     </dependencies>
 
@@ -75,10 +75,9 @@
                 <artifactId>client-maven-plugin</artifactId>
                 <version>${client.version}</version>
                 <configuration>
-                    <!-- Uncomment to run on android:
-                    
+                    <!-- Uncomment to run on android: -->
                     <target>android</target>
-                    <javafxStaticSdkVersion>14-ea+gvmandroidkeyboard</javafxStaticSdkVersion> -->
+                    <javafxStaticSdkVersion>14-ea+gvmandroidkeyboard</javafxStaticSdkVersion>
 
                     <nativeImageArgs>
                         <list>--verbose</list>
