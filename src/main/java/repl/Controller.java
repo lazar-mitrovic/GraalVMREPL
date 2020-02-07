@@ -40,7 +40,7 @@ public class Controller {
 
     private TerminalComponent interpreterComponent;
 
-    final String[] languages = new String[] { "js" }; // , "python" };
+    final String[] languages = new String[] { "js", "ruby" }; // , "python" };
 
     private int currentLangIndex = 0;
 
@@ -55,21 +55,24 @@ public class Controller {
 
         interpreterAdapters = new LanguageAdapter[languages.length];
 
-        for (int i = 0; i < languages.length; i++) {
-            interpreterAdapters[i] = new LanguageAdapter(languages[i], interpreterComponent);
-        }
-
-        switchLanguageButton.setOnAction(e -> {
-            currentLangIndex = (currentLangIndex + 1) % languages.length;
-            // interpreterAdapters[currentLangIndex].clear();
-            interpreterAdapters[currentLangIndex].showPrompt();
-        });
-
         interpreterComponent.writeLine("GraalVM REPL Prompt");
         interpreterComponent.writeLine(
                 "Copyright (c) 2013-" + String.valueOf(Year.now().getValue()) + ", Oracle and/or its affiliates");
+
+        
+                for (int i = 0; i < languages.length; i++) {
+                    interpreterAdapters[i] = new LanguageAdapter(languages[i], interpreterComponent);
+                }
+        
+                switchLanguageButton.setOnAction(e -> {
+                    currentLangIndex = (currentLangIndex + 1) % languages.length;
+                    // interpreterAdapters[currentLangIndex].clear();
+                    interpreterAdapters[currentLangIndex].showPrompt();
+                });
+
         interpreterAdapters[currentLangIndex].showPrompt();
         interpreterBox.requestFocus();
+        try { interpreterAdapters[0].eval("a=3");} catch(Exception e) {}
     }
 
     public void doInterpreterEval() throws IOException {
