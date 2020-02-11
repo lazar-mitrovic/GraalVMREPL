@@ -38,10 +38,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <compilerArgs>
-                        <arg>--module-path=${GRAALVM_HOME}/jmods</arg>
-                        <arg>--add-modules=ALL-MODULE-PATH</arg>
-                    </compilerArgs>
+                    <executable>${GRAALVM_HOME}/bin/javac</executable>
+                    <fork>true</fork>
                 </configuration>
             </plugin>
 
