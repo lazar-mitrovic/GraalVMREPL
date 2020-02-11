@@ -14,7 +14,6 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <javafx.version>14-ea+7</javafx.version>
-        <graalvm.version>19.3.1</graalvm.version>
         <client.version>0.1.16-SNAPSHOT</client.version>
         <mainClassName>repl.Main</mainClassName>
     </properties>
@@ -30,18 +29,6 @@
             <artifactId>javafx-fxml</artifactId>
             <version>${javafx.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.graalvm.sdk</groupId>
-            <artifactId>graal-sdk</artifactId>
-            <version>${graalvm.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.graalvm.truffle</groupId>
-            <artifactId>truffle-api</artifactId>
-            <version>SYSTEM</version>
-            <scope>system</scope>
-            <systemPath>${env.GRAALVM_HOME}/lib/truffle/truffle-api.jar</systemPath>
-        </dependency>
     </dependencies>
 
     <build>
@@ -51,15 +38,17 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <release>11</release>
+                    <compilerArgs>
+                        <arg>--module-path=${GRAALVM_HOME}/jmods</arg>
+                        <arg>--add-modules=ALL-MODULE-PATH</arg>
+                    </compilerArgs>
                 </configuration>
             </plugin>
-
 
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
-                <version>0.0.3</version>
+                <version>0.0.4</version>
                 <configuration>
                     <options>
                         <option>-agentlib:native-image-agent=config-merge-dir=src/main/resources/META-INF/native-image</option>
@@ -75,19 +64,23 @@
                 <artifactId>client-maven-plugin</artifactId>
                 <version>${client.version}</version>
                 <configuration>
-                    <!-- Uncomment to run on android: 
+                    <!-- Uncomment to run on android: -->
+                    <!--
                     <target>android</target>
-                    <javafxStaticSdkVersion>14-ea+gvmandroidkeyboard</javafxStaticSdkVersion>-->
-
+                    <javafxStaticSdkVersion>14-ea+gvmandroidkeyboard</javafxStaticSdkVersion>
+                    -->
+                    <verbose>true</verbose>
                     <nativeImageArgs>
-                        <list>--verbose</list>
                         <list>--language:js</list>
-                        <!-- <list>->-language:python</list> -->
                         <list>--language:ruby</list>
+                        <!-- <list>->-language:python</list> -->
+
                         <list>-Dtruffle.TruffleRuntime=com.oracle.truffle.api.impl.DefaultTruffleRuntime</list>
                         <list>-Dgraalvm.ForcePolyglotInvalid=false</list>
                         <list>-H:+ReportExceptionStackTraces</list>
                         <list>-H:+AllowIncompleteClasspath</list>
+                        <list>--features=org.graalvm.home.HomeFinderFeature</list>
+                        <!-- <list>-H:LLVMBatchesPerThread=-1</list>-->
                     </nativeImageArgs>
 
                     <reflectionList>
@@ -103,11 +96,9 @@
                         <list>javafx.geometry.Orientation</list>
                         <list>repl.Controller</list>
                     </reflectionList>
-
                     <mainClass>${mainClassName}</mainClass>
                 </configuration>
             </plugin>
-
         </plugins>
 
     </build>
