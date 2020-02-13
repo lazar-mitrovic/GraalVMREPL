@@ -2455,6 +2455,19 @@
   ]
 },
 {
+  "name":"com.oracle.graal.python.builtins.objects.exception.GetTracebackNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.exception.GetTracebackNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"materializedFrame_factory_", "allowUnsafeAccess":true}, 
+    {"name":"onStack_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"com.oracle.graal.python.builtins.objects.floats.FloatBuiltins$HashNode",
   "allDeclaredFields":true
 },
@@ -2769,6 +2782,10 @@
   "allDeclaredFields":true
 },
 {
+  "name":"com.oracle.graal.python.builtins.objects.ints.IntBuiltins$StrNode",
+  "allDeclaredFields":true
+},
+{
   "name":"com.oracle.graal.python.builtins.objects.ints.IntBuiltins$SubNode",
   "allDeclaredFields":true
 },
@@ -2888,6 +2905,15 @@
     {"name":"powModuloPInt_powNode_", "allowUnsafeAccess":true}, 
     {"name":"powModulo_modNode_", "allowUnsafeAccess":true}, 
     {"name":"powModulo_powNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.ints.IntBuiltinsFactory$StrNodeFactory$StrNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"nativeVoidPtr_lib_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
@@ -8757,6 +8783,10 @@
   "fields":[{"name":"stringValue", "allowUnsafeAccess":true}]
 },
 {
+  "name":"com.oracle.truffle.js.nodes.access.JSConstantNode$JSConstantUndefinedNode",
+  "allDeclaredFields":true
+},
+{
   "name":"com.oracle.truffle.js.nodes.access.JSReadCurrentFrameSlotNode",
   "allDeclaredFields":true
 },
@@ -8865,6 +8895,11 @@
   "allDeclaredFields":true
 },
 {
+  "name":"com.oracle.truffle.js.nodes.access.PropertyGetNode$IntPropertyGetNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"location", "allowUnsafeAccess":true}]
+},
+{
   "name":"com.oracle.truffle.js.nodes.access.PropertyGetNode$LinkedPropertyGetNode",
   "allDeclaredFields":true
 },
@@ -8898,6 +8933,14 @@
   "name":"com.oracle.truffle.js.nodes.access.PropertySetNode$DataPropertySetNode",
   "allDeclaredFields":true,
   "fields":[{"name":"cache", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.PropertySetNode$IntPropertySetNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"location", "allowUnsafeAccess":true}, 
+    {"name":"property", "allowUnsafeAccess":true}
+  ]
 },
 {
   "name":"com.oracle.truffle.js.nodes.access.PropertySetNode$LinkedPropertySetNode",
@@ -9005,12 +9048,33 @@
   ]
 },
 {
+  "name":"com.oracle.truffle.js.nodes.binary.JSAddSubNumericUnitNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"isAddition", "allowUnsafeAccess":true}, 
+    {"name":"truncate", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.binary.JSAddSubNumericUnitNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"com.oracle.truffle.js.nodes.binary.JSBinaryNode",
   "allDeclaredFields":true,
   "fields":[
     {"name":"leftNode", "allowUnsafeAccess":true}, 
     {"name":"rightNode", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.binary.JSCompareNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"stringToNumberNode", "allowUnsafeAccess":true}]
 },
 {
   "name":"com.oracle.truffle.js.nodes.binary.JSConcatStringsNode",
@@ -9024,6 +9088,41 @@
     {"name":"concat_cache", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.binary.JSLessThanNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.binary.JSLessThanNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"generic_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.cast.JSToNumericNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"toNumberNode", "allowUnsafeAccess":true}, 
+    {"name":"toPrimitiveNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.cast.JSToNumericNode$JSToNumericWrapperNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"toNumericNode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.cast.JSToNumericNodeGen",
+  "allDeclaredFields":true,
+  "fields":[{"name":"state_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.cast.JSToNumericNodeGen$JSToNumericWrapperNodeGen",
+  "allDeclaredFields":true
 },
 {
   "name":"com.oracle.truffle.js.nodes.cast.JSToObjectNode",
@@ -9089,6 +9188,40 @@
     {"name":"nonArrayIndex1_toPropertyKey_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.control.AbstractBlockNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"statements", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.control.AbstractRepeatingNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"bodyNode", "allowUnsafeAccess":true}, 
+    {"name":"conditionNode", "allowUnsafeAccess":true}, 
+    {"name":"conditionProfile", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.control.ExprBlockNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.control.StatementNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.control.WhileNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"loop", "allowUnsafeAccess":true}, 
+    {"name":"loopType", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.control.WhileNode$WhileDoRepeatingNode",
+  "allDeclaredFields":true
 },
 {
   "name":"com.oracle.truffle.js.nodes.function.AbstractBodyNode",
@@ -10614,6 +10747,11 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.VMPrimitiveNodes$VMObjectRespondToNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"respondToNode", "allowUnsafeAccess":true}]
+},
+{
   "name":"org.truffleruby.core.VMPrimitiveNodes$VMWatchSignalNode",
   "allDeclaredFields":true
 },
@@ -10642,6 +10780,20 @@
     {"name":"makeStringNode_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}, 
     {"name":"yieldNode_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.VMPrimitiveNodesFactory$VMObjectRespondToNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.VMPrimitiveNodesFactory$VMObjectRespondToNodeFactory$VMObjectRespondToNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -10939,6 +11091,10 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.array.ArrayNodes$AddNode",
+  "allDeclaredFields":true
+},
+{
   "name":"org.truffleruby.core.array.ArrayNodes$AllocateNode",
   "allDeclaredFields":true,
   "fields":[{"name":"allocateNode", "allowUnsafeAccess":true}]
@@ -10996,6 +11152,11 @@
   "fields":[{"name":"dispatch", "allowUnsafeAccess":true}]
 },
 {
+  "name":"org.truffleruby.core.array.ArrayNodes$MapInPlaceNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"writeNode", "allowUnsafeAccess":true}]
+},
+{
   "name":"org.truffleruby.core.array.ArrayNodes$MapNode",
   "allDeclaredFields":true
 },
@@ -11005,8 +11166,67 @@
   "fields":[{"name":"appendOneNode", "allowUnsafeAccess":true}]
 },
 {
+  "name":"org.truffleruby.core.array.ArrayNodes$RejectInPlaceNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodes$RejectNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodes$SelectNode",
+  "allDeclaredFields":true
+},
+{
   "name":"org.truffleruby.core.array.ArrayNodes$SizeNode",
   "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodes$SortNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodes$StealArrayStorageNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$AddNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$AddNodeFactory$AddNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"a_", "allowUnsafeAccess":true}, 
+    {"name":"addGeneralize_cache", "allowUnsafeAccess":true}, 
+    {"name":"addSameType_cache", "allowUnsafeAccess":true}, 
+    {"name":"b_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$AddNodeFactory$AddNodeGen$AddGeneralizeData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"aCopyToNode_", "allowUnsafeAccess":true}, 
+    {"name":"aStrategy_", "allowUnsafeAccess":true}, 
+    {"name":"bCopyToNode_", "allowUnsafeAccess":true}, 
+    {"name":"bStrategy_", "allowUnsafeAccess":true}, 
+    {"name":"generalized_", "allowUnsafeAccess":true}, 
+    {"name":"newStoreNode_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$AddNodeFactory$AddNodeGen$AddSameTypeData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"copyToNode_", "allowUnsafeAccess":true}, 
+    {"name":"mutableStrategy_", "allowUnsafeAccess":true}, 
+    {"name":"newStoreNode_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"strategy_", "allowUnsafeAccess":true}
+  ]
 },
 {
   "name":"org.truffleruby.core.array.ArrayNodesFactory$AllocateNodeFactory",
@@ -11199,6 +11419,20 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$MapInPlaceNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$MapInPlaceNodeFactory$MapInPlaceNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"iteratorNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.array.ArrayNodesFactory$MapNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -11237,6 +11471,82 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$RejectInPlaceNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$RejectInPlaceNodeFactory$RejectInPlaceNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"rejectInPlace_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$RejectInPlaceNodeFactory$RejectInPlaceNodeGen$RejectInPlaceData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"copyToNode_", "allowUnsafeAccess":true}, 
+    {"name":"getNode_", "allowUnsafeAccess":true}, 
+    {"name":"mutableStrategy_", "allowUnsafeAccess":true}, 
+    {"name":"newStoreNode_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"setNode_", "allowUnsafeAccess":true}, 
+    {"name":"strategy_", "allowUnsafeAccess":true}, 
+    {"name":"unshareNode_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$RejectNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$RejectNodeFactory$RejectNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"rejectOther_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$RejectNodeFactory$RejectNodeGen$RejectOtherData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arrayBuilder_", "allowUnsafeAccess":true}, 
+    {"name":"getNode_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"strategy_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$SelectNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$SelectNodeFactory$SelectNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"selectOther_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$SelectNodeFactory$SelectNodeGen$SelectOtherData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arrayBuilder_", "allowUnsafeAccess":true}, 
+    {"name":"getNode_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"strategy_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.array.ArrayNodesFactory$SizeNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -11250,12 +11560,72 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$SortNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$SortNodeFactory$SortNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"sortArrayWithoutBlock_cache", "allowUnsafeAccess":true}, 
+    {"name":"sortGenericWithBlock_fallbackNode_", "allowUnsafeAccess":true}, 
+    {"name":"sortPrimitiveArrayNoBlock_cache", "allowUnsafeAccess":true}, 
+    {"name":"sortVeryShort_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$SortNodeFactory$SortNodeGen$SortVeryShortData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cmpIntNode_", "allowUnsafeAccess":true}, 
+    {"name":"compareDispatchNode_", "allowUnsafeAccess":true}, 
+    {"name":"getNode_", "allowUnsafeAccess":true}, 
+    {"name":"mutableStrategy_", "allowUnsafeAccess":true}, 
+    {"name":"newStoreNode_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"originalGetNode_", "allowUnsafeAccess":true}, 
+    {"name":"setNode_", "allowUnsafeAccess":true}, 
+    {"name":"strategy_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$StealArrayStorageNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$StealArrayStorageNodeFactory$StealArrayStorageNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"stealStorage_cache", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$StealArrayStorageNodeFactory$StealArrayStorageNodeGen$StealStorageData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"otherStrategy_", "allowUnsafeAccess":true}, 
+    {"name":"propagateSharingNode_", "allowUnsafeAccess":true}, 
+    {"name":"strategy_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.array.ArrayOperationNodes$ArrayBoxedCopyNode",
   "allDeclaredFields":true,
   "fields":[{"name":"strategy", "allowUnsafeAccess":true}]
 },
 {
   "name":"org.truffleruby.core.array.ArrayOperationNodes$ArrayCapacityNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.array.ArrayOperationNodes$ArrayCommonUnshareStorageNode",
   "allDeclaredFields":true
 },
 {
@@ -11279,6 +11649,10 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.array.ArrayOperationNodes$ArrayUnshareStorageNode",
+  "allDeclaredFields":true
+},
+{
   "name":"org.truffleruby.core.array.ArrayOperationNodesFactory$ArrayBoxedCopyNodeGen",
   "allDeclaredFields":true,
   "fields":[
@@ -11286,6 +11660,10 @@
     {"name":"copyToNode_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayOperationNodesFactory$ArrayCommonUnshareStorageNodeGen",
+  "allDeclaredFields":true
 },
 {
   "name":"org.truffleruby.core.array.ArrayReadDenormalizedNode",
@@ -11402,11 +11780,32 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.array.IntegerArrayNodes$IntArrayCopyStoreNode",
+  "allDeclaredFields":true
+},
+{
   "name":"org.truffleruby.core.array.IntegerArrayNodes$IntArrayCopyToNode",
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.array.IntegerArrayNodes$IntArrayGetNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.array.IntegerArrayNodes$IntArrayNewStoreNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.array.IntegerArrayNodes$IntArraySetNode",
+  "allDeclaredFields":true
+},
+{
   "name":"org.truffleruby.core.array.IntegerArrayNodesFactory$IntArrayCapacityNodeGen",
+  "allDeclaredFields":true,
+  "fields":[{"name":"state_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"org.truffleruby.core.array.IntegerArrayNodesFactory$IntArrayCopyStoreNodeGen",
   "allDeclaredFields":true,
   "fields":[{"name":"state_", "allowUnsafeAccess":true}]
 },
@@ -11426,6 +11825,20 @@
     {"name":"setNode_", "allowUnsafeAccess":true}, 
     {"name":"toStrategy_", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"org.truffleruby.core.array.IntegerArrayNodesFactory$IntArrayGetNodeGen",
+  "allDeclaredFields":true,
+  "fields":[{"name":"state_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"org.truffleruby.core.array.IntegerArrayNodesFactory$IntArrayNewStoreNodeGen",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.array.IntegerArrayNodesFactory$IntArraySetNodeGen",
+  "allDeclaredFields":true,
+  "fields":[{"name":"state_", "allowUnsafeAccess":true}]
 },
 {
   "name":"org.truffleruby.core.array.ObjectArrayNodes$ObjectArrayCapacityNode",
@@ -11493,6 +11906,10 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.basicobject.BasicObjectNodes$MethodMissingNode",
+  "allDeclaredFields":true
+},
+{
   "name":"org.truffleruby.core.basicobject.BasicObjectNodes$NotEqualNode",
   "allDeclaredFields":true,
   "fields":[
@@ -11535,6 +11952,21 @@
 {
   "name":"org.truffleruby.core.basicobject.BasicObjectNodesFactory$InitializeNodeFactory$InitializeNodeGen",
   "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.basicobject.BasicObjectNodesFactory$MethodMissingNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.basicobject.BasicObjectNodesFactory$MethodMissingNodeFactory$MethodMissingNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"arguments3_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
 },
 {
   "name":"org.truffleruby.core.basicobject.BasicObjectNodesFactory$NotEqualNodeFactory",
@@ -11693,6 +12125,18 @@
   "fields":[
     {"name":"state_", "allowUnsafeAccess":true}, 
     {"name":"value_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.cast.CmpIntNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.cast.CmpIntNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cmpObject_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -11859,6 +12303,20 @@
   "name":"org.truffleruby.core.cast.ToSNode[]"
 },
 {
+  "name":"org.truffleruby.core.cast.ToStrNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.cast.ToStrNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"child_", "allowUnsafeAccess":true}, 
+    {"name":"coerceObject_errorProfile_", "allowUnsafeAccess":true}, 
+    {"name":"coerceObject_toStrNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.cast.ToStringOrSymbolNode",
   "allDeclaredFields":true,
   "fields":[{"name":"toStr", "allowUnsafeAccess":true}]
@@ -11895,6 +12353,11 @@
     {"name":"negotiateCompatibleEncodingNode", "allowUnsafeAccess":true}, 
     {"name":"toEncodingNode", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"org.truffleruby.core.encoding.EncodingNodes$CheckRopeEncodingNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"negotiateCompatibleEncodingNode", "allowUnsafeAccess":true}]
 },
 {
   "name":"org.truffleruby.core.encoding.EncodingNodes$EachAliasNode",
@@ -11965,6 +12428,14 @@
 },
 {
   "name":"org.truffleruby.core.encoding.EncodingNodesFactory$CheckEncodingNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"errorProfile_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.encoding.EncodingNodesFactory$CheckRopeEncodingNodeGen",
   "allDeclaredFields":true,
   "fields":[
     {"name":"errorProfile_", "allowUnsafeAccess":true}, 
@@ -12102,6 +12573,216 @@
   "fields":[
     {"name":"arguments0_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.exception.ExceptionNodes$CauseNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.exception.ExceptionNodes$FormatterPrimitiveNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.exception.ExceptionNodes$MessagePrimitiveNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.exception.ExceptionNodes$MessageSetNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.exception.ExceptionNodesFactory$CauseNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.exception.ExceptionNodesFactory$CauseNodeFactory$CauseNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.exception.ExceptionNodesFactory$FormatterPrimitiveNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.exception.ExceptionNodesFactory$FormatterPrimitiveNodeFactory$FormatterPrimitiveNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.exception.ExceptionNodesFactory$MessagePrimitiveNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.exception.ExceptionNodesFactory$MessagePrimitiveNodeFactory$MessagePrimitiveNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.exception.ExceptionNodesFactory$MessageSetNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.exception.ExceptionNodesFactory$MessageSetNodeFactory$MessageSetNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.exception.NameErrorNodes$NameNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.exception.NameErrorNodes$ReceiverNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.exception.NameErrorNodesFactory$NameNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.exception.NameErrorNodesFactory$NameNodeFactory$NameNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.exception.NameErrorNodesFactory$ReceiverNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.exception.NameErrorNodesFactory$ReceiverNodeFactory$ReceiverNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.format.FormatNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"codeRangeIncreasedProfile", "allowUnsafeAccess":true}, 
+    {"name":"sourceRangeProfile", "allowUnsafeAccess":true}, 
+    {"name":"tooFewArgumentsProfile", "allowUnsafeAccess":true}, 
+    {"name":"writeMoreThanZeroBytes", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.format.FormatRootNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"child", "allowUnsafeAccess":true}, 
+    {"name":"context", "allowUnsafeAccess":true}, 
+    {"name":"encoding", "allowUnsafeAccess":true}, 
+    {"name":"expectedLength", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.format.LiteralFormatNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"value", "allowUnsafeAccess":true}]
+},
+{
+  "name":"org.truffleruby.core.format.control.SequenceNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"children", "allowUnsafeAccess":true}]
+},
+{
+  "name":"org.truffleruby.core.format.convert.ToStringNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"conversionMethod", "allowUnsafeAccess":true}, 
+    {"name":"convertNumbersToStrings", "allowUnsafeAccess":true}, 
+    {"name":"inspectNode", "allowUnsafeAccess":true}, 
+    {"name":"inspectOnConversionFailure", "allowUnsafeAccess":true}, 
+    {"name":"isTaintedNode", "allowUnsafeAccess":true}, 
+    {"name":"taintedProfile", "allowUnsafeAccess":true}, 
+    {"name":"toSNode", "allowUnsafeAccess":true}, 
+    {"name":"toStrNode", "allowUnsafeAccess":true}, 
+    {"name":"valueOnNil", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.format.convert.ToStringNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"toString3_bytesNode_", "allowUnsafeAccess":true}, 
+    {"name":"toString4_bytesNode_", "allowUnsafeAccess":true}, 
+    {"name":"toStringString_bytesNode_", "allowUnsafeAccess":true}, 
+    {"name":"value_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.format.read.SourceNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.format.read.array.ReadStringNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"conversionMethod", "allowUnsafeAccess":true}, 
+    {"name":"convertNumbersToStrings", "allowUnsafeAccess":true}, 
+    {"name":"inspectOnConversionFailure", "allowUnsafeAccess":true}, 
+    {"name":"toStringNode", "allowUnsafeAccess":true}, 
+    {"name":"valueOnNil", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.format.read.array.ReadStringNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"read4_cache", "allowUnsafeAccess":true}, 
+    {"name":"source_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.format.read.array.ReadStringNodeGen$Read4Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"getNode_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"strategy_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.format.write.bytes.WriteByteNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.format.write.bytes.WriteByteNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"value_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.format.write.bytes.WriteBytesNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.format.write.bytes.WriteBytesNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"value_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -12732,6 +13413,22 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.inlined.InlinedRightShiftNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"fixnumRightShift", "allowUnsafeAccess":true}]
+},
+{
+  "name":"org.truffleruby.core.inlined.InlinedRightShiftNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"intRightShift_assumption0_", "allowUnsafeAccess":true}, 
+    {"name":"left_", "allowUnsafeAccess":true}, 
+    {"name":"longRightShift_assumption0_", "allowUnsafeAccess":true}, 
+    {"name":"right_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.inlined.InlinedSubNode",
   "allDeclaredFields":true,
   "fields":[{"name":"fixnumSub", "allowUnsafeAccess":true}]
@@ -12819,6 +13516,11 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.kernel.KernelNodes$InstanceVariablesNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"instanceVariablesNode", "allowUnsafeAccess":true}]
+},
+{
   "name":"org.truffleruby.core.kernel.KernelNodes$KernelClassNode",
   "allDeclaredFields":true,
   "fields":[{"name":"classNode", "allowUnsafeAccess":true}]
@@ -12859,6 +13561,11 @@
 {
   "name":"org.truffleruby.core.kernel.KernelNodes$MethodsNode",
   "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.kernel.KernelNodes$PrivateMethodsNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"metaClassNode", "allowUnsafeAccess":true}]
 },
 {
   "name":"org.truffleruby.core.kernel.KernelNodes$ProcNode",
@@ -12905,6 +13612,17 @@
   "name":"org.truffleruby.core.kernel.KernelNodes$SingletonClassMethodNode",
   "allDeclaredFields":true,
   "fields":[{"name":"singletonClassNode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"org.truffleruby.core.kernel.KernelNodes$SprintfNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exceptionProfile", "allowUnsafeAccess":true}, 
+    {"name":"makeStringNode", "allowUnsafeAccess":true}, 
+    {"name":"readDebugGlobalNode", "allowUnsafeAccess":true}, 
+    {"name":"resizeProfile", "allowUnsafeAccess":true}, 
+    {"name":"taintNode", "allowUnsafeAccess":true}
+  ]
 },
 {
   "name":"org.truffleruby.core.kernel.KernelNodesFactory$CaseCompareNodeFactory",
@@ -12986,6 +13704,23 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.kernel.KernelNodesFactory$EvalNodeFactory$EvalNodeGen$EvalBindingAddsVarsCachedData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"bindingDescriptor_", "allowUnsafeAccess":true}, 
+    {"name":"cachedCallTarget_", "allowUnsafeAccess":true}, 
+    {"name":"cachedFile_", "allowUnsafeAccess":true}, 
+    {"name":"cachedLine_", "allowUnsafeAccess":true}, 
+    {"name":"cachedRootNode_", "allowUnsafeAccess":true}, 
+    {"name":"cachedSource_", "allowUnsafeAccess":true}, 
+    {"name":"callNode_", "allowUnsafeAccess":true}, 
+    {"name":"equalNode_", "allowUnsafeAccess":true}, 
+    {"name":"newBindingDescriptor_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"rootNodeToEval_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.kernel.KernelNodesFactory$EvalNodeFactory$EvalNodeGen$EvalBindingNoAddsVarsCachedData",
   "allDeclaredFields":true,
   "fields":[
@@ -13062,6 +13797,15 @@
     {"name":"state_", "allowUnsafeAccess":true}, 
     {"name":"value_", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"org.truffleruby.core.kernel.KernelNodesFactory$InstanceVariablesNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.kernel.KernelNodesFactory$InstanceVariablesNodeFactory$InstanceVariablesNodeGen",
+  "allDeclaredFields":true,
+  "fields":[{"name":"arguments0_", "allowUnsafeAccess":true}]
 },
 {
   "name":"org.truffleruby.core.kernel.KernelNodesFactory$KernelClassNodeFactory",
@@ -13164,6 +13908,19 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.kernel.KernelNodesFactory$PrivateMethodsNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.kernel.KernelNodesFactory$PrivateMethodsNodeFactory$PrivateMethodsNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"includeAncestors_", "allowUnsafeAccess":true}, 
+    {"name":"object_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.kernel.KernelNodesFactory$ProcNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -13228,6 +13985,36 @@
   "name":"org.truffleruby.core.kernel.KernelNodesFactory$SingletonClassMethodNodeFactory$SingletonClassMethodNodeGen",
   "allDeclaredFields":true,
   "fields":[{"name":"arguments0_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"org.truffleruby.core.kernel.KernelNodesFactory$SprintfNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.kernel.KernelNodesFactory$SprintfNodeFactory$SprintfNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"formatCached_cache", "allowUnsafeAccess":true}, 
+    {"name":"formatUncached_callPackNode_", "allowUnsafeAccess":true}, 
+    {"name":"formatUncached_isTaintedNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.kernel.KernelNodesFactory$SprintfNodeFactory$SprintfNodeGen$FormatCachedData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cachedFormatLength_", "allowUnsafeAccess":true}, 
+    {"name":"cachedFormat_", "allowUnsafeAccess":true}, 
+    {"name":"cachedIsDebug_", "allowUnsafeAccess":true}, 
+    {"name":"callPackNode_", "allowUnsafeAccess":true}, 
+    {"name":"equalNode_", "allowUnsafeAccess":true}, 
+    {"name":"isTaintedNode_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}
+  ]
 },
 {
   "name":"org.truffleruby.core.kernel.TruffleKernelNodes$AtExitSystemNode",
@@ -13358,6 +14145,11 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.method.MethodNodes$CallNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"callBoundMethodNode", "allowUnsafeAccess":true}]
+},
+{
   "name":"org.truffleruby.core.method.MethodNodes$MethodUnimplementNode",
   "allDeclaredFields":true
 },
@@ -13365,6 +14157,11 @@
   "name":"org.truffleruby.core.method.MethodNodes$SetReceiverNode",
   "allDeclaredFields":true,
   "fields":[{"name":"methodCallNode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"org.truffleruby.core.method.MethodNodes$SuperMethodNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"metaClassNode", "allowUnsafeAccess":true}]
 },
 {
   "name":"org.truffleruby.core.method.MethodNodes$ToProcNode",
@@ -13376,11 +14173,37 @@
   "fields":[{"name":"classNode", "allowUnsafeAccess":true}]
 },
 {
+  "name":"org.truffleruby.core.method.MethodNodesFactory$CallNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.method.MethodNodesFactory$CallNodeFactory$CallNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.method.MethodNodesFactory$MethodUnimplementNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.core.method.MethodNodesFactory$MethodUnimplementNodeFactory$MethodUnimplementNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.method.MethodNodesFactory$SuperMethodNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.method.MethodNodesFactory$SuperMethodNodeFactory$SuperMethodNodeGen",
   "allDeclaredFields":true,
   "fields":[
     {"name":"arguments0_", "allowUnsafeAccess":true}, 
@@ -13478,6 +14301,10 @@
   "fields":[{"name":"callBlockNode", "allowUnsafeAccess":true}]
 },
 {
+  "name":"org.truffleruby.core.module.ModuleNodes$ClassVariablesNode",
+  "allDeclaredFields":true
+},
+{
   "name":"org.truffleruby.core.module.ModuleNodes$ConstSetNode",
   "allDeclaredFields":true,
   "fields":[{"name":"warnAlreadyInitializedNode", "allowUnsafeAccess":true}]
@@ -13539,6 +14366,11 @@
   "fields":[{"name":"setVisibilityNode", "allowUnsafeAccess":true}]
 },
 {
+  "name":"org.truffleruby.core.module.ModuleNodes$NameNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"makeStringNode", "allowUnsafeAccess":true}]
+},
+{
   "name":"org.truffleruby.core.module.ModuleNodes$PrependFeaturesNode",
   "allDeclaredFields":true,
   "fields":[{"name":"taintResultNode", "allowUnsafeAccess":true}]
@@ -13588,6 +14420,14 @@
   "fields":[
     {"name":"setMethodVisibilityNode", "allowUnsafeAccess":true}, 
     {"name":"visibility", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.module.ModuleNodes$ToSNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"callRbInspect", "allowUnsafeAccess":true}, 
+    {"name":"makeStringNode", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -13739,6 +14579,18 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.module.ModuleNodesFactory$ClassVariablesNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.module.ModuleNodesFactory$ClassVariablesNodeFactory$ClassVariablesNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.module.ModuleNodesFactory$ConstSetNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -13881,6 +14733,19 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.module.ModuleNodesFactory$NameNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.module.ModuleNodesFactory$NameNodeFactory$NameNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"fieldsProfile_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.module.ModuleNodesFactory$PrependFeaturesNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -13985,6 +14850,18 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.module.ModuleNodesFactory$ToSNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.module.ModuleNodesFactory$ToSNodeFactory$ToSNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.module.ModuleNodesFactory$UndefMethodNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -14027,6 +14904,158 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.numeric.FixnumOrBignumNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"intProfile", "allowUnsafeAccess":true}, 
+    {"name":"integerFromDoubleProfile", "allowUnsafeAccess":true}, 
+    {"name":"longFromDoubleProfile", "allowUnsafeAccess":true}, 
+    {"name":"lowerProfile", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.numeric.FloatNodes$AddNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.numeric.FloatNodes$CeilNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"fixnumOrBignum", "allowUnsafeAccess":true}]
+},
+{
+  "name":"org.truffleruby.core.numeric.FloatNodes$DivNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.numeric.FloatNodes$EqualNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"fallbackCallNode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"org.truffleruby.core.numeric.FloatNodes$FloorNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"fixnumOrBignum", "allowUnsafeAccess":true}]
+},
+{
+  "name":"org.truffleruby.core.numeric.FloatNodes$GreaterEqualNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.numeric.FloatNodes$GreaterNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.numeric.FloatNodes$SubNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.numeric.FloatNodesFactory$AddNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.numeric.FloatNodesFactory$AddNodeFactory$AddNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"addCoerced_redoCoerced_", "allowUnsafeAccess":true}, 
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.numeric.FloatNodesFactory$CeilNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.numeric.FloatNodesFactory$CeilNodeFactory$CeilNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.numeric.FloatNodesFactory$DivNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.numeric.FloatNodesFactory$DivNodeFactory$DivNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"divCoerced_redoCoerced_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.numeric.FloatNodesFactory$EqualNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.numeric.FloatNodesFactory$EqualNodeFactory$EqualNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.numeric.FloatNodesFactory$FloorNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.numeric.FloatNodesFactory$FloorNodeFactory$FloorNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.numeric.FloatNodesFactory$GreaterEqualNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.numeric.FloatNodesFactory$GreaterEqualNodeFactory$GreaterEqualNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"greaterEqualCoerced_redoCompare_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.numeric.FloatNodesFactory$GreaterNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.numeric.FloatNodesFactory$GreaterNodeFactory$GreaterNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"greaterCoerced_redoCompare_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.numeric.FloatNodesFactory$SubNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.numeric.FloatNodesFactory$SubNodeFactory$SubNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"subCoerced_redoCoerced_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.numeric.IntegerNodes$AddNode",
   "allDeclaredFields":true
 },
@@ -14048,6 +15077,14 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.numeric.IntegerNodes$GreaterEqualNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.numeric.IntegerNodes$GreaterNode",
+  "allDeclaredFields":true
+},
+{
   "name":"org.truffleruby.core.numeric.IntegerNodes$IntegerLowerNode",
   "allDeclaredFields":true
 },
@@ -14058,6 +15095,18 @@
     {"name":"absNode", "allowUnsafeAccess":true}, 
     {"name":"fallbackCallNode", "allowUnsafeAccess":true}, 
     {"name":"rightShiftNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.numeric.IntegerNodes$MulNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.numeric.IntegerNodes$RightShiftNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"fallbackCallNode", "allowUnsafeAccess":true}, 
+    {"name":"leftShiftNode", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -14116,6 +15165,34 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.numeric.IntegerNodesFactory$GreaterEqualNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.numeric.IntegerNodesFactory$GreaterEqualNodeFactory$GreaterEqualNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"greaterEqualCoerced_redoCompare_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.numeric.IntegerNodesFactory$GreaterNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.numeric.IntegerNodesFactory$GreaterNodeFactory$GreaterNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"greaterCoerced_redoCompare_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.numeric.IntegerNodesFactory$IntegerLowerNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -14138,6 +15215,38 @@
     {"name":"leftShiftCoerced_toIntNode_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"org.truffleruby.core.numeric.IntegerNodesFactory$MulNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.numeric.IntegerNodesFactory$MulNodeFactory$MulNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"mul7_redoCoerced_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.numeric.IntegerNodesFactory$RightShiftNodeFactory$RightShiftNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"rightShift0_profile_", "allowUnsafeAccess":true}, 
+    {"name":"rightShift1_profile_", "allowUnsafeAccess":true}, 
+    {"name":"rightShift4_bPositive_", "allowUnsafeAccess":true}, 
+    {"name":"rightShiftCoerced_toIntNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.numeric.IntegerNodesFactory$SubNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.core.numeric.IntegerNodesFactory$SubNodeFactory$SubNodeGen",
@@ -14248,6 +15357,11 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.range.RangeNodes$ToANode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"toAInternalCall", "allowUnsafeAccess":true}]
+},
+{
   "name":"org.truffleruby.core.range.RangeNodesFactory$NewNodeFactory$NewNodeGen",
   "allDeclaredFields":true,
   "fields":[
@@ -14255,6 +15369,18 @@
     {"name":"end_", "allowUnsafeAccess":true}, 
     {"name":"excludeEnd_", "allowUnsafeAccess":true}, 
     {"name":"rubyClass_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.range.RangeNodesFactory$ToANodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.range.RangeNodesFactory$ToANodeFactory$ToANodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
@@ -14465,6 +15591,10 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.rope.RopeNodes$CalculateCharacterLengthNode",
+  "allDeclaredFields":true
+},
+{
   "name":"org.truffleruby.core.rope.RopeNodes$CharacterLengthNode",
   "allDeclaredFields":true
 },
@@ -14582,6 +15712,19 @@
     {"name":"calculateAttributesGeneric_cache", "allowUnsafeAccess":true}, 
     {"name":"exclude_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.rope.RopeNodesFactory$CalculateCharacterLengthNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"brokenOrUnknownWithRecovery_minEncodingWidthUsedProfile_", "allowUnsafeAccess":true}, 
+    {"name":"brokenOrUnknownWithRecovery_validCharWidthProfile_", "allowUnsafeAccess":true}, 
+    {"name":"brokenOrUnknownWithoutRecovery_byteOffsetOutOfBoundsProfile_", "allowUnsafeAccess":true}, 
+    {"name":"brokenOrUnknownWithoutRecovery_validCharWidthProfile_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"validAsciiCompatible_asciiCharProfile_", "allowUnsafeAccess":true}, 
+    {"name":"validUtf8_cache", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -14808,6 +15951,27 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.string.StringNodes$DeleteBangNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"deleteBangRopesNode", "allowUnsafeAccess":true}, 
+    {"name":"toStr", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.string.StringNodes$DeleteBangRopesNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.string.StringNodes$EachCharNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"allocateObjectNode", "allowUnsafeAccess":true}, 
+    {"name":"bytesNode", "allowUnsafeAccess":true}, 
+    {"name":"substringNode", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.string.StringNodes$EqualNode",
   "allDeclaredFields":true,
   "fields":[
@@ -14921,6 +16085,11 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.string.StringNodes$StringDowncaseBangPrimitiveNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"singleByteOptimizableNode", "allowUnsafeAccess":true}]
+},
+{
   "name":"org.truffleruby.core.string.StringNodes$StringEqualNode",
   "allDeclaredFields":true,
   "fields":[{"name":"areComparableNode", "allowUnsafeAccess":true}]
@@ -14931,12 +16100,30 @@
   "fields":[{"name":"makeStringNode", "allowUnsafeAccess":true}]
 },
 {
+  "name":"org.truffleruby.core.string.StringNodes$StringIndexPrimitiveNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"checkEncodingNode", "allowUnsafeAccess":true}, 
+    {"name":"codeRangeNode", "allowUnsafeAccess":true}, 
+    {"name":"singleByteNode", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.string.StringNodes$StringPatternPrimitiveNode",
   "allDeclaredFields":true,
   "fields":[
     {"name":"allocateObjectNode", "allowUnsafeAccess":true}, 
     {"name":"makeLeafRopeNode", "allowUnsafeAccess":true}, 
     {"name":"repeatNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.string.StringNodes$StringRindexPrimitiveNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"checkEncodingNode", "allowUnsafeAccess":true}, 
+    {"name":"codeRangeNode", "allowUnsafeAccess":true}, 
+    {"name":"singleByteNode", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -14972,9 +16159,29 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.string.StringNodes$ToSNode",
+  "allDeclaredFields":true
+},
+{
   "name":"org.truffleruby.core.string.StringNodes$ToSymNode",
   "allDeclaredFields":true,
   "fields":[{"name":"codeRangeNode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"org.truffleruby.core.string.StringNodes$TrBangNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"checkEncodingNode", "allowUnsafeAccess":true}, 
+    {"name":"deleteBangNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.string.StringNodes$TrTableNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"checkEncodingNode", "allowUnsafeAccess":true}, 
+    {"name":"ropeEqualNode", "allowUnsafeAccess":true}
+  ]
 },
 {
   "name":"org.truffleruby.core.string.StringNodesFactory$ASCIIOnlyNodeFactory",
@@ -15056,6 +16263,43 @@
     {"name":"concatMany_cache", "allowUnsafeAccess":true}, 
     {"name":"concat_stringAppendNode_", "allowUnsafeAccess":true}, 
     {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.string.StringNodesFactory$DeleteBangNodeFactory$DeleteBangNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"deleteBang_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.string.StringNodesFactory$DeleteBangRopesNodeFactory$DeleteBangRopesNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"deleteBangFast_cache", "allowUnsafeAccess":true}, 
+    {"name":"deleteBang_errorProfile_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.string.StringNodesFactory$EachCharNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.string.StringNodesFactory$EachCharNodeFactory$EachCharNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"calculateCharacterLengthNode_", "allowUnsafeAccess":true}, 
+    {"name":"codeRangeNode_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
@@ -15290,6 +16534,22 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.string.StringNodesFactory$StringDowncaseBangPrimitiveNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.string.StringNodesFactory$StringDowncaseBangPrimitiveNodeFactory$StringDowncaseBangPrimitiveNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"wncaseMBCAsciiOnly_cache", "allowUnsafeAccess":true}, 
+    {"name":"wncaseMBC_cache", "allowUnsafeAccess":true}, 
+    {"name":"wncaseSingleByte_invertAsciiCaseNode_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.string.StringNodesFactory$StringEqualNodeGen",
   "allDeclaredFields":true,
   "fields":[
@@ -15313,6 +16573,24 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.string.StringNodesFactory$StringIndexPrimitiveNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.string.StringNodesFactory$StringIndexPrimitiveNodeFactory$StringIndexPrimitiveNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"stringIndexGeneric_cache", "allowUnsafeAccess":true}, 
+    {"name":"stringIndexMultiBytePattern_cache", "allowUnsafeAccess":true}, 
+    {"name":"stringIndexSingleBytePattern_bytesNode_", "allowUnsafeAccess":true}, 
+    {"name":"stringIndexSingleBytePattern_offsetTooLargeProfile_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.string.StringNodesFactory$StringPatternPrimitiveNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -15324,6 +16602,33 @@
     {"name":"arguments1_", "allowUnsafeAccess":true}, 
     {"name":"arguments2_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.string.StringNodesFactory$StringRindexPrimitiveNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.string.StringNodesFactory$StringRindexPrimitiveNodeFactory$StringRindexPrimitiveNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"stringRindexMultiBytePattern_cache", "allowUnsafeAccess":true}, 
+    {"name":"stringRindexSingleBytePattern_cache", "allowUnsafeAccess":true}, 
+    {"name":"stringRindex_cache", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.string.StringNodesFactory$StringRindexPrimitiveNodeFactory$StringRindexPrimitiveNodeGen$StringRindexSingleBytePatternData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"bytesNode_", "allowUnsafeAccess":true}, 
+    {"name":"matchFoundProfile_", "allowUnsafeAccess":true}, 
+    {"name":"noMatchProfile_", "allowUnsafeAccess":true}, 
+    {"name":"startTooLargeProfile_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -15409,6 +16714,18 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.string.StringNodesFactory$ToSNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.string.StringNodesFactory$ToSNodeFactory$ToSNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.string.StringNodesFactory$ToSymNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -15430,6 +16747,20 @@
     {"name":"cachedSymbol_", "allowUnsafeAccess":true}, 
     {"name":"equalNode_", "allowUnsafeAccess":true}, 
     {"name":"next_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.string.StringNodesFactory$TrBangNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.string.StringNodesFactory$TrBangNodeFactory$TrBangNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"fromStr_", "allowUnsafeAccess":true}, 
+    {"name":"self_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"toStrNode_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -15476,6 +16807,10 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.support.IONodes$IOWritePolyglotNode",
+  "allDeclaredFields":true
+},
+{
   "name":"org.truffleruby.core.support.IONodesFactory$AllocateNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -15497,6 +16832,19 @@
   "fields":[
     {"name":"arguments0_", "allowUnsafeAccess":true}, 
     {"name":"errorProfile_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.support.IONodesFactory$IOWritePolyglotNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.support.IONodesFactory$IOWritePolyglotNodeFactory$IOWritePolyglotNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
@@ -15566,9 +16914,18 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.support.TypeNodes$ObjectInstanceVariablesNode",
+  "allDeclaredFields":true
+},
+{
   "name":"org.truffleruby.core.support.TypeNodes$ObjectKindOfNode",
   "allDeclaredFields":true,
   "fields":[{"name":"isANode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"org.truffleruby.core.support.TypeNodes$VMObjectClassNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"classNode", "allowUnsafeAccess":true}]
 },
 {
   "name":"org.truffleruby.core.support.TypeNodesFactory$CanContainObjectNodeFactory",
@@ -15620,6 +16977,14 @@
   "fields":[{"name":"value_", "allowUnsafeAccess":true}]
 },
 {
+  "name":"org.truffleruby.core.support.TypeNodesFactory$ObjectInstanceVariablesNodeFactory$ObjectInstanceVariablesNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.support.TypeNodesFactory$ObjectKindOfNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -15631,6 +16996,15 @@
     {"name":"arguments1_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"org.truffleruby.core.support.TypeNodesFactory$VMObjectClassNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.support.TypeNodesFactory$VMObjectClassNodeFactory$VMObjectClassNodeGen",
+  "allDeclaredFields":true,
+  "fields":[{"name":"arguments0_", "allowUnsafeAccess":true}]
 },
 {
   "name":"org.truffleruby.core.symbol.SymbolNodes$EqualNode",
@@ -15794,6 +17168,23 @@
     {"name":"arguments0_", "allowUnsafeAccess":true}, 
     {"name":"arguments1_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.debug.TruffleDebugNodes$LogWarningNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.debug.TruffleDebugNodesFactory$LogWarningNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.debug.TruffleDebugNodesFactory$LogWarningNodeFactory$LogWarningNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"toJavaStringNode_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -16789,6 +18180,18 @@
   ]
 },
 {
+  "name":"org.truffleruby.language.dispatch.CachedMethodMissingDispatchNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"callNode", "allowUnsafeAccess":true}, 
+    {"name":"expectedClass", "allowUnsafeAccess":true}, 
+    {"name":"metaClassNode", "allowUnsafeAccess":true}, 
+    {"name":"methodMissing", "allowUnsafeAccess":true}, 
+    {"name":"methodMissingAssumptions", "allowUnsafeAccess":true}, 
+    {"name":"originalMethodAssumptions", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.language.dispatch.CachedReturnMissingDispatchNode",
   "allDeclaredFields":true,
   "fields":[
@@ -16954,6 +18357,11 @@
 },
 {
   "name":"org.truffleruby.language.exceptions.RescueNode[]"
+},
+{
+  "name":"org.truffleruby.language.exceptions.SetExceptionVariableNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"getCurrentThreadNode", "allowUnsafeAccess":true}]
 },
 {
   "name":"org.truffleruby.language.exceptions.TryNode",
@@ -17232,6 +18640,42 @@
     {"name":"sharedMethodInfo", "allowUnsafeAccess":true}, 
     {"name":"type", "allowUnsafeAccess":true}, 
     {"name":"withoutVisibilityNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.language.methods.CallBoundMethodNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.language.methods.CallBoundMethodNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"callInternalMethodNode_", "allowUnsafeAccess":true}, 
+    {"name":"procOrNullNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.language.methods.CallInternalMethodNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.language.methods.CallInternalMethodNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"callMethodCached_cache", "allowUnsafeAccess":true}, 
+    {"name":"callMethodUncached_indirectCallNode_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.language.methods.CallInternalMethodNodeGen$CallMethodCachedData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cachedCallTarget_", "allowUnsafeAccess":true}, 
+    {"name":"callNode_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -17832,6 +19276,32 @@
     {"name":"exclude_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}, 
     {"name":"writeBarrierCached_cache", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.language.supercall.CallSuperMethodNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"callMethodMissingNode", "allowUnsafeAccess":true}, 
+    {"name":"callMethodNode", "allowUnsafeAccess":true}, 
+    {"name":"missingProfile", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.language.supercall.CallSuperMethodNodeGen",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.language.supercall.LookupSuperMethodNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"metaClassNode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"org.truffleruby.language.supercall.LookupSuperMethodNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"lookupSuperMethodCachedDynamicObject_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
 {

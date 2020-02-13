@@ -1,7 +1,9 @@
 package repl.util;
 
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Paths;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,6 +22,7 @@ import org.graalvm.polyglot.Value;
 import org.graalvm.polyglot.Source;
 
 import repl.util.TerminalComponent;
+import repl.util.ZipUtils;
 
 public class LanguageAdapter {
 
@@ -34,7 +37,14 @@ public class LanguageAdapter {
 
     public static LanguageAdapter[] generateAdapters(final TerminalComponent term) {
         if (polyglot == null) {
-            polyglot = Context.newBuilder().in(term.in).out(term.out).logHandler(term.log).err(term.err)
+            String tmpDir = System.getProperty("java.io.tmpdir"); 
+            try {
+                ZipUtils.unzip(LanguageAdapter.class.getResourceAsStream("/filesystem.zip"), new File(tmpDir));
+            } catch (IOException e) {
+                e.printStackTrace();
+                System.exit(100);
+            }
+            polyglot = Context.newBuilder().in(term.in).out(term.out).logHandler(term.log).err(term.err).option("ruby.home", Paths.get(tmpDir, "truffleruby").toString())
                     .allowAllAccess(true).build();
             List<String> langNames = new ArrayList<>(polyglot.getEngine().getLanguages().keySet());
             langNames.remove("llvm"); // llvm is not supported, of course

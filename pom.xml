@@ -67,8 +67,8 @@
                     <target>android</target>
                     <javafxStaticSdkVersion>14-ea+gvmandroidkeyboard</javafxStaticSdkVersion>
                     -->
-                    <verbose>true</verbose>
                     <nativeImageArgs>
+                        <list>--verbose</list>
                         <list>--language:js</list>
                         <list>--language:ruby</list>
                         <!-- <list>->-language:python</list> -->
@@ -94,6 +94,11 @@
                         <list>javafx.geometry.Orientation</list>
                         <list>repl.Controller</list>
                     </reflectionList>
+
+                    <resourcesList>
+                        <list>.*/filesystem.zip$</list>
+                    </resourcesList>
+
                     <mainClass>${mainClassName}</mainClass>
                 </configuration>
             </plugin>

@@ -9,6 +9,7 @@
     {"pattern":"\\Qcom/oracle/graal/python/builtins/PythonBuiltins.class\\E"}, 
     {"pattern":"\\Qcom/oracle/js/parser/resources/Messages.properties\\E"}, 
     {"pattern":"\\Qcom/oracle/truffle/nfi/impl/NFILanguageImpl.class\\E"}, 
+    {"pattern":"\\Qfilesystem.zip\\E"}, 
     {"pattern":"\\Qmain.fxml\\E"}, 
     {"pattern":"\\Qtruffleruby/core/argf.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/array.rb\\E"}, 
