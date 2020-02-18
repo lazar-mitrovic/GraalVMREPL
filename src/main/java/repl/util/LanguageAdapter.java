@@ -12,6 +12,7 @@ import java.util.Set;
 import java.util.function.IntSupplier;
 
 import org.graalvm.polyglot.Context;
+import org.graalvm.polyglot.Engine;
 import org.graalvm.polyglot.Context.Builder;
 
 import javafx.application.Platform;
@@ -44,11 +45,15 @@ public class LanguageAdapter {
                 e.printStackTrace();
                 System.exit(100);
             }
-            polyglot = Context.newBuilder().in(term.in).out(term.out).logHandler(term.log).err(term.err).option("ruby.home", Paths.get(tmpDir, "truffleruby").toString())
-                    .allowAllAccess(true).build();
-            List<String> langNames = new ArrayList<>(polyglot.getEngine().getLanguages().keySet());
+
+            List<String> langNames = new ArrayList<>(Engine.create().getLanguages().keySet());
             langNames.remove("llvm"); // llvm is not supported, of course
             languages = (String[]) langNames.toArray(new String[0]);
+
+            Builder builder = Context.newBuilder().in(term.in).out(term.out).logHandler(term.log).err(term.err).allowAllAccess(true);
+            if (langNames.contains("ruby"))
+                builder = builder.option("ruby.home", Paths.get(tmpDir, "truffleruby").toString());
+            polyglot = builder.build();
         }
         final LanguageAdapter[] LanguageAdapters = new LanguageAdapter[languages.length];
 
