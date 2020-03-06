@@ -13,7 +13,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <javafx.version>14-ea+7</javafx.version>
+        <javafx.version>15-ea+2</javafx.version>
         <client.version>0.1.17-SNAPSHOT</client.version>
         <mainClassName>com.oracle.labs.repl.Main</mainClassName>
     </properties>
@@ -64,11 +64,12 @@
                 <configuration>
                     <!--<target>android</target>-->
                     <nativeImageArgs>
-                        <list>--verbose</list>
                         <list>--language:js</list>
-                        <!--<list>-!-language:ruby</list>-->
                         <list>--language:python</list>
-
+                        
+                        <!--<list>-!-language:ruby</list>-->
+                        <!--<list>-!-verbose</list>-->
+                        
                         <list>-Dtruffle.TruffleRuntime=com.oracle.truffle.api.impl.DefaultTruffleRuntime</list>
                         <list>-Dgraalvm.ForcePolyglotInvalid=false</list>
                         <list>-H:+ReportExceptionStackTraces</list>
