@@ -37,10 +37,12 @@
 {
   "name":"com.oracle.truffle.nfi.impl.NFIContext",
   "fields":[
+    {"name":"ISOLATED_NAMESPACE"}, 
     {"name":"RTLD_GLOBAL"}, 
     {"name":"RTLD_LAZY"}, 
     {"name":"RTLD_LOCAL"}, 
-    {"name":"RTLD_NOW"}
+    {"name":"RTLD_NOW"}, 
+    {"name":"isolatedNamespaceId"}
   ],
   "methods":[
     {"name":"createClosureNativePointer","parameterTypes":["long","long","com.oracle.truffle.api.CallTarget","com.oracle.truffle.nfi.impl.LibFFISignature"] }, 
@@ -52,7 +54,8 @@
   ]
 },
 {
-  "name":"com.oracle.truffle.nfi.impl.NFIUnsatisfiedLinkError"
+  "name":"com.oracle.truffle.nfi.impl.NFIUnsatisfiedLinkError",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.String"] }]
 },
 {
   "name":"com.oracle.truffle.nfi.impl.NativeString",
