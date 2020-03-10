@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.HBox ?>
 <?import javafx.scene.layout.VBox ?>
 
-<VBox maxHeight="+Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="375.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oracle.labs.repl.Controller">
+<VBox fx:id="mainBox" styleClass="main-box" maxHeight="+Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="375.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oracle.labs.repl.Controller">
    <children>
-      <HBox fx:id="buttonsBox" prefHeight="45">
+      <HBox fx:id="buttonsBox" styleClass="top-box" prefHeight="45">
          <children>
             <Button fx:id="interpreterButton" maxHeight="+Infinity" maxWidth="+Infinity" text="Interpreter" HBox.hgrow="ALWAYS" />
             <Button fx:id="codeButton" maxHeight="+Infinity" maxWidth="+Infinity" text="Code Editor" HBox.hgrow="ALWAYS" />
