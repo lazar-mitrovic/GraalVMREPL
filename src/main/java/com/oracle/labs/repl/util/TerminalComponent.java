@@ -64,9 +64,9 @@ public class TerminalComponent {
             }
         });
 
-        terminal.anchorProperty().addListener(event -> {
+        /*terminal.anchorProperty().addListener(event -> {
             this.fixCaretPosition();
-        });
+        });*/
 
         out = new ByteArrayOutputStream();
         log = new ByteArrayOutputStream();
@@ -173,7 +173,7 @@ public class TerminalComponent {
 
     public synchronized int fixCaretPosition() {
         int pos = Math.max(terminal.getCaretPosition(), terminalText.length());
-        terminal.selectRange(pos, pos);
+        terminal.positionCaret(pos);
         return pos;
     }
 

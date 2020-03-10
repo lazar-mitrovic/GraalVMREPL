@@ -9,6 +9,10 @@
   "name":"char[]"
 },
 {
+  "name":"com.gluonhq.attach.display.impl.DesktopDisplayService",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
   "name":"com.oracle.graal.python.builtins.PythonBuiltinClassTypeGen"
 },
 {
@@ -13904,6 +13908,10 @@
   "fields":[{"name":"property", "allowUnsafeAccess":true}]
 },
 {
+  "name":"com.oracle.truffle.js.nodes.access.PropertyGetNode$UndefinedPropertyErrorNode",
+  "allDeclaredFields":true
+},
+{
   "name":"com.oracle.truffle.js.nodes.access.PropertyNode",
   "allDeclaredFields":true,
   "fields":[
@@ -14109,6 +14117,14 @@
     {"name":"nonArrayIndex1_toPropertyKey_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.control.EmptyNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.control.StatementNode",
+  "allDeclaredFields":true
 },
 {
   "name":"com.oracle.truffle.js.nodes.control.TryCatchNode$GetErrorObjectNode"
