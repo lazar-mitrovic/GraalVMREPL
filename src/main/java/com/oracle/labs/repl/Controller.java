@@ -1,20 +1,34 @@
 package com.oracle.labs.repl;
 
-import com.oracle.labs.repl.util.TerminalComponent;
+import com.gluonhq.attach.display.DisplayService;
+import com.gluonhq.attach.lifecycle.LifecycleEvent;
+import com.gluonhq.attach.lifecycle.LifecycleService;
+import com.gluonhq.attach.util.Platform;
 import com.oracle.labs.repl.util.Interpreter;
-import javafx.collections.FXCollections;
+import com.oracle.labs.repl.util.TerminalComponent;
+import javafx.beans.value.ChangeListener;
+import javafx.css.PseudoClass;
 import javafx.fxml.FXML;
-import javafx.scene.control.TextArea;
-import javafx.scene.input.KeyCode;
 import javafx.scene.control.Button;
 import javafx.scene.control.SplitPane;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextArea;
+import javafx.scene.input.KeyCode;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 import java.time.Year;
 
 
 public class Controller {
+
+    private static final PseudoClass LANDSCAPE = PseudoClass.getPseudoClass("landscape");
+
+    @FXML
+    private VBox mainBox;
+
+    @FXML
+    private HBox buttonsBox;
 
     @FXML
     private Button interpreterButton;
@@ -130,5 +144,48 @@ public class Controller {
                 e.printStackTrace();
             }
         });
+
+        if (Platform.isIOS() && !buttonsBox.getStyleClass().contains("ios")) {
+            buttonsBox.getStyleClass().add("ios");
+        }
+        if (Platform.isIOS() && !mainBox.getStyleClass().contains("ios")) {
+            mainBox.getStyleClass().add("ios");
+        }
+        if (DisplayService.create().map(DisplayService::hasNotch).orElse(false)) {
+            if (!buttonsBox.getStyleClass().contains("notch")) {
+                buttonsBox.getStyleClass().add("notch");
+            }
+            if (!mainBox.getStyleClass().contains("notch")) {
+                mainBox.getStyleClass().add("notch");
+            }
+            ChangeListener<DisplayService.Notch> notchListener = (obs, oldNotch, newNotch) ->
+                    applyNotch(oldNotch, newNotch);
+
+            DisplayService.create().ifPresent(display -> {
+                LifecycleService.create().ifPresent((l) -> {
+                    l.addListener(LifecycleEvent.RESUME, () -> display.notchProperty().addListener(notchListener));
+                    l.addListener(LifecycleEvent.PAUSE, () -> display.notchProperty().removeListener(notchListener));
+                });
+                display.notchProperty().addListener(notchListener);
+            });
+            applyNotch(null, DisplayService.create().map(display -> display.notchProperty().get())
+                    .orElse(DisplayService.Notch.UNKNOWN));
+        }
+    }
+
+    private void applyNotch(DisplayService.Notch oldNotch, DisplayService.Notch newNotch) {
+        if (newNotch == DisplayService.Notch.BOTTOM && oldNotch != null) {
+            boolean landscape = isLandscape(oldNotch);
+            mainBox.pseudoClassStateChanged(LANDSCAPE, landscape);
+            buttonsBox.pseudoClassStateChanged(LANDSCAPE, landscape);
+        } else {
+            boolean landscape = isLandscape(newNotch);
+            mainBox.pseudoClassStateChanged(LANDSCAPE, landscape);
+            buttonsBox.pseudoClassStateChanged(LANDSCAPE, landscape);
+        }
+    }
+
+    private boolean isLandscape(DisplayService.Notch notch) {
+        return notch == DisplayService.Notch.LEFT || notch == DisplayService.Notch.RIGHT;
     }
 }

@@ -3,6 +3,43 @@
     src: url('FreeMono.ttf');
 }
 
+.main-box {
+    -fx-padding: 1mm 1mm 1mm 1mm;
+    -fx-font-size: 1.2em;
+}
+
+.main-box.ios {
+    -fx-padding: 1mm 1mm 5mm 1mm;
+}
+
+.main-box.ios.notch {
+    -fx-padding: 1mm 1mm 10mm 1mm;
+}
+
+.main-box.ios.notch:landscape {
+    -fx-padding: 1mm 12mm 6mm 12mm;
+}
+
+.top-box {
+    -fx-padding: 1mm 1mm 1mm 1mm;
+    -fx-alignment: CENTER_RIGHT;
+    -fx-spacing: 5px;
+}
+
+.top-box.ios {
+    -fx-padding: 5mm 1mm 1mm 1mm;
+}
+
+.top-box.ios.notch {
+    -fx-padding: 12mm 1mm 1mm 1mm;
+}
+
+.top-box.ios.notch:landscape {
+    -fx-padding: 1mm 1mm 1mm 1mm;
+}
+
+
+
 .terminal {
     -fx-background-color: #333;
     -fx-control-inner-background: #333;

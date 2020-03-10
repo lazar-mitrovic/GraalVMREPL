@@ -1,0 +1,19 @@
+[
+  {
+    "name":"javafx.beans.DefaultProperty",
+    "allDeclaredMethods":true
+  }
+,
+  {
+    "name" : "javafx.scene.control.SplitPane",
+    "methods":[
+      {"name":"<init>","parameterTypes":[] },
+      {"name":"<init>","parameterTypes":["javafx.scene.Node[]"] },
+      {"name":"getDividerPositions","parameterTypes":[] },
+      {"name":"setDividerPositions","parameterTypes":["double[]"] },
+      {"name":"getOrientation","parameterTypes":[] },
+      {"name":"setOrientation","parameterTypes":["javafx.geometry.Orientation"] },
+      {"name":"getItems","parameterTypes":[] }
+    ]
+  }
+]
