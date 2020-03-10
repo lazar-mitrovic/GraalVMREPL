@@ -1,6 +1,5 @@
 package com.oracle.labs.repl.util.languages;
 
-import java.util.HashMap;
 import java.util.function.IntSupplier;
 import org.graalvm.polyglot.Context;
 import org.graalvm.polyglot.Context.Builder;

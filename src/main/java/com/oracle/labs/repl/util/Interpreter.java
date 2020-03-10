@@ -17,8 +17,6 @@ import java.util.function.IntSupplier;
 import javafx.application.Platform;
 import javafx.concurrent.Task;
 
-import com.oracle.labs.repl.util.TerminalComponent;
-import com.oracle.labs.repl.util.ZipUtils;
 
 import com.oracle.labs.repl.util.languages.*;
 
@@ -59,8 +57,8 @@ public class Interpreter {
 
         // Create builder
 
-        Builder builder = Context.newBuilder().in(term.in).out(term.out).logHandler(term.log)
-                .err(term.err).allowAllAccess(true);
+        Builder builder = Context.newBuilder().in(term.in).out(Interpreter.out).logHandler(Interpreter.log)
+                .err(Interpreter.err).allowAllAccess(true);
         
         for (String lang : languages) {
             builder = languageImplementations.get(lang).addParameters(builder);
@@ -163,7 +161,7 @@ public class Interpreter {
 
 
 
-    protected class EvalTask extends Task {
+    protected class EvalTask extends Task<Object> {
         private final Source source;
         private Value result;
         private final boolean visible;

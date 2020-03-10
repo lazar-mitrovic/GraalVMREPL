@@ -55,7 +55,6 @@ public class Controller {
 
     private TerminalComponent term;
 
-    private int currentLangIndex = 0;
 
     enum GUI_STATE {
         INTERPRETER, CODE_EDITOR,

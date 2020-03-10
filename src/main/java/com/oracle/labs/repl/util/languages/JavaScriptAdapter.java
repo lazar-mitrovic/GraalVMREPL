@@ -5,7 +5,6 @@ import org.graalvm.polyglot.Context.Builder;
 import org.graalvm.polyglot.Value;
 
 import java.util.function.IntSupplier;
-import java.nio.file.Paths;
 
 public class JavaScriptAdapter implements LanguageAdapter {
     public Builder addParameters(Builder builder) {
