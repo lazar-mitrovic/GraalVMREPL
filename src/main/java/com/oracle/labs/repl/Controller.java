@@ -67,13 +67,17 @@ public class Controller {
         term.writeLine(
                 "Copyright (c) 2013-" + String.valueOf(Year.now().getValue()) + ", Oracle and/or its affiliates");
 
+        term.writeLine("");
+
         interpreter = new Interpreter(term);
 
         switchLanguageButton.setOnAction(e -> {
             interpreter.nextLanguage();
+            term.writeLine("");
             interpreter.showPrompt();
         });
 
+        term.writeLine("");
         interpreter.showPrompt();
         interpreterBox.requestFocus();
     }

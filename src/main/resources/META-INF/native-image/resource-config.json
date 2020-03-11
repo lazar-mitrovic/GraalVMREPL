@@ -99,5 +99,5 @@
     {"pattern":"\\Qtruffleruby/core/warning.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/post-boot/post-boot.rb\\E"}
   ],
-  "bundles":[]
+  "bundles":[{"name":"com.oracle.js.parser.resources.Messages"}]
 }

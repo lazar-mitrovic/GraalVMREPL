@@ -12127,6 +12127,9 @@
   ]
 },
 {
+  "name":"com.oracle.graal.python.nodes.function.FunctionDefinitionNode$KwDefaultExpressionNode[]"
+},
+{
   "name":"com.oracle.graal.python.nodes.function.FunctionRootNode",
   "allDeclaredFields":true,
   "fields":[
@@ -13688,6 +13691,11 @@
   ]
 },
 {
+  "name":"com.oracle.truffle.js.nodes.access.GlobalObjectNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"context", "allowUnsafeAccess":true}]
+},
+{
   "name":"com.oracle.truffle.js.nodes.access.GlobalPropertyNode",
   "allDeclaredFields":true,
   "fields":[
@@ -13790,9 +13798,18 @@
   "allDeclaredFields":true
 },
 {
+  "name":"com.oracle.truffle.js.nodes.access.JSConstantNode$JSConstantIntegerNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"intValue", "allowUnsafeAccess":true}]
+},
+{
   "name":"com.oracle.truffle.js.nodes.access.JSConstantNode$JSConstantStringNode",
   "allDeclaredFields":true,
   "fields":[{"name":"stringValue", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.JSConstantNode$JSConstantUndefinedNode",
+  "allDeclaredFields":true
 },
 {
   "name":"com.oracle.truffle.js.nodes.access.JSReadCurrentFrameSlotNode",
@@ -13809,6 +13826,10 @@
 },
 {
   "name":"com.oracle.truffle.js.nodes.access.JSTargetableNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.JSTargetableWriteNode",
   "allDeclaredFields":true
 },
 {
@@ -13899,6 +13920,11 @@
   "allDeclaredFields":true
 },
 {
+  "name":"com.oracle.truffle.js.nodes.access.PropertyGetNode$IntPropertyGetNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"location", "allowUnsafeAccess":true}]
+},
+{
   "name":"com.oracle.truffle.js.nodes.access.PropertyGetNode$LinkedPropertyGetNode",
   "allDeclaredFields":true
 },
@@ -13936,6 +13962,14 @@
   "name":"com.oracle.truffle.js.nodes.access.PropertySetNode$DataPropertySetNode",
   "allDeclaredFields":true,
   "fields":[{"name":"cache", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.PropertySetNode$IntPropertySetNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"location", "allowUnsafeAccess":true}, 
+    {"name":"property", "allowUnsafeAccess":true}
+  ]
 },
 {
   "name":"com.oracle.truffle.js.nodes.access.PropertySetNode$LinkedPropertySetNode",
@@ -13995,6 +14029,16 @@
   "fields":[{"name":"typeCacheNext", "allowUnsafeAccess":true}]
 },
 {
+  "name":"com.oracle.truffle.js.nodes.access.WritePropertyNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cache", "allowUnsafeAccess":true}, 
+    {"name":"rhsNode", "allowUnsafeAccess":true}, 
+    {"name":"targetNode", "allowUnsafeAccess":true}, 
+    {"name":"valueState", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"com.oracle.truffle.js.nodes.arguments.AccessIndexedArgumentNode",
   "allDeclaredFields":true,
   "fields":[
@@ -14033,12 +14077,33 @@
   ]
 },
 {
+  "name":"com.oracle.truffle.js.nodes.binary.JSAddSubNumericUnitNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"isAddition", "allowUnsafeAccess":true}, 
+    {"name":"truncate", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.binary.JSAddSubNumericUnitNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"com.oracle.truffle.js.nodes.binary.JSBinaryNode",
   "allDeclaredFields":true,
   "fields":[
     {"name":"leftNode", "allowUnsafeAccess":true}, 
     {"name":"rightNode", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.binary.JSCompareNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"stringToNumberNode", "allowUnsafeAccess":true}]
 },
 {
   "name":"com.oracle.truffle.js.nodes.binary.JSConcatStringsNode",
@@ -14052,6 +14117,41 @@
     {"name":"concat_cache", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.binary.JSLessThanNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.binary.JSLessThanNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"generic_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.cast.JSToNumericNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"toNumberNode", "allowUnsafeAccess":true}, 
+    {"name":"toPrimitiveNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.cast.JSToNumericNode$JSToNumericWrapperNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"toNumericNode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.cast.JSToNumericNodeGen",
+  "allDeclaredFields":true,
+  "fields":[{"name":"state_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.cast.JSToNumericNodeGen$JSToNumericWrapperNodeGen",
+  "allDeclaredFields":true
 },
 {
   "name":"com.oracle.truffle.js.nodes.cast.JSToObjectNode",
@@ -14119,7 +14219,25 @@
   ]
 },
 {
+  "name":"com.oracle.truffle.js.nodes.control.AbstractBlockNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"statements", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.control.AbstractRepeatingNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"bodyNode", "allowUnsafeAccess":true}, 
+    {"name":"conditionNode", "allowUnsafeAccess":true}, 
+    {"name":"conditionProfile", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"com.oracle.truffle.js.nodes.control.EmptyNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.control.ExprBlockNode",
   "allDeclaredFields":true
 },
 {
@@ -14128,6 +14246,18 @@
 },
 {
   "name":"com.oracle.truffle.js.nodes.control.TryCatchNode$GetErrorObjectNode"
+},
+{
+  "name":"com.oracle.truffle.js.nodes.control.WhileNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"loop", "allowUnsafeAccess":true}, 
+    {"name":"loopType", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.control.WhileNode$WhileDoRepeatingNode",
+  "allDeclaredFields":true
 },
 {
   "name":"com.oracle.truffle.js.nodes.function.AbstractBodyNode",

@@ -20,27 +20,26 @@ public class FXInputStream extends InputStream {
 
     @Override
     public int read() throws IOException {
-        if (buffer == null || pos == buffer.length) {
-            pos = 0;
+        if (buffer == null || pos >= buffer.length) {
 
             while (flushString.length() == 0) {
                 inputBlocked = true;
-                try {
-                    System.out.println("usao u blok");
-                    this.wait();
-                    System.out.println("izasao iz bloka");
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+                synchronized (this) {
+                    try {
+                        this.wait();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
             synchronized (this) {
                 inputBlocked = false;
                 buffer = flushString.toString().getBytes(StandardCharsets.UTF_8);
                 flushString.setLength(0);
+                pos = 0;
             }
         }
         return buffer[pos++];
-
     }
 
     public String readLine() {
@@ -73,5 +72,15 @@ public class FXInputStream extends InputStream {
 
     public Boolean isInputBlocked() {
         return inputBlocked;
+    }
+
+    public void flush() {
+        buffer = null;
+        flushString.setLength(0);
+        pos = 0;
+    }
+
+    public Boolean isEmpty() {
+        return flushString.length()!=0 || pos != buffer.length;
     }
 };

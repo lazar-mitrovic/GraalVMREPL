@@ -37,7 +37,7 @@ public class TerminalComponent {
 
         in = new FXInputStream();
 
-        terminal.setOnKeyTyped(event -> {
+        terminal.textProperty().addListener(event -> {
             checkInvalidState();
         });
 
@@ -105,19 +105,19 @@ public class TerminalComponent {
 
     public synchronized void updateStreams() {
         if (!err.toString().isEmpty()) {
-            _guiWrite(System.lineSeparator() + "err> " + err);
+            _guiWrite("err> " + err + System.lineSeparator());
             changed = true;
             err.reset();
         }
 
         if (!log.toString().isEmpty()) {
-            _guiWrite(System.lineSeparator() + "log> " + log);
+            _guiWrite("log> " + log + System.lineSeparator());
             changed = true;
             log.reset();
         }
 
         if (!out.toString().isEmpty()) {
-            _guiWrite(System.lineSeparator() + out);
+            _guiWrite(out.toString());
             changed = true;
             out.reset();
         }
@@ -169,10 +169,11 @@ public class TerminalComponent {
     }
 
     public synchronized void commitCurrent() {
-        history.add(currentCode);
+        if (!currentCode.equals(""))
+            history.add(currentCode);
         historyPosition = 0;
         writeLine(currentCode);
-        in.write(currentCode);
+        in.writeLine(currentCode);
         flushCurrent();
     }
 

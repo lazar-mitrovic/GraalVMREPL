@@ -1,16 +1,13 @@
 package com.oracle.labs.repl.util;
 
 import org.graalvm.polyglot.Source;
-import org.graalvm.polyglot.Value;
 import org.graalvm.polyglot.Context;
 import org.graalvm.polyglot.Engine;
 import org.graalvm.polyglot.PolyglotException;
 import org.graalvm.polyglot.Context.Builder;
 
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.function.IntSupplier;
@@ -33,7 +30,6 @@ public class Interpreter {
     private static FXOutputStream out, log, err;
 
     private static TerminalComponent term;
-    private static Boolean blocked = false;
 
     public Interpreter(TerminalComponent term) {
 
@@ -119,59 +115,52 @@ public class Interpreter {
     }
 
     public void readEvalPrint() {
-        System.out.println("odje");
-        while (true) { // processing inputs
-            String input = in.readLine();
-            if (input == null) {
-                err.write("EOF reached.");
-                return;
-            }
-            if (input.isEmpty() || input.charAt(0) == '#') {
-                // nothing to parse
-                continue;
-            }
-    
-            System.out.println("prva linija " + input);
-            StringBuilder sb = new StringBuilder(input).append('\n');
-            while (true) { // processing subsequent lines while input is incomplete
-                try {
-                    polyglot.eval(Source.newBuilder(getLanguageName(), sb.toString(), "<stdin>").interactive(true).buildLiteral());
-                } catch (PolyglotException e) {
-                    System.out.println("greska " + e.getMessage());
-                    if (e.isIncompleteSource()) {
-                        // read more input until we get an empty line
-                        out.write("...");
-                        String additionalInput = in.readLine();
-                        while (additionalInput != null && !additionalInput.isEmpty()) {
-                            sb.append(additionalInput).append('\n');
-                            out.write("...");
-                            additionalInput = in.readLine();
-                        }
-                        if (additionalInput == null) {
-                            err.write("EOF reached.");
-                            return;
-                        }
-                        // The only continuation in the while loop
-                        continue;
+        String input = in.readLine();
+        
+        if (input.isEmpty() || input.charAt(0) == '#') {
+            // nothing to parse
+            return;
+        }
+
+        StringBuilder sb = new StringBuilder(input).append('\n');
+        while (!in.isEmpty()) { // processing subsequent lines while input is incomplete
+            try {
+                polyglot.eval(Source.newBuilder(getLanguageName(), sb.toString(), "<shell>").interactive(true)
+                        .buildLiteral()).toString();
+            } catch (PolyglotException e) {
+                if (e.isIncompleteSource()) {
+                    // read more input until we get an empty line
+                    String additionalInput = in.readLine();
+                    while (additionalInput != null && !additionalInput.isEmpty()) {
+                        sb.append(additionalInput).append('\n');
+                        additionalInput = in.readLine();
                     }
-                    else {
-                        break;
+                    if (additionalInput == null) {
+                        err.write("EOF reached.");
+                        return;
                     }
+                    // The only continuation in the while loop
+                    continue;
+                }
+                else {
+                    err.write(e.getMessage());
                 }
             }
+            break;
         }
+        in.flush();
     }
 
     public void evalInternal(String code) {
         polyglot.eval(Source.newBuilder(getLanguageName(), code, "<internal>").internal(true).buildLiteral());
     }
 
-    public void eval(){
+    public void eval() {
         new Thread(new EvalTask()).start();
     }
 
     public Boolean getBlocked() {
-        return blocked;
+        return in.isInputBlocked();
     }
 
     protected class EvalTask extends Task<Object> {
