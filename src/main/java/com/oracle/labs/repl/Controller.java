@@ -19,7 +19,6 @@ import javafx.scene.layout.VBox;
 import java.io.IOException;
 import java.time.Year;
 
-
 public class Controller {
 
     private static final PseudoClass LANDSCAPE = PseudoClass.getPseudoClass("landscape");
@@ -55,7 +54,6 @@ public class Controller {
 
     private TerminalComponent term;
 
-
     enum GUI_STATE {
         INTERPRETER, CODE_EDITOR,
     }
@@ -81,20 +79,16 @@ public class Controller {
     }
 
     public void doInterpreterEval() throws IOException {
-        if (interpreter.getBlocked() && !term.isInputBlocked()) {
-            term.flushCurrent();
-            return;
-        }
-        final String code = term.getCurrentCode();
         term.commitCurrent();
         if (!interpreter.getBlocked())
-            interpreter.eval(code, true);
+            interpreter.eval();
         term.updateStreams();
     }
 
     public void doExecutionEval() throws IOException {
         final String code = codeBox.getText();
-        interpreter.eval(code, true);
+        term.in.write(code);
+        interpreter.eval();
         term.updateStreams();
     }
 
@@ -144,6 +138,11 @@ public class Controller {
             }
         });
 
+        initIosNotch();
+    }
+
+    private void initIosNotch() {
+
         if (Platform.isIOS() && !buttonsBox.getStyleClass().contains("ios")) {
             buttonsBox.getStyleClass().add("ios");
         }
@@ -157,8 +156,8 @@ public class Controller {
             if (!mainBox.getStyleClass().contains("notch")) {
                 mainBox.getStyleClass().add("notch");
             }
-            ChangeListener<DisplayService.Notch> notchListener = (obs, oldNotch, newNotch) ->
-                    applyNotch(oldNotch, newNotch);
+            ChangeListener<DisplayService.Notch> notchListener = (obs, oldNotch, newNotch) -> applyNotch(oldNotch,
+                    newNotch);
 
             DisplayService.create().ifPresent(display -> {
                 LifecycleService.create().ifPresent((l) -> {
