@@ -170,7 +170,7 @@ public class TerminalComponent {
 
     public synchronized void commitCurrent() {
         if (!currentCode.equals(""))
-            history.add(currentCode);
+            history.add(currentCode.trim());
         historyPosition = 0;
         writeLine(currentCode);
         in.writeLine(currentCode);

@@ -85,6 +85,7 @@ public class Controller {
     public void doInterpreterEval() throws IOException {
         term.updateStreams();
         if (!interpreter.isBlocked() || interpreter.isInputBlocked()) {
+            term.in.flush();
             term.commitCurrent();
             if (!interpreter.isBlocked())
                 interpreter.eval();
