@@ -7424,6 +7424,10 @@
   ]
 },
 {
+  "name":"com.oracle.graal.python.builtins.objects.object.ObjectBuiltins$ReprNode",
+  "allDeclaredFields":true
+},
+{
   "name":"com.oracle.graal.python.builtins.objects.object.ObjectBuiltins$SetattrNode",
   "allDeclaredFields":true
 },
@@ -7510,6 +7514,23 @@
   "fields":[
     {"name":"ne_nativeNeNode_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.object.ObjectBuiltinsFactory$ReprNodeFactory$ReprNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"repr_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.object.ObjectBuiltinsFactory$ReprNodeFactory$ReprNodeGen$ReprData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"getClass_", "allowUnsafeAccess":true}, 
+    {"name":"readModuleNode_", "allowUnsafeAccess":true}, 
+    {"name":"readQualNameNode_", "allowUnsafeAccess":true}
   ]
 },
 {

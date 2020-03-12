@@ -83,9 +83,12 @@ public class Controller {
     }
 
     public void doInterpreterEval() throws IOException {
-        term.commitCurrent();
-        if (!interpreter.getBlocked())
-            interpreter.eval();
+        term.updateStreams();
+        if (!interpreter.isBlocked() || interpreter.isInputBlocked()) {
+            term.commitCurrent();
+            if (!interpreter.isBlocked())
+                interpreter.eval();
+        }
         term.updateStreams();
     }
 

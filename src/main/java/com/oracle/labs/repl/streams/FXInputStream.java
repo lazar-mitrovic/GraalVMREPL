@@ -23,8 +23,8 @@ public class FXInputStream extends InputStream {
         if (buffer == null || pos >= buffer.length) {
 
             while (flushString.length() == 0) {
-                inputBlocked = true;
                 synchronized (this) {
+                    inputBlocked = true;
                     try {
                         this.wait();
                     } catch (InterruptedException e) {
@@ -75,9 +75,11 @@ public class FXInputStream extends InputStream {
     }
 
     public void flush() {
-        buffer = null;
-        flushString.setLength(0);
-        pos = 0;
+        synchronized (this) {
+            buffer = null;
+            flushString.setLength(0);
+            pos = 0;
+        }
     }
 
     public Boolean isEmpty() {

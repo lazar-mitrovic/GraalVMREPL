@@ -31,6 +31,8 @@ public class Interpreter {
 
     private static TerminalComponent term;
 
+    private boolean blocked;
+
     public Interpreter(TerminalComponent term) {
 
         Interpreter.term = term;
@@ -38,6 +40,8 @@ public class Interpreter {
         Interpreter.out = term.out;
         Interpreter.log = term.log;
         Interpreter.err = term.err;
+
+        blocked = false;
 
         // Unpack language files
 
@@ -159,18 +163,24 @@ public class Interpreter {
         new Thread(new EvalTask()).start();
     }
 
-    public Boolean getBlocked() {
+    public Boolean isBlocked() {
+        return blocked;
+    }
+
+    public Boolean isInputBlocked() {
         return in.isInputBlocked();
     }
 
     protected class EvalTask extends Task<Object> {
         @Override
         protected Object call() throws IOException {
+            blocked = true;
             try {
                 readEvalPrint();
             } catch (final PolyglotException exception) {
                 err.write(exception.getMessage());
             }
+            blocked = false;
             showPrompt();
             return null;
         }

@@ -115,6 +115,7 @@
                         <option>-Dgraalvm.ForcePolyglotInvalid=false</option>
                     </options>
                     <mainClass>${mainClassName}</mainClass>
+                    <executable>${GRAALVM_HOME}/bin/java</executable>
                 </configuration>
             </plugin>
 
