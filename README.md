@@ -6,7 +6,7 @@ REPL (read–eval–print loop) shell built ontop of JavaFX stack, GraalJS, Graa
 * `GRAALVM_HOME` environment variable set (optimally `JAVA_HOME=$GRAALVM_HOME`, which should help with `The import org.graalvm cannot be resolved` error)
 * [GraalJS](https://github.com/graalvm/graaljs), [GraalPython](https://github.com/graalvm/graalpython), [TruffleRuby](https://github.com/oracle/truffleruby), [FastR](https://github.com/oracle/fastr). Any combination of those will work, provided that `pom.xml` is edited accordingly. Those can be added either by `gu install` (on stable versions) or better by adding them as dynamic mx imports - 
 ```
-cd $GRAALVM_HOME/vm
+cd $GRAAL_SOURCE/vm # Assuming that GRAAL_SOURCE points to right location
 mx --dynamicimports /graal-js,graalpython,truffleruby build
 ```
 

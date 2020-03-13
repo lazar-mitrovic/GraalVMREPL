@@ -62,8 +62,8 @@ public class Interpreter {
         if (languages.size() == 0) {
             System.err.println("No languages present!");
             System.err.println("You can add them to your GraalVM build using:");
-            System.err.println("`cd $GRAALVM_HOME/vm`");
-            System.err.println("`mx --dynamicimports /graal-js,graalpython,truffleruby build`");
+            System.err.println("$ cd $GRAAL_SOURCE/vm");
+            System.err.println("$ mx --dynamicimports /graal-js,graalpython,truffleruby build`");
             System.exit(1);
         }
 
