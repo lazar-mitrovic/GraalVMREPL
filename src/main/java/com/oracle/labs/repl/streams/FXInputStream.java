@@ -52,7 +52,7 @@ public class FXInputStream extends InputStream {
                     break;
                 s.append(c);
             } while (c != -1);
-            return s.toString();
+            return s.toString().trim();
         } catch (Exception e) {
             e.printStackTrace();
             return null;

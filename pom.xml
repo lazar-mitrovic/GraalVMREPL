@@ -113,6 +113,7 @@
                         <option>-agentlib:native-image-agent=config-merge-dir=src/main/resources/META-INF/native-image</option>
                         <option>-Dtruffle.TruffleRuntime=com.oracle.truffle.api.impl.DefaultTruffleRuntime</option>
                         <option>-Dgraalvm.ForcePolyglotInvalid=false</option>
+                        <option>-Djavafx.platform=Desktop</option>
                     </options>
                     <mainClass>${mainClassName}</mainClass>
                     <executable>${GRAALVM_HOME}/bin/java</executable>

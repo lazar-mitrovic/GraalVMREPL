@@ -59,6 +59,14 @@ public class Interpreter {
                 languages.add(lang);
         }
 
+        if (languages.size() == 0) {
+            System.err.println("No languages present!");
+            System.err.println("You can add them to your GraalVM build using:");
+            System.err.println("`cd $GRAALVM_HOME/vm`");
+            System.err.println("`mx --dynamicimports /graal-js,graalpython,truffleruby build`");
+            System.exit(1);
+        }
+
         // Create builder
 
         Builder builder = Context.newBuilder().in(Interpreter.in).out(Interpreter.out).logHandler(Interpreter.log)
@@ -136,7 +144,7 @@ public class Interpreter {
                     // read more input until we get an empty line
                     String additionalInput = in.readLine();
                     while (additionalInput != null && !additionalInput.isEmpty()) {
-                        sb.append(additionalInput).append('\n');
+                        sb.append('\n').append(additionalInput);
                         additionalInput = in.readLine();
                     }
                     if (additionalInput == null) {
@@ -152,6 +160,8 @@ public class Interpreter {
             }
             break;
         }
+        System.out.println("Executed command: ");
+        System.out.println(sb.toString());
         in.flush();
     }
 

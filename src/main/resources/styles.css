@@ -4,7 +4,7 @@
 }
 
 .main-box {
-    -fx-padding: 1mm 1mm 1mm 1mm;
+    -fx-padding: 0;
     -fx-font-size: 1.2em;
 }
 
@@ -51,6 +51,9 @@
 .context-menu {
     -fx-background-color: #cccccc;
     -fx-text-fill: #333333;
+}
+#buttonsBox, .button {
+    -fx-background-color: #03687f;
 }
 
 .button {
