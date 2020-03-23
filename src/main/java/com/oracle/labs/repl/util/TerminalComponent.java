@@ -11,7 +11,6 @@ import java.lang.Thread;
 
 import javafx.application.Platform;
 import javafx.scene.control.TextArea;
-import javafx.scene.input.KeyCode;
 
 public class TerminalComponent {
 
