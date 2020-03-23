@@ -47,12 +47,14 @@ public class Interpreter {
 
         String tmpDir = System.getProperty("java.io.tmpdir");
 
+        System.out.print("Unpacking language runtimes...");
         try {
             ZipUtils.unzip(Interpreter.class.getResourceAsStream("/filesystem.zip"), new File(tmpDir));
         } catch (IOException e) {
             e.printStackTrace();
             System.exit(100);
         }
+        System.out.println(" Done.");
 
         for (String lang : Engine.create().getLanguages().keySet()) {
             if (languageImplementations.containsKey(lang))
@@ -67,6 +69,7 @@ public class Interpreter {
             System.exit(1);
         }
 
+        System.out.print("Creating context builder...");
         // Create builder
 
         Builder builder = Context.newBuilder().in(Interpreter.in).out(Interpreter.out).logHandler(Interpreter.log)
@@ -75,11 +78,13 @@ public class Interpreter {
         for (String lang : languages) {
             builder = languageImplementations.get(lang).addParameters(builder);
         }
-
+        
         polyglot = builder.build();
+        System.out.println(" Done.");
 
         // Make language bindings
 
+        System.out.print("Adding language bindings...");
         IntSupplier exit = new IntSupplier() {
             @Override
             public int getAsInt() {
@@ -100,14 +105,17 @@ public class Interpreter {
         for (String lang : languages) {
             languageImplementations.get(lang).putBindings(polyglot, clear, exit);
         }
+        System.out.println(" Done.");
 
         // Initialize languages
 
+        System.out.print("Initializing languages...");
         for (String lang : languages) {
             String code = languageImplementations.get(lang).initCode();
             evalInternal(code);
             nextLanguage();
         }
+        System.out.println(" Done.");
     }
 
     public void nextLanguage() {
@@ -127,13 +135,12 @@ public class Interpreter {
     }
 
     public void readEvalPrint() {
-        String input = in.readLine();
+        String input;
         
-        if (input.isEmpty() || input.charAt(0) == '#') {
-            // nothing to parse
-            return;
-        }
-
+        do {
+            input = in.readLine();
+        } while (!in.isEmpty() && (input.isEmpty() || input.charAt(0) == '#'));
+            
         StringBuilder sb = new StringBuilder(input).append('\n');
         while (!in.isEmpty()) { // processing subsequent lines while input is incomplete
             try {
@@ -144,7 +151,7 @@ public class Interpreter {
                     // read more input until we get an empty line
                     String additionalInput = in.readLine();
                     while (additionalInput != null && !additionalInput.isEmpty()) {
-                        sb.append('\n').append(additionalInput);
+                        sb.append(additionalInput);
                         additionalInput = in.readLine();
                     }
                     if (additionalInput == null) {
@@ -156,12 +163,13 @@ public class Interpreter {
                 }
                 else {
                     err.write(e.getMessage());
+                    e.printStackTrace();
                 }
             }
             break;
         }
         System.out.println("Executed command: ");
-        System.out.println(sb.toString());
+        System.out.println(sb.toString().replace("\n","\\n"));
         in.flush();
     }
 

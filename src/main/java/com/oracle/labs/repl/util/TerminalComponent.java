@@ -41,28 +41,6 @@ public class TerminalComponent {
             checkInvalidState();
         });
 
-        terminal.setOnKeyReleased(event -> {
-            if (event.getCode() == KeyCode.UP) {
-                historyPosition = Math.min(historyPosition + 1, history.size());
-                if (historyPosition > 0)
-                    currentCode = history.get(history.size() - historyPosition);
-                changed = true;
-                safeUpdate();
-            } else if (event.getCode() == KeyCode.DOWN) {
-                historyPosition = Math.max(historyPosition - 1, 0);
-                if (historyPosition > 0)
-                    currentCode = history.get(history.size() - historyPosition);
-                else
-                    currentCode = "";
-                changed = true;
-                safeUpdate();
-            }
-        });
-
-        /*terminal.anchorProperty().addListener(event -> {
-            this.fixCaretPosition();
-        });*/
-
         out = new FXOutputStream();
         log = new FXOutputStream();
         err = new FXOutputStream();
@@ -77,6 +55,15 @@ public class TerminalComponent {
             }
         };
         timer.scheduleAtFixedRate(streamListener, 100, 100);
+    }
+
+    public void historyChange(int move) {
+        historyPosition = Math.max(Math.min(historyPosition + move, history.size()), 0);
+        if (historyPosition > 0)
+            currentCode = history.get(history.size() - historyPosition);
+        changed = true;
+        safeUpdate();
+        terminal.positionCaret(terminal.getText().length());
     }
 
     public synchronized void checkInvalidState() {

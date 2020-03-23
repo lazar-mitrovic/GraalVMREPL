@@ -13,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
@@ -80,6 +81,7 @@ public class Controller {
         term.writeLine("");
         interpreter.showPrompt();
         interpreterBox.requestFocus();
+        System.out.println("GUI init done.");
     }
 
     public void doInterpreterEval() throws IOException {
@@ -112,11 +114,20 @@ public class Controller {
                 } catch (final Exception e) {
                     e.printStackTrace();
                 }
-            } else if (event.getCode() == KeyCode.ESCAPE) // Keyboard turned off.
+            } else if (event.getCode() == KeyCode.ESCAPE) {
+                event.consume();
                 interpreterBox.getParent().requestFocus();
-            else
+            }
+            else if (event.getCode() == KeyCode.UP) {
+                event.consume();
+                term.historyChange(+1);
+            } else if (event.getCode() == KeyCode.DOWN) {
+                event.consume();
+                term.historyChange(-1);
+            } else
                 term.checkInvalidState();
         });
+
 
         codeBox.setOnKeyPressed(event -> {
             if (event.getCode() == KeyCode.ESCAPE) // Keyboard turned off.

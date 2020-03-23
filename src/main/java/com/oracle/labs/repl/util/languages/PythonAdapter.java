@@ -11,7 +11,6 @@ public class PythonAdapter implements LanguageAdapter {
 
     public Builder addParameters(Builder builder) {
         String tmpDir = System.getProperty("java.io.tmpdir");
-        System.out.println(tmpDir);
         return builder.option("python.CoreHome",   Paths.get(tmpDir, "python", "lib-graalpython").toString())
                       .option("python.SysPrefix",  Paths.get(tmpDir, "python").toString())
                       .option("python.CAPI",       Paths.get(tmpDir, "python", "include").toString())

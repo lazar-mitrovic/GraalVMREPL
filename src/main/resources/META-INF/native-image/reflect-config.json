@@ -14330,6 +14330,11 @@
   "allDeclaredFields":true
 },
 {
+  "name":"com.oracle.truffle.js.nodes.function.JSFunctionCallNode$Call1Node",
+  "allDeclaredFields":true,
+  "fields":[{"name":"argument0", "allowUnsafeAccess":true}]
+},
+{
   "name":"com.oracle.truffle.js.nodes.function.JSFunctionCallNode$CallNode",
   "allDeclaredFields":true,
   "fields":[

@@ -48,11 +48,11 @@ public class FXInputStream extends InputStream {
             StringBuilder s = new StringBuilder();
             do {
                 c = (char) this.read();
-                if (c == '\n')
+                if (c == '\r' || c == '\n')
                     break;
                 s.append(c);
             } while (c != -1);
-            return s.toString().trim();
+            return s.toString();
         } catch (Exception e) {
             e.printStackTrace();
             return null;

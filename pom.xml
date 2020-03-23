@@ -15,7 +15,7 @@
         <maven.compiler.target>11</maven.compiler.target>
         <javafx.version>15-ea+2</javafx.version>
         <attach.version>4.0.5</attach.version>
-        <client.version>0.1.18-SNAPSHOT</client.version>
+        <client.version>0.1.19-SNAPSHOT</client.version>
         <mainClassName>com.oracle.labs.repl.Main</mainClassName>
     </properties>
 
@@ -43,6 +43,11 @@
         <dependency>
             <groupId>com.gluonhq.attach</groupId>
             <artifactId>util</artifactId>
+            <version>${attach.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.gluonhq.attach</groupId>
+            <artifactId>keyboard</artifactId>
             <version>${attach.version}</version>
         </dependency>
     </dependencies>
@@ -149,6 +154,7 @@
                     <attachList>
                         <list>display</list>
                         <list>lifecycle</list>
+                        <list>keyboard</list>
                     </attachList>
                     <mainClass>${mainClassName}</mainClass>
                 </configuration>
