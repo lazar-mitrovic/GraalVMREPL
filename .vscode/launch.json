@@ -1,0 +1,14 @@
+{
+"version": "0.2.0",
+"configurations": [
+    {
+        "type": "java",
+        "name": "Debug (Attach)",
+        "projectName": "GraalREPL",
+        "preLaunchTask": "RunWithDebug",
+        "request": "attach",
+        "hostName": "127.0.0.1",
+        "port": 8000
+    }
+]
+}
