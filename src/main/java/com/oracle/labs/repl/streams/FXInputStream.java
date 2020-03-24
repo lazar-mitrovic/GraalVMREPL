@@ -83,6 +83,6 @@ public class FXInputStream extends InputStream {
     }
 
     public Boolean isEmpty() {
-        return flushString.length()!=0 || pos != buffer.length;
+        return flushString.length()==0 && (buffer == null || pos == buffer.length);
     }
 };

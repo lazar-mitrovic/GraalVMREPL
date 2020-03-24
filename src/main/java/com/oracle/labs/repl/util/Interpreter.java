@@ -136,13 +136,14 @@ public class Interpreter {
 
     public void readEvalPrint() {
         String input;
-        
         do {
             input = in.readLine();
         } while (!in.isEmpty() && (input.isEmpty() || input.charAt(0) == '#'));
-            
+        
+        if (input.isEmpty()) return;
+
         StringBuilder sb = new StringBuilder(input).append('\n');
-        while (!in.isEmpty()) { // processing subsequent lines while input is incomplete
+        while (true) { // processing subsequent lines while input is incomplete
             try {
                 polyglot.eval(Source.newBuilder(getLanguageName(), sb.toString(), "<shell>").interactive(true)
                         .buildLiteral()).toString();
@@ -151,7 +152,7 @@ public class Interpreter {
                     // read more input until we get an empty line
                     String additionalInput = in.readLine();
                     while (additionalInput != null && !additionalInput.isEmpty()) {
-                        sb.append(additionalInput);
+                        sb.append(additionalInput).append("\n");
                         additionalInput = in.readLine();
                     }
                     if (additionalInput == null) {
