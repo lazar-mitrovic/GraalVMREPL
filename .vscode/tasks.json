@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [{
+        "label": "RunWithDebug",
+        "command": "mvn",
+        "args": ["javafx:run@debug"],
+        "type": "shell",
+        "isBackground": true,
+            "problemMatcher": [{
+                "pattern": [{
+                    "regexp": "\\b\\B",
+                    "file": 1,
+                    "location": 2,
+                    "message": 3
+                }],
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "^.*Preparing to execute Maven in debug mode.*",
+                    "endsPattern": "^.*Listening for transport dt_socket at address.*"
+                }
+            }]
+    }]
+}

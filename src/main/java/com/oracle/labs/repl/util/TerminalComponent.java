@@ -1,26 +1,22 @@
 package com.oracle.labs.repl.util;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import com.oracle.labs.repl.streams.FXInputStream;
+import com.oracle.labs.repl.streams.FXOutputStream;
+
 import java.lang.Thread;
-import java.nio.charset.StandardCharsets;
 
 import javafx.application.Platform;
 import javafx.scene.control.TextArea;
-import javafx.scene.input.KeyCode;
 
 public class TerminalComponent {
 
     private TextArea terminal;
 
     private String currentCode = "";
-    private String flushCode = null;
-
     private String terminalText = "";
     private String oldVal = "";
 
@@ -28,49 +24,25 @@ public class TerminalComponent {
     private int historyPosition;
 
     private Boolean changed;
-    private Boolean inputBlocked;
 
-    public ByteArrayOutputStream out, log, err;
-    public InputStream in;
+    public FXOutputStream out, log, err;
+    public FXInputStream in;
 
     public TerminalComponent(TextArea terminal) {
         this.terminal = terminal;
         this.changed = false;
         history = new ArrayList<>();
         historyPosition = 0;
-        inputBlocked = false;
 
-        in = createInputStream();
+        in = new FXInputStream();
 
-        terminal.setOnKeyTyped(event -> {
+        terminal.textProperty().addListener(event -> {
             checkInvalidState();
         });
 
-        terminal.setOnKeyReleased(event -> {
-            if (event.getCode() == KeyCode.UP) {
-                historyPosition = Math.min(historyPosition + 1, history.size());
-                if (historyPosition > 0)
-                    currentCode = history.get(history.size() - historyPosition);
-                changed = true;
-                safeUpdate();
-            } else if (event.getCode() == KeyCode.DOWN) {
-                historyPosition = Math.max(historyPosition - 1, 0);
-                if (historyPosition > 0)
-                    currentCode = history.get(history.size() - historyPosition);
-                else
-                    currentCode = "";
-                changed = true;
-                safeUpdate();
-            }
-        });
-
-        /*terminal.anchorProperty().addListener(event -> {
-            this.fixCaretPosition();
-        });*/
-
-        out = new ByteArrayOutputStream();
-        log = new ByteArrayOutputStream();
-        err = new ByteArrayOutputStream();
+        out = new FXOutputStream();
+        log = new FXOutputStream();
+        err = new FXOutputStream();
 
         Timer timer = new Timer(true);
         TimerTask streamListener = new TimerTask() {
@@ -82,6 +54,15 @@ public class TerminalComponent {
             }
         };
         timer.scheduleAtFixedRate(streamListener, 100, 100);
+    }
+
+    public void historyChange(int move) {
+        historyPosition = Math.max(Math.min(historyPosition + move, history.size()), 0);
+        if (historyPosition > 0)
+            currentCode = history.get(history.size() - historyPosition);
+        changed = true;
+        safeUpdate();
+        terminal.positionCaret(terminal.getText().length());
     }
 
     public synchronized void checkInvalidState() {
@@ -110,40 +91,36 @@ public class TerminalComponent {
 
     public synchronized void updateStreams() {
         if (!err.toString().isEmpty()) {
-            write(System.lineSeparator() + "err> " + err.toString(StandardCharsets.UTF_8), false);
+            _guiWrite("err> " + err + System.lineSeparator());
             changed = true;
             err.reset();
         }
 
         if (!log.toString().isEmpty()) {
-            write(System.lineSeparator() + "log> " + log.toString(StandardCharsets.UTF_8), false);
+            _guiWrite("log> " + log + System.lineSeparator());
             changed = true;
             log.reset();
         }
 
         if (!out.toString().isEmpty()) {
-            write(System.lineSeparator() + out.toString(StandardCharsets.UTF_8), false);
+            _guiWrite(out.toString());
             changed = true;
             out.reset();
         }
     }
 
-    public synchronized void write(String s) {
-        write(s, true);
-    }
-
-    public synchronized void writeLine(String s) {
-        writeLine(s, true);
-    }
-
-    public synchronized void writeLine(String s, boolean update) {
-        write(s + System.lineSeparator(), true);
-    }
-
-    public synchronized void write(String s, boolean update) {
+    private synchronized void _guiWrite(String s) {
         terminalText += s;
         terminalText = terminalText.substring(Math.max(terminalText.length() - 1000, 0));
         changed = true;
+    }
+
+    public synchronized void writeLine(String s) {
+        write(s + System.lineSeparator());
+    }
+
+    public synchronized void write(String s) {
+        out.write(s);
     }
 
     public synchronized void clear() {
@@ -178,15 +155,11 @@ public class TerminalComponent {
     }
 
     public synchronized void commitCurrent() {
-        history.add(currentCode);
+        if (!currentCode.equals(""))
+            history.add(currentCode.trim());
         historyPosition = 0;
-        writeLine(currentCode, false);
-        if (inputBlocked) {
-            flushCode = currentCode;
-            synchronized (in) {
-                in.notifyAll();
-            }
-        }
+        writeLine(currentCode);
+        in.writeLine(currentCode);
         flushCurrent();
     }
 
@@ -205,42 +178,5 @@ public class TerminalComponent {
 
     public void setTerminal(TextArea terminal) {
         this.terminal = terminal;
-    }
-
-    private InputStream createInputStream() {
-        return new InputStream() {
-            byte[] buffer = null;
-            int pos = -1;
-
-            @Override
-            public int read() throws IOException {
-                if (buffer == null) {
-                    pos = 0;
-                    synchronized (this) {
-                        while (flushCode == null) {
-                            inputBlocked = true;
-                            try {
-                                this.wait();
-                            } catch (InterruptedException e) {
-                                e.printStackTrace();
-                            }
-                        }
-                        inputBlocked = false;
-                    }
-                    buffer = flushCode.getBytes(StandardCharsets.UTF_8);
-                    flushCode = null;
-                }
-                if (pos == buffer.length) {
-                    buffer = null;
-                    return '\n';
-                } else {
-                    return buffer[pos++];
-                }
-            }
-        };
-    }
-
-    public Boolean isInputBlocked() {
-        return inputBlocked;
     }
 }

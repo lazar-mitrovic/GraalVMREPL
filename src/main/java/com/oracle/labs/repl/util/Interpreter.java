@@ -1,73 +1,90 @@
 package com.oracle.labs.repl.util;
 
 import org.graalvm.polyglot.Source;
-import org.graalvm.polyglot.Value;
 import org.graalvm.polyglot.Context;
 import org.graalvm.polyglot.Engine;
 import org.graalvm.polyglot.PolyglotException;
 import org.graalvm.polyglot.Context.Builder;
 
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.function.IntSupplier;
 import javafx.application.Platform;
 import javafx.concurrent.Task;
 
-
+import com.oracle.labs.repl.streams.FXInputStream;
+import com.oracle.labs.repl.streams.FXOutputStream;
 import com.oracle.labs.repl.util.languages.*;
 
 public class Interpreter {
-    private static Map<?, LanguageAdapter> languageImplementations 
-                = Map.of("js", new JavaScriptAdapter(), "python", new PythonAdapter(), "ruby", new RubyAdapter());
+    private static Map<?, LanguageAdapter> languageImplementations = Map.of("js", new JavaScriptAdapter(), "python",
+            new PythonAdapter(), "ruby", new RubyAdapter());
 
     private static Context polyglot = null;
     private static ArrayList<String> languages = new ArrayList<>();
     private static int languageIndex = 0;
-    private static ByteArrayOutputStream out, log, err;
-    
+
+    private static FXInputStream in;
+    private static FXOutputStream out, log, err;
+
     private static TerminalComponent term;
-    private static Boolean blocked = false;
+
+    private boolean blocked;
 
     public Interpreter(TerminalComponent term) {
 
         Interpreter.term = term;
+        Interpreter.in = term.in;
         Interpreter.out = term.out;
         Interpreter.log = term.log;
         Interpreter.err = term.err;
-        
+
+        blocked = false;
+
         // Unpack language files
 
-        String tmpDir = System.getProperty("java.io.tmpdir"); 
+        String tmpDir = System.getProperty("java.io.tmpdir");
 
+        System.out.print("Unpacking language runtimes...");
         try {
             ZipUtils.unzip(Interpreter.class.getResourceAsStream("/filesystem.zip"), new File(tmpDir));
         } catch (IOException e) {
             e.printStackTrace();
             System.exit(100);
         }
-        
+        System.out.println(" Done.");
+
         for (String lang : Engine.create().getLanguages().keySet()) {
             if (languageImplementations.containsKey(lang))
                 languages.add(lang);
         }
 
+        if (languages.size() == 0) {
+            System.err.println("No languages present!");
+            System.err.println("You can add them to your GraalVM build using:");
+            System.err.println("$ cd $GRAAL_SOURCE/vm");
+            System.err.println("$ mx --dynamicimports /graal-js,graalpython,truffleruby build`");
+            System.exit(1);
+        }
+
+        System.out.print("Creating context builder...");
         // Create builder
 
-        Builder builder = Context.newBuilder().in(term.in).out(Interpreter.out).logHandler(Interpreter.log)
+        Builder builder = Context.newBuilder().in(Interpreter.in).out(Interpreter.out).logHandler(Interpreter.log)
                 .err(Interpreter.err).allowAllAccess(true);
-        
+
         for (String lang : languages) {
             builder = languageImplementations.get(lang).addParameters(builder);
         }
         
         polyglot = builder.build();
+        System.out.println(" Done.");
 
         // Make language bindings
 
+        System.out.print("Adding language bindings...");
         IntSupplier exit = new IntSupplier() {
             @Override
             public int getAsInt() {
@@ -88,24 +105,23 @@ public class Interpreter {
         for (String lang : languages) {
             languageImplementations.get(lang).putBindings(polyglot, clear, exit);
         }
+        System.out.println(" Done.");
 
         // Initialize languages
 
+        System.out.print("Initializing languages...");
         for (String lang : languages) {
             String code = languageImplementations.get(lang).initCode();
-            try {
-                eval(code, false, true);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            evalInternal(code);
             nextLanguage();
         }
+        System.out.println(" Done.");
     }
 
     public void nextLanguage() {
         languageIndex = (languageIndex + 1) % languages.size();
     }
-    
+
     public void clear() {
         term.clear();
     }
@@ -113,37 +129,80 @@ public class Interpreter {
     public void showPrompt() {
         final String prompt = getLanguageName() + "> ";
         try {
-            out.write(prompt.getBytes(StandardCharsets.UTF_8));
+            out.write(prompt);
         } catch (final Exception e) {
         }
     }
 
-    public Value eval(final String code) throws IOException {
-        return eval(code, false, false);
-    }
-
-    public Value eval(final String code, final Boolean longTask) throws IOException {
-        return eval(code, longTask, true);
-    }
-
-    public Value eval(final String code, final Boolean longTask, final Boolean visible) throws IOException {
-        Source source;
+    public void readEvalPrint() {
+        String input;
+        do {
+            input = in.readLine();
+        } while (!in.isEmpty() && (input.isEmpty() || input.charAt(0) == '#'));
         
-        if (visible)
-            source = Source.newBuilder(getLanguageName(), code, "<shell>").interactive(true).build();
-        else    
-            source = Source.create(getLanguageName(), code);
+        if (input.isEmpty()) return;
 
-        if (longTask) {
-            final EvalTask e = new EvalTask(source, visible);
-            new Thread(e).start();
-            return Value.asValue(null);
+        StringBuilder sb = new StringBuilder(input).append('\n');
+        while (true) { // processing subsequent lines while input is incomplete
+            try {
+                polyglot.eval(Source.newBuilder(getLanguageName(), sb.toString(), "<shell>").interactive(true)
+                        .buildLiteral()).toString();
+            } catch (PolyglotException e) {
+                if (e.isIncompleteSource()) {
+                    // read more input until we get an empty line
+                    String additionalInput = in.readLine();
+                    while (additionalInput != null && !additionalInput.isEmpty()) {
+                        sb.append(additionalInput).append("\n");
+                        additionalInput = in.readLine();
+                    }
+                    if (additionalInput == null) {
+                        err.write("EOF reached.");
+                        return;
+                    }
+                    // The only continuation in the while loop
+                    continue;
+                }
+                else {
+                    err.write(e.getMessage());
+                    e.printStackTrace();
+                }
+            }
+            break;
         }
-        return polyglot.eval(source);
+        System.out.println("Executed command: ");
+        System.out.println(sb.toString().replace("\n","\\n"));
+        in.flush();
     }
 
-    public Boolean getBlocked() {
+    public void evalInternal(String code) {
+        polyglot.eval(Source.newBuilder(getLanguageName(), code, "<internal>").internal(true).buildLiteral());
+    }
+
+    public void eval() {
+        new Thread(new EvalTask()).start();
+    }
+
+    public Boolean isBlocked() {
         return blocked;
+    }
+
+    public Boolean isInputBlocked() {
+        return in.isInputBlocked();
+    }
+
+    protected class EvalTask extends Task<Object> {
+        @Override
+        protected Object call() throws IOException {
+            blocked = true;
+            try {
+                readEvalPrint();
+            } catch (final PolyglotException exception) {
+                err.write(exception.getMessage());
+            }
+            blocked = false;
+            showPrompt();
+            return null;
+        }
     }
 
     @Override
@@ -157,36 +216,5 @@ public class Interpreter {
 
     public String getLanguageName() {
         return languages.get(languageIndex);
-    }
-
-
-
-    protected class EvalTask extends Task<Object> {
-        private final Source source;
-        private Value result;
-        private final boolean visible;
-
-        public EvalTask(final Source source, final boolean visible) {
-            this.source = source;
-            this.visible = visible;
-        }
-
-        @Override
-        protected Object call() throws IOException {
-            blocked = true;
-            try {
-                result = polyglot.eval(source);
-            } catch (final PolyglotException exception) {
-                err.write(exception.getMessage().getBytes(StandardCharsets.UTF_8));
-            }
-            if (visible)
-                showPrompt();
-            blocked = false;
-            return null;
-        }
-
-        public Value getResult() {
-            return result;
-        }
     }
 }

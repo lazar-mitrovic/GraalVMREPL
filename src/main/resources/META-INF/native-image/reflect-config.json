@@ -468,7 +468,10 @@
     {"name":"getClasscellNode_", "allowUnsafeAccess":true}, 
     {"name":"getInitSubclassNode_", "allowUnsafeAccess":true}, 
     {"name":"getMetaclassNode_", "allowUnsafeAccess":true}, 
-    {"name":"getNewFuncNode_", "allowUnsafeAccess":true}
+    {"name":"getNewFuncNode_", "allowUnsafeAccess":true}, 
+    {"name":"glib_", "allowUnsafeAccess":true}, 
+    {"name":"nslib_", "allowUnsafeAccess":true}, 
+    {"name":"updatedStorage_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -1206,6 +1209,8 @@
   "allDeclaredFields":true,
   "fields":[
     {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"run0_hasFrame_", "allowUnsafeAccess":true}, 
+    {"name":"run0_hasKeyLib_", "allowUnsafeAccess":true}, 
     {"name":"run0_hasKey_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
@@ -4129,6 +4134,201 @@
   "allDeclaredFields":true
 },
 {
+  "name":"com.oracle.graal.python.builtins.objects.common.DynamicObjectStorageGen"
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.common.DynamicObjectStorageGen$HashingStorageLibraryExports$Cached",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"addAllToOtherNode__injectNode_", "allowUnsafeAccess":true}, 
+    {"name":"addAllToOtherNode__libSelf_", "allowUnsafeAccess":true}, 
+    {"name":"builtinStringProfile", "allowUnsafeAccess":true}, 
+    {"name":"compareEntriesWithStateNode__gotState_", "allowUnsafeAccess":true}, 
+    {"name":"compareEntriesWithStateNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"compareEntriesWithStateNode__testNode_", "allowUnsafeAccess":true}, 
+    {"name":"compareKeysNode__hasKeyNode_", "allowUnsafeAccess":true}, 
+    {"name":"compareKeysNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"delItemWithStateNode__gotState_", "allowUnsafeAccess":true}, 
+    {"name":"delItemWithStateNode__writeNode_", "allowUnsafeAccess":true}, 
+    {"name":"diffNode__diffNode_", "allowUnsafeAccess":true}, 
+    {"name":"diffNode__libSelf_", "allowUnsafeAccess":true}, 
+    {"name":"entriesNode__readNode_", "allowUnsafeAccess":true}, 
+    {"name":"equalsWithStateNode__gotState_", "allowUnsafeAccess":true}, 
+    {"name":"equalsWithStateNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"getItemWithState_notStringLoop_gotState_", "allowUnsafeAccess":true}, 
+    {"name":"getItemWithState_notStringLoop_lib_", "allowUnsafeAccess":true}, 
+    {"name":"getItemWithState_notStringLoop_noValueProfile_", "allowUnsafeAccess":true}, 
+    {"name":"getItemWithState_notString_cachedShape_", "allowUnsafeAccess":true}, 
+    {"name":"getItemWithState_notString_gotState_", "allowUnsafeAccess":true}, 
+    {"name":"getItemWithState_notString_keyList_", "allowUnsafeAccess":true}, 
+    {"name":"getItemWithState_notString_lib_", "allowUnsafeAccess":true}, 
+    {"name":"getItemWithState_notString_noValueProfile_", "allowUnsafeAccess":true}, 
+    {"name":"getItemWithState_pstring_noValueProfile_", "allowUnsafeAccess":true}, 
+    {"name":"getItemWithState_string_noValueProfile_", "allowUnsafeAccess":true}, 
+    {"name":"hasMroprofile", "allowUnsafeAccess":true}, 
+    {"name":"injectInto_cachedLen_cachedShape_", "allowUnsafeAccess":true}, 
+    {"name":"injectInto_cachedLen_keys_", "allowUnsafeAccess":true}, 
+    {"name":"intersectNode__injectNode_", "allowUnsafeAccess":true}, 
+    {"name":"intersectNode__libSelf_", "allowUnsafeAccess":true}, 
+    {"name":"keysNode__readNode_", "allowUnsafeAccess":true}, 
+    {"name":"length_cachedLen_cache", "allowUnsafeAccess":true}, 
+    {"name":"length_length_readNode_", "allowUnsafeAccess":true}, 
+    {"name":"readKey", "allowUnsafeAccess":true}, 
+    {"name":"readNodeInject", "allowUnsafeAccess":true}, 
+    {"name":"setItemWithState_generalize_gotState_", "allowUnsafeAccess":true}, 
+    {"name":"setItemWithState_generalize_lib_", "allowUnsafeAccess":true}, 
+    {"name":"setitemWrite", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"unionNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"xorNode__injectNode_", "allowUnsafeAccess":true}, 
+    {"name":"xorNode__lib_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.common.DynamicObjectStorageGen$HashingStorageLibraryExports$Cached$LengthCachedLenData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cachedShape_", "allowUnsafeAccess":true}, 
+    {"name":"keys_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"readNode_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.common.EconomicMapStorageGen"
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.common.EconomicMapStorageGen$HashingStorageLibraryExports$Cached",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"addAllToOther_generic0_cache", "allowUnsafeAccess":true}, 
+    {"name":"compareEntriesWithStateNode__gotState_", "allowUnsafeAccess":true}, 
+    {"name":"compareEntriesWithStateNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"compareEntriesWithStateNode__testNode_", "allowUnsafeAccess":true}, 
+    {"name":"compareKeys_compareGeneric0_cache", "allowUnsafeAccess":true}, 
+    {"name":"compareKeys_compareSameType_findProfile_", "allowUnsafeAccess":true}, 
+    {"name":"compareKeys_compareSameType_lib_", "allowUnsafeAccess":true}, 
+    {"name":"delItemWithStateNode__delItemWithState0_cache", "allowUnsafeAccess":true}, 
+    {"name":"delItemWithStateNode__delItemWithState1_gotState_", "allowUnsafeAccess":true}, 
+    {"name":"delItemWithStateNode__delItemWithState1_otherlib_", "allowUnsafeAccess":true}, 
+    {"name":"diff_diffGeneric0_cache", "allowUnsafeAccess":true}, 
+    {"name":"diff_diffGeneric1_findProfile_", "allowUnsafeAccess":true}, 
+    {"name":"diff_diffGeneric1_lib_", "allowUnsafeAccess":true}, 
+    {"name":"diff_diffSameType_findProfile_", "allowUnsafeAccess":true}, 
+    {"name":"diff_diffSameType_lib_", "allowUnsafeAccess":true}, 
+    {"name":"equalsWithState_equalGeneric_compareLib1_", "allowUnsafeAccess":true}, 
+    {"name":"equalsWithState_equalGeneric_compareLib2_", "allowUnsafeAccess":true}, 
+    {"name":"equalsWithState_equalGeneric_otherlib_", "allowUnsafeAccess":true}, 
+    {"name":"equalsWithState_equalGeneric_selflib_", "allowUnsafeAccess":true}, 
+    {"name":"equalsWithState_equalSameType_compareLib1_", "allowUnsafeAccess":true}, 
+    {"name":"equalsWithState_equalSameType_compareLib2_", "allowUnsafeAccess":true}, 
+    {"name":"equalsWithState_equalSameType_findProfile_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"getItemWithState_getItemGeneric0_cache", "allowUnsafeAccess":true}, 
+    {"name":"getItemWithState_getItemGeneric1_findProfile_", "allowUnsafeAccess":true}, 
+    {"name":"getItemWithState_getItemGeneric1_gotState_", "allowUnsafeAccess":true}, 
+    {"name":"getItemWithState_getItemGeneric1_otherlib_", "allowUnsafeAccess":true}, 
+    {"name":"getItemWithState_getItemPString_cache", "allowUnsafeAccess":true}, 
+    {"name":"getItemWithState_getItemString_findProfile_", "allowUnsafeAccess":true}, 
+    {"name":"getItemWithState_getItemString_lib_", "allowUnsafeAccess":true}, 
+    {"name":"intersect_intersectGeneric0_cache", "allowUnsafeAccess":true}, 
+    {"name":"intersect_intersectGeneric1_findProfile_", "allowUnsafeAccess":true}, 
+    {"name":"intersect_intersectGeneric1_lib_", "allowUnsafeAccess":true}, 
+    {"name":"intersect_intersectSameType_findProfile_", "allowUnsafeAccess":true}, 
+    {"name":"intersect_intersectSameType_lib_", "allowUnsafeAccess":true}, 
+    {"name":"receiverClass_", "allowUnsafeAccess":true}, 
+    {"name":"setItemWithState_setItemGeneric0_cache", "allowUnsafeAccess":true}, 
+    {"name":"setItemWithState_setItemGeneric1_findProfile_", "allowUnsafeAccess":true}, 
+    {"name":"setItemWithState_setItemGeneric1_gotState_", "allowUnsafeAccess":true}, 
+    {"name":"setItemWithState_setItemGeneric1_otherlib_", "allowUnsafeAccess":true}, 
+    {"name":"setItemWithState_setItemPString_cache", "allowUnsafeAccess":true}, 
+    {"name":"setItemWithState_setItemString_findProfile_", "allowUnsafeAccess":true}, 
+    {"name":"setItemWithState_setItemString_lib_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"unionNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"xorNode__injectNode_", "allowUnsafeAccess":true}, 
+    {"name":"xorNode__lib_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.common.EconomicMapStorageGen$HashingStorageLibraryExports$Cached$DelItemWithStateNode_DelItemWithState0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"gotState_", "allowUnsafeAccess":true}, 
+    {"name":"lib_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"otherlib_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.common.EconomicMapStorageGen$HashingStorageLibraryExports$Cached$GetItemWithStateGetItemGeneric0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"findProfile_", "allowUnsafeAccess":true}, 
+    {"name":"gotState_", "allowUnsafeAccess":true}, 
+    {"name":"lib_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"otherlib_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.common.EconomicMapStorageGen$HashingStorageLibraryExports$Cached$GetItemWithStateGetItemPStringData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"findProfile_", "allowUnsafeAccess":true}, 
+    {"name":"getClassNode_", "allowUnsafeAccess":true}, 
+    {"name":"isBuiltinClassProfile_", "allowUnsafeAccess":true}, 
+    {"name":"lib_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"profile_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.common.EconomicMapStorageGen$HashingStorageLibraryExports$Cached$SetItemWithStateSetItemGeneric0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"findProfile_", "allowUnsafeAccess":true}, 
+    {"name":"gotState_", "allowUnsafeAccess":true}, 
+    {"name":"lib_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"otherlib_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.common.EmptyStorageGen"
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.common.EmptyStorageGen$HashingStorageLibraryExports$Cached",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"addAllToOtherNode__injectNode_", "allowUnsafeAccess":true}, 
+    {"name":"addAllToOtherNode__libSelf_", "allowUnsafeAccess":true}, 
+    {"name":"compareEntriesWithStateNode__gotState_", "allowUnsafeAccess":true}, 
+    {"name":"compareEntriesWithStateNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"compareEntriesWithStateNode__testNode_", "allowUnsafeAccess":true}, 
+    {"name":"compareKeysNode__hasKeyNode_", "allowUnsafeAccess":true}, 
+    {"name":"compareKeysNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"delItemWithStateNode__gotState_", "allowUnsafeAccess":true}, 
+    {"name":"delItemWithStateNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"diffNode__diffNode_", "allowUnsafeAccess":true}, 
+    {"name":"diffNode__libSelf_", "allowUnsafeAccess":true}, 
+    {"name":"equalsWithStateNode__gotState_", "allowUnsafeAccess":true}, 
+    {"name":"equalsWithStateNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"getItemWithStateNode__gotState_", "allowUnsafeAccess":true}, 
+    {"name":"getItemWithStateNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"intersectNode__injectNode_", "allowUnsafeAccess":true}, 
+    {"name":"intersectNode__libSelf_", "allowUnsafeAccess":true}, 
+    {"name":"receiverClass_", "allowUnsafeAccess":true}, 
+    {"name":"setItemWithStateNode__gotState_", "allowUnsafeAccess":true}, 
+    {"name":"setItemWithStateNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"unionNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"xorNode__injectNode_", "allowUnsafeAccess":true}, 
+    {"name":"xorNode__lib_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"com.oracle.graal.python.builtins.objects.common.HashingCollectionNodes$GetDictStorageNode",
   "allDeclaredFields":true
 },
@@ -4150,9 +4350,24 @@
   "allDeclaredFields":true,
   "fields":[
     {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"setItemCached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"setItemCached1_cache", "allowUnsafeAccess":true}, 
     {"name":"setItemCached_cache", "allowUnsafeAccess":true}, 
+    {"name":"setItemGeneric0_hasFrame_", "allowUnsafeAccess":true}, 
+    {"name":"setItemGeneric0_lib_", "allowUnsafeAccess":true}, 
+    {"name":"setItemGeneric1_hasFrame_", "allowUnsafeAccess":true}, 
     {"name":"setItemGeneric_setItemNode_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.common.HashingCollectionNodesFactory$SetItemNodeGen$SetItemCached0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cachedClass_", "allowUnsafeAccess":true}, 
+    {"name":"hasFrame_", "allowUnsafeAccess":true}, 
+    {"name":"lib_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -4165,12 +4380,83 @@
   ]
 },
 {
+  "name":"com.oracle.graal.python.builtins.objects.common.HashingStorage$AddToOtherInjectNode",
+  "allDeclaredFields":true
+},
+{
   "name":"com.oracle.graal.python.builtins.objects.common.HashingStorage$EqualsRootNode",
   "allDeclaredFields":true,
   "fields":[{"name":"callEqNode", "allowUnsafeAccess":true}]
 },
 {
   "name":"com.oracle.graal.python.builtins.objects.common.HashingStorage$Equivalence",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.common.HashingStorage$InitNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"dontNeedCallerFrame", "allowUnsafeAccess":true}, 
+    {"name":"dontNeedExceptionState", "allowUnsafeAccess":true}, 
+    {"name":"lookupKeysAttributeNode", "allowUnsafeAccess":true}, 
+    {"name":"nextNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.common.HashingStorageFactory$AddToOtherInjectNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"lib_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.common.HashingStorageFactory$InitNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"mapping_cache", "allowUnsafeAccess":true}, 
+    {"name":"pDictKwargs_getDictStorageNode_", "allowUnsafeAccess":true}, 
+    {"name":"pDictKwargs_lib_", "allowUnsafeAccess":true}, 
+    {"name":"pDict_getDictStorageNode_", "allowUnsafeAccess":true}, 
+    {"name":"pDict_lib_", "allowUnsafeAccess":true}, 
+    {"name":"pythonLanguageContextReference_", "allowUnsafeAccess":true}, 
+    {"name":"sequence_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.common.HashingStorageGen"
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.common.HashingStorageLibrary",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.common.HashingStorageLibrary$InjectIntoNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.common.HashingStorageLibraryGen"
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.common.HashingStorageLibraryGen$CachedDispatch",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"library", "allowUnsafeAccess":true}, 
+    {"name":"next", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.common.HashingStorageLibraryGen$CachedDispatchFirst",
+  "allDeclaredFields":true,
+  "fields":[{"name":"limit_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.common.HashingStorageLibraryGen$CachedDispatchNext",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.common.HashingStorageLibraryGen$CachedToUncachedDispatch",
   "allDeclaredFields":true
 },
 {
@@ -4468,6 +4754,46 @@
     {"name":"negativeIndexProfile", "allowUnsafeAccess":true}, 
     {"name":"raiseNode", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.common.KeywordsStorageGen"
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.common.KeywordsStorageGen$HashingStorageLibraryExports$Cached",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"addAllToOther_cached_cachedLen_", "allowUnsafeAccess":true}, 
+    {"name":"addAllToOther_cached_lib_", "allowUnsafeAccess":true}, 
+    {"name":"addAllToOther_generic_lib_", "allowUnsafeAccess":true}, 
+    {"name":"compareEntriesWithStateNode__gotState_", "allowUnsafeAccess":true}, 
+    {"name":"compareEntriesWithStateNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"compareEntriesWithStateNode__testNode_", "allowUnsafeAccess":true}, 
+    {"name":"compareKeysNode__hasKeyNode_", "allowUnsafeAccess":true}, 
+    {"name":"compareKeysNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"delItemWithStateNode__gotState_", "allowUnsafeAccess":true}, 
+    {"name":"delItemWithStateNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"diffNode__diffNode_", "allowUnsafeAccess":true}, 
+    {"name":"diffNode__libSelf_", "allowUnsafeAccess":true}, 
+    {"name":"equalsWithStateNode__gotState_", "allowUnsafeAccess":true}, 
+    {"name":"equalsWithStateNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"getItemWithState_cached_cachedLen_", "allowUnsafeAccess":true}, 
+    {"name":"getItemWithState_notString_cache", "allowUnsafeAccess":true}, 
+    {"name":"getItemWithState_pstring_profile_", "allowUnsafeAccess":true}, 
+    {"name":"hasKeyWithState_cached_cachedLen_", "allowUnsafeAccess":true}, 
+    {"name":"hasKeyWithState_notString_cache", "allowUnsafeAccess":true}, 
+    {"name":"hasKeyWithState_pstring_profile_", "allowUnsafeAccess":true}, 
+    {"name":"injectInto_cached_cachedLen_", "allowUnsafeAccess":true}, 
+    {"name":"intersectNode__injectNode_", "allowUnsafeAccess":true}, 
+    {"name":"intersectNode__libSelf_", "allowUnsafeAccess":true}, 
+    {"name":"receiverClass_", "allowUnsafeAccess":true}, 
+    {"name":"setItemWithStateNode__gotState_", "allowUnsafeAccess":true}, 
+    {"name":"setItemWithStateNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"unionNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"xorNode__injectNode_", "allowUnsafeAccess":true}, 
+    {"name":"xorNode__lib_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -5216,7 +5542,13 @@
 {
   "name":"com.oracle.graal.python.builtins.objects.dict.DictBuiltinsFactory$ContainsNodeFactory$ContainsNodeGen",
   "allDeclaredFields":true,
-  "fields":[{"name":"state_", "allowUnsafeAccess":true}]
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"run0_hasFrame_", "allowUnsafeAccess":true}, 
+    {"name":"run0_lib_", "allowUnsafeAccess":true}, 
+    {"name":"run1_hasFrame_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
 },
 {
   "name":"com.oracle.graal.python.builtins.objects.dict.DictBuiltinsFactory$CopyNodeFactory$CopyNodeGen",
@@ -5231,22 +5563,54 @@
   "allDeclaredFields":true,
   "fields":[
     {"name":"delItemNode_", "allowUnsafeAccess":true}, 
+    {"name":"run_cache", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.dict.DictBuiltinsFactory$DelItemNodeFactory$DelItemNodeGen$RunData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"hasFrame_", "allowUnsafeAccess":true}, 
+    {"name":"lib_", "allowUnsafeAccess":true}, 
+    {"name":"updatedStorage_", "allowUnsafeAccess":true}
   ]
 },
 {
   "name":"com.oracle.graal.python.builtins.objects.dict.DictBuiltinsFactory$GetItemNodeFactory$GetItemNodeGen",
   "allDeclaredFields":true,
   "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"getItem0_cache", "allowUnsafeAccess":true}, 
+    {"name":"getItem1_profile_", "allowUnsafeAccess":true}, 
+    {"name":"getItem1_specialNode_", "allowUnsafeAccess":true}, 
     {"name":"getItemNode_", "allowUnsafeAccess":true}, 
     {"name":"specialNode_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
 {
+  "name":"com.oracle.graal.python.builtins.objects.dict.DictBuiltinsFactory$GetItemNodeFactory$GetItemNodeGen$GetItem0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"hlib_", "allowUnsafeAccess":true}, 
+    {"name":"profile_", "allowUnsafeAccess":true}, 
+    {"name":"specialNode_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"com.oracle.graal.python.builtins.objects.dict.DictBuiltinsFactory$GetNodeFactory$GetNodeGen",
   "allDeclaredFields":true,
-  "fields":[{"name":"state_", "allowUnsafeAccess":true}]
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"noDefault0_hlib_", "allowUnsafeAccess":true}, 
+    {"name":"noDefault0_profile_", "allowUnsafeAccess":true}, 
+    {"name":"noDefault1_profile_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"withDefault0_hlib_", "allowUnsafeAccess":true}, 
+    {"name":"withDefault0_profile_", "allowUnsafeAccess":true}, 
+    {"name":"withDefault1_profile_", "allowUnsafeAccess":true}
+  ]
 },
 {
   "name":"com.oracle.graal.python.builtins.objects.dict.DictBuiltinsFactory$InitNodeFactory$InitNodeGen",
@@ -5277,6 +5641,8 @@
   "name":"com.oracle.graal.python.builtins.objects.dict.DictBuiltinsFactory$LenNodeFactory$LenNodeGen",
   "allDeclaredFields":true,
   "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"len0_lib_", "allowUnsafeAccess":true}, 
     {"name":"lenNode_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
@@ -5292,7 +5658,26 @@
 {
   "name":"com.oracle.graal.python.builtins.objects.dict.DictBuiltinsFactory$PopNodeFactory$PopNodeGen",
   "allDeclaredFields":true,
-  "fields":[{"name":"state_", "allowUnsafeAccess":true}]
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"pop0_cache", "allowUnsafeAccess":true}, 
+    {"name":"pop1_hasFrame_", "allowUnsafeAccess":true}, 
+    {"name":"pop1_updatedStorage_", "allowUnsafeAccess":true}, 
+    {"name":"popDefault0_cache", "allowUnsafeAccess":true}, 
+    {"name":"popDefault1_hasFrame_", "allowUnsafeAccess":true}, 
+    {"name":"popDefault1_updatedStorage_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.dict.DictBuiltinsFactory$PopNodeFactory$PopNodeGen$Pop0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"hasFrame_", "allowUnsafeAccess":true}, 
+    {"name":"lib_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"updatedStorage_", "allowUnsafeAccess":true}
+  ]
 },
 {
   "name":"com.oracle.graal.python.builtins.objects.dict.DictBuiltinsFactory$SetDefaultNodeFactory$SetDefaultNodeGen",
@@ -6838,6 +7223,10 @@
     {"name":"arguments0_", "allowUnsafeAccess":true}, 
     {"name":"arguments1_", "allowUnsafeAccess":true}, 
     {"name":"containsKeyNode_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"run0_hasFrame_", "allowUnsafeAccess":true}, 
+    {"name":"run0_lib_", "allowUnsafeAccess":true}, 
+    {"name":"run1_hasFrame_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
@@ -6845,6 +7234,10 @@
   "name":"com.oracle.graal.python.builtins.objects.mappingproxy.MappingproxyBuiltinsFactory$GetItemNodeFactory$GetItemNodeGen",
   "allDeclaredFields":true,
   "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"getItem0_hlib_", "allowUnsafeAccess":true}, 
+    {"name":"getItem0_profile_", "allowUnsafeAccess":true}, 
+    {"name":"getItem1_profile_", "allowUnsafeAccess":true}, 
     {"name":"getItemNode_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
@@ -7424,6 +7817,10 @@
   ]
 },
 {
+  "name":"com.oracle.graal.python.builtins.objects.object.ObjectBuiltins$ReprNode",
+  "allDeclaredFields":true
+},
+{
   "name":"com.oracle.graal.python.builtins.objects.object.ObjectBuiltins$SetattrNode",
   "allDeclaredFields":true
 },
@@ -7513,6 +7910,23 @@
   ]
 },
 {
+  "name":"com.oracle.graal.python.builtins.objects.object.ObjectBuiltinsFactory$ReprNodeFactory$ReprNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"repr_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.object.ObjectBuiltinsFactory$ReprNodeFactory$ReprNodeGen$ReprData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"getClass_", "allowUnsafeAccess":true}, 
+    {"name":"readModuleNode_", "allowUnsafeAccess":true}, 
+    {"name":"readQualNameNode_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"com.oracle.graal.python.builtins.objects.object.ObjectBuiltinsFactory$SetattrNodeFactory$SetattrNodeGen",
   "allDeclaredFields":true,
   "fields":[
@@ -7545,6 +7959,7 @@
     {"name":"dateTimeModuleProfile", "allowUnsafeAccess":true}, 
     {"name":"executeNode__executeNode_", "allowUnsafeAccess":true}, 
     {"name":"getClassNode", "allowUnsafeAccess":true}, 
+    {"name":"getClassThis", "allowUnsafeAccess":true}, 
     {"name":"getItemNode", "allowUnsafeAccess":true}, 
     {"name":"getMembersNode__castToList_", "allowUnsafeAccess":true}, 
     {"name":"getMembersNode__dataModelLibrary_", "allowUnsafeAccess":true}, 
@@ -7554,6 +7969,7 @@
     {"name":"getMembersNode__lenNode_", "allowUnsafeAccess":true}, 
     {"name":"hasArrayElementsNode__dataModelLibrary_", "allowUnsafeAccess":true}, 
     {"name":"instantiateNode__executeNode_", "allowUnsafeAccess":true}, 
+    {"name":"invokeMemberNode__attributeErrorProfile_", "allowUnsafeAccess":true}, 
     {"name":"invokeMemberNode__callGetattributeNode_", "allowUnsafeAccess":true}, 
     {"name":"invokeMemberNode__executeNode_", "allowUnsafeAccess":true}, 
     {"name":"invokeMemberNode__lookupGetattributeNode_", "allowUnsafeAccess":true}, 
@@ -7564,6 +7980,7 @@
     {"name":"isSubtypeNode", "allowUnsafeAccess":true}, 
     {"name":"isTimeZoneNode__lib_", "allowUnsafeAccess":true}, 
     {"name":"keyInfoNode", "allowUnsafeAccess":true}, 
+    {"name":"pythonLanguageContextReference_", "allowUnsafeAccess":true}, 
     {"name":"readArrayElementNode__callIterNode_", "allowUnsafeAccess":true}, 
     {"name":"readArrayElementNode__callNextNode_", "allowUnsafeAccess":true}, 
     {"name":"readArrayElementNode__dataModelLibrary_", "allowUnsafeAccess":true}, 
@@ -7587,6 +8004,8 @@
     {"name":"removeMemberNode__getItemKey_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}, 
     {"name":"timeModuleProfile", "allowUnsafeAccess":true}, 
+    {"name":"toDisplayString_builtin_cache", "allowUnsafeAccess":true}, 
+    {"name":"toDisplayString_fallback0_cache", "allowUnsafeAccess":true}, 
     {"name":"toForeign", "allowUnsafeAccess":true}, 
     {"name":"writeArrayElementNode__dataModelLibrary_", "allowUnsafeAccess":true}, 
     {"name":"writeArrayElementNode__setItemNode_", "allowUnsafeAccess":true}, 
@@ -7861,19 +8280,29 @@
   "name":"com.oracle.graal.python.builtins.objects.set.FrozenSetBuiltinsFactory$ContainsNodeFactory$ContainsNodeGen",
   "allDeclaredFields":true,
   "fields":[
+    {"name":"contains0_hasFrame_", "allowUnsafeAccess":true}, 
+    {"name":"contains0_lib_", "allowUnsafeAccess":true}, 
+    {"name":"contains1_hasFrame_", "allowUnsafeAccess":true}, 
     {"name":"containsKeyNode_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
 {
   "name":"com.oracle.graal.python.builtins.objects.set.FrozenSetBuiltinsFactory$IterNodeFactory$IterNodeGen",
   "allDeclaredFields":true,
-  "fields":[{"name":"state_", "allowUnsafeAccess":true}]
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"iter0_lib_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
 },
 {
   "name":"com.oracle.graal.python.builtins.objects.set.FrozenSetBuiltinsFactory$LenNodeFactory$LenNodeGen",
   "allDeclaredFields":true,
   "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"len0_lib_", "allowUnsafeAccess":true}, 
     {"name":"lenNode_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
@@ -7882,6 +8311,10 @@
   "name":"com.oracle.graal.python.builtins.objects.set.FrozenSetBuiltinsFactory$LessEqualNodeFactory$LessEqualNodeGen",
   "allDeclaredFields":true,
   "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"lE0_hasFrame_", "allowUnsafeAccess":true}, 
+    {"name":"lE0_lib_", "allowUnsafeAccess":true}, 
+    {"name":"lE1_hasFrame_", "allowUnsafeAccess":true}, 
     {"name":"lE_isSubsetNode_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
@@ -7916,7 +8349,20 @@
   "allDeclaredFields":true,
   "fields":[
     {"name":"delItemNode_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"remove0_cache", "allowUnsafeAccess":true}, 
+    {"name":"remove1_hasFrame_", "allowUnsafeAccess":true}, 
+    {"name":"remove1_updatedStorage_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.set.SetBuiltinsFactory$RemoveNodeFactory$RemoveNodeGen$Remove0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"hasFrame_", "allowUnsafeAccess":true}, 
+    {"name":"lib_", "allowUnsafeAccess":true}, 
+    {"name":"updatedStorage_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -8644,6 +9090,7 @@
   "name":"com.oracle.graal.python.builtins.objects.superobject.SuperBuiltinsFactory$SuperInitNodeFactory$SuperInitNodeGen",
   "allDeclaredFields":true,
   "fields":[
+    {"name":"init1_hlib_", "allowUnsafeAccess":true}, 
     {"name":"init1_readCaller_", "allowUnsafeAccess":true}, 
     {"name":"initInPlace_cache", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
@@ -8821,6 +9268,180 @@
     {"name":"getItemNode_", "allowUnsafeAccess":true}, 
     {"name":"getLen_", "allowUnsafeAccess":true}, 
     {"name":"reprNode_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.type.PythonBuiltinClassGen"
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.type.PythonBuiltinClassGen$PythonObjectLibraryExports$Cached",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"asIndexWithStateNode__callNode_", "allowUnsafeAccess":true}, 
+    {"name":"asIndexWithStateNode__gotState_", "allowUnsafeAccess":true}, 
+    {"name":"asIndexWithStateNode__isSubtype_", "allowUnsafeAccess":true}, 
+    {"name":"asIndexWithStateNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"asIndexWithStateNode__lookupIndex_", "allowUnsafeAccess":true}, 
+    {"name":"asIndexWithStateNode__noIndex_", "allowUnsafeAccess":true}, 
+    {"name":"asIndexWithStateNode__raise_", "allowUnsafeAccess":true}, 
+    {"name":"asIndexWithStateNode__resultProfile_", "allowUnsafeAccess":true}, 
+    {"name":"asSizeWithStateNode__castToLong_", "allowUnsafeAccess":true}, 
+    {"name":"asSizeWithStateNode__ignoreOverflow_", "allowUnsafeAccess":true}, 
+    {"name":"asSizeWithStateNode__overflow_", "allowUnsafeAccess":true}, 
+    {"name":"asSizeWithStateNode__raise_", "allowUnsafeAccess":true}, 
+    {"name":"canBeIndexNode__hasIndex_", "allowUnsafeAccess":true}, 
+    {"name":"equalsInternalNode__callNode_", "allowUnsafeAccess":true}, 
+    {"name":"equalsInternalNode__gotState_", "allowUnsafeAccess":true}, 
+    {"name":"equalsInternalNode__isNode_", "allowUnsafeAccess":true}, 
+    {"name":"equalsInternalNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"equalsInternalNode__lookupEqAttrNode_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"getDict_getNoDict_cachedShape_", "allowUnsafeAccess":true}, 
+    {"name":"getDict_getNoDict_layoutAssumption_", "allowUnsafeAccess":true}, 
+    {"name":"getDict_getNoDict_prop_", "allowUnsafeAccess":true}, 
+    {"name":"getItemProfile", "allowUnsafeAccess":true}, 
+    {"name":"getNoDict_assumption0_", "allowUnsafeAccess":true}, 
+    {"name":"hasDict_assumption0_", "allowUnsafeAccess":true}, 
+    {"name":"hasDict_hasDict_cachedShape_", "allowUnsafeAccess":true}, 
+    {"name":"hasDict_hasDict_layoutAssumption_", "allowUnsafeAccess":true}, 
+    {"name":"hasDict_hasDict_prop_", "allowUnsafeAccess":true}, 
+    {"name":"hasDict_hasNoDict_cachedShape_", "allowUnsafeAccess":true}, 
+    {"name":"hasDict_hasNoDict_layoutAssumption_", "allowUnsafeAccess":true}, 
+    {"name":"hasDict_hasNoDict_prop_", "allowUnsafeAccess":true}, 
+    {"name":"hasGetItemNode", "allowUnsafeAccess":true}, 
+    {"name":"hasLenNode", "allowUnsafeAccess":true}, 
+    {"name":"hasNoDict_assumption0_", "allowUnsafeAccess":true}, 
+    {"name":"hashWithStateNode__callNode_", "allowUnsafeAccess":true}, 
+    {"name":"hashWithStateNode__castToLong_", "allowUnsafeAccess":true}, 
+    {"name":"hashWithStateNode__gotState_", "allowUnsafeAccess":true}, 
+    {"name":"hashWithStateNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"hashWithStateNode__lookupHashAttributeNode_", "allowUnsafeAccess":true}, 
+    {"name":"hashWithStateNode__raise_", "allowUnsafeAccess":true}, 
+    {"name":"isCallableNode__callAttrGetterNode_", "allowUnsafeAccess":true}, 
+    {"name":"isContextManagerNode__hasEnterNode_", "allowUnsafeAccess":true}, 
+    {"name":"isContextManagerNode__hasExitNode_", "allowUnsafeAccess":true}, 
+    {"name":"isContextManagerNode__profile_", "allowUnsafeAccess":true}, 
+    {"name":"isHashableNode__dataModelLibrary_", "allowUnsafeAccess":true}, 
+    {"name":"isHashableNode__lookupHashAttributeNode_", "allowUnsafeAccess":true}, 
+    {"name":"isIterableNode__dataModelLibrary_", "allowUnsafeAccess":true}, 
+    {"name":"isIterableNode__getIterNode_", "allowUnsafeAccess":true}, 
+    {"name":"isIterableNode__hasNextNode_", "allowUnsafeAccess":true}, 
+    {"name":"isIterableNode__profileIter_", "allowUnsafeAccess":true}, 
+    {"name":"isIterableNode__profileNext_", "allowUnsafeAccess":true}, 
+    {"name":"isLazyClass", "allowUnsafeAccess":true}, 
+    {"name":"isMappingNode__pythonTypeLibrary_", "allowUnsafeAccess":true}, 
+    {"name":"isMappingTypeNode__hasItemsNode_", "allowUnsafeAccess":true}, 
+    {"name":"isMappingTypeNode__hasKeysNode_", "allowUnsafeAccess":true}, 
+    {"name":"isMappingTypeNode__hasValuesNode_", "allowUnsafeAccess":true}, 
+    {"name":"isMappingTypeNode__profile_", "allowUnsafeAccess":true}, 
+    {"name":"isSequenceNode__pythonTypeLibrary_", "allowUnsafeAccess":true}, 
+    {"name":"isTrueWithStateNode__callNode_", "allowUnsafeAccess":true}, 
+    {"name":"isTrueWithStateNode__castToBoolean_", "allowUnsafeAccess":true}, 
+    {"name":"isTrueWithStateNode__gotState_", "allowUnsafeAccess":true}, 
+    {"name":"isTrueWithStateNode__hasBool_", "allowUnsafeAccess":true}, 
+    {"name":"isTrueWithStateNode__hasLen_", "allowUnsafeAccess":true}, 
+    {"name":"isTrueWithStateNode__lookupAttrs_", "allowUnsafeAccess":true}, 
+    {"name":"isTrueWithStateNode__raiseNode_", "allowUnsafeAccess":true}, 
+    {"name":"lenProfile", "allowUnsafeAccess":true}, 
+    {"name":"lengthWithStateNode__callNode_", "allowUnsafeAccess":true}, 
+    {"name":"lengthWithStateNode__getLenNode_", "allowUnsafeAccess":true}, 
+    {"name":"lengthWithStateNode__gotState_", "allowUnsafeAccess":true}, 
+    {"name":"lengthWithStateNode__hasLen_", "allowUnsafeAccess":true}, 
+    {"name":"lengthWithStateNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"lengthWithStateNode__ltZero_", "allowUnsafeAccess":true}, 
+    {"name":"lengthWithStateNode__raiseNode_", "allowUnsafeAccess":true}, 
+    {"name":"setDictNode__writeNode_", "allowUnsafeAccess":true}, 
+    {"name":"setLazyPythonClass_setSingle_storingClassesInShapes_", "allowUnsafeAccess":true}, 
+    {"name":"setSingle_assumption0_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"thisObject", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.type.PythonClassGen"
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.type.PythonClassGen$PythonObjectLibraryExports$Cached",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"asIndexWithStateNode__callNode_", "allowUnsafeAccess":true}, 
+    {"name":"asIndexWithStateNode__gotState_", "allowUnsafeAccess":true}, 
+    {"name":"asIndexWithStateNode__isSubtype_", "allowUnsafeAccess":true}, 
+    {"name":"asIndexWithStateNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"asIndexWithStateNode__lookupIndex_", "allowUnsafeAccess":true}, 
+    {"name":"asIndexWithStateNode__noIndex_", "allowUnsafeAccess":true}, 
+    {"name":"asIndexWithStateNode__raise_", "allowUnsafeAccess":true}, 
+    {"name":"asIndexWithStateNode__resultProfile_", "allowUnsafeAccess":true}, 
+    {"name":"asSizeWithStateNode__castToLong_", "allowUnsafeAccess":true}, 
+    {"name":"asSizeWithStateNode__ignoreOverflow_", "allowUnsafeAccess":true}, 
+    {"name":"asSizeWithStateNode__overflow_", "allowUnsafeAccess":true}, 
+    {"name":"asSizeWithStateNode__raise_", "allowUnsafeAccess":true}, 
+    {"name":"canBeIndexNode__hasIndex_", "allowUnsafeAccess":true}, 
+    {"name":"equalsInternalNode__callNode_", "allowUnsafeAccess":true}, 
+    {"name":"equalsInternalNode__gotState_", "allowUnsafeAccess":true}, 
+    {"name":"equalsInternalNode__isNode_", "allowUnsafeAccess":true}, 
+    {"name":"equalsInternalNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"equalsInternalNode__lookupEqAttrNode_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"getDict_getNoDict_cachedShape_", "allowUnsafeAccess":true}, 
+    {"name":"getDict_getNoDict_layoutAssumption_", "allowUnsafeAccess":true}, 
+    {"name":"getDict_getNoDict_prop_", "allowUnsafeAccess":true}, 
+    {"name":"getItemProfile", "allowUnsafeAccess":true}, 
+    {"name":"getNoDict_assumption0_", "allowUnsafeAccess":true}, 
+    {"name":"hasDict_assumption0_", "allowUnsafeAccess":true}, 
+    {"name":"hasDict_hasDict_cachedShape_", "allowUnsafeAccess":true}, 
+    {"name":"hasDict_hasDict_layoutAssumption_", "allowUnsafeAccess":true}, 
+    {"name":"hasDict_hasDict_prop_", "allowUnsafeAccess":true}, 
+    {"name":"hasDict_hasNoDict_cachedShape_", "allowUnsafeAccess":true}, 
+    {"name":"hasDict_hasNoDict_layoutAssumption_", "allowUnsafeAccess":true}, 
+    {"name":"hasDict_hasNoDict_prop_", "allowUnsafeAccess":true}, 
+    {"name":"hasGetItemNode", "allowUnsafeAccess":true}, 
+    {"name":"hasLenNode", "allowUnsafeAccess":true}, 
+    {"name":"hasNoDict_assumption0_", "allowUnsafeAccess":true}, 
+    {"name":"hashWithStateNode__callNode_", "allowUnsafeAccess":true}, 
+    {"name":"hashWithStateNode__castToLong_", "allowUnsafeAccess":true}, 
+    {"name":"hashWithStateNode__gotState_", "allowUnsafeAccess":true}, 
+    {"name":"hashWithStateNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"hashWithStateNode__lookupHashAttributeNode_", "allowUnsafeAccess":true}, 
+    {"name":"hashWithStateNode__raise_", "allowUnsafeAccess":true}, 
+    {"name":"isCallableNode__callAttrGetterNode_", "allowUnsafeAccess":true}, 
+    {"name":"isContextManagerNode__hasEnterNode_", "allowUnsafeAccess":true}, 
+    {"name":"isContextManagerNode__hasExitNode_", "allowUnsafeAccess":true}, 
+    {"name":"isContextManagerNode__profile_", "allowUnsafeAccess":true}, 
+    {"name":"isHashableNode__dataModelLibrary_", "allowUnsafeAccess":true}, 
+    {"name":"isHashableNode__lookupHashAttributeNode_", "allowUnsafeAccess":true}, 
+    {"name":"isIterableNode__dataModelLibrary_", "allowUnsafeAccess":true}, 
+    {"name":"isIterableNode__getIterNode_", "allowUnsafeAccess":true}, 
+    {"name":"isIterableNode__hasNextNode_", "allowUnsafeAccess":true}, 
+    {"name":"isIterableNode__profileIter_", "allowUnsafeAccess":true}, 
+    {"name":"isIterableNode__profileNext_", "allowUnsafeAccess":true}, 
+    {"name":"isLazyClass", "allowUnsafeAccess":true}, 
+    {"name":"isMappingNode__pythonTypeLibrary_", "allowUnsafeAccess":true}, 
+    {"name":"isMappingTypeNode__hasItemsNode_", "allowUnsafeAccess":true}, 
+    {"name":"isMappingTypeNode__hasKeysNode_", "allowUnsafeAccess":true}, 
+    {"name":"isMappingTypeNode__hasValuesNode_", "allowUnsafeAccess":true}, 
+    {"name":"isMappingTypeNode__profile_", "allowUnsafeAccess":true}, 
+    {"name":"isSequenceNode__pythonTypeLibrary_", "allowUnsafeAccess":true}, 
+    {"name":"isTrueWithStateNode__callNode_", "allowUnsafeAccess":true}, 
+    {"name":"isTrueWithStateNode__castToBoolean_", "allowUnsafeAccess":true}, 
+    {"name":"isTrueWithStateNode__gotState_", "allowUnsafeAccess":true}, 
+    {"name":"isTrueWithStateNode__hasBool_", "allowUnsafeAccess":true}, 
+    {"name":"isTrueWithStateNode__hasLen_", "allowUnsafeAccess":true}, 
+    {"name":"isTrueWithStateNode__lookupAttrs_", "allowUnsafeAccess":true}, 
+    {"name":"isTrueWithStateNode__raiseNode_", "allowUnsafeAccess":true}, 
+    {"name":"lenProfile", "allowUnsafeAccess":true}, 
+    {"name":"lengthWithStateNode__callNode_", "allowUnsafeAccess":true}, 
+    {"name":"lengthWithStateNode__getLenNode_", "allowUnsafeAccess":true}, 
+    {"name":"lengthWithStateNode__gotState_", "allowUnsafeAccess":true}, 
+    {"name":"lengthWithStateNode__hasLen_", "allowUnsafeAccess":true}, 
+    {"name":"lengthWithStateNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"lengthWithStateNode__ltZero_", "allowUnsafeAccess":true}, 
+    {"name":"lengthWithStateNode__raiseNode_", "allowUnsafeAccess":true}, 
+    {"name":"setDictNode__writeNode_", "allowUnsafeAccess":true}, 
+    {"name":"setLazyPythonClass_setSingle_storingClassesInShapes_", "allowUnsafeAccess":true}, 
+    {"name":"setSingle_assumption0_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"thisObject", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -9641,11 +10262,27 @@
   "name":"com.oracle.graal.python.nodes.argument.keywords.ExecuteKeywordStarargsNodeGen$ExpandKeywordStarargsNodeGen",
   "allDeclaredFields":true,
   "fields":[
+    {"name":"dict0_cache", "allowUnsafeAccess":true}, 
+    {"name":"dict1_errorProfile_", "allowUnsafeAccess":true}, 
+    {"name":"dict1_raise_", "allowUnsafeAccess":true}, 
+    {"name":"dictCached0_cache", "allowUnsafeAccess":true}, 
+    {"name":"dictCached1_cache", "allowUnsafeAccess":true}, 
     {"name":"dictCached_cache", "allowUnsafeAccess":true}, 
     {"name":"dict_cache", "allowUnsafeAccess":true}, 
     {"name":"exclude_", "allowUnsafeAccess":true}, 
     {"name":"generic_cache", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.nodes.argument.keywords.ExecuteKeywordStarargsNodeGen$ExpandKeywordStarargsNodeGen$DictCached0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cachedLen_", "allowUnsafeAccess":true}, 
+    {"name":"errorProfile_", "allowUnsafeAccess":true}, 
+    {"name":"lib_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"raise_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -9685,7 +10322,10 @@
   "name":"com.oracle.graal.python.nodes.argument.positional.ExecutePositionalStarargsNodeGen",
   "allDeclaredFields":true,
   "fields":[
+    {"name":"dict0_lib_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
     {"name":"list_toArray_", "allowUnsafeAccess":true}, 
+    {"name":"set0_lib_", "allowUnsafeAccess":true}, 
     {"name":"starargs_cache", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}, 
     {"name":"tuple_toArray_", "allowUnsafeAccess":true}
@@ -9909,12 +10549,14 @@
     {"name":"readFromDict0_cache", "allowUnsafeAccess":true}, 
     {"name":"readFromDict1_getDictStorage_", "allowUnsafeAccess":true}, 
     {"name":"readFromDict1_getItemNode_", "allowUnsafeAccess":true}, 
+    {"name":"readFromDict1_hlib_", "allowUnsafeAccess":true}, 
     {"name":"readFromDynamicStorage0_lib_", "allowUnsafeAccess":true}, 
     {"name":"readFromDynamicStorage0_readAttributeFromDynamicObjectNode_", "allowUnsafeAccess":true}, 
     {"name":"readFromDynamicStorage1_readAttributeFromDynamicObjectNode_", "allowUnsafeAccess":true}, 
     {"name":"readNativeObject0_cache", "allowUnsafeAccess":true}, 
     {"name":"readNativeObject1_getDictStorage_", "allowUnsafeAccess":true}, 
     {"name":"readNativeObject1_getItemNode_", "allowUnsafeAccess":true}, 
+    {"name":"readNativeObject1_hlib_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
@@ -9924,6 +10566,7 @@
   "fields":[
     {"name":"getDictStorage_", "allowUnsafeAccess":true}, 
     {"name":"getItemNode_", "allowUnsafeAccess":true}, 
+    {"name":"hlib_", "allowUnsafeAccess":true}, 
     {"name":"isBuiltinDict_", "allowUnsafeAccess":true}, 
     {"name":"isBuiltinMappingproxy_", "allowUnsafeAccess":true}, 
     {"name":"lib_", "allowUnsafeAccess":true}
@@ -9938,6 +10581,7 @@
     {"name":"cachedObject_", "allowUnsafeAccess":true}, 
     {"name":"getDictStorage_", "allowUnsafeAccess":true}, 
     {"name":"getItemNode_", "allowUnsafeAccess":true}, 
+    {"name":"hlib_", "allowUnsafeAccess":true}, 
     {"name":"isBuiltinDict_", "allowUnsafeAccess":true}, 
     {"name":"isBuiltinMappingproxy_", "allowUnsafeAccess":true}, 
     {"name":"lib_", "allowUnsafeAccess":true}, 
@@ -9953,6 +10597,7 @@
     {"name":"cachedObject_", "allowUnsafeAccess":true}, 
     {"name":"getDictStorage_", "allowUnsafeAccess":true}, 
     {"name":"getItemNode_", "allowUnsafeAccess":true}, 
+    {"name":"hlib_", "allowUnsafeAccess":true}, 
     {"name":"isBuiltinDict_", "allowUnsafeAccess":true}, 
     {"name":"isBuiltinMappingproxy_", "allowUnsafeAccess":true}, 
     {"name":"singleContextAssumption_", "allowUnsafeAccess":true}
@@ -9967,6 +10612,7 @@
     {"name":"cachedObject_", "allowUnsafeAccess":true}, 
     {"name":"cachedStorage_", "allowUnsafeAccess":true}, 
     {"name":"getItemNode_", "allowUnsafeAccess":true}, 
+    {"name":"hlib_", "allowUnsafeAccess":true}, 
     {"name":"isBuiltinDict_", "allowUnsafeAccess":true}, 
     {"name":"lib_", "allowUnsafeAccess":true}, 
     {"name":"singleContextAssumption_", "allowUnsafeAccess":true}
@@ -9981,6 +10627,7 @@
     {"name":"cachedObject_", "allowUnsafeAccess":true}, 
     {"name":"cachedStorage_", "allowUnsafeAccess":true}, 
     {"name":"getItemNode_", "allowUnsafeAccess":true}, 
+    {"name":"hlib_", "allowUnsafeAccess":true}, 
     {"name":"isBuiltinDict_", "allowUnsafeAccess":true}, 
     {"name":"singleContextAssumption_", "allowUnsafeAccess":true}
   ]
@@ -10001,6 +10648,7 @@
     {"name":"readFromDict0_cache", "allowUnsafeAccess":true}, 
     {"name":"readFromDict1_getDictStorage_", "allowUnsafeAccess":true}, 
     {"name":"readFromDict1_getItemNode_", "allowUnsafeAccess":true}, 
+    {"name":"readFromDict1_hlib_", "allowUnsafeAccess":true}, 
     {"name":"readFromDynamicStorage0_lib_", "allowUnsafeAccess":true}, 
     {"name":"readFromDynamicStorage0_readAttributeFromDynamicObjectNode_", "allowUnsafeAccess":true}, 
     {"name":"readFromDynamicStorage1_readAttributeFromDynamicObjectNode_", "allowUnsafeAccess":true}, 
@@ -10014,6 +10662,7 @@
   "fields":[
     {"name":"getDictStorage_", "allowUnsafeAccess":true}, 
     {"name":"getItemNode_", "allowUnsafeAccess":true}, 
+    {"name":"hlib_", "allowUnsafeAccess":true}, 
     {"name":"isBuiltinDict_", "allowUnsafeAccess":true}, 
     {"name":"isBuiltinMappingproxy_", "allowUnsafeAccess":true}, 
     {"name":"lib_", "allowUnsafeAccess":true}
@@ -10116,6 +10765,7 @@
   "allDeclaredFields":true,
   "fields":[
     {"name":"getDictStorage_", "allowUnsafeAccess":true}, 
+    {"name":"hlib_", "allowUnsafeAccess":true}, 
     {"name":"isClassProfile_", "allowUnsafeAccess":true}, 
     {"name":"lib_", "allowUnsafeAccess":true}, 
     {"name":"setItemNode_", "allowUnsafeAccess":true}, 
@@ -11673,6 +12323,7 @@
   "fields":[
     {"name":"exclude_", "allowUnsafeAccess":true}, 
     {"name":"readFromLocals0_delItem_", "allowUnsafeAccess":true}, 
+    {"name":"readFromLocalsDict_cache", "allowUnsafeAccess":true}, 
     {"name":"readFromLocalsDict_delItem_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
@@ -11793,6 +12444,7 @@
   "fields":[
     {"name":"exclude_", "allowUnsafeAccess":true}, 
     {"name":"genericDictAdoptableCached_cache", "allowUnsafeAccess":true}, 
+    {"name":"genericDictAdoptable_cache", "allowUnsafeAccess":true}, 
     {"name":"genericDictAdoptable_deleteItemNode_", "allowUnsafeAccess":true}, 
     {"name":"genericDictAdoptable_setItemNode_", "allowUnsafeAccess":true}, 
     {"name":"localsStorageCached_assumption0_", "allowUnsafeAccess":true}, 
@@ -11850,6 +12502,8 @@
   "allDeclaredFields":true,
   "fields":[
     {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"readGlobalBuiltinDict0_cache", "allowUnsafeAccess":true}, 
+    {"name":"readGlobalBuiltinDict1_cache", "allowUnsafeAccess":true}, 
     {"name":"readGlobalBuiltinDictCachedUnchangedStorage_cache", "allowUnsafeAccess":true}, 
     {"name":"readGlobalBuiltinDictCached_cache", "allowUnsafeAccess":true}, 
     {"name":"readGlobalBuiltinDict_cache", "allowUnsafeAccess":true}, 
@@ -11872,7 +12526,8 @@
     {"name":"builtinProfile_", "allowUnsafeAccess":true}, 
     {"name":"cachedGlobals_", "allowUnsafeAccess":true}, 
     {"name":"cachedStorage_", "allowUnsafeAccess":true}, 
-    {"name":"getItemNode_", "allowUnsafeAccess":true}
+    {"name":"getItemNode_", "allowUnsafeAccess":true}, 
+    {"name":"hlib_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -11894,6 +12549,7 @@
   "fields":[
     {"name":"exclude_", "allowUnsafeAccess":true}, 
     {"name":"readFromLocals0_getItem_", "allowUnsafeAccess":true}, 
+    {"name":"readFromLocalsDict0_hlib_", "allowUnsafeAccess":true}, 
     {"name":"readFromLocalsDict_getItem_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
@@ -12125,6 +12781,9 @@
     {"name":"exprNode", "allowUnsafeAccess":true}, 
     {"name":"name", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"com.oracle.graal.python.nodes.function.FunctionDefinitionNode$KwDefaultExpressionNode[]"
 },
 {
   "name":"com.oracle.graal.python.nodes.function.FunctionRootNode",
@@ -12473,6 +13132,15 @@
   ]
 },
 {
+  "name":"com.oracle.graal.python.nodes.literal.DictLiteralNodeFactory$DictLiteralNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"hasFrame_", "allowUnsafeAccess":true}, 
+    {"name":"lib_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"com.oracle.graal.python.nodes.literal.DoubleLiteralNode",
   "allDeclaredFields":true,
   "fields":[{"name":"value", "allowUnsafeAccess":true}]
@@ -12549,6 +13217,19 @@
     {"name":"setItemNode", "allowUnsafeAccess":true}, 
     {"name":"values", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"com.oracle.graal.python.nodes.literal.SetLiteralNodeFactory$SetLiteralNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"hasFrame_", "allowUnsafeAccess":true}, 
+    {"name":"lib_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.nodes.literal.SimpleLiteralNode",
+  "allDeclaredFields":true
 },
 {
   "name":"com.oracle.graal.python.nodes.literal.StringLiteralNode",
@@ -13074,6 +13755,7 @@
     {"name":"bytes_toBytes_", "allowUnsafeAccess":true}, 
     {"name":"memoryview_cache", "allowUnsafeAccess":true}, 
     {"name":"object_cache", "allowUnsafeAccess":true}, 
+    {"name":"pString_castToJavaStringNode_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
@@ -13688,6 +14370,11 @@
   ]
 },
 {
+  "name":"com.oracle.truffle.js.nodes.access.GlobalObjectNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"context", "allowUnsafeAccess":true}]
+},
+{
   "name":"com.oracle.truffle.js.nodes.access.GlobalPropertyNode",
   "allDeclaredFields":true,
   "fields":[
@@ -13790,9 +14477,18 @@
   "allDeclaredFields":true
 },
 {
+  "name":"com.oracle.truffle.js.nodes.access.JSConstantNode$JSConstantIntegerNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"intValue", "allowUnsafeAccess":true}]
+},
+{
   "name":"com.oracle.truffle.js.nodes.access.JSConstantNode$JSConstantStringNode",
   "allDeclaredFields":true,
   "fields":[{"name":"stringValue", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.JSConstantNode$JSConstantUndefinedNode",
+  "allDeclaredFields":true
 },
 {
   "name":"com.oracle.truffle.js.nodes.access.JSReadCurrentFrameSlotNode",
@@ -13809,6 +14505,10 @@
 },
 {
   "name":"com.oracle.truffle.js.nodes.access.JSTargetableNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.JSTargetableWriteNode",
   "allDeclaredFields":true
 },
 {
@@ -13899,6 +14599,11 @@
   "allDeclaredFields":true
 },
 {
+  "name":"com.oracle.truffle.js.nodes.access.PropertyGetNode$IntPropertyGetNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"location", "allowUnsafeAccess":true}]
+},
+{
   "name":"com.oracle.truffle.js.nodes.access.PropertyGetNode$LinkedPropertyGetNode",
   "allDeclaredFields":true
 },
@@ -13936,6 +14641,14 @@
   "name":"com.oracle.truffle.js.nodes.access.PropertySetNode$DataPropertySetNode",
   "allDeclaredFields":true,
   "fields":[{"name":"cache", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.PropertySetNode$IntPropertySetNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"location", "allowUnsafeAccess":true}, 
+    {"name":"property", "allowUnsafeAccess":true}
+  ]
 },
 {
   "name":"com.oracle.truffle.js.nodes.access.PropertySetNode$LinkedPropertySetNode",
@@ -13995,6 +14708,16 @@
   "fields":[{"name":"typeCacheNext", "allowUnsafeAccess":true}]
 },
 {
+  "name":"com.oracle.truffle.js.nodes.access.WritePropertyNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cache", "allowUnsafeAccess":true}, 
+    {"name":"rhsNode", "allowUnsafeAccess":true}, 
+    {"name":"targetNode", "allowUnsafeAccess":true}, 
+    {"name":"valueState", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"com.oracle.truffle.js.nodes.arguments.AccessIndexedArgumentNode",
   "allDeclaredFields":true,
   "fields":[
@@ -14033,12 +14756,33 @@
   ]
 },
 {
+  "name":"com.oracle.truffle.js.nodes.binary.JSAddSubNumericUnitNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"isAddition", "allowUnsafeAccess":true}, 
+    {"name":"truncate", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.binary.JSAddSubNumericUnitNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"com.oracle.truffle.js.nodes.binary.JSBinaryNode",
   "allDeclaredFields":true,
   "fields":[
     {"name":"leftNode", "allowUnsafeAccess":true}, 
     {"name":"rightNode", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.binary.JSCompareNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"stringToNumberNode", "allowUnsafeAccess":true}]
 },
 {
   "name":"com.oracle.truffle.js.nodes.binary.JSConcatStringsNode",
@@ -14052,6 +14796,41 @@
     {"name":"concat_cache", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.binary.JSLessThanNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.binary.JSLessThanNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"generic_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.cast.JSToNumericNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"toNumberNode", "allowUnsafeAccess":true}, 
+    {"name":"toPrimitiveNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.cast.JSToNumericNode$JSToNumericWrapperNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"toNumericNode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.cast.JSToNumericNodeGen",
+  "allDeclaredFields":true,
+  "fields":[{"name":"state_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.cast.JSToNumericNodeGen$JSToNumericWrapperNodeGen",
+  "allDeclaredFields":true
 },
 {
   "name":"com.oracle.truffle.js.nodes.cast.JSToObjectNode",
@@ -14119,7 +14898,25 @@
   ]
 },
 {
+  "name":"com.oracle.truffle.js.nodes.control.AbstractBlockNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"statements", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.control.AbstractRepeatingNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"bodyNode", "allowUnsafeAccess":true}, 
+    {"name":"conditionNode", "allowUnsafeAccess":true}, 
+    {"name":"conditionProfile", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"com.oracle.truffle.js.nodes.control.EmptyNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.control.ExprBlockNode",
   "allDeclaredFields":true
 },
 {
@@ -14128,6 +14925,18 @@
 },
 {
   "name":"com.oracle.truffle.js.nodes.control.TryCatchNode$GetErrorObjectNode"
+},
+{
+  "name":"com.oracle.truffle.js.nodes.control.WhileNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"loop", "allowUnsafeAccess":true}, 
+    {"name":"loopType", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.control.WhileNode$WhileDoRepeatingNode",
+  "allDeclaredFields":true
 },
 {
   "name":"com.oracle.truffle.js.nodes.function.AbstractBodyNode",
@@ -14177,6 +14986,11 @@
 {
   "name":"com.oracle.truffle.js.nodes.function.JSFunctionCallNode$Call0Node",
   "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.function.JSFunctionCallNode$Call1Node",
+  "allDeclaredFields":true,
+  "fields":[{"name":"argument0", "allowUnsafeAccess":true}]
 },
 {
   "name":"com.oracle.truffle.js.nodes.function.JSFunctionCallNode$CallNode",
@@ -19083,6 +19897,14 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.VMPrimitiveNodes$VMMethodIsBasicNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.VMPrimitiveNodes$VMMethodLookupNode",
+  "allDeclaredFields":true
+},
+{
   "name":"org.truffleruby.core.VMPrimitiveNodes$VMWatchSignalNode",
   "allDeclaredFields":true
 },
@@ -19114,6 +19936,33 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.VMPrimitiveNodesFactory$VMMethodIsBasicNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.VMPrimitiveNodesFactory$VMMethodIsBasicNodeFactory$VMMethodIsBasicNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.VMPrimitiveNodesFactory$VMMethodLookupNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.VMPrimitiveNodesFactory$VMMethodLookupNodeFactory$VMMethodLookupNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"lookupMethodNode_", "allowUnsafeAccess":true}, 
+    {"name":"nameToJavaStringNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.VMPrimitiveNodesFactory$VMWatchSignalNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -19135,8 +19984,12 @@
   "name":"org.truffleruby.core.array.ArrayAppendManyNodeGen",
   "allDeclaredFields":true,
   "fields":[
+    {"name":"appendManyGeneralize0_cache", "allowUnsafeAccess":true}, 
     {"name":"appendManyGeneralize_cache", "allowUnsafeAccess":true}, 
+    {"name":"appendManySameType0_cache", "allowUnsafeAccess":true}, 
+    {"name":"appendManySameType1_extendProfile_", "allowUnsafeAccess":true}, 
     {"name":"appendManySameType_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
@@ -19162,11 +20015,25 @@
   "name":"org.truffleruby.core.array.ArrayAppendOneNodeGen",
   "allDeclaredFields":true,
   "fields":[
+    {"name":"appendOneGeneralizeNonMutable0_cache", "allowUnsafeAccess":true}, 
+    {"name":"appendOneGeneralizeNonMutable1_newStores_", "allowUnsafeAccess":true}, 
     {"name":"appendOneGeneralizeNonMutable_cache", "allowUnsafeAccess":true}, 
+    {"name":"appendOneSameType0_cache", "allowUnsafeAccess":true}, 
+    {"name":"appendOneSameType1_extendProfile_", "allowUnsafeAccess":true}, 
     {"name":"appendOneSameType_cache", "allowUnsafeAccess":true}, 
     {"name":"array_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}, 
     {"name":"value_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayAppendOneNodeGen$AppendOneGeneralizeNonMutable0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"currentStores_", "allowUnsafeAccess":true}, 
+    {"name":"newStores_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -19181,6 +20048,15 @@
     {"name":"setNode_", "allowUnsafeAccess":true}, 
     {"name":"strategy_", "allowUnsafeAccess":true}, 
     {"name":"valueStrategy_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayAppendOneNodeGen$AppendOneSameType0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"extendProfile_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"stores_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -19203,6 +20079,7 @@
   "name":"org.truffleruby.core.array.ArrayBuilderNode$AppendArrayNode",
   "allDeclaredFields":true,
   "fields":[
+    {"name":"allocator", "allowUnsafeAccess":true}, 
     {"name":"arrayStrategy", "allowUnsafeAccess":true}, 
     {"name":"context", "allowUnsafeAccess":true}
   ]
@@ -19211,6 +20088,7 @@
   "name":"org.truffleruby.core.array.ArrayBuilderNode$AppendOneNode",
   "allDeclaredFields":true,
   "fields":[
+    {"name":"allocator", "allowUnsafeAccess":true}, 
     {"name":"arrayStrategy", "allowUnsafeAccess":true}, 
     {"name":"context", "allowUnsafeAccess":true}
   ]
@@ -19232,6 +20110,7 @@
   "name":"org.truffleruby.core.array.ArrayBuilderNode$StartNode",
   "allDeclaredFields":true,
   "fields":[
+    {"name":"allocator", "allowUnsafeAccess":true}, 
     {"name":"expectedLength", "allowUnsafeAccess":true}, 
     {"name":"newStoreNode", "allowUnsafeAccess":true}, 
     {"name":"strategy", "allowUnsafeAccess":true}
@@ -19241,8 +20120,11 @@
   "name":"org.truffleruby.core.array.ArrayBuilderNodeFactory$AppendArrayNodeGen",
   "allDeclaredFields":true,
   "fields":[
+    {"name":"appendCompatibleStrategy0_arrays_", "allowUnsafeAccess":true}, 
+    {"name":"appendCompatibleStrategy0_others_", "allowUnsafeAccess":true}, 
     {"name":"appendNewStrategy0_cache", "allowUnsafeAccess":true}, 
     {"name":"appendSameStrategy_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
@@ -19275,7 +20157,9 @@
   "name":"org.truffleruby.core.array.ArrayBuilderNodeFactory$AppendOneNodeGen",
   "allDeclaredFields":true,
   "fields":[
+    {"name":"appendCompatibleType0_arrays_", "allowUnsafeAccess":true}, 
     {"name":"appendCompatibleType_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
@@ -19310,10 +20194,23 @@
   "name":"org.truffleruby.core.array.ArrayDupNodeGen",
   "allDeclaredFields":true,
   "fields":[
+    {"name":"dupProfiledSize0_cache", "allowUnsafeAccess":true}, 
+    {"name":"dupProfiledSize1_cache", "allowUnsafeAccess":true}, 
     {"name":"dupProfiledSize_cache", "allowUnsafeAccess":true}, 
     {"name":"dup_cache", "allowUnsafeAccess":true}, 
+    {"name":"dup_cowNode_", "allowUnsafeAccess":true}, 
     {"name":"exclude_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayDupNodeGen$DupProfiledSize0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cachedSize_", "allowUnsafeAccess":true}, 
+    {"name":"fromStores_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"toStores_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -19338,9 +20235,22 @@
   "name":"org.truffleruby.core.array.ArrayEachIteratorNodeGen",
   "allDeclaredFields":true,
   "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"iterateMany0_cache", "allowUnsafeAccess":true}, 
+    {"name":"iterateMany1_strategyMatchProfile_", "allowUnsafeAccess":true}, 
     {"name":"iterateMany_cache", "allowUnsafeAccess":true}, 
+    {"name":"iterateOne0_cache", "allowUnsafeAccess":true}, 
     {"name":"iterateOne_cache", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayEachIteratorNodeGen$IterateMany0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arrays_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"strategyMatchProfile_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -19351,6 +20261,14 @@
     {"name":"next_", "allowUnsafeAccess":true}, 
     {"name":"strategyMatchProfile_", "allowUnsafeAccess":true}, 
     {"name":"strategy_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayEachIteratorNodeGen$IterateOne0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arrays_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -19452,6 +20370,10 @@
   "name":"org.truffleruby.core.array.ArrayNodes$IndexSetNode",
   "allDeclaredFields":true,
   "fields":[{"name":"fallbackNode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodes$InitializeCopyNode",
+  "allDeclaredFields":true
 },
 {
   "name":"org.truffleruby.core.array.ArrayNodes$InitializeNode",
@@ -19644,8 +20566,18 @@
   "fields":[
     {"name":"arguments0_", "allowUnsafeAccess":true}, 
     {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"include0_cache", "allowUnsafeAccess":true}, 
     {"name":"include_cache", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$IncludeNodeFactory$IncludeNodeGen$Include0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"stores_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -19684,10 +20616,27 @@
     {"name":"arguments1_", "allowUnsafeAccess":true}, 
     {"name":"arguments2_", "allowUnsafeAccess":true}, 
     {"name":"arguments3_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
     {"name":"set0_negativeIndexProfile_", "allowUnsafeAccess":true}, 
+    {"name":"setOtherArray0_cache", "allowUnsafeAccess":true}, 
+    {"name":"setOtherArray1_cache", "allowUnsafeAccess":true}, 
     {"name":"setOtherArraySameLength_negativeIndexProfile_", "allowUnsafeAccess":true}, 
     {"name":"setOtherArray_cache", "allowUnsafeAccess":true}, 
     {"name":"setRange_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$InitializeCopyNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$InitializeCopyNodeFactory$InitializeCopyNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"from_", "allowUnsafeAccess":true}, 
+    {"name":"replaceNode_", "allowUnsafeAccess":true}, 
+    {"name":"self_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
@@ -19762,8 +20711,20 @@
   "fields":[
     {"name":"arguments0_", "allowUnsafeAccess":true}, 
     {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"map0_cache", "allowUnsafeAccess":true}, 
+    {"name":"map1_arrayBuilder_", "allowUnsafeAccess":true}, 
     {"name":"map_cache", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$MapNodeFactory$MapNodeGen$Map0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arrayBuilder_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"stores_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -19917,6 +20878,21 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$SortNodeFactory$SortNodeGen$SortVeryShortData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cmpIntNode_", "allowUnsafeAccess":true}, 
+    {"name":"compareDispatchNode_", "allowUnsafeAccess":true}, 
+    {"name":"getNode_", "allowUnsafeAccess":true}, 
+    {"name":"mutableStrategy_", "allowUnsafeAccess":true}, 
+    {"name":"newStoreNode_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"originalGetNode_", "allowUnsafeAccess":true}, 
+    {"name":"setNode_", "allowUnsafeAccess":true}, 
+    {"name":"strategy_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.array.ArrayNodesFactory$StealArrayStorageNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -20026,10 +21002,20 @@
   "allDeclaredFields":true,
   "fields":[
     {"name":"array_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
     {"name":"index_", "allowUnsafeAccess":true}, 
+    {"name":"readInBounds0_cache", "allowUnsafeAccess":true}, 
     {"name":"readInBounds_cache", "allowUnsafeAccess":true}, 
     {"name":"readOutOfBounds_cache", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayReadNormalizedNodeGen$ReadInBounds0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arrays_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -20069,6 +21055,15 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.array.ArrayReadSliceNormalizedNodeGen$ReadInBoundsData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"extractRangeCopyOnWriteNode_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"strategy_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.array.ArrayReadSliceNormalizedNodeGen$ReadOutOfBoundsData",
   "allDeclaredFields":true,
   "fields":[
@@ -20085,8 +21080,18 @@
   "name":"org.truffleruby.core.array.ArrayToObjectArrayNodeGen",
   "allDeclaredFields":true,
   "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"toObjectArrayOther0_cache", "allowUnsafeAccess":true}, 
     {"name":"toObjectArrayOther_cache", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayToObjectArrayNodeGen$ToObjectArrayOther0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"stores_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -20107,12 +21112,29 @@
   "name":"org.truffleruby.core.array.ArrayWriteNormalizedNodeGen",
   "allDeclaredFields":true,
   "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"writeBeyondObject0_cache", "allowUnsafeAccess":true}, 
+    {"name":"writeBeyondObject1_ensureCapacityNode_", "allowUnsafeAccess":true}, 
+    {"name":"writeBeyondObject1_newArrays_", "allowUnsafeAccess":true}, 
     {"name":"writeBeyondObject_cache", "allowUnsafeAccess":true}, 
+    {"name":"writeBeyondPrimitive0_cache", "allowUnsafeAccess":true}, 
+    {"name":"writeBeyondPrimitive1_newArrays_", "allowUnsafeAccess":true}, 
     {"name":"writeBeyondPrimitive_cache", "allowUnsafeAccess":true}, 
     {"name":"writeExtendByOne_appendNode_", "allowUnsafeAccess":true}, 
+    {"name":"writeWithin0_cache", "allowUnsafeAccess":true}, 
+    {"name":"writeWithinGeneralizeNonMutable0_cache", "allowUnsafeAccess":true}, 
+    {"name":"writeWithinGeneralizeNonMutable1_newArrays_", "allowUnsafeAccess":true}, 
     {"name":"writeWithinGeneralizeNonMutable_cache", "allowUnsafeAccess":true}, 
     {"name":"writeWithin_cache", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.array.ArrayWriteNormalizedNodeGen$WriteWithin0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arrays_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -20142,6 +21164,15 @@
   "fields":[
     {"name":"get_cache", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.array.DelegateArrayNodesFactory$DelegateArrayGetNodeGen$GetData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"getNode_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"strategy_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -20288,6 +21319,51 @@
   "name":"org.truffleruby.core.array.ObjectArrayNodesFactory$ObjectArraySetNodeGen",
   "allDeclaredFields":true,
   "fields":[{"name":"state_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"org.truffleruby.core.array.library.ArrayStoreLibrary",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.array.library.ArrayStoreLibraryGen"
+},
+{
+  "name":"org.truffleruby.core.array.library.ArrayStoreLibraryGen$CachedDispatch",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"library", "allowUnsafeAccess":true}, 
+    {"name":"next", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.array.library.ArrayStoreLibraryGen$CachedDispatchFirst",
+  "allDeclaredFields":true,
+  "fields":[{"name":"limit_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"org.truffleruby.core.array.library.ObjectArrayStoreGen"
+},
+{
+  "name":"org.truffleruby.core.array.library.ObjectArrayStoreGen$ArrayStoreLibraryExports$Cached",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"copyContents1_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.array.library.ZeroLengthArrayStoreGen"
+},
+{
+  "name":"org.truffleruby.core.array.library.ZeroLengthArrayStoreGen$ArrayStoreLibraryExports$Cached",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"generalizeForStore_generalize1_cache", "allowUnsafeAccess":true}, 
+    {"name":"receiverClass_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
 },
 {
   "name":"org.truffleruby.core.basicobject.BasicObjectNodes$AllocateNode",
@@ -20518,6 +21594,18 @@
   "fields":[
     {"name":"state_", "allowUnsafeAccess":true}, 
     {"name":"value_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.cast.CmpIntNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.cast.CmpIntNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cmpObject_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -21196,7 +22284,10 @@
 {
   "name":"org.truffleruby.core.hash.HashLiteralNode$GenericHashLiteralNode",
   "allDeclaredFields":true,
-  "fields":[{"name":"setNode", "allowUnsafeAccess":true}]
+  "fields":[
+    {"name":"bucketsCount", "allowUnsafeAccess":true}, 
+    {"name":"setNode", "allowUnsafeAccess":true}
+  ]
 },
 {
   "name":"org.truffleruby.core.hash.HashLiteralNode$SmallHashLiteralNode",
@@ -21827,6 +22918,16 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.kernel.IsImmutableObjectNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"logicalClassNode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"org.truffleruby.core.kernel.IsImmutableObjectNodeGen",
+  "allDeclaredFields":true,
+  "fields":[{"name":"state_", "allowUnsafeAccess":true}]
+},
+{
   "name":"org.truffleruby.core.kernel.KernelNodes$CaseCompareNode",
   "allDeclaredFields":true,
   "fields":[{"name":"sameOrEqualNode", "allowUnsafeAccess":true}]
@@ -21863,6 +22964,10 @@
     {"name":"bindingNode", "allowUnsafeAccess":true}, 
     {"name":"createEvalSourceNode", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"org.truffleruby.core.kernel.KernelNodes$FindFileNode",
+  "allDeclaredFields":true
 },
 {
   "name":"org.truffleruby.core.kernel.KernelNodes$GetMethodObjectNode",
@@ -21931,6 +23036,11 @@
   "fields":[{"name":"taintNode", "allowUnsafeAccess":true}]
 },
 {
+  "name":"org.truffleruby.core.kernel.KernelNodes$LoadNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"requireNode", "allowUnsafeAccess":true}]
+},
+{
   "name":"org.truffleruby.core.kernel.KernelNodes$MethodNode",
   "allDeclaredFields":true,
   "fields":[{"name":"getMethodObjectNode", "allowUnsafeAccess":true}]
@@ -21989,6 +23099,11 @@
   "name":"org.truffleruby.core.kernel.KernelNodes$SingletonClassMethodNode",
   "allDeclaredFields":true,
   "fields":[{"name":"singletonClassNode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"org.truffleruby.core.kernel.KernelNodes$SingletonMethodsNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"metaClassNode", "allowUnsafeAccess":true}]
 },
 {
   "name":"org.truffleruby.core.kernel.KernelNodes$SprintfNode",
@@ -22065,7 +23180,18 @@
   "allDeclaredFields":true,
   "fields":[
     {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"dup_cache", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.kernel.KernelNodesFactory$DupNodeFactory$DupNodeGen$DupData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"copyNode_", "allowUnsafeAccess":true}, 
+    {"name":"immutableProfile_", "allowUnsafeAccess":true}, 
+    {"name":"initializeDupNode_", "allowUnsafeAccess":true}, 
+    {"name":"isImmutableObjectNode_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -22117,6 +23243,22 @@
     {"name":"callNode_", "allowUnsafeAccess":true}, 
     {"name":"equalNode_", "allowUnsafeAccess":true}, 
     {"name":"next_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.kernel.KernelNodesFactory$FindFileNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.kernel.KernelNodesFactory$FindFileNodeFactory$FindFileNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"findFileString_makeStringNode_", "allowUnsafeAccess":true}, 
+    {"name":"findFileString_notFoundProfile_", "allowUnsafeAccess":true}, 
+    {"name":"findFile_makeStringNode_", "allowUnsafeAccess":true}, 
+    {"name":"findFile_notFoundProfile_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -22264,6 +23406,19 @@
   "fields":[{"name":"arguments0_", "allowUnsafeAccess":true}]
 },
 {
+  "name":"org.truffleruby.core.kernel.KernelNodesFactory$LoadNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.kernel.KernelNodesFactory$LoadNodeFactory$LoadNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.kernel.KernelNodesFactory$MethodNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -22369,6 +23524,19 @@
   "name":"org.truffleruby.core.kernel.KernelNodesFactory$SingletonClassMethodNodeFactory$SingletonClassMethodNodeGen",
   "allDeclaredFields":true,
   "fields":[{"name":"arguments0_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"org.truffleruby.core.kernel.KernelNodesFactory$SingletonMethodsNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.kernel.KernelNodesFactory$SingletonMethodsNodeFactory$SingletonMethodsNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"includeAncestors_", "allowUnsafeAccess":true}, 
+    {"name":"object_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
 },
 {
   "name":"org.truffleruby.core.kernel.KernelNodesFactory$SprintfNodeFactory",
@@ -22690,9 +23858,25 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.module.ModuleNodes$ConstGetNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"getConstantNode", "allowUnsafeAccess":true}, 
+    {"name":"lookupConstantNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.module.ModuleNodes$ConstMissingNode",
+  "allDeclaredFields":true
+},
+{
   "name":"org.truffleruby.core.module.ModuleNodes$ConstSetNode",
   "allDeclaredFields":true,
   "fields":[{"name":"warnAlreadyInitializedNode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"org.truffleruby.core.module.ModuleNodes$ConstantsNode",
+  "allDeclaredFields":true
 },
 {
   "name":"org.truffleruby.core.module.ModuleNodes$ContainsInstanceNode",
@@ -22979,6 +24163,46 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.module.ModuleNodesFactory$ConstGetNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.module.ModuleNodesFactory$ConstGetNodeFactory$ConstGetNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"getConstantStringCached_cache", "allowUnsafeAccess":true}, 
+    {"name":"inherit_", "allowUnsafeAccess":true}, 
+    {"name":"module_", "allowUnsafeAccess":true}, 
+    {"name":"name_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.module.ModuleNodesFactory$ConstGetNodeFactory$ConstGetNodeGen$GetConstantStringCachedData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cachedRope_", "allowUnsafeAccess":true}, 
+    {"name":"cachedString_", "allowUnsafeAccess":true}, 
+    {"name":"equalNode_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"scoped_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.module.ModuleNodesFactory$ConstMissingNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.module.ModuleNodesFactory$ConstMissingNodeFactory$ConstMissingNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"module_", "allowUnsafeAccess":true}, 
+    {"name":"name_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.module.ModuleNodesFactory$ConstSetNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -22990,6 +24214,19 @@
     {"name":"name_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}, 
     {"name":"value_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.module.ModuleNodesFactory$ConstantsNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.module.ModuleNodesFactory$ConstantsNodeFactory$ConstantsNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"inherit_", "allowUnsafeAccess":true}, 
+    {"name":"module_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -23586,6 +24823,8 @@
   "fields":[
     {"name":"arguments0_", "allowUnsafeAccess":true}, 
     {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"equal8_booleanCastNode_", "allowUnsafeAccess":true}, 
+    {"name":"equal8_reverseCallNode_", "allowUnsafeAccess":true}, 
     {"name":"equal9_booleanCastNode_", "allowUnsafeAccess":true}, 
     {"name":"equal9_reverseCallNode_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
@@ -23682,6 +24921,10 @@
     {"name":"rightShiftCoerced_toIntNode_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"org.truffleruby.core.numeric.IntegerNodesFactory$SubNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.core.numeric.IntegerNodesFactory$SubNodeFactory$SubNodeGen",
@@ -23793,6 +25036,11 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.range.RangeNodes$ToANode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"toAInternalCall", "allowUnsafeAccess":true}]
+},
+{
   "name":"org.truffleruby.core.range.RangeNodesFactory$NewNodeFactory$NewNodeGen",
   "allDeclaredFields":true,
   "fields":[
@@ -23800,6 +25048,18 @@
     {"name":"end_", "allowUnsafeAccess":true}, 
     {"name":"excludeEnd_", "allowUnsafeAccess":true}, 
     {"name":"rubyClass_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.range.RangeNodesFactory$ToANodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.range.RangeNodesFactory$ToANodeFactory$ToANodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
@@ -24338,6 +25598,7 @@
     {"name":"appendNode", "allowUnsafeAccess":true}, 
     {"name":"children", "allowUnsafeAccess":true}, 
     {"name":"dupNode", "allowUnsafeAccess":true}, 
+    {"name":"emptyRope", "allowUnsafeAccess":true}, 
     {"name":"isTaintedNode", "allowUnsafeAccess":true}, 
     {"name":"taintNode", "allowUnsafeAccess":true}, 
     {"name":"taintProfile", "allowUnsafeAccess":true}
@@ -24346,6 +25607,11 @@
 {
   "name":"org.truffleruby.core.string.StringNodes$ASCIIOnlyNode",
   "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.string.StringNodes$AddNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"allocateObjectNode", "allowUnsafeAccess":true}]
 },
 {
   "name":"org.truffleruby.core.string.StringNodes$AllocateNode",
@@ -24421,11 +25687,14 @@
   "allDeclaredFields":true,
   "fields":[
     {"name":"allocateObjectNode", "allowUnsafeAccess":true}, 
+    {"name":"charLengthNode", "allowUnsafeAccess":true}, 
+    {"name":"longCastNode", "allowUnsafeAccess":true}, 
     {"name":"normalizeIndexNode", "allowUnsafeAccess":true}, 
     {"name":"outOfBounds", "allowUnsafeAccess":true}, 
     {"name":"sizeNode", "allowUnsafeAccess":true}, 
     {"name":"substringNode", "allowUnsafeAccess":true}, 
-    {"name":"toIntNode", "allowUnsafeAccess":true}
+    {"name":"toIntNode", "allowUnsafeAccess":true}, 
+    {"name":"toLongNode", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -24488,6 +25757,16 @@
   "fields":[{"name":"areComparableRopesNode", "allowUnsafeAccess":true}]
 },
 {
+  "name":"org.truffleruby.core.string.StringNodes$StringAwkSplitPrimitiveNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"bytesNode", "allowUnsafeAccess":true}, 
+    {"name":"codeRangeNode", "allowUnsafeAccess":true}, 
+    {"name":"getCodePointNode", "allowUnsafeAccess":true}, 
+    {"name":"substringNode", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.string.StringNodes$StringByteIndexFromCharIndexNode",
   "allDeclaredFields":true
 },
@@ -24517,6 +25796,15 @@
   "name":"org.truffleruby.core.string.StringNodes$StringFromCodepointPrimitiveNode",
   "allDeclaredFields":true,
   "fields":[{"name":"makeStringNode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"org.truffleruby.core.string.StringNodes$StringIndexPrimitiveNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"checkEncodingNode", "allowUnsafeAccess":true}, 
+    {"name":"codeRangeNode", "allowUnsafeAccess":true}, 
+    {"name":"singleByteNode", "allowUnsafeAccess":true}
+  ]
 },
 {
   "name":"org.truffleruby.core.string.StringNodes$StringPatternPrimitiveNode",
@@ -24585,6 +25873,10 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.string.StringNodes$ValidEncodingQueryNode",
+  "allDeclaredFields":true
+},
+{
   "name":"org.truffleruby.core.string.StringNodesFactory$ASCIIOnlyNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -24595,6 +25887,20 @@
     {"name":"arguments0_", "allowUnsafeAccess":true}, 
     {"name":"codeRangeNode_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.string.StringNodesFactory$AddNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.string.StringNodesFactory$AddNodeFactory$AddNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"other_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"stringAppendNode_", "allowUnsafeAccess":true}, 
+    {"name":"string_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -24881,6 +26187,22 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.string.StringNodesFactory$StringAwkSplitPrimitiveNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.string.StringNodesFactory$StringAwkSplitPrimitiveNodeFactory$StringAwkSplitPrimitiveNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"stringAwkSplitSingleByte_cache", "allowUnsafeAccess":true}, 
+    {"name":"stringAwkSplit_growArrayProfile_", "allowUnsafeAccess":true}, 
+    {"name":"stringAwkSplit_trailingSubstringProfile_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.string.StringNodesFactory$StringByteIndexFromCharIndexNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -24971,6 +26293,33 @@
     {"name":"state_", "allowUnsafeAccess":true}, 
     {"name":"stringFromCodepointSimple_cache", "allowUnsafeAccess":true}, 
     {"name":"stringFromCodepoint_calculateCharacterLengthNode_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.string.StringNodesFactory$StringIndexPrimitiveNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.string.StringNodesFactory$StringIndexPrimitiveNodeFactory$StringIndexPrimitiveNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"stringIndexGeneric_cache", "allowUnsafeAccess":true}, 
+    {"name":"stringIndexMultiBytePattern_cache", "allowUnsafeAccess":true}, 
+    {"name":"stringIndexSingleBytePattern_bytesNode_", "allowUnsafeAccess":true}, 
+    {"name":"stringIndexSingleBytePattern_offsetTooLargeProfile_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.string.StringNodesFactory$StringIndexPrimitiveNodeFactory$StringIndexPrimitiveNodeGen$StringIndexMultiBytePatternData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"bytesNode_", "allowUnsafeAccess":true}, 
+    {"name":"matchFoundProfile_", "allowUnsafeAccess":true}, 
+    {"name":"noMatchProfile_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -25120,6 +26469,19 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.string.StringNodesFactory$ValidEncodingQueryNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.string.StringNodesFactory$ValidEncodingQueryNodeFactory$ValidEncodingQueryNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"codeRangeNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.core.support.ByteArrayNodes$AllocateNode",
   "allDeclaredFields":true,
   "fields":[{"name":"allocateObjectNode", "allowUnsafeAccess":true}]
@@ -25163,6 +26525,10 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.support.IONodes$IOWritePolyglotNode",
+  "allDeclaredFields":true
+},
+{
   "name":"org.truffleruby.core.support.IONodesFactory$AllocateNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -25184,6 +26550,19 @@
   "fields":[
     {"name":"arguments0_", "allowUnsafeAccess":true}, 
     {"name":"errorProfile_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.core.support.IONodesFactory$IOWritePolyglotNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.support.IONodesFactory$IOWritePolyglotNodeFactory$IOWritePolyglotNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
@@ -25281,7 +26660,9 @@
   "fields":[
     {"name":"arguments0_", "allowUnsafeAccess":true}, 
     {"name":"objectArray_cache", "allowUnsafeAccess":true}, 
+    {"name":"objectArray_stores_", "allowUnsafeAccess":true}, 
     {"name":"primitiveArray_cache", "allowUnsafeAccess":true}, 
+    {"name":"primitiveArray_stores_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
@@ -25628,11 +27009,19 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.interop.InteropNodes$InteropIsForeignNode",
+  "allDeclaredFields":true
+},
+{
   "name":"org.truffleruby.interop.InteropNodes$InvokeNode",
   "allDeclaredFields":true
 },
 {
   "name":"org.truffleruby.interop.InteropNodes$PointerNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.interop.InteropNodes$ReadMemberNode",
   "allDeclaredFields":true
 },
 {
@@ -25663,7 +27052,8 @@
     {"name":"foreignToRubyNode_", "allowUnsafeAccess":true}, 
     {"name":"next_", "allowUnsafeAccess":true}, 
     {"name":"receivers_", "allowUnsafeAccess":true}, 
-    {"name":"rubyToForeignArgumentsNode_", "allowUnsafeAccess":true}
+    {"name":"rubyToForeignArgumentsNode_", "allowUnsafeAccess":true}, 
+    {"name":"translateInteropException_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -25706,6 +27096,15 @@
   ]
 },
 {
+  "name":"org.truffleruby.interop.InteropNodesFactory$InteropIsForeignNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.interop.InteropNodesFactory$InteropIsForeignNodeFactory$InteropIsForeignNodeGen",
+  "allDeclaredFields":true,
+  "fields":[{"name":"arguments0_", "allowUnsafeAccess":true}]
+},
+{
   "name":"org.truffleruby.interop.InteropNodesFactory$InvokeNodeFactory$InvokeNodeGen",
   "allDeclaredFields":true,
   "fields":[
@@ -25732,6 +27131,7 @@
     {"name":"receivers_", "allowUnsafeAccess":true}, 
     {"name":"rubyToForeignArgumentsNode_", "allowUnsafeAccess":true}, 
     {"name":"toJavaStringNode_", "allowUnsafeAccess":true}, 
+    {"name":"translateInteropException_", "allowUnsafeAccess":true}, 
     {"name":"unknownIdentifierProfile_", "allowUnsafeAccess":true}
   ]
 },
@@ -25747,6 +27147,40 @@
     {"name":"exclude_", "allowUnsafeAccess":true}, 
     {"name":"isPointer0_cache", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.interop.InteropNodesFactory$PointerNodeFactory$PointerNodeGen$IsPointer0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"receivers_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.interop.InteropNodesFactory$ReadMemberNodeFactory$ReadMemberNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"flags", "allowUnsafeAccess":true}, 
+    {"name":"readMember0_cache", "allowUnsafeAccess":true}, 
+    {"name":"readMember1_cache", "allowUnsafeAccess":true}, 
+    {"name":"sourceCharIndex", "allowUnsafeAccess":true}, 
+    {"name":"sourceLength", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.interop.InteropNodesFactory$ReadMemberNodeFactory$ReadMemberNodeGen$ReadMember0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"foreignToRubyNode_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"receivers_", "allowUnsafeAccess":true}, 
+    {"name":"toJavaStringNode_", "allowUnsafeAccess":true}, 
+    {"name":"translateInteropException_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -25796,12 +27230,16 @@
     {"name":"nil_nullNode_", "allowUnsafeAccess":true}, 
     {"name":"notOperator_invokeNode_", "allowUnsafeAccess":true}, 
     {"name":"operator_node_", "allowUnsafeAccess":true}, 
+    {"name":"readArrayElement_readNode_", "allowUnsafeAccess":true}, 
+    {"name":"readMember_readNode_", "allowUnsafeAccess":true}, 
     {"name":"redirectToTruffleInterop_cachedArity_", "allowUnsafeAccess":true}, 
     {"name":"redirectToTruffleInterop_errorProfile_", "allowUnsafeAccess":true}, 
     {"name":"redirectToTruffleInterop_interopMethodName_", "allowUnsafeAccess":true}, 
     {"name":"rubyLanguageContextReference_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}, 
-    {"name":"withBadArguments_cachedArity_", "allowUnsafeAccess":true}
+    {"name":"withBadArguments_cachedArity_", "allowUnsafeAccess":true}, 
+    {"name":"writeArrayElement_writeNode_", "allowUnsafeAccess":true}, 
+    {"name":"writeMember_writeNode_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -25876,6 +27314,18 @@
     {"name":"convertedString_", "allowUnsafeAccess":true}, 
     {"name":"equalsNode_", "allowUnsafeAccess":true}, 
     {"name":"next_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"org.truffleruby.interop.TranslateInteropExceptionNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.interop.TranslateInteropExceptionNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"rubyLanguageContextReference_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -26083,6 +27533,7 @@
   "allDeclaredFields":true,
   "fields":[
     {"name":"arity", "allowUnsafeAccess":true}, 
+    {"name":"body", "allowUnsafeAccess":true}, 
     {"name":"checkFailedProfile", "allowUnsafeAccess":true}
   ]
 },
@@ -26092,6 +27543,7 @@
   "fields":[
     {"name":"arity", "allowUnsafeAccess":true}, 
     {"name":"basicArityCheckFailedProfile", "allowUnsafeAccess":true}, 
+    {"name":"body", "allowUnsafeAccess":true}, 
     {"name":"checkKeywordArgumentsNode", "allowUnsafeAccess":true}, 
     {"name":"eachKeyNode", "allowUnsafeAccess":true}, 
     {"name":"readUserKeywordsHashNode", "allowUnsafeAccess":true}, 
@@ -26748,6 +28200,11 @@
   ]
 },
 {
+  "name":"org.truffleruby.language.exceptions.SetExceptionVariableNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"getCurrentThreadNode", "allowUnsafeAccess":true}]
+},
+{
   "name":"org.truffleruby.language.exceptions.TryNode",
   "allDeclaredFields":true,
   "fields":[
@@ -26913,6 +28370,7 @@
     {"name":"addToLoadedFeatures", "allowUnsafeAccess":true}, 
     {"name":"booleanCastNode", "allowUnsafeAccess":true}, 
     {"name":"callNode", "allowUnsafeAccess":true}, 
+    {"name":"findFileNode", "allowUnsafeAccess":true}, 
     {"name":"getConstantNode", "allowUnsafeAccess":true}, 
     {"name":"isInLoadedFeatures", "allowUnsafeAccess":true}, 
     {"name":"lookupConstantNode", "allowUnsafeAccess":true}, 
@@ -26923,6 +28381,8 @@
   "name":"org.truffleruby.language.loader.RequireNodeGen",
   "allDeclaredFields":true,
   "fields":[
+    {"name":"isLoadedProfile_", "allowUnsafeAccess":true}, 
+    {"name":"notFoundProfile_", "allowUnsafeAccess":true}, 
     {"name":"require_cache", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
@@ -27372,6 +28832,7 @@
   "allDeclaredFields":true,
   "fields":[
     {"name":"isFrozen4_readFrozenNode_", "allowUnsafeAccess":true}, 
+    {"name":"isFrozen5_readFrozenNode_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
@@ -27384,6 +28845,7 @@
   "allDeclaredFields":true,
   "fields":[
     {"name":"isTainted4_readTaintedNode_", "allowUnsafeAccess":true}, 
+    {"name":"isTainted5_readTaintedNode_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
@@ -27402,6 +28864,7 @@
   "fields":[
     {"name":"exclude_", "allowUnsafeAccess":true}, 
     {"name":"logicalClassCached_cache", "allowUnsafeAccess":true}, 
+    {"name":"rubyLanguageContextReference_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
@@ -27652,6 +29115,7 @@
   "fields":[
     {"name":"exclude_", "allowUnsafeAccess":true}, 
     {"name":"isShareCached_cache", "allowUnsafeAccess":true}, 
+    {"name":"rubyLanguageContextReference_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
@@ -27664,6 +29128,15 @@
   ]
 },
 {
+  "name":"org.truffleruby.language.objects.shared.PropagateSharingNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"isSharedNode", "allowUnsafeAccess":true}, 
+    {"name":"propagateShared_writeBarrierNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"org.truffleruby.language.objects.shared.WriteBarrierNode",
   "allDeclaredFields":true,
   "fields":[{"name":"depth", "allowUnsafeAccess":true}]
@@ -27672,7 +29145,9 @@
   "name":"org.truffleruby.language.objects.shared.WriteBarrierNodeGen",
   "allDeclaredFields":true,
   "fields":[
+    {"name":"depth", "allowUnsafeAccess":true}, 
     {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"rubyLanguageContextReference_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}, 
     {"name":"writeBarrierCached_cache", "allowUnsafeAccess":true}
   ]

@@ -1,0 +1,1940 @@
+[
+{
+  "name":"boolean[]"
+},
+{
+  "name":"byte[]"
+},
+{
+  "name":"char[]"
+},
+{
+  "name":"com.gluonhq.attach.display.impl.DesktopDisplayService",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.oracle.graal.python.builtins.PythonBuiltinClassTypeGen"
+},
+{
+  "name":"com.oracle.graal.python.builtins.PythonBuiltinClassTypeGen$PythonObjectLibraryExports$Cached",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"hashNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"isMappingTypeNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"isSequenceTypeNode__lib_", "allowUnsafeAccess":true}, 
+    {"name":"pythonLanguageContextReference_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructors$BaseExceptionNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructors$BoolNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructors$ByteArrayNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructors$BytesNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructors$ClassmethodNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructors$CreateByteOrByteArrayNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"isClassProfile", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructors$DictionaryNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructors$EnumerateNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructors$FloatNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"isNanProfile", "allowUnsafeAccess":true}, 
+    {"name":"isPrimitiveProfile", "allowUnsafeAccess":true}, 
+    {"name":"toByteArrayNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructors$FrozenSetNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"setItemNode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructors$GetSetDescriptorNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructors$IntNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"bigIntegerProfile", "allowUnsafeAccess":true}, 
+    {"name":"fullIntProfile", "allowUnsafeAccess":true}, 
+    {"name":"invalidBase", "allowUnsafeAccess":true}, 
+    {"name":"invalidValueProfile", "allowUnsafeAccess":true}, 
+    {"name":"isPrimitiveProfile", "allowUnsafeAccess":true}, 
+    {"name":"primitiveIntProfile", "allowUnsafeAccess":true}, 
+    {"name":"toByteArrayNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructors$ListNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructors$MappingproxyNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructors$ModuleNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructors$ObjectNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"asPythonObjectNode", "allowUnsafeAccess":true}, 
+    {"name":"callCapiFunction", "allowUnsafeAccess":true}, 
+    {"name":"getInstanceShapeNode", "allowUnsafeAccess":true}, 
+    {"name":"splitArgsNode", "allowUnsafeAccess":true}, 
+    {"name":"toSulongNodes", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructors$RangeNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructors$ReversedNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructors$SetNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructors$StaticmethodNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructors$StrNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"callDecodeNode", "allowUnsafeAccess":true}, 
+    {"name":"isPStringProfile", "allowUnsafeAccess":true}, 
+    {"name":"isPrimitiveProfile", "allowUnsafeAccess":true}, 
+    {"name":"isStringProfile", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructors$SuperInitNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructors$TupleNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructors$TypeNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"appendNode", "allowUnsafeAccess":true}, 
+    {"name":"callAddNativeSlotsNode", "allowUnsafeAccess":true}, 
+    {"name":"castToInt", "allowUnsafeAccess":true}, 
+    {"name":"castToList", "allowUnsafeAccess":true}, 
+    {"name":"castToStringNode", "allowUnsafeAccess":true}, 
+    {"name":"containsKeyNode", "allowUnsafeAccess":true}, 
+    {"name":"getAttrNode", "allowUnsafeAccess":true}, 
+    {"name":"getDictItemNode", "allowUnsafeAccess":true}, 
+    {"name":"getItemNode", "allowUnsafeAccess":true}, 
+    {"name":"getMroNode", "allowUnsafeAccess":true}, 
+    {"name":"getObjectArrayNode", "allowUnsafeAccess":true}, 
+    {"name":"isSubtypeNode", "allowUnsafeAccess":true}, 
+    {"name":"readAttrNode", "allowUnsafeAccess":true}, 
+    {"name":"readCallerFrameNode", "allowUnsafeAccess":true}, 
+    {"name":"slotLenNode", "allowUnsafeAccess":true}, 
+    {"name":"toSulongNode", "allowUnsafeAccess":true}, 
+    {"name":"writeAttrNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructors$ZipNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$BaseExceptionNodeFactory$BaseExceptionNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$BoolNodeFactory$BoolNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"bool0_cache", "allowUnsafeAccess":true}, 
+    {"name":"bool1_hasFrame_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$BoolNodeFactory$BoolNodeGen$Bool0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"hasFrame_", "allowUnsafeAccess":true}, 
+    {"name":"lib_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$ByteArrayNodeFactory$ByteArrayNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"arguments3_", "allowUnsafeAccess":true}, 
+    {"name":"bytearray1_lib_", "allowUnsafeAccess":true}, 
+    {"name":"bytearray4_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$BytesNodeFactory$BytesNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"arguments3_", "allowUnsafeAccess":true}, 
+    {"name":"bytearray1_lib_", "allowUnsafeAccess":true}, 
+    {"name":"bytearray4_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$BytesNodeFactory$BytesNodeGen$Bytearray4Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"castToByteNode_", "allowUnsafeAccess":true}, 
+    {"name":"getIteratorNode_", "allowUnsafeAccess":true}, 
+    {"name":"getNextNode_", "allowUnsafeAccess":true}, 
+    {"name":"lib_", "allowUnsafeAccess":true}, 
+    {"name":"stopIterationProfile_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$ClassmethodNodeFactory$ClassmethodNodeGen",
+  "allDeclaredFields":true,
+  "fields":[{"name":"state_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$DictionaryNodeFactory$DictionaryNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$EnumerateNodeFactory$EnumerateNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"enumerate0_getIterator_", "allowUnsafeAccess":true}, 
+    {"name":"enumerate1_getIterator_", "allowUnsafeAccess":true}, 
+    {"name":"enumerate2_getIterator_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$FloatNodeFactory$FloatNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"pythonObject0_callFloatNode_", "allowUnsafeAccess":true}, 
+    {"name":"pythonObject0_gotException_", "allowUnsafeAccess":true}, 
+    {"name":"pythonObject1_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"ubleFromObject_callFloatNode_", "allowUnsafeAccess":true}, 
+    {"name":"ubleFromObject_gotException_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$FrozenSetNodeFactory$FrozenSetNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"frozensetIterable_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$FrozenSetNodeFactory$FrozenSetNodeGen$FrozensetIterableData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"errorProfile_", "allowUnsafeAccess":true}, 
+    {"name":"getIterator_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$GetSetDescriptorNodeFactory$GetSetDescriptorNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"arguments3_", "allowUnsafeAccess":true}, 
+    {"name":"arguments4_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$IntNodeFactory$IntNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"createInt1_isIntProfile_", "allowUnsafeAccess":true}, 
+    {"name":"createInt2_createIntFromObjectNode_", "allowUnsafeAccess":true}, 
+    {"name":"createInt2_intNode_", "allowUnsafeAccess":true}, 
+    {"name":"createInt7_createIntFromObjectNode_", "allowUnsafeAccess":true}, 
+    {"name":"createIntError0_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$ListNodeFactory$ListNodeGen",
+  "allDeclaredFields":true,
+  "fields":[{"name":"state_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$MappingproxyNodeFactory$MappingproxyNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"invalid_lib_", "allowUnsafeAccess":true}, 
+    {"name":"mapping1_initNode_", "allowUnsafeAccess":true}, 
+    {"name":"mapping1_lib_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$ModuleNodeFactory$ModuleNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"native_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$ObjectNodeFactory$ObjectNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"nativeObjectIndirect0_getMroNode_", "allowUnsafeAccess":true}, 
+    {"name":"objectCachedInstanceShape_cache", "allowUnsafeAccess":true}, 
+    {"name":"objectDirectType_cache", "allowUnsafeAccess":true}, 
+    {"name":"objectDirect_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$RangeNodeFactory$RangeNodeGen",
+  "allDeclaredFields":true,
+  "fields":[{"name":"state_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$ReversedNodeFactory$ReversedNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"reversed0_cache", "allowUnsafeAccess":true}, 
+    {"name":"reversed3_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$ReversedNodeFactory$ReversedNodeGen$Reversed3Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"callReversedNode_", "allowUnsafeAccess":true}, 
+    {"name":"getClassNode_", "allowUnsafeAccess":true}, 
+    {"name":"getItemNode_", "allowUnsafeAccess":true}, 
+    {"name":"lenNode_", "allowUnsafeAccess":true}, 
+    {"name":"noGetItemProfile_", "allowUnsafeAccess":true}, 
+    {"name":"noReversedProfile_", "allowUnsafeAccess":true}, 
+    {"name":"reversedNode_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$SetNodeFactory$SetNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"constructSet_constructSetNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$StaticmethodNodeFactory$StaticmethodNodeGen",
+  "allDeclaredFields":true,
+  "fields":[{"name":"state_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$StrNodeFactory$StrNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"arguments3_", "allowUnsafeAccess":true}, 
+    {"name":"buffer0_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"nativeSubclass_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"strOneArg_coerceToStringNode_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$SuperInitNodeFactory$SuperInitNodeGen",
+  "allDeclaredFields":true,
+  "fields":[{"name":"state_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$TupleNodeFactory$TupleNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"constructTuple_constructTupleNode_", "allowUnsafeAccess":true}, 
+    {"name":"native_isSubtype_", "allowUnsafeAccess":true}, 
+    {"name":"native_subtypeNew_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$TypeNodeFactory$TypeNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"arguments3_", "allowUnsafeAccess":true}, 
+    {"name":"arguments4_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"type0_getClass_", "allowUnsafeAccess":true}, 
+    {"name":"type1_cache", "allowUnsafeAccess":true}, 
+    {"name":"typeGeneric_nextTypeNode_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$TypeNodeFactory$TypeNodeGen$Type1Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"callInitSubclassNode_", "allowUnsafeAccess":true}, 
+    {"name":"callNewFuncNode_", "allowUnsafeAccess":true}, 
+    {"name":"delClasscellNode_", "allowUnsafeAccess":true}, 
+    {"name":"getClasscellNode_", "allowUnsafeAccess":true}, 
+    {"name":"getInitSubclassNode_", "allowUnsafeAccess":true}, 
+    {"name":"getMetaclassNode_", "allowUnsafeAccess":true}, 
+    {"name":"getNewFuncNode_", "allowUnsafeAccess":true}, 
+    {"name":"glib_", "allowUnsafeAccess":true}, 
+    {"name":"nslib_", "allowUnsafeAccess":true}, 
+    {"name":"updatedStorage_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinConstructorsFactory$ZipNodeFactory$ZipNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"getIterator_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$AbsNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$BuiltinNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"getNameNode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$CallableNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$ChrNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$CompileNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"mayBeFromFile", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$DirNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$DivModNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$EvalNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"compileNode", "allowUnsafeAccess":true}, 
+    {"name":"funcname", "allowUnsafeAccess":true}, 
+    {"name":"hasFreeVarsBranch", "allowUnsafeAccess":true}, 
+    {"name":"hasGetItemNode", "allowUnsafeAccess":true}, 
+    {"name":"invokeNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$ExecNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$GetAttrNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$GlobalsNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"condProfile", "allowUnsafeAccess":true}, 
+    {"name":"readCallerFrameNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$HashNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$InputNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$IsInstanceNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"castToBooleanNode", "allowUnsafeAccess":true}, 
+    {"name":"emulateJython", "allowUnsafeAccess":true}, 
+    {"name":"getClassNode", "allowUnsafeAccess":true}, 
+    {"name":"getObjectArrayNode", "allowUnsafeAccess":true}, 
+    {"name":"instanceCheckNode", "allowUnsafeAccess":true}, 
+    {"name":"lenNode", "allowUnsafeAccess":true}, 
+    {"name":"typeInstanceCheckNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$IsSubClassNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"castToBooleanNode", "allowUnsafeAccess":true}, 
+    {"name":"getObjectArrayNode", "allowUnsafeAccess":true}, 
+    {"name":"isSubtypeNode", "allowUnsafeAccess":true}, 
+    {"name":"lenNode", "allowUnsafeAccess":true}, 
+    {"name":"subclassCheckNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$IterNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$LenNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$MinMaxNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"seenNonBoolean", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$MinNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$NextNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$OrdNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$PrintNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cachedSys", "allowUnsafeAccess":true}, 
+    {"name":"callFlushNode", "allowUnsafeAccess":true}, 
+    {"name":"callWrite", "allowUnsafeAccess":true}, 
+    {"name":"getWrite", "allowUnsafeAccess":true}, 
+    {"name":"readStdout", "allowUnsafeAccess":true}, 
+    {"name":"singleContextAssumption", "allowUnsafeAccess":true}, 
+    {"name":"toString", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$ReprNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$RoundNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$SetAttrNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctions$SumFunctionNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"add", "allowUnsafeAccess":true}, 
+    {"name":"errorProfile1", "allowUnsafeAccess":true}, 
+    {"name":"errorProfile2", "allowUnsafeAccess":true}, 
+    {"name":"errorProfile3", "allowUnsafeAccess":true}, 
+    {"name":"iter", "allowUnsafeAccess":true}, 
+    {"name":"next", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$AbsNodeFactory$AbsNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"absObject_callAbsNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$BuiltinNodeFactory$BuiltinNodeGen",
+  "allDeclaredFields":true,
+  "fields":[{"name":"state_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$CallableNodeFactory$CallableNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"generic_getAttributeNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$ChrNodeFactory$ChrNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$CompileNodeFactory$CompileNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"arguments3_", "allowUnsafeAccess":true}, 
+    {"name":"arguments4_", "allowUnsafeAccess":true}, 
+    {"name":"arguments5_", "allowUnsafeAccess":true}, 
+    {"name":"compile0_toBytesNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$DirNodeFactory$DirNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"dir_dirNode_", "allowUnsafeAccess":true}, 
+    {"name":"locals_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$DivModNodeFactory$DivModNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"object_floordivNode_", "allowUnsafeAccess":true}, 
+    {"name":"object_modNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$ExecNodeFactory$ExecNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"execCustomGlobalsCustomLocals_lib_", "allowUnsafeAccess":true}, 
+    {"name":"execCustomGlobalsCustomLocals_setBuiltins_", "allowUnsafeAccess":true}, 
+    {"name":"execCustomGlobalsGlobalLocals_lib_", "allowUnsafeAccess":true}, 
+    {"name":"execCustomGlobalsGlobalLocals_setBuiltins_", "allowUnsafeAccess":true}, 
+    {"name":"execInheritGlobalsCustomLocals_readCallerFrameNode_", "allowUnsafeAccess":true}, 
+    {"name":"execInheritGlobalsInheritLocals_getLocalsNode_", "allowUnsafeAccess":true}, 
+    {"name":"execInheritGlobalsInheritLocals_readCallerFrameNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$GetAttrNodeFactory$GetAttrNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"getAttrDefault_cache", "allowUnsafeAccess":true}, 
+    {"name":"getAttrFromObject0_getAttributeNode_", "allowUnsafeAccess":true}, 
+    {"name":"getAttrFromObject1_errorProfile_", "allowUnsafeAccess":true}, 
+    {"name":"getAttrFromObject1_getAttributeNode_", "allowUnsafeAccess":true}, 
+    {"name":"getAttrGeneric_errorProfile_", "allowUnsafeAccess":true}, 
+    {"name":"getAttrGeneric_getAttributeNode_", "allowUnsafeAccess":true}, 
+    {"name":"getAttr_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$GetAttrNodeFactory$GetAttrNodeGen$GetAttrData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cachedName_", "allowUnsafeAccess":true}, 
+    {"name":"errorProfile_", "allowUnsafeAccess":true}, 
+    {"name":"getAttributeNode_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"stringProfile_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$GetAttrNodeFactory$GetAttrNodeGen$GetAttrDefaultData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cachedName_", "allowUnsafeAccess":true}, 
+    {"name":"getAttributeNode_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"stringProfile_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$GlobalsNodeFactory$GlobalsNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"lib_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$HashNodeFactory$HashNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"hash0_cache", "allowUnsafeAccess":true}, 
+    {"name":"hash1_profile_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$HashNodeFactory$HashNodeGen$Hash0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"lib_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}, 
+    {"name":"profile_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$InputNodeFactory$InputNodeGen",
+  "allDeclaredFields":true,
+  "fields":[{"name":"state_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$IsInstanceNodeFactory$IsInstanceNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"isInstance0_isSameTypeNode_", "allowUnsafeAccess":true}, 
+    {"name":"isInstance0_isSubtypeNode_", "allowUnsafeAccess":true}, 
+    {"name":"isInstance1_instanceNode_", "allowUnsafeAccess":true}, 
+    {"name":"isInstanceTupleConstantLen_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$IsInstanceNodeFactory$IsInstanceNodeGen$IsInstanceTupleConstantLenData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cachedLen_", "allowUnsafeAccess":true}, 
+    {"name":"isInstanceNode_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$IsSubClassNodeFactory$IsSubClassNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"isSubclassTupleConstantLen_cache", "allowUnsafeAccess":true}, 
+    {"name":"isSubclass_isSubclassNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$IterNodeFactory$IterNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"iter0_getIterNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$LenNodeFactory$LenNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"len0_cache", "allowUnsafeAccess":true}, 
+    {"name":"len1_hasFrame_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$LenNodeFactory$LenNodeGen$Len0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"hasFrame_", "allowUnsafeAccess":true}, 
+    {"name":"lib_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$MinNodeFactory$MinNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"castToBooleanNode", "allowUnsafeAccess":true}, 
+    {"name":"maxSequence_compare_", "allowUnsafeAccess":true}, 
+    {"name":"maxSequence_errorProfile1_", "allowUnsafeAccess":true}, 
+    {"name":"maxSequence_errorProfile2_", "allowUnsafeAccess":true}, 
+    {"name":"maxSequence_getIterator_", "allowUnsafeAccess":true}, 
+    {"name":"maxSequence_next_", "allowUnsafeAccess":true}, 
+    {"name":"minmaxBinaryWithKey_compare_", "allowUnsafeAccess":true}, 
+    {"name":"minmaxBinaryWithKey_keyCall_", "allowUnsafeAccess":true}, 
+    {"name":"minmaxBinaryWithKey_moreThanTwo_", "allowUnsafeAccess":true}, 
+    {"name":"minmaxBinary_compare_", "allowUnsafeAccess":true}, 
+    {"name":"minmaxBinary_moreThanTwo_", "allowUnsafeAccess":true}, 
+    {"name":"minmaxSequenceWithKey_compare_", "allowUnsafeAccess":true}, 
+    {"name":"minmaxSequenceWithKey_errorProfile1_", "allowUnsafeAccess":true}, 
+    {"name":"minmaxSequenceWithKey_errorProfile2_", "allowUnsafeAccess":true}, 
+    {"name":"minmaxSequenceWithKey_getIterator_", "allowUnsafeAccess":true}, 
+    {"name":"minmaxSequenceWithKey_keyCall_", "allowUnsafeAccess":true}, 
+    {"name":"minmaxSequenceWithKey_next_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$NextNodeFactory$NextNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"next0_errorProfile_", "allowUnsafeAccess":true}, 
+    {"name":"next0_next_", "allowUnsafeAccess":true}, 
+    {"name":"next1_errorProfile_", "allowUnsafeAccess":true}, 
+    {"name":"next1_next_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$OrdNodeFactory$OrdNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"ord1_getItemNode_", "allowUnsafeAccess":true}, 
+    {"name":"ord1_lenNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$PrintNodeFactory$PrintNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"arguments3_", "allowUnsafeAccess":true}, 
+    {"name":"arguments4_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"printGeneric_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$ReprNodeFactory$ReprNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"repr_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$ReprNodeFactory$ReprNodeGen$ReprData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"isPString_", "allowUnsafeAccess":true}, 
+    {"name":"isString_", "allowUnsafeAccess":true}, 
+    {"name":"reprCallNode_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$RoundNodeFactory$RoundNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"callNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$SetAttrNodeFactory$SetAttrNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"setAttrNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.BuiltinFunctionsFactory$SumFunctionNodeFactory$SumFunctionNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"sum_hasStart_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.CodecsModuleBuiltins$CodecsEncodeNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"lenNode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.CodecsModuleBuiltins$EncodeBaseNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.CodecsModuleBuiltinsFactory$CodecsEncodeNodeFactory$CodecsEncodeNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"encode0_strTypeProfile_", "allowUnsafeAccess":true}, 
+    {"name":"encode1_encodingTypeProfile_", "allowUnsafeAccess":true}, 
+    {"name":"encode1_strTypeProfile_", "allowUnsafeAccess":true}, 
+    {"name":"encode2_errorsTypeProfile_", "allowUnsafeAccess":true}, 
+    {"name":"encode2_strTypeProfile_", "allowUnsafeAccess":true}, 
+    {"name":"encode3_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ExternalFunctionNodes$AllocFuncRootNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"asSsizeTNode", "allowUnsafeAccess":true}, 
+    {"name":"readArgNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ExternalFunctionNodes$ExternalFunctionNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"callable", "allowUnsafeAccess":true}, 
+    {"name":"calleeContext", "allowUnsafeAccess":true}, 
+    {"name":"checkResultNode", "allowUnsafeAccess":true}, 
+    {"name":"fromForeign", "allowUnsafeAccess":true}, 
+    {"name":"lib", "allowUnsafeAccess":true}, 
+    {"name":"name", "allowUnsafeAccess":true}, 
+    {"name":"nativeCodeDoesntNeedExceptionState", "allowUnsafeAccess":true}, 
+    {"name":"nativeCodeDoesntNeedMyFrame", "allowUnsafeAccess":true}, 
+    {"name":"signature", "allowUnsafeAccess":true}, 
+    {"name":"toSulongNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ExternalFunctionNodes$MethFastcallRoot",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"factory", "allowUnsafeAccess":true}, 
+    {"name":"readVarargsNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ExternalFunctionNodes$MethFastcallWithKeywordsRoot",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"factory", "allowUnsafeAccess":true}, 
+    {"name":"readKwargsNode", "allowUnsafeAccess":true}, 
+    {"name":"readVarargsNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ExternalFunctionNodes$MethKeywordsRoot",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"factory", "allowUnsafeAccess":true}, 
+    {"name":"readKwargsNode", "allowUnsafeAccess":true}, 
+    {"name":"readVarargsNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ExternalFunctionNodes$MethNoargsRoot",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ExternalFunctionNodes$MethORoot",
+  "allDeclaredFields":true,
+  "fields":[{"name":"readArgNode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ExternalFunctionNodes$MethRichcmpOpRootNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"op", "allowUnsafeAccess":true}, 
+    {"name":"readArgNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ExternalFunctionNodes$MethVarargsRoot",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"factory", "allowUnsafeAccess":true}, 
+    {"name":"readVarargsNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ExternalFunctionNodes$MethodDescriptorRoot",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"calleeContext", "allowUnsafeAccess":true}, 
+    {"name":"customLocalsProfile", "allowUnsafeAccess":true}, 
+    {"name":"invokeNode", "allowUnsafeAccess":true}, 
+    {"name":"readSelfNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ExternalFunctionNodes$RichCmpFuncRootNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"asSsizeTNode", "allowUnsafeAccess":true}, 
+    {"name":"readArg1Node", "allowUnsafeAccess":true}, 
+    {"name":"readArg2Node", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ExternalFunctionNodesFactory$ExternalFunctionNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"it_cache", "allowUnsafeAccess":true}, 
+    {"name":"pythonLanguageContextReference_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ExternalFunctionNodesFactory$ExternalFunctionNodeGen$ItData",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"asPythonObjectNode_", "allowUnsafeAccess":true}, 
+    {"name":"customLocalsProfile_", "allowUnsafeAccess":true}, 
+    {"name":"raiseNode_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ImpModuleBuiltins$AcquireLock",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ImpModuleBuiltins$CacheModuleCode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ImpModuleBuiltins$CachedCodeIsPackage",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ImpModuleBuiltins$CreateBuiltin",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ImpModuleBuiltins$CreateDynamic",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"callReprNode", "allowUnsafeAccess":true}, 
+    {"name":"checkResultNode", "allowUnsafeAccess":true}, 
+    {"name":"setItemNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ImpModuleBuiltins$ExecDynamicNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ImpModuleBuiltins$ExtensionSuffixesNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ImpModuleBuiltins$HasCachedCode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ImpModuleBuiltins$IsBuiltin",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ImpModuleBuiltins$ReleaseLockNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ImpModuleBuiltinsFactory$AcquireLockFactory$AcquireLockNodeGen",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ImpModuleBuiltinsFactory$CacheModuleCodeFactory$CacheModuleCodeNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cast", "allowUnsafeAccess":true}, 
+    {"name":"pythonLanguageContextReference_", "allowUnsafeAccess":true}, 
+    {"name":"pythonLanguageReference_", "allowUnsafeAccess":true}, 
+    {"name":"run1_lenNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ImpModuleBuiltinsFactory$CachedCodeIsPackageFactory$CachedCodeIsPackageNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"pythonLanguageContextReference_", "allowUnsafeAccess":true}, 
+    {"name":"pythonLanguageReference_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ImpModuleBuiltinsFactory$CreateBuiltinFactory$CreateBuiltinNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ImpModuleBuiltinsFactory$CreateDynamicFactory$CreateDynamicNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"interop_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ImpModuleBuiltinsFactory$ExecDynamicNodeFactory$ExecDynamicNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ImpModuleBuiltinsFactory$ExtensionSuffixesNodeFactory$ExtensionSuffixesNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"pythonLanguageContextReference_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ImpModuleBuiltinsFactory$HasCachedCodeFactory$HasCachedCodeNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"pythonLanguageContextReference_", "allowUnsafeAccess":true}, 
+    {"name":"pythonLanguageReference_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ImpModuleBuiltinsFactory$IsBuiltinFactory$IsBuiltinNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"run0_hasFrame_", "allowUnsafeAccess":true}, 
+    {"name":"run0_hasKeyLib_", "allowUnsafeAccess":true}, 
+    {"name":"run0_hasKey_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.ImpModuleBuiltinsFactory$ReleaseLockNodeFactory$ReleaseLockNodeGen",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.MathModuleBuiltins$ExpNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.MathModuleBuiltins$LogNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"baseCastNode", "allowUnsafeAccess":true}, 
+    {"name":"recLogNode", "allowUnsafeAccess":true}, 
+    {"name":"valueCastNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.MathModuleBuiltins$MathDoubleUnaryBuiltinNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.MathModuleBuiltins$MathUnaryBuiltinNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.MathModuleBuiltins$SqrtNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.MathModuleBuiltinsFactory$ExpNodeFactory$ExpNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"general_convertToFloat_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.MathModuleBuiltinsFactory$LogNodeFactory$LogNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"logDD_divByZero_", "allowUnsafeAccess":true}, 
+    {"name":"logDD_doNotFit_", "allowUnsafeAccess":true}, 
+    {"name":"logDL_divByZero_", "allowUnsafeAccess":true}, 
+    {"name":"logDL_doNotFit_", "allowUnsafeAccess":true}, 
+    {"name":"logDN_doNotFit_", "allowUnsafeAccess":true}, 
+    {"name":"logDPI_divByZero_", "allowUnsafeAccess":true}, 
+    {"name":"logDPI_doNotFit_", "allowUnsafeAccess":true}, 
+    {"name":"logLD_divByZero_", "allowUnsafeAccess":true}, 
+    {"name":"logLD_doNotFit_", "allowUnsafeAccess":true}, 
+    {"name":"logLL_divByZero_", "allowUnsafeAccess":true}, 
+    {"name":"logLL_doNotFit_", "allowUnsafeAccess":true}, 
+    {"name":"logLPI_divByZero_", "allowUnsafeAccess":true}, 
+    {"name":"logLPI_doNotFit_", "allowUnsafeAccess":true}, 
+    {"name":"logPID_divByZero_", "allowUnsafeAccess":true}, 
+    {"name":"logPID_doNotFit_", "allowUnsafeAccess":true}, 
+    {"name":"logPIL_divByZero_", "allowUnsafeAccess":true}, 
+    {"name":"logPIL_doNotFit_", "allowUnsafeAccess":true}, 
+    {"name":"logPIN_doNotFit_", "allowUnsafeAccess":true}, 
+    {"name":"logPIPI_divByZero_", "allowUnsafeAccess":true}, 
+    {"name":"logPIPI_doNotFit_", "allowUnsafeAccess":true}, 
+    {"name":"log_doNotFit_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.MathModuleBuiltinsFactory$SqrtNodeFactory$SqrtNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"general_convertToFloat_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PosixModuleBuiltins$CloseNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"noFile", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PosixModuleBuiltins$CwdNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PosixModuleBuiltins$FstatNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"statNode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PosixModuleBuiltins$ListdirNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PosixModuleBuiltins$LseekNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"gotException", "allowUnsafeAccess":true}, 
+    {"name":"noFile", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PosixModuleBuiltins$OpenNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"gotException", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PosixModuleBuiltins$PythonFileNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PosixModuleBuiltins$ReadNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"tooLargeProfile", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PosixModuleBuiltins$SetInheritableNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PosixModuleBuiltins$StatNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"fileNotFound", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PosixModuleBuiltins$WriteNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"gotException", "allowUnsafeAccess":true}, 
+    {"name":"notWritable", "allowUnsafeAccess":true}, 
+    {"name":"toByteArrayNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PosixModuleBuiltinsFactory$CloseNodeFactory$CloseNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"close0_cache", "allowUnsafeAccess":true}, 
+    {"name":"close1_channelClassProfile_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PosixModuleBuiltinsFactory$CloseNodeFactory$CloseNodeGen$Close0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"channelClassProfile_", "allowUnsafeAccess":true}, 
+    {"name":"lib_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PosixModuleBuiltinsFactory$CwdNodeFactory$CwdNodeGen",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PosixModuleBuiltinsFactory$FstatNodeFactory$FstatNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"fstatPInt0_cache", "allowUnsafeAccess":true}, 
+    {"name":"fstatPInt1_recursive_", "allowUnsafeAccess":true}, 
+    {"name":"fstat_channelClassProfile_", "allowUnsafeAccess":true}, 
+    {"name":"fstat_fstatForNonFile_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PosixModuleBuiltinsFactory$ListdirNodeFactory$ListdirNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"cast_", "allowUnsafeAccess":true}, 
+    {"name":"raiseOS_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PosixModuleBuiltinsFactory$LseekNodeFactory$LseekNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"channelClassProfile", "allowUnsafeAccess":true}, 
+    {"name":"lseekGeneric_castFdNode_", "allowUnsafeAccess":true}, 
+    {"name":"lseekGeneric_castHowNode_", "allowUnsafeAccess":true}, 
+    {"name":"lseekGeneric_castPosNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PosixModuleBuiltinsFactory$OpenNodeFactory$OpenNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"arguments3_", "allowUnsafeAccess":true}, 
+    {"name":"openMode_cast_", "allowUnsafeAccess":true}, 
+    {"name":"open_cast_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PosixModuleBuiltinsFactory$ReadNodeFactory$ReadNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"profile", "allowUnsafeAccess":true}, 
+    {"name":"readFdGeneric_castToIntNode_", "allowUnsafeAccess":true}, 
+    {"name":"readFdGeneric_castToLongNode_", "allowUnsafeAccess":true}, 
+    {"name":"readNode", "allowUnsafeAccess":true}, 
+    {"name":"read_castToLongNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PosixModuleBuiltinsFactory$SetInheritableNodeFactory$SetInheritableNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PosixModuleBuiltinsFactory$StatNodeFactory$StatNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"statDefault_cast_", "allowUnsafeAccess":true}, 
+    {"name":"statPath_cast_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PosixModuleBuiltinsFactory$WriteNodeFactory$WriteNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"write0_channelClassProfile_", "allowUnsafeAccess":true}, 
+    {"name":"write1_channelClassProfile_", "allowUnsafeAccess":true}, 
+    {"name":"write2_channelClassProfile_", "allowUnsafeAccess":true}, 
+    {"name":"write3_channelClassProfile_", "allowUnsafeAccess":true}, 
+    {"name":"writePInt0_cache", "allowUnsafeAccess":true}, 
+    {"name":"writePInt1_recursive_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$AsPythonClassNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$AsPythonObjectNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$BuiltinMethodNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$CheckFunctionResultNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$CreateFunctionNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$GetSetDescriptorNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$MakeMayRaiseWrapperNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$MethAllocNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$MethDirectNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$MethEqNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$MethFastcallNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$MethFastcallWithKeywordsNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$MethGeNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$MethGtNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$MethKeywordsNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$MethLeNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$MethLtNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$MethNeNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$MethNoargsNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$MethONode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$MethRichcmpNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$MethRichcmpOpBaseNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"op", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$MethVarargsNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$NativeBuiltin",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"raiseNativeNode", "allowUnsafeAccess":true}, 
+    {"name":"transformExceptionToNativeNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$PyHashImagNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$PyNoneNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$PyObject_Setattr",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$PyTruffleDecorateFunction",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$PyTruffleHandleCacheCreate",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$PyTruffle_Compute_Mro",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$PyTruffle_Register_NULL",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$PyTruffle_SetBufferProcs",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$PyTruffle_Set_SulongType",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$PyTruffle_Type",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$PyTruffle_Type_Modified",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$PyTruffle_Type_SlotsNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$PyTuple_GetItem",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$PyTuple_New",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$PyTuple_SetItem",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$PyType_IsSubtype",
+  "allDeclaredFields":true,
+  "fields":[{"name":"isSubtypeNode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$Py_NoValue",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$ToSulongNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$TrufflePInt_AsPrimitive",
+  "allDeclaredFields":true,
+  "fields":[{"name":"raiseNativeNode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$UpcallCextLNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$UpcallCextNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$UpcallCextPtrNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$UpcallLNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltins$UpcallLandingNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$AsPythonClassNodeFactory$AsPythonClassNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"toJavaNode_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$AsPythonObjectNodeFactory$AsPythonObjectNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"toJavaNode_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$BuiltinMethodNodeFactory$BuiltinMethodNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$CheckFunctionResultNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"fact", "allowUnsafeAccess":true}, 
+    {"name":"foreign_isNullProfile_", "allowUnsafeAccess":true}, 
+    {"name":"foreign_lib_", "allowUnsafeAccess":true}, 
+    {"name":"nativeWrapper0_lib_", "allowUnsafeAccess":true}, 
+    {"name":"nativeWrapper0_recursive_", "allowUnsafeAccess":true}, 
+    {"name":"nativeWrapper1_recursive_", "allowUnsafeAccess":true}, 
+    {"name":"pythonLanguageContextReference_", "allowUnsafeAccess":true}, 
+    {"name":"raise", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$CreateFunctionNodeFactory$CreateFunctionNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"arguments3_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"pythonCallable0_cache", "allowUnsafeAccess":true}, 
+    {"name":"pythonLanguageReference_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$CreateFunctionNodeFactory$CreateFunctionNodeGen$PythonCallable0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"nativeWrapperLibrary_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$GetSetDescriptorNodeFactory$GetSetDescriptorNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"arguments3_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$MakeMayRaiseWrapperNodeFactory$MakeMayRaiseWrapperNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"pythonLanguageReference_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$MethAllocNodeFactory$MethAllocNodeGen",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$MethDirectNodeFactory$MethDirectNodeGen",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$MethEqNodeFactory$MethEqNodeGen",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$MethFastcallNodeFactory$MethFastcallNodeGen",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$MethFastcallWithKeywordsNodeFactory$MethFastcallWithKeywordsNodeGen",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$MethGeNodeFactory$MethGeNodeGen",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$MethGtNodeFactory$MethGtNodeGen",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$MethKeywordsNodeFactory$MethKeywordsNodeGen",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$MethLeNodeFactory$MethLeNodeGen",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$MethLtNodeFactory$MethLtNodeGen",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$MethNeNodeFactory$MethNeNodeGen",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$MethNoargsNodeFactory$MethNoargsNodeGen",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$MethONodeFactory$MethONodeGen",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$MethRichcmpNodeFactory$MethRichcmpNodeGen",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$MethVarargsNodeFactory$MethVarargsNodeGen",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$PyHashImagNodeFactory$PyHashImagNodeGen",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$PyNoneNodeFactory$PyNoneNodeGen",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$PyObject_SetattrFactory$PyObject_SetattrNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"builtinClass_writeAttrNode_", "allowUnsafeAccess":true}, 
+    {"name":"nativeClass_writeAttrNode_", "allowUnsafeAccess":true}, 
+    {"name":"object_writeAttrToDynamicObjectNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$PyTruffleDecorateFunctionFactory$PyTruffleDecorateFunctionNodeGen",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$PyTruffleHandleCacheCreateFactory$PyTruffleHandleCacheCreateNodeGen",
+  "allDeclaredFields":true,
+  "fields":[{"name":"state_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$PyTruffle_Compute_MroFactory$PyTruffle_Compute_MroNodeGen",
+  "allDeclaredFields":true,
+  "fields":[{"name":"state_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$PyTruffle_Register_NULLFactory$PyTruffle_Register_NULLNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"readAttrNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$PyTruffle_SetBufferProcsFactory$PyTruffle_SetBufferProcsNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"arguments2_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$PyTruffle_Set_SulongTypeFactory$PyTruffle_Set_SulongTypeNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"pythonObject0_lib_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$PyTruffle_TypeFactory$PyTruffle_TypeNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$PyTruffle_Type_ModifiedFactory$PyTruffle_Type_ModifiedNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"it1_profile_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$PyTruffle_Type_SlotsNodeFactory$PyTruffle_Type_SlotsNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"getNativeNullNode_", "allowUnsafeAccess":true}, 
+    {"name":"lookupSlotsNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$PyTuple_GetItemFactory$PyTuple_GetItemNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"pTuple_getItemNode_", "allowUnsafeAccess":true}, 
+    {"name":"pTuple_lenNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$PyTuple_NewFactory$PyTuple_NewNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"generic0_cache", "allowUnsafeAccess":true}, 
+    {"name":"generic1_gotFrame_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$PyTuple_NewFactory$PyTuple_NewNodeGen$Generic0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"gotFrame_", "allowUnsafeAccess":true}, 
+    {"name":"lib_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.PythonCextBuiltinsFactory$PyTuple_SetItemFactory$PyTuple_SetItemNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"managed_setItemNode_", "allowUnsafeAccess":true}, 
+    {"name":"native_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.pytho

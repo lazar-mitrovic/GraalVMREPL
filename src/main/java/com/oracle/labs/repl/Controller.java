@@ -19,7 +19,6 @@ import javafx.scene.layout.VBox;
 import java.io.IOException;
 import java.time.Year;
 
-
 public class Controller {
 
     private static final PseudoClass LANDSCAPE = PseudoClass.getPseudoClass("landscape");
@@ -55,7 +54,6 @@ public class Controller {
 
     private TerminalComponent term;
 
-
     enum GUI_STATE {
         INTERPRETER, CODE_EDITOR,
     }
@@ -69,32 +67,37 @@ public class Controller {
         term.writeLine(
                 "Copyright (c) 2013-" + String.valueOf(Year.now().getValue()) + ", Oracle and/or its affiliates");
 
+        term.writeLine("");
+
         interpreter = new Interpreter(term);
 
         switchLanguageButton.setOnAction(e -> {
             interpreter.nextLanguage();
+            term.writeLine("");
             interpreter.showPrompt();
         });
 
+        term.writeLine("");
         interpreter.showPrompt();
         interpreterBox.requestFocus();
+        System.out.println("GUI init done.");
     }
 
     public void doInterpreterEval() throws IOException {
-        if (interpreter.getBlocked() && !term.isInputBlocked()) {
-            term.flushCurrent();
-            return;
+        term.updateStreams();
+        if (!interpreter.isBlocked() || interpreter.isInputBlocked()) {
+            term.in.flush();
+            term.commitCurrent();
+            if (!interpreter.isBlocked())
+                interpreter.eval();
         }
-        final String code = term.getCurrentCode();
-        term.commitCurrent();
-        if (!interpreter.getBlocked())
-            interpreter.eval(code, true);
         term.updateStreams();
     }
 
     public void doExecutionEval() throws IOException {
-        final String code = codeBox.getText();
-        interpreter.eval(code, true);
+        final String code = codeBox.getText() + "\n\n";
+        term.in.write(code);
+        interpreter.eval();
         term.updateStreams();
     }
 
@@ -110,11 +113,20 @@ public class Controller {
                 } catch (final Exception e) {
                     e.printStackTrace();
                 }
-            } else if (event.getCode() == KeyCode.ESCAPE) // Keyboard turned off.
+            } else if (event.getCode() == KeyCode.ESCAPE) {
+                event.consume();
                 interpreterBox.getParent().requestFocus();
-            else
+            }
+            else if (event.getCode() == KeyCode.UP) {
+                event.consume();
+                term.historyChange(+1);
+            } else if (event.getCode() == KeyCode.DOWN) {
+                event.consume();
+                term.historyChange(-1);
+            } else
                 term.checkInvalidState();
         });
+
 
         codeBox.setOnKeyPressed(event -> {
             if (event.getCode() == KeyCode.ESCAPE) // Keyboard turned off.
@@ -144,6 +156,11 @@ public class Controller {
             }
         });
 
+        initIosNotch();
+    }
+
+    private void initIosNotch() {
+
         if (Platform.isIOS() && !buttonsBox.getStyleClass().contains("ios")) {
             buttonsBox.getStyleClass().add("ios");
         }
@@ -157,8 +174,8 @@ public class Controller {
             if (!mainBox.getStyleClass().contains("notch")) {
                 mainBox.getStyleClass().add("notch");
             }
-            ChangeListener<DisplayService.Notch> notchListener = (obs, oldNotch, newNotch) ->
-                    applyNotch(oldNotch, newNotch);
+            ChangeListener<DisplayService.Notch> notchListener = (obs, oldNotch, newNotch) -> applyNotch(oldNotch,
+                    newNotch);
 
             DisplayService.create().ifPresent(display -> {
                 LifecycleService.create().ifPresent((l) -> {
