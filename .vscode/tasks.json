@@ -1,23 +1,109 @@
 {
     "version": "2.0.0",
-    "tasks": [{
-        "label": "RunWithDebug",
-        "command": "mvn",
-        "args": ["javafx:run@debug"],
-        "type": "shell",
-        "isBackground": true,
-            "problemMatcher": [{
-                "pattern": [{
-                    "regexp": "\\b\\B",
-                    "file": 1,
-                    "location": 2,
-                    "message": 3
-                }],
-                "background": {
-                    "activeOnStart": true,
-                    "beginsPattern": "^.*Preparing to execute Maven in debug mode.*",
-                    "endsPattern": "^.*Listening for transport dt_socket at address.*"
+    "tasks": [
+        {
+            "label": "RunDebug",
+            "command": "mvn",
+            "args": [
+                "javafx:run@debug"
+            ],
+            "type": "shell",
+            "isBackground": true,
+            "problemMatcher": [
+                {
+                    "pattern": [
+                        {
+                            "regexp": "\\b\\B",
+                            "file": 1,
+                            "location": 2,
+                            "message": 3
+                        }
+                    ],
+                    "background": {
+                        "activeOnStart": true,
+                        "beginsPattern": "^.*Preparing to execute Maven in debug mode.*",
+                        "endsPattern": "^.*Listening for transport dt_socket at address.*"
+                    }
                 }
-            }]
-    }]
+            ]
+        },
+        {
+            "label": "Run JVM",
+            "command": "mvn",
+            "args": [
+                "javafx:run"
+            ],
+            "type": "shell",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Build (Desktop)",
+            "command": "mvn",
+            "args": [
+                "client:build",
+                "client:package"
+            ],
+            "type": "shell",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run (Desktop)",
+            "command": "mvn",
+            "args": [
+                "client:run",
+            ],
+            "type": "shell",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Build (Android)",
+            "command": "mvn",
+            "args": [
+                "-Pandroid",
+                "client:build",
+                "client:package"
+            ],
+            "type": "shell",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run (Android)",
+            "command": "mvn",
+            "args": [
+                "-Pandroid",
+                "client:run",
+            ],
+            "type": "shell",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Build (iOS)",
+            "command": "mvn",
+            "args": [
+                "-Pios",
+                "client:build",
+                "client:package"
+            ],
+            "type": "shell",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run (iOS)",
+            "command": "mvn",
+            "args": [
+                "-Pios",
+                "client:build",
+                "client:package"
+            ],
+            "type": "shell",
+            "group": "build",
+            "problemMatcher": []
+        },
+    ]
 }

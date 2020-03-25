@@ -5,10 +5,9 @@
         "type": "java",
         "name": "Debug (Attach)",
         "projectName": "GraalVMREPL",
-        "preLaunchTask": "RunWithDebug",
+        "preLaunchTask": "RunDebug",
         "request": "attach",
         "hostName": "127.0.0.1",
         "port": 8000
-    }
-]
+    }]
 }

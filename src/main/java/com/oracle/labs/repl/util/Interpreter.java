@@ -9,6 +9,7 @@ import org.graalvm.polyglot.Context.Builder;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
 import java.util.function.IntSupplier;
 import javafx.application.Platform;
@@ -20,7 +21,7 @@ import com.oracle.labs.repl.util.languages.*;
 
 public class Interpreter {
     private static Map<?, LanguageAdapter> languageImplementations = Map.of("js", new JavaScriptAdapter(), "python",
-            new PythonAdapter(), "ruby", new RubyAdapter());
+            new PythonAdapter(), "ruby", new RubyAdapter(), "R", new RAdapter());
 
     private static Context polyglot = null;
     private static ArrayList<String> languages = new ArrayList<>();
@@ -33,7 +34,7 @@ public class Interpreter {
 
     private boolean blocked;
 
-    public Interpreter(TerminalComponent term) {
+    public Interpreter(final TerminalComponent term) {
 
         Interpreter.term = term;
         Interpreter.in = term.in;
@@ -45,19 +46,20 @@ public class Interpreter {
 
         // Unpack language files
 
-        String tmpDir = System.getProperty("java.io.tmpdir");
+        final String tmpDir = System.getProperty("java.io.tmpdir");
 
         System.out.print("Unpacking language runtimes...");
         try {
             ZipUtils.unzip(Interpreter.class.getResourceAsStream("/filesystem.zip"), new File(tmpDir));
-        } catch (IOException e) {
+        } catch (final IOException e) {
             e.printStackTrace();
             System.exit(100);
         }
         System.out.println(" Done.");
 
-        for (String lang : Engine.create().getLanguages().keySet()) {
-            if (languageImplementations.containsKey(lang))
+        final var engineLangList = Engine.create().getLanguages().keySet(); 
+        for (final String lang : Arrays.asList("js", "python", "ruby", "R")) {
+            if (engineLangList.contains(lang))
                 languages.add(lang);
         }
 
@@ -75,7 +77,7 @@ public class Interpreter {
         Builder builder = Context.newBuilder().in(Interpreter.in).out(Interpreter.out).logHandler(Interpreter.log)
                 .err(Interpreter.err).allowAllAccess(true);
 
-        for (String lang : languages) {
+        for (final String lang : languages) {
             builder = languageImplementations.get(lang).addParameters(builder);
         }
         
@@ -85,7 +87,7 @@ public class Interpreter {
         // Make language bindings
 
         System.out.print("Adding language bindings...");
-        IntSupplier exit = new IntSupplier() {
+        final IntSupplier exit = new IntSupplier() {
             @Override
             public int getAsInt() {
                 Platform.exit();
@@ -94,7 +96,7 @@ public class Interpreter {
             }
         };
 
-        IntSupplier clear = new IntSupplier() {
+        final IntSupplier clear = new IntSupplier() {
             @Override
             public int getAsInt() {
                 clear();
@@ -102,7 +104,7 @@ public class Interpreter {
             }
         };
 
-        for (String lang : languages) {
+        for (final String lang : languages) {
             languageImplementations.get(lang).putBindings(polyglot, clear, exit);
         }
         System.out.println(" Done.");
@@ -110,8 +112,8 @@ public class Interpreter {
         // Initialize languages
 
         System.out.print("Initializing languages...");
-        for (String lang : languages) {
-            String code = languageImplementations.get(lang).initCode();
+        for (final String lang : languages) {
+            final String code = languageImplementations.get(lang).initCode();
             evalInternal(code);
             nextLanguage();
         }
@@ -128,10 +130,7 @@ public class Interpreter {
 
     public void showPrompt() {
         final String prompt = getLanguageName() + "> ";
-        try {
-            out.write(prompt);
-        } catch (final Exception e) {
-        }
+        out.write(prompt);
     }
 
     public void readEvalPrint() {
@@ -142,12 +141,12 @@ public class Interpreter {
         
         if (input.isEmpty()) return;
 
-        StringBuilder sb = new StringBuilder(input).append('\n');
+        final StringBuilder sb = new StringBuilder(input).append('\n');
         while (true) { // processing subsequent lines while input is incomplete
             try {
                 polyglot.eval(Source.newBuilder(getLanguageName(), sb.toString(), "<shell>").interactive(true)
                         .buildLiteral()).toString();
-            } catch (PolyglotException e) {
+            } catch (final PolyglotException e) {
                 if (e.isIncompleteSource()) {
                     // read more input until we get an empty line
                     out.write("... ");
@@ -165,8 +164,7 @@ public class Interpreter {
                     continue;
                 }
                 else {
-                    err.write(e.getLocalizedMessage());
-                    e.printStackTrace();
+                    err.write(getPolyglotException(e));
                 }
             }
             break;
@@ -176,7 +174,7 @@ public class Interpreter {
         in.flush();
     }
 
-    public void evalInternal(String code) {
+    public void evalInternal(final String code) {
         polyglot.eval(Source.newBuilder(getLanguageName(), code, "<internal>").internal(true).buildLiteral());
     }
 
@@ -184,7 +182,7 @@ public class Interpreter {
         new Thread(new EvalTask()).start();
     }
 
-    public void evalCode(String code) {
+    public void evalCode(final String code) {
         new Thread(new EvalTask(code)).start();
     }
 
@@ -205,7 +203,7 @@ public class Interpreter {
             this.interpreter = true;
         }
 
-        EvalTask(String code) {
+        EvalTask(final String code) {
             this.interpreter = false;
             this.code = code;
         }
@@ -218,17 +216,22 @@ public class Interpreter {
                     readEvalPrint();
                 }
                 else {
-                    Source source = Source.newBuilder(getLanguageName(), code, "<shell>").build();
+                    final Source source = Source.newBuilder(getLanguageName(), code, "<shell>").build();
                     polyglot.eval(source);
                 }
 
-            } catch (final PolyglotException exception) {
-                err.write(exception.getLocalizedMessage());
+            } catch (final PolyglotException e) {
+                err.write(getPolyglotException(e));
             }
             blocked = false;
             showPrompt();
             return null;
         }
+    }
+
+    public String getPolyglotException(PolyglotException e) {
+        return e.getLocalizedMessage() + "\n\tat \"" + e.getSourceLocation().getCharacters() +
+        "\" (" + e.getSourceLocation().getStartLine() + ":" + e.getSourceLocation().getStartColumn() + ")";
     }
 
     @Override
