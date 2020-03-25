@@ -95,9 +95,9 @@ public class Controller {
     }
 
     public void doExecutionEval() throws IOException {
-        final String code = codeBox.getText() + "\n\n";
-        term.in.write(code);
-        interpreter.eval();
+        String code = codeBox.getText();
+        term.writeLine("");
+        interpreter.evalCode(code);
         term.updateStreams();
     }
 

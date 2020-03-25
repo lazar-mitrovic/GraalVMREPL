@@ -150,9 +150,11 @@ public class Interpreter {
             } catch (PolyglotException e) {
                 if (e.isIncompleteSource()) {
                     // read more input until we get an empty line
+                    out.write("... ");
                     String additionalInput = in.readLine();
                     while (additionalInput != null && !additionalInput.isEmpty()) {
                         sb.append(additionalInput).append("\n");
+                        out.write("... ");
                         additionalInput = in.readLine();
                     }
                     if (additionalInput == null) {
@@ -163,14 +165,14 @@ public class Interpreter {
                     continue;
                 }
                 else {
-                    err.write(e.getMessage());
+                    err.write(e.getLocalizedMessage());
                     e.printStackTrace();
                 }
             }
             break;
         }
-        System.out.println("Executed command: ");
-        System.out.println(sb.toString().replace("\n","\\n"));
+        // System.out.println("Executed command: ");
+        // System.out.println(sb.toString().replace("\n","\\n"));
         in.flush();
     }
 
@@ -182,6 +184,10 @@ public class Interpreter {
         new Thread(new EvalTask()).start();
     }
 
+    public void evalCode(String code) {
+        new Thread(new EvalTask(code)).start();
+    }
+
     public Boolean isBlocked() {
         return blocked;
     }
@@ -191,13 +197,33 @@ public class Interpreter {
     }
 
     protected class EvalTask extends Task<Object> {
+
+        boolean interpreter;
+        String code;
+
+        EvalTask() {
+            this.interpreter = true;
+        }
+
+        EvalTask(String code) {
+            this.interpreter = false;
+            this.code = code;
+        }
+
         @Override
         protected Object call() throws IOException {
             blocked = true;
             try {
-                readEvalPrint();
+                if (interpreter) {
+                    readEvalPrint();
+                }
+                else {
+                    Source source = Source.newBuilder(getLanguageName(), code, "<shell>").build();
+                    polyglot.eval(source);
+                }
+
             } catch (final PolyglotException exception) {
-                err.write(exception.getMessage());
+                err.write(exception.getLocalizedMessage());
             }
             blocked = false;
             showPrompt();

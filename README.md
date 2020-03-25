@@ -18,7 +18,7 @@ REPL (read–eval–print loop) shell built ontop of JavaFX stack, GraalJS, Graa
 
 * Various other Ubuntu 18.04 dependencies (which might or might not be needed):
 
-      sudo apt -y install build-essential curl python git libxml2 python ruby libssl-dev zlib1g-dev xorg-dev libcurl4-openssl-dev libgfortran-8-dev libgomp1 gfortran-8 libxml2 libc++-dev libpcre3 libpcre3-dev;
+      sudo apt -y install build-essential curl python git libxml2 ruby libssl-dev zlib1g-dev xorg-dev libcurl4-openssl-dev libgfortran-8-dev libgomp1 gfortran-8 libxml2 libc++-dev libpcre3 libpcre3-dev;
 
       sudo apt -y install libgtk-3-dev libgdk3.0-cil-dev libpangocairo-1.0-0 libpango1.0-dev libgl1-mesa-dev libatk1.0-dev libcairo-gobject2 libavcodec-dev libavformat-dev libavutil-dev libasound2-dev libpangoft2-1.0-0 libgdk-pixbuf2.0-dev;
 
