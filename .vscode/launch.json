@@ -4,7 +4,7 @@
     {
         "type": "java",
         "name": "Debug (Attach)",
-        "projectName": "GraalREPL",
+        "projectName": "GraalVMREPL",
         "preLaunchTask": "RunWithDebug",
         "request": "attach",
         "hostName": "127.0.0.1",
