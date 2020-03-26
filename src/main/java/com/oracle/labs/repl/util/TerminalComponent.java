@@ -70,17 +70,12 @@ public class TerminalComponent {
 
         changed = true;
 
-        if (newVal.length() == terminalText.length() && newVal.equals(oldVal)) {
-            safeUpdate(); // you cannot edit output!
-            return;
-        }
-
         if (newVal.length() < terminalText.length() || !newVal.startsWith(terminalText)) {
             safeUpdate(); // you cannot edit output!
             return;
         }
 
-        if (newVal.endsWith(System.lineSeparator()) && !oldVal.endsWith(System.lineSeparator())) {
+       if (newVal.endsWith(System.lineSeparator()) && !terminalText.equals(newVal)) {
             safeUpdate(); // you cannot edit output!
             return;
         }
@@ -158,6 +153,7 @@ public class TerminalComponent {
         if (!currentCode.equals(""))
             history.add(currentCode.trim());
         historyPosition = 0;
+        currentCode = currentCode.replace(System.lineSeparator(), "");
         writeLine(currentCode);
         in.writeLine(currentCode);
         flushCurrent();
