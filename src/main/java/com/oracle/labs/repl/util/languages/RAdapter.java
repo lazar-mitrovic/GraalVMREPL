@@ -19,6 +19,6 @@ public class RAdapter implements LanguageAdapter {
     }
 
     public String initCode() {
-        return "cat(R.version.string)";
+        return "cat(R.version.string)\ncat('\n')";
     } 
 }
