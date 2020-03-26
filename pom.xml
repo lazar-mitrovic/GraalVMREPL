@@ -57,6 +57,10 @@
             <id>gluon-releases</id>
             <url>http://nexus.gluonhq.com/nexus/content/repositories/releases/</url>
         </repository>
+        <repository>
+            <id>gluon-snapshots</id>
+            <url>http://nexus.gluonhq.com/nexus/content/repositories/public-snapshots/</url>
+        </repository>
     </repositories>
 
     <profiles>
