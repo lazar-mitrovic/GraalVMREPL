@@ -160,8 +160,6 @@
                         <!--<list>-!-language:R</list>-->
                         <list>-Dtruffle.TruffleRuntime=com.oracle.truffle.api.impl.DefaultTruffleRuntime</list>
                         <list>-Dgraalvm.ForcePolyglotInvalid=false</list>
-                        <list>-H:+ReportExceptionStackTraces</list>
-                        <list>-H:+AllowIncompleteClasspath</list>
                     </nativeImageArgs>
 
                     <reflectionList>

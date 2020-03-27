@@ -75,6 +75,7 @@
             "command": "mvn",
             "args": [
                 "-Pandroid",
+                "client:install",
                 "client:run",
             ],
             "type": "shell",
@@ -98,8 +99,8 @@
             "command": "mvn",
             "args": [
                 "-Pios",
-                "client:build",
-                "client:package"
+                "client:install",
+                "client:run"
             ],
             "type": "shell",
             "group": "build",

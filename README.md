@@ -1,11 +1,7 @@
 # GraalVM REPL
 REPL (read–eval–print loop) shell built ontop of JavaFX stack, GraalJS, GraalPython, TruffleRuby and FastR
 
-<center> 
-
 ![GraalVM REPL](preview.png)
-
-</center>
 
 ## Building prerequisites
 * Up-to-date GraalVM (for mobile builds [this fork](https://github.com/gluonhq/graal) might be best since static libraries and relevant patches are added, prebuilt binaries for [linux](https://download2.gluonhq.com/substrate/graalvm/graalvm-svm-linux-20.1.0-latest.zip) and [macOS](https://download2.gluonhq.com/substrate/graalvm/graalvm-svm-darwin-20.1.0-latest.zip) are provided)
@@ -58,8 +54,8 @@ or if VSCode is used: install `Debugger for Java` extension and then press F5
 |          	|   |
 |----------	|---|
 | Desktop: 	|`mvn clean client:build client:package client:run`|
-| Android: 	|`mvn -Pandroid clean client:build client:package client:run`|
-| iOS:      |`mvn -Pios clean client:build client:package client:run`|
+| Android: 	|`mvn -Pandroid clean client:build client:package client:install client:run`|
+| iOS:      |`mvn -Pios clean client:build client:package client:install client:run`|
 
 or if VSCode is used: 
 
