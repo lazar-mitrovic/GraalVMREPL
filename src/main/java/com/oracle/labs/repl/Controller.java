@@ -1,20 +1,28 @@
 package com.oracle.labs.repl;
 
 import com.gluonhq.attach.display.DisplayService;
+import com.gluonhq.attach.keyboard.KeyboardService;
 import com.gluonhq.attach.lifecycle.LifecycleEvent;
 import com.gluonhq.attach.lifecycle.LifecycleService;
 import com.gluonhq.attach.util.Platform;
 import com.oracle.labs.repl.util.Interpreter;
 import com.oracle.labs.repl.util.TerminalComponent;
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 import javafx.beans.value.ChangeListener;
 import javafx.css.PseudoClass;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.KeyCode;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.Region;
+import javafx.scene.shape.Path;
 
 import java.io.IOException;
 import java.time.Year;
@@ -24,7 +32,7 @@ public class Controller {
     private static final PseudoClass LANDSCAPE = PseudoClass.getPseudoClass("landscape");
 
     @FXML
-    private VBox mainBox;
+    private BorderPane mainBox;
 
     @FXML
     private HBox buttonsBox;
@@ -46,6 +54,9 @@ public class Controller {
 
     @FXML
     private TextArea interpreterBox;
+
+    @FXML
+    private Pane caret;
 
     @FXML
     private Button switchLanguageButton;
@@ -156,7 +167,14 @@ public class Controller {
             }
         });
 
+        initKeyboardSupport();
+
         initIosNotch();
+        codeBox.setOnMouseClicked(e -> {
+            if (interpreterBox.isFocused()) {
+                buttonsBox.requestFocus();
+            }
+        });
     }
 
     private void initIosNotch() {
@@ -203,5 +221,32 @@ public class Controller {
 
     private boolean isLandscape(DisplayService.Notch notch) {
         return notch == DisplayService.Notch.LEFT || notch == DisplayService.Notch.RIGHT;
+    }
+
+    private void initKeyboardSupport() {
+        if (Platform.isDesktop()) {
+            return;
+        }
+
+        interpreterBox.skinProperty().addListener(new InvalidationListener() {
+            @Override
+            public void invalidated(Observable observable) {
+                if (interpreterBox.getSkin() != null) {
+                    Region content = (Region) ((ScrollPane) interpreterBox.getChildrenUnmodifiable().get(0)).getContent();
+                    Path caretPath = content.getChildrenUnmodifiable().stream()
+                            .filter(Path.class::isInstance)
+                            .map(Path.class::cast)
+                            .findFirst()
+                            .orElse(new Path());
+                    caretPath.layoutBoundsProperty().addListener((obs, ov, nv) ->
+                            AnchorPane.setTopAnchor(caret, nv.getMinY()));
+                    interpreterBox.focusedProperty().addListener((obs, ov, nv) ->
+                            AnchorPane.setTopAnchor(caret, !nv ? 0d : caretPath.getLayoutBounds().getMinY()));
+                    AnchorPane.setTopAnchor(caret, caretPath.getLayoutBounds().getMinY());
+                    KeyboardService.create().ifPresent(k -> k.keepVisibilityForNode(caret, mainSplit));
+                    interpreterBox.skinProperty().removeListener(this);
+                }
+            }
+        });
     }
 }

@@ -7,14 +7,11 @@
 <?import javafx.scene.layout.HBox ?>
 <?import javafx.scene.layout.VBox ?>
 
-<VBox fx:id="mainBox" styleClass="main-box" maxHeight="+Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="375.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oracle.labs.repl.Controller">
-   <children>
-      <HBox fx:id="buttonsBox" styleClass="top-box" prefHeight="45">
-         <children>
-            <Button fx:id="interpreterButton" maxHeight="+Infinity" maxWidth="+Infinity" text="Interpreter" HBox.hgrow="ALWAYS" />
-            <Button fx:id="codeButton" maxHeight="+Infinity" maxWidth="+Infinity" text="Code Editor" HBox.hgrow="ALWAYS" />
-         </children>
-      </HBox>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.layout.Pane?>
+<BorderPane fx:id="mainBox" styleClass="main-box" maxHeight="+Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="375.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oracle.labs.repl.Controller">
+   <center>
       <SplitPane fx:id="mainSplit" dividerPositions="0.5" orientation="VERTICAL" VBox.vgrow="ALWAYS">
          <items>
             <AnchorPane minHeight="0.0" minWidth="0.0">
@@ -26,10 +23,19 @@
             <AnchorPane VBox.vgrow="ALWAYS">
                <children>
                   <TextArea fx:id="interpreterBox" maxHeight="+Infinity" maxWidth="+Infinity" styleClass="terminal"  wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                   <Pane fx:id="caret" prefWidth="0" prefHeight="30" AnchorPane.leftAnchor="30.0" />
                   <Button fx:id="switchLanguageButton" text="↔" styleClass="circ-button" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
                </children>
             </AnchorPane>
          </items>
       </SplitPane>
-   </children>
-</VBox>
+   </center>
+   <top>
+      <HBox fx:id="buttonsBox" styleClass="top-box" prefHeight="45">
+         <children>
+            <Button fx:id="interpreterButton" maxHeight="+Infinity" maxWidth="+Infinity" text="Interpreter" HBox.hgrow="ALWAYS" />
+            <Button fx:id="codeButton" maxHeight="+Infinity" maxWidth="+Infinity" text="Code Editor" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
