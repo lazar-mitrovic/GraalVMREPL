@@ -5,15 +5,14 @@
   }
 ,
   {
-    "name" : "javafx.scene.control.SplitPane",
+    "name" : "javafx.scene.shape.Rectangle",
     "methods":[
       {"name":"<init>","parameterTypes":[] },
-      {"name":"<init>","parameterTypes":["javafx.scene.Node[]"] },
-      {"name":"getDividerPositions","parameterTypes":[] },
-      {"name":"setDividerPositions","parameterTypes":["double[]"] },
-      {"name":"getOrientation","parameterTypes":[] },
-      {"name":"setOrientation","parameterTypes":["javafx.geometry.Orientation"] },
-      {"name":"getItems","parameterTypes":[] }
+      {"name":"<init>","parameterTypes":["double", "double"] },
+      {"name":"setWidth","parameterTypes":["double"] },
+      {"name":"getWidth","parameterTypes":[] },
+      {"name":"setHeight","parameterTypes":["double"] },
+      {"name":"getHeight","parameterTypes":[] }
     ]
   }
 ]

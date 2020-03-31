@@ -14,15 +14,16 @@ import javafx.css.PseudoClass;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.KeyCode;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.shape.Path;
+import javafx.scene.shape.Rectangle;
 
 import java.io.IOException;
 import java.time.Year;
@@ -31,45 +32,29 @@ public class Controller {
 
     private static final PseudoClass LANDSCAPE = PseudoClass.getPseudoClass("landscape");
 
-    @FXML
-    private BorderPane mainBox;
+    @FXML private BorderPane mainBox;
 
-    @FXML
-    private HBox buttonsBox;
+    @FXML private HBox buttonsBox;
+    @FXML private Button interpreterButton;
+    @FXML private Button codeButton;
 
-    @FXML
-    private Button interpreterButton;
-
-    @FXML
-    private Button codeButton;
-
-    @FXML
-    private Button runCodeButton;
-
-    @FXML
-    private SplitPane mainSplit;
-
-    @FXML
-    private TextArea codeBox;
-
-    @FXML
-    private TextArea interpreterBox;
-
-    @FXML
-    private Pane caret;
-
-    @FXML
-    private Button switchLanguageButton;
+    @FXML private VBox centerBox;
+    @FXML private StackPane codePane;
+    @FXML private TextArea codeBox;
+    @FXML private Button runCodeButton;
+    @FXML private StackPane interpreterPane;
+    @FXML private TextArea interpreterBox;
+    @FXML private Rectangle caret;
+    @FXML private Button switchLanguageButton;
 
     private Interpreter interpreter;
-
     private TerminalComponent term;
 
     enum GUI_STATE {
         INTERPRETER, CODE_EDITOR,
     }
 
-    private GUI_STATE state = GUI_STATE.INTERPRETER;
+    private GUI_STATE state;
 
     public void init() {
         term = new TerminalComponent(interpreterBox);
@@ -115,8 +100,6 @@ public class Controller {
     public void initialize() {
         init();
 
-        mainSplit.setDividerPositions(0);
-
         interpreterBox.setOnKeyPressed(event -> {
             if (event.getCode() == KeyCode.ENTER) {
                 try {
@@ -144,19 +127,14 @@ public class Controller {
                 codeBox.getParent().requestFocus();
         });
 
-        mainSplit.getDividers().get(0).positionProperty().addListener(e -> {
-            if (state == GUI_STATE.INTERPRETER)
-                mainSplit.setDividerPositions(0);
-        });
-
         interpreterButton.setOnAction(event -> {
             state = GUI_STATE.INTERPRETER;
-            mainSplit.setDividerPositions(0);
+            setState(state);
         });
 
         codeButton.setOnAction(event -> {
             state = GUI_STATE.CODE_EDITOR;
-            mainSplit.setDividerPositions(0.5);
+            setState(state);
         });
 
         runCodeButton.setOnAction(event -> {
@@ -175,6 +153,13 @@ public class Controller {
                 buttonsBox.requestFocus();
             }
         });
+
+        interpreterButton.fire();
+    }
+
+    private void setState(GUI_STATE state) {
+        codePane.setVisible(state == GUI_STATE.CODE_EDITOR);
+        codePane.setManaged(state == GUI_STATE.CODE_EDITOR);
     }
 
     private void initIosNotch() {
@@ -227,6 +212,8 @@ public class Controller {
         if (Platform.isDesktop()) {
             return;
         }
+        caret.setManaged(false);
+        caret.setLayoutX(0);
 
         interpreterBox.skinProperty().addListener(new InvalidationListener() {
             @Override
@@ -238,12 +225,17 @@ public class Controller {
                             .map(Path.class::cast)
                             .findFirst()
                             .orElse(new Path());
-                    caretPath.layoutBoundsProperty().addListener((obs, ov, nv) ->
-                            AnchorPane.setTopAnchor(caret, nv.getMinY()));
+                    caretPath.boundsInParentProperty().addListener((obs, ov, nv) ->
+                            caret.setLayoutY(nv.getMinY()));
+                    codeBox.focusedProperty().addListener((obs, ov, nv) -> {
+                        if (nv) {
+                            caret.setLayoutY(0d);
+                        }
+                    });
                     interpreterBox.focusedProperty().addListener((obs, ov, nv) ->
-                            AnchorPane.setTopAnchor(caret, !nv ? 0d : caretPath.getLayoutBounds().getMinY()));
-                    AnchorPane.setTopAnchor(caret, caretPath.getLayoutBounds().getMinY());
-                    KeyboardService.create().ifPresent(k -> k.keepVisibilityForNode(caret, mainSplit));
+                            caret.setLayoutY(!nv ? 0d : caretPath.getBoundsInParent().getMinY()));
+                    interpreterButton.requestFocus();
+                    KeyboardService.create().ifPresent(k -> k.keepVisibilityForNode(caret, centerBox));
                     interpreterBox.skinProperty().removeListener(this);
                 }
             }
