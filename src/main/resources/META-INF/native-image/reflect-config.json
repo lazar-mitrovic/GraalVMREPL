@@ -13924,6 +13924,10 @@
   ]
 },
 {
+  "name":"com.oracle.graal.python.runtime.PythonOptions",
+  "allDeclaredFields":true
+},
+{
   "name":"com.oracle.graal.python.runtime.interop.InteropMapGen"
 },
 {
@@ -24356,6 +24360,7 @@
     {"name":"srcNamesProfile", "allowUnsafeAccess":true}, 
     {"name":"srcNamesValueProfile", "allowUnsafeAccess":true}, 
     {"name":"targetClass", "allowUnsafeAccess":true}, 
+    {"name":"targetDataClass", "allowUnsafeAccess":true}, 
     {"name":"valueLibrary", "allowUnsafeAccess":true}, 
     {"name":"vectorLengthProfile", "allowUnsafeAccess":true}, 
     {"name":"vectorLibrary", "allowUnsafeAccess":true}, 
@@ -25050,7 +25055,8 @@
     {"name":"removeDim_", "allowUnsafeAccess":true}, 
     {"name":"rightHasDimensions_", "allowUnsafeAccess":true}, 
     {"name":"rightLibrary_", "allowUnsafeAccess":true}, 
-    {"name":"setDimNamesNode_", "allowUnsafeAccess":true}
+    {"name":"setDimNamesNode_", "allowUnsafeAccess":true}, 
+    {"name":"targetLib_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -25672,6 +25678,7 @@
   "name":"com.oracle.truffle.r.nodes.attributes.SpecialAttributesFunctions$GetDimAttributeNode",
   "allDeclaredFields":true,
   "fields":[
+    {"name":"dimDataLib", "allowUnsafeAccess":true}, 
     {"name":"getReadonlyData", "allowUnsafeAccess":true}, 
     {"name":"isPairListProfile", "allowUnsafeAccess":true}, 
     {"name":"nonEmptyDimsProfile", "allowUnsafeAccess":true}, 
@@ -29899,7 +29906,9 @@
   "name":"com.oracle.truffle.r.nodes.builtin.base.infix.special.SubsetSpecial2NodeGen",
   "allDeclaredFields":true,
   "fields":[
+    {"name":"accessDouble20_cache", "allowUnsafeAccess":true}, 
     {"name":"accessDouble2_cache", "allowUnsafeAccess":true}, 
+    {"name":"accessInt0_cache", "allowUnsafeAccess":true}, 
     {"name":"accessInt_cache", "allowUnsafeAccess":true}, 
     {"name":"accessString_cache", "allowUnsafeAccess":true}, 
     {"name":"access_extract_", "allowUnsafeAccess":true}, 
@@ -30239,6 +30248,15 @@
   "allDeclaredFields":true,
   "fields":[
     {"name":"cachedClass_", "allowUnsafeAccess":true}, 
+    {"name":"lengthProfile_", "allowUnsafeAccess":true}, 
+    {"name":"lib_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.r.nodes.control.RLengthNodeGen$Container0Data",
+  "allDeclaredFields":true,
+  "fields":[
     {"name":"lengthProfile_", "allowUnsafeAccess":true}, 
     {"name":"lib_", "allowUnsafeAccess":true}, 
     {"name":"next_", "allowUnsafeAccess":true}
@@ -32613,6 +32631,15 @@
   "name":"com.oracle.truffle.r.runtime.data.RIntVectorGen"
 },
 {
+  "name":"com.oracle.truffle.r.runtime.data.RIntVectorGen$AbstractContainerLibraryExports$Cached",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"containerLibGetLengthNode__dataLib_", "allowUnsafeAccess":true}, 
+    {"name":"materializeDataNode__dataLib_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"com.oracle.truffle.r.runtime.data.RList$FastPathAccess",
   "allDeclaredFields":true
 },
@@ -32690,6 +32717,9 @@
   "fields":[{"name":"emptyStringProfile", "allowUnsafeAccess":true}]
 },
 {
+  "name":"com.oracle.truffle.r.runtime.data.VectorDataLibraryGen"
+},
+{
   "name":"com.oracle.truffle.r.runtime.data.VectorDataLibraryGen$CachedDispatch",
   "allDeclaredFields":true,
   "fields":[
@@ -32707,16 +32737,77 @@
   "allDeclaredFields":true
 },
 {
+  "name":"com.oracle.truffle.r.runtime.data.model.RAbstractContainerGen"
+},
+{
   "name":"com.oracle.truffle.r.runtime.data.model.RAbstractListBaseVectorGen"
+},
+{
+  "name":"com.oracle.truffle.r.runtime.data.model.RAbstractListBaseVectorGen$AbstractContainerLibraryExports$Cached",
+  "allDeclaredFields":true,
+  "fields":[{"name":"receiverClass_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.r.runtime.data.model.RAbstractListBaseVectorGen$VectorDataLibraryExports$Cached",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"SeqItLoopProfile", "allowUnsafeAccess":true}, 
+    {"name":"receiverClass_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
 },
 {
   "name":"com.oracle.truffle.r.runtime.data.model.RAbstractLogicalVectorGen"
 },
 {
+  "name":"com.oracle.truffle.r.runtime.data.model.RAbstractLogicalVectorGen$AbstractContainerLibraryExports$Cached",
+  "allDeclaredFields":true,
+  "fields":[{"name":"receiverClass_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.r.runtime.data.model.RAbstractLogicalVectorGen$VectorDataLibraryExports$Cached",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"SeqItLoopProfile", "allowUnsafeAccess":true}, 
+    {"name":"naCheck", "allowUnsafeAccess":true}, 
+    {"name":"receiverClass_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"storeProfile", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"com.oracle.truffle.r.runtime.data.model.RAbstractNumericVectorGen"
 },
 {
+  "name":"com.oracle.truffle.r.runtime.data.model.RAbstractRawVectorGen"
+},
+{
+  "name":"com.oracle.truffle.r.runtime.data.model.RAbstractRawVectorGen$VectorDataLibraryExports$Cached",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"SeqItLoopProfile", "allowUnsafeAccess":true}, 
+    {"name":"receiverClass_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"com.oracle.truffle.r.runtime.data.model.RAbstractStringVectorGen"
+},
+{
+  "name":"com.oracle.truffle.r.runtime.data.model.RAbstractStringVectorGen$AbstractContainerLibraryExports$Cached",
+  "allDeclaredFields":true,
+  "fields":[{"name":"receiverClass_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.r.runtime.data.model.RAbstractStringVectorGen$VectorDataLibraryExports$Cached",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"SeqItLoopProfile", "allowUnsafeAccess":true}, 
+    {"name":"naCheck", "allowUnsafeAccess":true}, 
+    {"name":"receiverClass_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"storeProfile", "allowUnsafeAccess":true}
+  ]
 },
 {
   "name":"com.oracle.truffle.r.runtime.data.model.RAbstractVectorGen"
@@ -32778,6 +32869,7 @@
   "allDeclaredFields":true,
   "fields":[
     {"name":"clazz", "allowUnsafeAccess":true}, 
+    {"name":"dataLib", "allowUnsafeAccess":true}, 
     {"name":"hasStore", "allowUnsafeAccess":true}, 
     {"name":"na", "allowUnsafeAccess":true}
   ]
@@ -33512,6 +33604,12 @@
   ]
 },
 {
+  "name":"com.oracle.truffle.tools.coverage.CoverageTracker"
+},
+{
+  "name":"com.oracle.truffle.tools.profiler.CPUSampler"
+},
+{
   "name":"double[]"
 },
 {
@@ -33546,7 +33644,15 @@
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
+  "name":"javafx.scene.layout.BorderPane",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
   "name":"javafx.scene.layout.HBox",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"javafx.scene.layout.Pane",
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
@@ -35384,11 +35490,15 @@
   "name":"org.truffleruby.core.cast.NameToJavaStringNodeGen",
   "allDeclaredFields":true,
   "fields":[
+    {"name":"flags", "allowUnsafeAccess":true}, 
     {"name":"nameToJavaString1_errorProfile_", "allowUnsafeAccess":true}, 
     {"name":"nameToJavaString1_toStr_", "allowUnsafeAccess":true}, 
     {"name":"rubyLanguageContextReference_", "allowUnsafeAccess":true}, 
+    {"name":"sourceCharIndex", "allowUnsafeAccess":true}, 
+    {"name":"sourceLength", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}, 
-    {"name":"toJavaStringNode", "allowUnsafeAccess":true}
+    {"name":"toJavaStringNode", "allowUnsafeAccess":true}, 
+    {"name":"value_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -36800,6 +36910,11 @@
   "fields":[{"name":"taintNode", "allowUnsafeAccess":true}]
 },
 {
+  "name":"org.truffleruby.core.kernel.KernelNodes$LoadFeatureNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"requireNode", "allowUnsafeAccess":true}]
+},
+{
   "name":"org.truffleruby.core.kernel.KernelNodes$LoadNode",
   "allDeclaredFields":true,
   "fields":[{"name":"requireNode", "allowUnsafeAccess":true}]
@@ -37168,6 +37283,19 @@
   "name":"org.truffleruby.core.kernel.KernelNodesFactory$KernelTaintNodeFactory$KernelTaintNodeGen",
   "allDeclaredFields":true,
   "fields":[{"name":"arguments0_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"org.truffleruby.core.kernel.KernelNodesFactory$LoadFeatureNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.kernel.KernelNodesFactory$LoadFeatureNodeFactory$LoadFeatureNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"arguments1_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
 },
 {
   "name":"org.truffleruby.core.kernel.KernelNodesFactory$LoadNodeFactory",
@@ -40656,6 +40784,7 @@
   "allDeclaredFields":true,
   "fields":[
     {"name":"arguments0_", "allowUnsafeAccess":true}, 
+    {"name":"loopProfile_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}, 
     {"name":"yieldNode_", "allowUnsafeAccess":true}
   ]
@@ -41054,11 +41183,15 @@
   "allDeclaredFields":true,
   "fields":[
     {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"flags", "allowUnsafeAccess":true}, 
     {"name":"javaStringCached_cache", "allowUnsafeAccess":true}, 
+    {"name":"sourceCharIndex", "allowUnsafeAccess":true}, 
+    {"name":"sourceLength", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}, 
     {"name":"stringCached_cache", "allowUnsafeAccess":true}, 
     {"name":"stringUncached_cache", "allowUnsafeAccess":true}, 
-    {"name":"symbolCached_cache", "allowUnsafeAccess":true}
+    {"name":"symbolCached_cache", "allowUnsafeAccess":true}, 
+    {"name":"value_", "allowUnsafeAccess":true}
   ]
 },
 {

@@ -38,6 +38,7 @@
     {"pattern":"\\Qtruffleruby/core/integer.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/io.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/kernel.rb\\E"}, 
+    {"pattern":"\\Qtruffleruby/core/lazy_rubygems.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/main.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/marshal.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/math.rb\\E"}, 
