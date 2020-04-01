@@ -33656,7 +33656,15 @@
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
+  "name":"javafx.scene.layout.StackPane",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
   "name":"javafx.scene.layout.VBox",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"javafx.scene.shape.Rectangle",
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
