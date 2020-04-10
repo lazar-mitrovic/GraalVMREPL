@@ -86,7 +86,7 @@ public class Controller {
 
     public void doExecutionEval() throws IOException {
         String code = codeBox.getText();
-        term.writeLine("");
+        term.clear();
         interpreter.evalCode(code);
         term.updateStreams();
     }
