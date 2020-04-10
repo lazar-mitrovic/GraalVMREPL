@@ -10,11 +10,11 @@
 }
 
 .main-box.ios {
-    -fx-padding: 1mm 1mm 5mm 1mm;
+    -fx-padding: 5mm 1mm 5mm 1mm;
 }
 
 .main-box.ios.notch {
-    -fx-padding: 1mm 1mm 10mm 1mm;
+    -fx-padding: 12mm 1mm 10mm 1mm;
 }
 
 .main-box.ios.notch:landscape {
@@ -26,19 +26,6 @@
     -fx-alignment: CENTER_RIGHT;
     -fx-spacing: 5px;
 }
-
-.top-box.ios {
-    -fx-padding: 5mm 1mm 1mm 1mm;
-}
-
-.top-box.ios.notch {
-    -fx-padding: 12mm 1mm 1mm 1mm;
-}
-
-.top-box.ios.notch:landscape {
-    -fx-padding: 1mm 1mm 1mm 1mm;
-}
-
 
 
 .terminal {

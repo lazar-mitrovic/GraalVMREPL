@@ -7,23 +7,16 @@ import com.gluonhq.attach.lifecycle.LifecycleService;
 import com.gluonhq.attach.util.Platform;
 import com.oracle.labs.repl.util.Interpreter;
 import com.oracle.labs.repl.util.TerminalComponent;
-import javafx.beans.InvalidationListener;
-import javafx.beans.Observable;
 import javafx.beans.value.ChangeListener;
 import javafx.css.PseudoClass;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.KeyCode;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.shape.Path;
-import javafx.scene.shape.Rectangle;
 
 import java.io.IOException;
 import java.time.Year;
@@ -32,7 +25,7 @@ public class Controller {
 
     private static final PseudoClass LANDSCAPE = PseudoClass.getPseudoClass("landscape");
 
-    @FXML private BorderPane mainBox;
+    @FXML private VBox mainBox;
 
     @FXML private HBox buttonsBox;
     @FXML private Button interpreterButton;
@@ -44,8 +37,9 @@ public class Controller {
     @FXML private Button runCodeButton;
     @FXML private StackPane interpreterPane;
     @FXML private TextArea interpreterBox;
-    @FXML private Rectangle caret;
     @FXML private Button switchLanguageButton;
+
+    @FXML private Pane keyboardPane;
 
     private Interpreter interpreter;
     private TerminalComponent term;
@@ -164,16 +158,10 @@ public class Controller {
 
     private void initIosNotch() {
 
-        if (Platform.isIOS() && !buttonsBox.getStyleClass().contains("ios")) {
-            buttonsBox.getStyleClass().add("ios");
-        }
         if (Platform.isIOS() && !mainBox.getStyleClass().contains("ios")) {
             mainBox.getStyleClass().add("ios");
         }
         if (DisplayService.create().map(DisplayService::hasNotch).orElse(false)) {
-            if (!buttonsBox.getStyleClass().contains("notch")) {
-                buttonsBox.getStyleClass().add("notch");
-            }
             if (!mainBox.getStyleClass().contains("notch")) {
                 mainBox.getStyleClass().add("notch");
             }
@@ -194,13 +182,9 @@ public class Controller {
 
     private void applyNotch(DisplayService.Notch oldNotch, DisplayService.Notch newNotch) {
         if (newNotch == DisplayService.Notch.BOTTOM && oldNotch != null) {
-            boolean landscape = isLandscape(oldNotch);
-            mainBox.pseudoClassStateChanged(LANDSCAPE, landscape);
-            buttonsBox.pseudoClassStateChanged(LANDSCAPE, landscape);
+            mainBox.pseudoClassStateChanged(LANDSCAPE, isLandscape(oldNotch));
         } else {
-            boolean landscape = isLandscape(newNotch);
-            mainBox.pseudoClassStateChanged(LANDSCAPE, landscape);
-            buttonsBox.pseudoClassStateChanged(LANDSCAPE, landscape);
+            mainBox.pseudoClassStateChanged(LANDSCAPE, isLandscape(newNotch));
         }
     }
 
@@ -209,36 +193,12 @@ public class Controller {
     }
 
     private void initKeyboardSupport() {
-        if (Platform.isDesktop()) {
-            return;
-        }
-        caret.setManaged(false);
-        caret.setLayoutX(0);
-
-        interpreterBox.skinProperty().addListener(new InvalidationListener() {
-            @Override
-            public void invalidated(Observable observable) {
-                if (interpreterBox.getSkin() != null) {
-                    Region content = (Region) ((ScrollPane) interpreterBox.getChildrenUnmodifiable().get(0)).getContent();
-                    Path caretPath = content.getChildrenUnmodifiable().stream()
-                            .filter(Path.class::isInstance)
-                            .map(Path.class::cast)
-                            .findFirst()
-                            .orElse(new Path());
-                    caretPath.boundsInParentProperty().addListener((obs, ov, nv) ->
-                            caret.setLayoutY(nv.getMinY()));
-                    codeBox.focusedProperty().addListener((obs, ov, nv) -> {
-                        if (nv) {
-                            caret.setLayoutY(0d);
-                        }
-                    });
-                    interpreterBox.focusedProperty().addListener((obs, ov, nv) ->
-                            caret.setLayoutY(!nv ? 0d : caretPath.getBoundsInParent().getMinY()));
-                    interpreterButton.requestFocus();
-                    KeyboardService.create().ifPresent(k -> k.keepVisibilityForNode(caret, centerBox));
-                    interpreterBox.skinProperty().removeListener(this);
-                }
-            }
-        });
+        KeyboardService.create().ifPresent(k ->
+                k.visibleHeightProperty().addListener((obs, ov, nv) -> {
+                    double height = nv.doubleValue() == 0d ? 0d : nv.doubleValue() - mainBox.getPadding().getBottom() + 2;
+                    keyboardPane.setMinHeight(height);
+                    keyboardPane.setPrefHeight(height);
+                    keyboardPane.setMaxHeight(height);
+                }));
     }
 }

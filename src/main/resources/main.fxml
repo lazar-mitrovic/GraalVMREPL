@@ -5,13 +5,18 @@
 <?import javafx.scene.layout.HBox ?>
 <?import javafx.scene.layout.VBox ?>
 
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.shape.Rectangle?>
-<BorderPane fx:id="mainBox" styleClass="main-box" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oracle.labs.repl.Controller">
-   <center>
-      <VBox fx:id="centerBox" spacing="2">
+<?import javafx.scene.layout.Pane?>
+<VBox fx:id="mainBox" styleClass="main-box" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oracle.labs.repl.Controller">
+   <children>
+      <HBox fx:id="buttonsBox" styleClass="top-box" minHeight="45" prefHeight="45" maxHeight="45">
+         <children>
+            <Button fx:id="interpreterButton" maxHeight="+Infinity" maxWidth="+Infinity" text="Interpreter" HBox.hgrow="ALWAYS" />
+            <Button fx:id="codeButton" maxHeight="+Infinity" maxWidth="+Infinity" text="Code Editor" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <VBox fx:id="centerBox" spacing="2" VBox.vgrow="ALWAYS">
          <children>
             <StackPane fx:id="codePane" VBox.vgrow="SOMETIMES">
                <children>
@@ -26,7 +31,6 @@
             <StackPane fx:id="interpreterPane" VBox.vgrow="SOMETIMES">
                <children>
                   <TextArea fx:id="interpreterBox" maxHeight="+Infinity" maxWidth="+Infinity" styleClass="terminal"  wrapText="true"  />
-                  <Rectangle fx:id="caret" width="0" height="30" />
                   <Button fx:id="switchLanguageButton" styleClass="circ-button" text="↔" StackPane.alignment="BOTTOM_RIGHT">
                      <StackPane.margin>
                         <Insets bottom="10.0" right="10.0" />
@@ -36,13 +40,6 @@
             </StackPane>
          </children>
       </VBox>
-   </center>
-   <top>
-      <HBox fx:id="buttonsBox" styleClass="top-box" prefHeight="45">
-         <children>
-            <Button fx:id="interpreterButton" maxHeight="+Infinity" maxWidth="+Infinity" text="Interpreter" HBox.hgrow="ALWAYS" />
-            <Button fx:id="codeButton" maxHeight="+Infinity" maxWidth="+Infinity" text="Code Editor" HBox.hgrow="ALWAYS" />
-         </children>
-      </HBox>
-   </top>
-</BorderPane>
+      <Pane fx:id="keyboardPane"/>
+   </children>
+</VBox>
