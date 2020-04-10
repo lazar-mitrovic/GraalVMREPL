@@ -1096,6 +1096,57 @@
   ]
 },
 {
+  "name":"com.oracle.graal.python.builtins.modules.GraalPythonModuleBuiltins$BuiltinNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"getNameNode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.GraalPythonModuleBuiltins$CacheModuleCode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.GraalPythonModuleBuiltins$CachedCodeIsPackage",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.GraalPythonModuleBuiltins$HasCachedCode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.GraalPythonModuleBuiltinsFactory$BuiltinNodeFactory$BuiltinNodeGen",
+  "allDeclaredFields":true,
+  "fields":[{"name":"state_", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.GraalPythonModuleBuiltinsFactory$CacheModuleCodeFactory$CacheModuleCodeNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cast", "allowUnsafeAccess":true}, 
+    {"name":"pythonLanguageContextReference_", "allowUnsafeAccess":true}, 
+    {"name":"pythonLanguageReference_", "allowUnsafeAccess":true}, 
+    {"name":"run1_lenNode_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.GraalPythonModuleBuiltinsFactory$CachedCodeIsPackageFactory$CachedCodeIsPackageNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"pythonLanguageContextReference_", "allowUnsafeAccess":true}, 
+    {"name":"pythonLanguageReference_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.modules.GraalPythonModuleBuiltinsFactory$HasCachedCodeFactory$HasCachedCodeNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"pythonLanguageContextReference_", "allowUnsafeAccess":true}, 
+    {"name":"pythonLanguageReference_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"com.oracle.graal.python.builtins.modules.ImpModuleBuiltins$AcquireLock",
   "allDeclaredFields":true
 },
@@ -4159,6 +4210,8 @@
     {"name":"equalsWithStateNode__gotState_", "allowUnsafeAccess":true}, 
     {"name":"equalsWithStateNode__lib_", "allowUnsafeAccess":true}, 
     {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"forEachUntyped_cachedLen_cachedShape_", "allowUnsafeAccess":true}, 
+    {"name":"forEachUntyped_cachedLen_keys_", "allowUnsafeAccess":true}, 
     {"name":"getItemWithState_notStringLoop_gotState_", "allowUnsafeAccess":true}, 
     {"name":"getItemWithState_notStringLoop_lib_", "allowUnsafeAccess":true}, 
     {"name":"getItemWithState_notStringLoop_noValueProfile_", "allowUnsafeAccess":true}, 
@@ -4483,6 +4536,10 @@
 },
 {
   "name":"com.oracle.graal.python.builtins.objects.common.HashingStorageLibrary",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.common.HashingStorageLibrary$ForEachNode",
   "allDeclaredFields":true
 },
 {
@@ -4832,6 +4889,7 @@
     {"name":"equalsWithStateNode__gotState_", "allowUnsafeAccess":true}, 
     {"name":"equalsWithStateNode__lib_", "allowUnsafeAccess":true}, 
     {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"forEachUntyped_cached_cachedLen_", "allowUnsafeAccess":true}, 
     {"name":"getItemWithState_cached_cachedLen_", "allowUnsafeAccess":true}, 
     {"name":"getItemWithState_notString_cache", "allowUnsafeAccess":true}, 
     {"name":"getItemWithState_pstring_profile_", "allowUnsafeAccess":true}, 
@@ -5131,6 +5189,7 @@
   "allDeclaredFields":true,
   "fields":[
     {"name":"emptyManagedSameType_cache", "allowUnsafeAccess":true}, 
+    {"name":"generic_cache", "allowUnsafeAccess":true}, 
     {"name":"generic_leftProfile_", "allowUnsafeAccess":true}, 
     {"name":"generic_rightProfile_", "allowUnsafeAccess":true}, 
     {"name":"leftEmpty_outOfMemProfile_", "allowUnsafeAccess":true}, 
@@ -5156,6 +5215,8 @@
   "allDeclaredFields":true,
   "fields":[
     {"name":"leftProfile_", "allowUnsafeAccess":true}, 
+    {"name":"lenLeft_", "allowUnsafeAccess":true}, 
+    {"name":"lenRight_", "allowUnsafeAccess":true}, 
     {"name":"outOfMemProfile_", "allowUnsafeAccess":true}, 
     {"name":"raiseNode_", "allowUnsafeAccess":true}, 
     {"name":"rightProfile_", "allowUnsafeAccess":true}
@@ -5255,6 +5316,8 @@
     {"name":"concatStoragesNode_", "allowUnsafeAccess":true}, 
     {"name":"ensureCapacityNode_", "allowUnsafeAccess":true}, 
     {"name":"leftProfile_", "allowUnsafeAccess":true}, 
+    {"name":"lenLeft_", "allowUnsafeAccess":true}, 
+    {"name":"lenRight_", "allowUnsafeAccess":true}, 
     {"name":"overflowErrorProfile_", "allowUnsafeAccess":true}, 
     {"name":"raiseNode_", "allowUnsafeAccess":true}, 
     {"name":"rightProfile_", "allowUnsafeAccess":true}, 
@@ -5799,7 +5862,21 @@
 {
   "name":"com.oracle.graal.python.builtins.objects.dict.DictValuesBuiltinsFactory$IterNodeFactory$IterNodeGen",
   "allDeclaredFields":true,
-  "fields":[{"name":"state_", "allowUnsafeAccess":true}]
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"pDictValuesView0_cache", "allowUnsafeAccess":true}, 
+    {"name":"pDictValuesView1_getStore_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.dict.DictValuesBuiltinsFactory$IterNodeFactory$IterNodeGen$PDictValuesView0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"getStore_", "allowUnsafeAccess":true}, 
+    {"name":"lib_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}
+  ]
 },
 {
   "name":"com.oracle.graal.python.builtins.objects.dict.DictValuesIteratorBuiltins$NextNode",
@@ -5820,7 +5897,21 @@
 {
   "name":"com.oracle.graal.python.builtins.objects.dict.DictViewBuiltinsFactory$IterNodeFactory$IterNodeGen",
   "allDeclaredFields":true,
-  "fields":[{"name":"state_", "allowUnsafeAccess":true}]
+  "fields":[
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"getItemsViewIter0_cache", "allowUnsafeAccess":true}, 
+    {"name":"getItemsViewIter1_getStore_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.builtins.objects.dict.DictViewBuiltinsFactory$IterNodeFactory$IterNodeGen$GetItemsViewIter0Data",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"getStore_", "allowUnsafeAccess":true}, 
+    {"name":"lib_", "allowUnsafeAccess":true}, 
+    {"name":"next_", "allowUnsafeAccess":true}
+  ]
 },
 {
   "name":"com.oracle.graal.python.builtins.objects.enumerate.EnumerateBuiltins$IterNode",
@@ -7192,6 +7283,7 @@
     {"name":"init0_appendNode_", "allowUnsafeAccess":true}, 
     {"name":"listIterable_getIteratorNode_", "allowUnsafeAccess":true}, 
     {"name":"listIterable_storageNode_", "allowUnsafeAccess":true}, 
+    {"name":"listPGenerator_cache", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
@@ -11770,6 +11862,23 @@
     {"name":"readGlobalNameNode", "allowUnsafeAccess":true}, 
     {"name":"readPrimaryArgNode", "allowUnsafeAccess":true}, 
     {"name":"setItemIfNotPresentNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.nodes.classes.DeleteClassAttributeNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"deleteNsItem", "allowUnsafeAccess":true}, 
+    {"name":"identifier", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.graal.python.nodes.classes.DeleteClassAttributeNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"deleteFromLocals_delItemNode_", "allowUnsafeAccess":true}, 
+    {"name":"deleteFromLocals_localsDict_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -34000,6 +34109,7 @@
   "fields":[
     {"name":"appendCompatibleStrategy0_arrays_", "allowUnsafeAccess":true}, 
     {"name":"appendCompatibleStrategy0_others_", "allowUnsafeAccess":true}, 
+    {"name":"appendNewStrategy0_arrayLibrary_", "allowUnsafeAccess":true}, 
     {"name":"appendNewStrategy0_cache", "allowUnsafeAccess":true}, 
     {"name":"appendSameStrategy_cache", "allowUnsafeAccess":true}, 
     {"name":"exclude_", "allowUnsafeAccess":true}, 
@@ -34037,6 +34147,7 @@
   "fields":[
     {"name":"appendCompatibleType0_arrays_", "allowUnsafeAccess":true}, 
     {"name":"appendCompatibleType_cache", "allowUnsafeAccess":true}, 
+    {"name":"appendNewStrategy0_arrays_", "allowUnsafeAccess":true}, 
     {"name":"exclude_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]

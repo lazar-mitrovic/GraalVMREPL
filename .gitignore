@@ -27,3 +27,5 @@ target/
 .project
 *.iml
 .idea
+
+src/main/resources/filesystem.zip
