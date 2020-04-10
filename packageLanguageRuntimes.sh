@@ -10,13 +10,14 @@ popd () {
 
 LANGUAGES=("python" "ruby")
 EXCLUDE=("*.src.zip" "bin" "docs" "doc" "logo")
+echo "Started packaging language runtimes."
 rm -rf languages
 mkdir languages
 pushd languages
     for language in "${LANGUAGES[@]}"; do 
         if [ -d "$GRAALVM_HOME/languages/$language" ]; then
             cp -r "$GRAALVM_HOME/languages/$language" .
-            echo "Copied $language"
+            echo "Copied $language runtime"
             pushd $language
                 for excluded in "${EXCLUDE[@]}"; do
                     rm -rf $excluded
