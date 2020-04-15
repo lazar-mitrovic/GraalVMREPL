@@ -8,12 +8,13 @@ popd () {
     command popd "$@" > /dev/null
 }
 
-LANGUAGES=("python" "ruby")
+LANGUAGES=("python" "ruby" "R")
 EXCLUDE=("*.src.zip" "bin" "docs" "doc" "logo")
 echo "Started packaging language runtimes."
 rm -rf languages
 mkdir languages
 pushd languages
+    touch .empty
     for language in "${LANGUAGES[@]}"; do 
         if [ -d "$GRAALVM_HOME/languages/$language" ]; then
             cp -r "$GRAALVM_HOME/languages/$language" .

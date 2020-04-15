@@ -180,7 +180,6 @@
                         <list>-Dtruffle.TruffleRuntime=com.oracle.truffle.api.impl.DefaultTruffleRuntime</list>
                         <list>-Dgraalvm.ForcePolyglotInvalid=false</list>
                         <list>-H:+AllowIncompleteClasspath</list>
-                        <list>-H:+RemoveSaturatedTypeFlows</list>
                     </nativeImageArgs>
 
                     <reflectionList>
