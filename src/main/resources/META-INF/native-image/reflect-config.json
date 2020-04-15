@@ -14528,6 +14528,34 @@
   ]
 },
 {
+  "name":"com.oracle.truffle.js.nodes.access.DeclareGlobalFunctionNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"configurable", "allowUnsafeAccess":true}, 
+    {"name":"getOwnPropertyNode", "allowUnsafeAccess":true}, 
+    {"name":"isExtensibleNode", "allowUnsafeAccess":true}, 
+    {"name":"valueNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.DeclareGlobalFunctionNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cached_cache_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.DeclareGlobalNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"errorProfile", "allowUnsafeAccess":true}, 
+    {"name":"hasLexicalBindingNode", "allowUnsafeAccess":true}, 
+    {"name":"varName", "allowUnsafeAccess":true}
+  ]
+},
+{
   "name":"com.oracle.truffle.js.nodes.access.FrameSlotNode",
   "allDeclaredFields":true,
   "fields":[{"name":"frameSlot", "allowUnsafeAccess":true}]
@@ -14544,6 +14572,14 @@
     {"name":"exclude_", "allowUnsafeAccess":true}, 
     {"name":"proxy_jsclassProfile_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.GlobalDeclarationInstantiationNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"context", "allowUnsafeAccess":true}, 
+    {"name":"globalDeclarations", "allowUnsafeAccess":true}
   ]
 },
 {
@@ -14612,6 +14648,26 @@
   ]
 },
 {
+  "name":"com.oracle.truffle.js.nodes.access.HasPropertyCacheNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"hasOwnProperty", "allowUnsafeAccess":true}, 
+    {"name":"propertyAssumptionCheckEnabled", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.HasPropertyCacheNode$AbsentHasPropertyCacheNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.HasPropertyCacheNode$HasCacheNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.HasPropertyCacheNode$LinkedHasPropertyCacheNode",
+  "allDeclaredFields":true
+},
+{
   "name":"com.oracle.truffle.js.nodes.access.InitErrorObjectNodeFactory$DefineStackPropertyNodeGen"
 },
 {
@@ -14630,6 +14686,22 @@
     {"name":"exclude_", "allowUnsafeAccess":true}, 
     {"name":"isArrayJSClass_cache", "allowUnsafeAccess":true}, 
     {"name":"isArrayShape_cache", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.IsExtensibleNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.IsExtensibleNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"cachedJSClass_cachedJSClass_", "allowUnsafeAccess":true}, 
+    {"name":"cachedShape_cachedShape_", "allowUnsafeAccess":true}, 
+    {"name":"cachedShape_result_", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"resultProfile", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
 },
@@ -14666,6 +14738,35 @@
 {
   "name":"com.oracle.truffle.js.nodes.access.JSConstantNode$JSConstantUndefinedNode",
   "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.JSGetOwnPropertyNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"allowCaching", "allowUnsafeAccess":true}, 
+    {"name":"hasPropertyBranch", "allowUnsafeAccess":true}, 
+    {"name":"isAccessorPropertyBranch", "allowUnsafeAccess":true}, 
+    {"name":"isDataPropertyBranch", "allowUnsafeAccess":true}, 
+    {"name":"isProxyPropertyBranch", "allowUnsafeAccess":true}, 
+    {"name":"needConfigurability", "allowUnsafeAccess":true}, 
+    {"name":"needEnumerability", "allowUnsafeAccess":true}, 
+    {"name":"needValue", "allowUnsafeAccess":true}, 
+    {"name":"needWritability", "allowUnsafeAccess":true}, 
+    {"name":"seenNonArrayIndex", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.access.JSGetOwnPropertyNodeGen",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"array_cache", "allowUnsafeAccess":true}, 
+    {"name":"cachedOrdinary_cache", "allowUnsafeAccess":true}, 
+    {"name":"exclude_", "allowUnsafeAccess":true}, 
+    {"name":"generic_jsclassProfile_", "allowUnsafeAccess":true}, 
+    {"name":"getOwnPropertyString_stringCaseProfile_", "allowUnsafeAccess":true}, 
+    {"name":"state_", "allowUnsafeAccess":true}, 
+    {"name":"uncachedOrdinary_usesOrdinaryGetOwnProperty_", "allowUnsafeAccess":true}
+  ]
 },
 {
   "name":"com.oracle.truffle.js.nodes.access.JSReadCurrentFrameSlotNode",
@@ -15089,11 +15190,24 @@
   ]
 },
 {
+  "name":"com.oracle.truffle.js.nodes.control.DiscardResultNode",
+  "allDeclaredFields":true
+},
+{
   "name":"com.oracle.truffle.js.nodes.control.EmptyNode",
   "allDeclaredFields":true
 },
 {
   "name":"com.oracle.truffle.js.nodes.control.ExprBlockNode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.oracle.truffle.js.nodes.control.ReturnNode",
+  "allDeclaredFields":true,
+  "fields":[{"name":"expression", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.control.ReturnNode$TerminalPositionReturnNode",
   "allDeclaredFields":true
 },
 {
@@ -15217,6 +15331,18 @@
   "name":"com.oracle.truffle.js.nodes.function.JSFunctionCallNode$UnboundJSFunctionCacheNode",
   "allDeclaredFields":true,
   "fields":[{"name":"callNode", "allowUnsafeAccess":true}]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.function.JSFunctionExpressionNode",
+  "allDeclaredFields":true,
+  "fields":[
+    {"name":"functionData", "allowUnsafeAccess":true}, 
+    {"name":"functionNode", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.oracle.truffle.js.nodes.function.JSFunctionExpressionNode$AutonomousFunctionExpressionNode",
+  "allDeclaredFields":true
 },
 {
   "name":"com.oracle.truffle.js.nodes.interop.ExportArgumentsNode",
@@ -16391,6 +16517,9 @@
     {"name":"statement", "allowUnsafeAccess":true}, 
     {"name":"value_", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"com.oracle.truffle.llvm.runtime.nodes.asm.syscall.darwin.amd64.DarwinAMD64Syscall[]"
 },
 {
   "name":"com.oracle.truffle.llvm.runtime.nodes.asm.syscall.linux.amd64.LinuxAMD64Syscall[]"
@@ -33719,6 +33848,15 @@
   "name":"com.oracle.truffle.tools.profiler.CPUSampler"
 },
 {
+  "name":"com.sun.glass.ui.Application"
+},
+{
+  "name":"com.sun.glass.ui.mac.MacApplication"
+},
+{
+  "name":"com.sun.glass.ui.mac.MacGestureSupport"
+},
+{
   "name":"double[]"
 },
 {
@@ -33731,6 +33869,12 @@
   "name":"java.lang.Object",
   "allDeclaredFields":true,
   "allPublicMethods":true
+},
+{
+  "name":"java.lang.Runnable"
+},
+{
+  "name":"java.lang.String"
 },
 {
   "name":"java.util.function.IntSupplier",
