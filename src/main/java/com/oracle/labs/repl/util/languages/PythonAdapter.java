@@ -13,7 +13,7 @@ public class PythonAdapter implements LanguageAdapter {
         String tmpDir = System.getProperty("java.io.tmpdir");
         return builder.option("python.CoreHome",   Paths.get(tmpDir, "python", "lib-graalpython").toString())
                       .option("python.SysPrefix",  Paths.get(tmpDir, "python").toString())
-                      .option("python.CAPI",       Paths.get(tmpDir, "python", "include").toString())
+                      .option("python.CAPI",       Paths.get(tmpDir, "python", "lib-graalpython").toString())
                       .option("python.StdLibHome", Paths.get(tmpDir, "python", "lib-python", "3").toString());
     }
 
