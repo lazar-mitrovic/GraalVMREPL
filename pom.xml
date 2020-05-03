@@ -179,7 +179,7 @@
                     <nativeImageArgs>
                         <list>--language:js</list>
                         <list>--language:python</list>
-                        <list>--language:ruby</list>
+<!--                        <list>&#45;&#45;language:ruby</list>-->
                         <!--<list>-!-language:R</list>-->
                         <list>-Dtruffle.TruffleRuntime=com.oracle.truffle.api.impl.DefaultTruffleRuntime</list>
                         <list>-Dgraalvm.ForcePolyglotInvalid=false</list>
@@ -188,7 +188,6 @@
                         <!--<list>-H:+UseBionicC</list>-->
                     </nativeImageArgs>
                     <reflectionList>
-                        <list>javafx.fxml.FXMLLoader</list>
                         <list>javafx.scene.input.Clipboard</list>
                         <list>com.oracle.labs.repl.Controller</list>
                     </reflectionList>
@@ -201,6 +200,12 @@
                         <list>keyboard</list>
                     </attachList>
                     <mainClass>${mainClassName}</mainClass>
+                    <releaseConfiguration>
+                        <bundleVersion>1.0.0</bundleVersion>
+                        <bundleShortVersion>1.0.0</bundleShortVersion>
+                        <providedSigningIdentity>iPhone Distribution: Gluon Software BVBA (S7ZR395D8U)</providedSigningIdentity>
+                        <providedProvisioningProfile>REPLapp</providedProvisioningProfile>
+                    </releaseConfiguration>
                 </configuration>
             </plugin>
         </plugins>

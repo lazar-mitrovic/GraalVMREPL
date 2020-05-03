@@ -3,6 +3,11 @@
     src: url('FreeMono.ttf');
 }
 
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('Inconsolata-Regular.ttf');
+}
+
 .main-box {
     -fx-padding: 0;
     -fx-font-size: 1.2em;
@@ -33,7 +38,7 @@
     -fx-control-inner-background: #333;
     -fx-highlight-text-fill: #333;
     -fx-text-fill: #fff;
-    -fx-font-family: Consolas;
+    -fx-font-family: 'Inconsolata';
 }
 
 .context-menu {
@@ -49,7 +54,7 @@
     -fx-background-color: #03687f;
     -fx-text-fill: #fff;
     -fx-alignment: center;
-    -fx-font-family: Consolas;
+    -fx-font-family: 'Inconsolata';
 }
 
 .button:hover {

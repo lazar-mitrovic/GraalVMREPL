@@ -5,9 +5,9 @@
 	<key>CFBundleIdentifier</key>
 	<string>com.oracle.labs.repl.Main</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.0.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.0.0</string>
 	<key>CFBundleExecutable</key>
 	<string>GraalVM REPL</string>
 	<key>CFBundleIconName</key>
@@ -45,5 +45,7 @@
 	<string>11.0</string>
 	<key>UIRequiresFullScreen</key>
 	<string>YES</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>This app doesn't use bluetooth</string>
 </dict>
 </plist>
