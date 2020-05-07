@@ -5,7 +5,7 @@ REPL (read–eval–print loop) shell built ontop of JavaFX stack, GraalJS, Graa
 ![GraalVM REPL](preview2.png)
 
 ## Building prerequisites
-* Up-to-date GraalVM (for mobile builds [this fork](https://github.com/gluonhq/graal) might be best since static libraries and relevant patches are added, prebuilt binaries for [linux](https://download2.gluonhq.com/substrate/graalvm/graalvm-svm-linux-20.1.0-latest.zip) and [macOS](https://download2.gluonhq.com/substrate/graalvm/graalvm-svm-darwin-20.1.0-latest.zip) are provided)
+* Up-to-date GraalVM (ideally built using [this script](https://gist.github.com/lazar-mitrovic/e726b9263bef5ed3f9a95e1bad32c125))
 * `GRAALVM_HOME` environment variable set (optimally `JAVA_HOME=$GRAALVM_HOME`, which should help with `The import org.graalvm cannot be resolved` error)
 * [GraalJS](https://github.com/graalvm/graaljs), [GraalPython](https://github.com/graalvm/graalpython), [TruffleRuby](https://github.com/oracle/truffleruby), [FastR](https://github.com/oracle/fastr). Any combination of those will work, provided that `pom.xml` is edited accordingly. Those can be added either by `gu install` (on stable versions) or better by adding them as dynamic mx imports - 
 
