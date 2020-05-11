@@ -45,7 +45,7 @@ So if you only have `graalpython` installed, your configuration would look like 
 
 (this will generate required reflection configuration - note that `native-image-agent` is needed)
 
-or if VSCode is used: `ctrl+shift+b` -> `Run JVM`
+or if VSCode is used: `CTRL+SHIFT+b` / `⇧⌘B` -> `Run JVM`
 ### Debug
 `mvn clean javafx:run@debug`
 
