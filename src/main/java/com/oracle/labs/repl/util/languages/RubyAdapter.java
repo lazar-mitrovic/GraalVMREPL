@@ -1,22 +1,21 @@
 package com.oracle.labs.repl.util.languages;
 
+import java.nio.file.Paths;
+import java.util.function.IntSupplier;
+
 import org.graalvm.polyglot.Context;
 import org.graalvm.polyglot.Context.Builder;
 
 import org.graalvm.polyglot.Value;
-
-import java.util.function.IntSupplier;
-import java.nio.file.Paths;
 
 public class RubyAdapter implements LanguageAdapter {
 
     public Builder addParameters(Builder builder) {
         String tmpDir = System.getProperty("java.io.tmpdir");
         String rubyHome = Paths.get(tmpDir, "ruby").toString();
-        //System.setProperty("org.graalvm.language.ruby.home", rubyHome);
-       // System.setProperty("ruby.home", rubyHome);
-        return builder.option("ruby.home",  rubyHome);
-                      //.option("log.level",  "CONFIG");
+        System.setProperty("ruby.home", rubyHome);
+        System.setProperty("org.graalvm.language.ruby.home", rubyHome);
+        return builder;//.option("ruby.home",  rubyHome).option("log.level",  "CONFIG");
     }
 
     public void putBindings(Context context, IntSupplier clear, IntSupplier exit) {
