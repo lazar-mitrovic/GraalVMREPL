@@ -13,9 +13,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <javafx.version>15-ea+5</javafx.version>
-        <attach.version>4.0.8-SNAPSHOT</attach.version>
-        <client.version>0.1.25-SNAPSHOT</client.version>
+        <javafx.version>16-ea+1</javafx.version>
+        <attach.version>4.0.9-SNAPSHOT</attach.version>
+        <client.version>0.1.30-SNAPSHOT</client.version>
         <mainClassName>com.oracle.labs.repl.Main</mainClassName>
     </properties>
 
@@ -75,7 +75,6 @@
             </activation>
             <properties>
                 <clientTarget>host</clientTarget>
-                <libC>-Dplatform=desktop</libC>
             </properties>
             <dependencies>
                 <dependency>
@@ -96,14 +95,12 @@
             <id>ios</id>
             <properties>
                 <clientTarget>ios</clientTarget>
-                <libC>-Dplatform=ios</libC>
             </properties>
         </profile>
         <profile>
             <id>android</id>
             <properties>
                 <clientTarget>android</clientTarget>
-                <libC>-H:+UseBionicC</libC>
             </properties>
         </profile>
     </profiles>
@@ -187,8 +184,6 @@
                         <list>-Dtruffle.TruffleRuntime=com.oracle.truffle.api.impl.DefaultTruffleRuntime</list>
                         <list>-Dgraalvm.ForcePolyglotInvalid=false</list>
                         <list>-H:+AllowIncompleteClasspath</list>
-                        <list>-H:+RemoveSaturatedTypeFlows</list>
-                        <list>${libC}</list>
                     </nativeImageArgs>
                     <reflectionList>
                         <list>javafx.scene.input.Clipboard</list>
