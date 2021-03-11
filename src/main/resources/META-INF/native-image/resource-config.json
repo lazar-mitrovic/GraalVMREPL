@@ -1,10 +1,14 @@
 {
-  "resources":[
+  "resources":{
+  "includes":[
     {"pattern":"\\QMETA-INF/services/com.oracle.truffle.api.TruffleLanguage$Provider\\E"}, 
     {"pattern":"\\QMETA-INF/services/com.oracle.truffle.api.instrumentation.TruffleInstrument$Provider\\E"}, 
     {"pattern":"\\QMETA-INF/services/com.oracle.truffle.js.runtime.Evaluator\\E"}, 
     {"pattern":"\\QMETA-INF/services/com.oracle.truffle.llvm.runtime.config.ConfigurationFactory\\E"}, 
     {"pattern":"\\QMETA-INF/services/java.nio.file.spi.FileSystemProvider\\E"}, 
+    {"pattern":"\\Qcom/ibm/icu/ICUConfig.properties\\E"}, 
+    {"pattern":"\\Qcom/ibm/icu/impl/data/icudt66b/ucase.icu\\E"}, 
+    {"pattern":"\\Qcom/ibm/icu/impl/data/icudt66b/uprops.icu\\E"}, 
     {"pattern":"\\Qcom/oracle/graal/python/builtins/PythonBuiltins.class\\E"}, 
     {"pattern":"\\Qcom/oracle/truffle/nfi/impl/NFILanguageImpl.class\\E"}, 
     {"pattern":"\\Qfilesystem.zip\\E"}, 
@@ -80,21 +84,28 @@
     {"pattern":"\\Qtruffleruby/core/truffle/feature_loader.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/truffle/ffi/pointer.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/truffle/ffi/pointer_access.rb\\E"}, 
+    {"pattern":"\\Qtruffleruby/core/truffle/ffi/pointer_extra.rb\\E"}, 
+    {"pattern":"\\Qtruffleruby/core/truffle/file_operations.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/truffle/gem_util.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/truffle/hash_operations.rb\\E"}, 
+    {"pattern":"\\Qtruffleruby/core/truffle/integer_operations.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/truffle/internal.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/truffle/interop.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/truffle/io_operations.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/truffle/kernel_operations.rb\\E"}, 
+    {"pattern":"\\Qtruffleruby/core/truffle/method_operations.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/truffle/numeric_operations.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/truffle/platform.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/truffle/polyglot.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/truffle/proc_operations.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/truffle/process_operations.rb\\E"}, 
+    {"pattern":"\\Qtruffleruby/core/truffle/random_operations.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/truffle/range_operations.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/truffle/regexp_operations.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/truffle/stat_operations.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/truffle/string_operations.rb\\E"}, 
+    {"pattern":"\\Qtruffleruby/core/truffle/synchronized_array.rb\\E"}, 
+    {"pattern":"\\Qtruffleruby/core/truffle/thread_operations.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/truffle/truffle_primitive.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/truffle/truffleruby.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/type.rb\\E"}, 
@@ -102,6 +113,10 @@
     {"pattern":"\\Qtruffleruby/core/warning.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/weakmap.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/post-boot/post-boot.rb\\E"}
-  ],
-  "bundles":[]
+  ]},
+  "bundles":[
+    {"name":"com.oracle.js.parser.resources.Messages"}, 
+    {"name":"com.sun.javafx.tk.quantum.QuantumMessagesBundle"}, 
+    {"name":"com/sun/javafx/scene/control/skin/resources/controls"}
+  ]
 }

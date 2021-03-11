@@ -19,6 +19,6 @@ public class JavaScriptAdapter implements LanguageAdapter {
     }
 
     public String initCode() {
-        return "console.log(`GraalVM ${Graal.language} ${Graal.versionJS}`)";
-    } 
+        return "console.log(`GraalVM ${Graal.language} ${Graal.versionGraalVM}`)";
+    }
 }

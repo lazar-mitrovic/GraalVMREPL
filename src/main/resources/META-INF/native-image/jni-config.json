@@ -94,8 +94,87 @@
   ]
 },
 {
+  "name":"com.sun.glass.ui.Screen[]"
+},
+{
   "name":"com.sun.glass.ui.mac.MacApplication",
   "methods":[{"name":"setEventThread","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.javafx.font.FontConfigManager$FcCompFont",
+  "fields":[
+    {"name":"allFonts"}, 
+    {"name":"fcName"}, 
+    {"name":"firstFont"}
+  ]
+},
+{
+  "name":"com.sun.javafx.font.FontConfigManager$FontConfigFont",
+  "fields":[
+    {"name":"familyName"}, 
+    {"name":"fontFile"}, 
+    {"name":"fullName"}, 
+    {"name":"styleStr"}
+  ],
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.javafx.font.FontConfigManager$FontConfigFont[]"
+},
+{
+  "name":"com.sun.javafx.font.freetype.FT_Bitmap",
+  "fields":[
+    {"name":"buffer"}, 
+    {"name":"num_grays"}, 
+    {"name":"palette"}, 
+    {"name":"palette_mode"}, 
+    {"name":"pitch"}, 
+    {"name":"pixel_mode"}, 
+    {"name":"rows"}, 
+    {"name":"width"}
+  ]
+},
+{
+  "name":"com.sun.javafx.font.freetype.FT_GlyphSlotRec",
+  "fields":[
+    {"name":"advance_x"}, 
+    {"name":"advance_y"}, 
+    {"name":"bitmap"}, 
+    {"name":"bitmap_left"}, 
+    {"name":"bitmap_top"}, 
+    {"name":"format"}, 
+    {"name":"linearHoriAdvance"}, 
+    {"name":"linearVertAdvance"}, 
+    {"name":"metrics"}
+  ],
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.javafx.font.freetype.FT_Glyph_Metrics",
+  "fields":[
+    {"name":"height"}, 
+    {"name":"horiAdvance"}, 
+    {"name":"horiBearingX"}, 
+    {"name":"horiBearingY"}, 
+    {"name":"vertAdvance"}, 
+    {"name":"vertBearingX"}, 
+    {"name":"vertBearingY"}, 
+    {"name":"width"}
+  ]
+},
+{
+  "name":"com.sun.management.internal.DiagnosticCommandArgumentInfo",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.String","java.lang.String","java.lang.String","java.lang.String","boolean","boolean","boolean","int"] }]
+},
+{
+  "name":"com.sun.management.internal.DiagnosticCommandArgumentInfo[]"
+},
+{
+  "name":"com.sun.management.internal.DiagnosticCommandInfo",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.String","java.lang.String","java.lang.String","java.lang.String","java.lang.String","java.lang.String","boolean","java.util.List"] }]
+},
+{
+  "name":"com.sun.management.internal.DiagnosticCommandInfo[]"
 },
 {
   "name":"java.lang.Class",
@@ -125,6 +204,46 @@
   "methods":[{"name":"run","parameterTypes":[] }]
 },
 {
-  "name":"java.lang.String"
+  "name":"java.lang.String",
+  "methods":[
+    {"name":"<init>","parameterTypes":["byte[]","java.lang.String"] }, 
+    {"name":"getBytes","parameterTypes":["java.lang.String"] }, 
+    {"name":"toLowerCase","parameterTypes":["java.util.Locale"] }
+  ]
+},
+{
+  "name":"java.lang.String[]"
+},
+{
+  "name":"java.util.ArrayList",
+  "methods":[
+    {"name":"<init>","parameterTypes":["int"] }, 
+    {"name":"add","parameterTypes":["java.lang.Object"] }
+  ]
+},
+{
+  "name":"java.util.Arrays",
+  "methods":[{"name":"asList","parameterTypes":["java.lang.Object[]"] }]
+},
+{
+  "name":"java.util.HashMap",
+  "methods":[
+    {"name":"containsKey","parameterTypes":["java.lang.Object"] }, 
+    {"name":"get","parameterTypes":["java.lang.Object"] }, 
+    {"name":"put","parameterTypes":["java.lang.Object","java.lang.Object"] }
+  ]
+},
+{
+  "name":"sun.management.VMManagementImpl",
+  "fields":[
+    {"name":"compTimeMonitoringSupport"}, 
+    {"name":"currentThreadCpuTimeSupport"}, 
+    {"name":"objectMonitorUsageSupport"}, 
+    {"name":"otherThreadCpuTimeSupport"}, 
+    {"name":"remoteDiagnosticCommandsSupport"}, 
+    {"name":"synchronizerUsageSupport"}, 
+    {"name":"threadAllocatedMemorySupport"}, 
+    {"name":"threadContentionMonitoringSupport"}
+  ]
 }
 ]

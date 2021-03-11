@@ -14468,7 +14468,11 @@
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
-  "name":"com.oracle.labs.repl.Main"
+  "name":"com.oracle.labs.repl.Main",
+  "methods":[
+    {"name":"<init>","parameterTypes":[] }, 
+    {"name":"main","parameterTypes":["java.lang.String[]"] }
+  ]
 },
 {
   "name":"com.oracle.labs.repl.util.Interpreter$1",
@@ -34128,10 +34132,141 @@
   "name":"com.sun.glass.ui.Application"
 },
 {
+  "name":"com.sun.glass.ui.gtk.GtkPlatformFactory",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
   "name":"com.sun.glass.ui.mac.MacApplication"
 },
 {
   "name":"com.sun.glass.ui.mac.MacGestureSupport"
+},
+{
+  "name":"com.sun.javafx.font.freetype.FTFactory",
+  "methods":[{"name":"getFactory","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.javafx.logging.PrintLogger",
+  "methods":[{"name":"createInstance","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.javafx.logging.jfr.JFRPulseLogger",
+  "methods":[{"name":"createInstance","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.javafx.reflect.Trampoline",
+  "methods":[{"name":"invoke","parameterTypes":["java.lang.reflect.Method","java.lang.Object","java.lang.Object[]"] }]
+},
+{
+  "name":"com.sun.javafx.tk.quantum.QuantumToolkit",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.management.GarbageCollectorMXBean",
+  "allPublicMethods":true
+},
+{
+  "name":"com.sun.management.GcInfo",
+  "allPublicMethods":true
+},
+{
+  "name":"com.sun.management.HotSpotDiagnosticMXBean",
+  "allPublicMethods":true
+},
+{
+  "name":"com.sun.management.ThreadMXBean",
+  "allPublicMethods":true
+},
+{
+  "name":"com.sun.management.UnixOperatingSystemMXBean",
+  "allPublicMethods":true
+},
+{
+  "name":"com.sun.management.VMOption",
+  "allPublicMethods":true
+},
+{
+  "name":"com.sun.management.internal.GarbageCollectorExtImpl",
+  "allPublicConstructors":true
+},
+{
+  "name":"com.sun.management.internal.HotSpotDiagnostic",
+  "allPublicConstructors":true
+},
+{
+  "name":"com.sun.management.internal.HotSpotThreadImpl",
+  "allPublicConstructors":true
+},
+{
+  "name":"com.sun.management.internal.OperatingSystemImpl",
+  "allPublicConstructors":true
+},
+{
+  "name":"com.sun.prism.GraphicsPipeline",
+  "methods":[
+    {"name":"getFontFactory","parameterTypes":[] }, 
+    {"name":"getPipeline","parameterTypes":[] }
+  ]
+},
+{
+  "name":"com.sun.prism.es2.ES2Pipeline",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.prism.es2.X11GLFactory",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.prism.shader.FillPgram_Color_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.FillPgram_LinearGradient_PAD_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.FillRoundRect_Color_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.Solid_TextureFirstPassLCD_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.Solid_TextureRGB_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.Solid_TextureSecondPassLCD_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.Texture_Color_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.Texture_LinearGradient_PAD_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.scenario.effect.impl.es2.ES2ShaderSource",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.scenario.effect.impl.prism.PrRenderer",
+  "methods":[{"name":"createRenderer","parameterTypes":["com.sun.scenario.effect.FilterContext"] }]
+},
+{
+  "name":"com.sun.scenario.effect.impl.prism.ps.PPSLinearConvolveShadowPeer",
+  "methods":[{"name":"<init>","parameterTypes":["com.sun.scenario.effect.FilterContext","com.sun.scenario.effect.impl.Renderer","java.lang.String"] }]
+},
+{
+  "name":"com.sun.scenario.effect.impl.prism.ps.PPSRenderer",
+  "methods":[{"name":"createRenderer","parameterTypes":["com.sun.scenario.effect.FilterContext"] }]
+},
+{
+  "name":"com.sun.xml.internal.stream.XMLInputFactoryImpl",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
   "name":"double[]"
@@ -34143,6 +34278,43 @@
   "name":"int[]"
 },
 {
+  "name":"java.lang.Boolean",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.Byte",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.Character",
+  "fields":[{"name":"TYPE"}],
+  "methods":[{"name":"isIdeographic","parameterTypes":["int"] }]
+},
+{
+  "name":"java.lang.Class",
+  "methods":[{"name":"getModule","parameterTypes":[] }]
+},
+{
+  "name":"java.lang.Double",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.Float",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.Integer",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.Long",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.Module",
+  "methods":[{"name":"getResourceAsStream","parameterTypes":["java.lang.String"] }]
+},
+{
   "name":"java.lang.Object",
   "allDeclaredFields":true,
   "allPublicMethods":true
@@ -34151,22 +34323,167 @@
   "name":"java.lang.Runnable"
 },
 {
+  "name":"java.lang.Short",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.StackTraceElement",
+  "allPublicMethods":true
+},
+{
   "name":"java.lang.String"
+},
+{
+  "name":"java.lang.String[]"
 },
 {
   "name":"java.lang.Throwable",
   "fields":[{"name":"cause", "allowUnsafeAccess":true}]
 },
 {
+  "name":"java.lang.Void",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.management.BufferPoolMXBean",
+  "allPublicMethods":true
+},
+{
+  "name":"java.lang.management.ClassLoadingMXBean",
+  "allPublicMethods":true
+},
+{
+  "name":"java.lang.management.CompilationMXBean",
+  "allPublicMethods":true
+},
+{
+  "name":"java.lang.management.LockInfo",
+  "allPublicMethods":true
+},
+{
+  "name":"java.lang.management.ManagementPermission",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.String"] }]
+},
+{
+  "name":"java.lang.management.MemoryMXBean",
+  "allPublicMethods":true
+},
+{
+  "name":"java.lang.management.MemoryManagerMXBean",
+  "allPublicMethods":true
+},
+{
+  "name":"java.lang.management.MemoryPoolMXBean",
+  "allPublicMethods":true
+},
+{
+  "name":"java.lang.management.MemoryUsage",
+  "allPublicMethods":true
+},
+{
+  "name":"java.lang.management.MonitorInfo",
+  "allPublicMethods":true
+},
+{
+  "name":"java.lang.management.PlatformLoggingMXBean",
+  "allPublicMethods":true
+},
+{
+  "name":"java.lang.management.RuntimeMXBean",
+  "allPublicMethods":true
+},
+{
+  "name":"java.lang.management.ThreadInfo",
+  "allPublicMethods":true
+},
+{
+  "name":"java.math.BigDecimal"
+},
+{
+  "name":"java.math.BigInteger"
+},
+{
+  "name":"java.nio.ByteBuffer",
+  "methods":[{"name":"order","parameterTypes":["java.nio.ByteOrder"] }]
+},
+{
+  "name":"java.nio.ByteOrder",
+  "methods":[{"name":"nativeOrder","parameterTypes":[] }]
+},
+{
+  "name":"java.security.MessageDigestSpi"
+},
+{
+  "name":"java.security.SecureRandomParameters"
+},
+{
+  "name":"java.util.Date"
+},
+{
+  "name":"java.util.PropertyPermission",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.String","java.lang.String"] }]
+},
+{
   "name":"java.util.function.IntSupplier",
   "allPublicMethods":true
 },
 {
-  "name":"javafx.geometry.Insets"
+  "name":"java.util.logging.LogManager",
+  "methods":[{"name":"getLoggingMXBean","parameterTypes":[] }]
+},
+{
+  "name":"java.util.logging.LoggingMXBean",
+  "allPublicMethods":true
+},
+{
+  "name":"javafx.fxml.FXMLLoader"
+},
+{
+  "name":"javafx.geometry.Insets",
+  "allPublicMethods":true,
+  "allPublicConstructors":true
+},
+{
+  "name":"javafx.geometry.Pos",
+  "methods":[{"name":"valueOf","parameterTypes":["java.lang.String"] }]
+},
+{
+  "name":"javafx.scene.Camera"
+},
+{
+  "name":"javafx.scene.Group"
+},
+{
+  "name":"javafx.scene.Node",
+  "allDeclaredMethods":true
+},
+{
+  "name":"javafx.scene.ParallelCamera"
+},
+{
+  "name":"javafx.scene.Parent",
+  "allDeclaredMethods":true
+},
+{
+  "name":"javafx.scene.Scene"
 },
 {
   "name":"javafx.scene.control.Button",
+  "allDeclaredMethods":true,
+  "allPublicConstructors":true,
   "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"javafx.scene.control.ButtonBase",
+  "allDeclaredMethods":true
+},
+{
+  "name":"javafx.scene.control.Control",
+  "allDeclaredMethods":true
+},
+{
+  "name":"javafx.scene.control.Labeled",
+  "allDeclaredMethods":true
 },
 {
   "name":"javafx.scene.control.SplitPane",
@@ -34174,7 +34491,22 @@
 },
 {
   "name":"javafx.scene.control.TextArea",
+  "allDeclaredMethods":true,
+  "allPublicConstructors":true,
   "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"javafx.scene.control.TextInputControl",
+  "allDeclaredMethods":true
+},
+{
+  "name":"javafx.scene.effect.Effect"
+},
+{
+  "name":"javafx.scene.image.Image"
+},
+{
+  "name":"javafx.scene.input.Clipboard"
 },
 {
   "name":"javafx.scene.layout.AnchorPane",
@@ -34186,23 +34518,126 @@
 },
 {
   "name":"javafx.scene.layout.HBox",
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true,
+  "allPublicConstructors":true,
+  "methods":[
+    {"name":"<init>","parameterTypes":[] }, 
+    {"name":"getHgrow","parameterTypes":["javafx.scene.Node"] }, 
+    {"name":"setHgrow","parameterTypes":["javafx.scene.Node","javafx.scene.layout.Priority"] }
+  ]
 },
 {
   "name":"javafx.scene.layout.Pane",
+  "allDeclaredMethods":true,
+  "allPublicConstructors":true,
   "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"javafx.scene.layout.Priority",
+  "methods":[{"name":"valueOf","parameterTypes":["java.lang.String"] }]
+},
+{
+  "name":"javafx.scene.layout.Region",
+  "allDeclaredMethods":true
 },
 {
   "name":"javafx.scene.layout.StackPane",
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true,
+  "allPublicConstructors":true,
+  "methods":[
+    {"name":"<init>","parameterTypes":[] }, 
+    {"name":"getAlignment","parameterTypes":["javafx.scene.Node"] }, 
+    {"name":"setAlignment","parameterTypes":["javafx.scene.Node","javafx.geometry.Pos"] }, 
+    {"name":"setMargin","parameterTypes":["javafx.scene.Node","javafx.geometry.Insets"] }
+  ]
 },
 {
   "name":"javafx.scene.layout.VBox",
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true,
+  "allPublicConstructors":true,
+  "methods":[
+    {"name":"<init>","parameterTypes":[] }, 
+    {"name":"getVgrow","parameterTypes":["javafx.scene.Node"] }, 
+    {"name":"setVgrow","parameterTypes":["javafx.scene.Node","javafx.scene.layout.Priority"] }
+  ]
+},
+{
+  "name":"javafx.scene.shape.LineTo"
+},
+{
+  "name":"javafx.scene.shape.MoveTo"
+},
+{
+  "name":"javafx.scene.shape.Path"
+},
+{
+  "name":"javafx.scene.shape.PathElement"
 },
 {
   "name":"javafx.scene.shape.Rectangle",
   "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"javafx.scene.shape.SVGPath"
+},
+{
+  "name":"javafx.scene.text.Font"
+},
+{
+  "name":"javafx.stage.PopupWindow"
+},
+{
+  "name":"javafx.stage.Stage"
+},
+{
+  "name":"javafx.stage.Window"
+},
+{
+  "name":"javax.management.MBeanOperationInfo",
+  "allPublicMethods":true
+},
+{
+  "name":"javax.management.MBeanServerBuilder",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"javax.management.ObjectName"
+},
+{
+  "name":"javax.management.openmbean.CompositeData"
+},
+{
+  "name":"javax.management.openmbean.CompositeData[]"
+},
+{
+  "name":"javax.management.openmbean.OpenMBeanOperationInfoSupport"
+},
+{
+  "name":"javax.management.openmbean.TabularData"
+},
+{
+  "name":"jdk.management.jfr.ConfigurationInfo",
+  "allPublicMethods":true
+},
+{
+  "name":"jdk.management.jfr.EventTypeInfo",
+  "allPublicMethods":true
+},
+{
+  "name":"jdk.management.jfr.FlightRecorderMXBean",
+  "allPublicMethods":true
+},
+{
+  "name":"jdk.management.jfr.FlightRecorderMXBeanImpl",
+  "allPublicConstructors":true
+},
+{
+  "name":"jdk.management.jfr.RecordingInfo",
+  "allPublicMethods":true
+},
+{
+  "name":"jdk.management.jfr.SettingDescriptorInfo",
+  "allPublicMethods":true
 },
 {
   "name":"jdk.vm.ci.services.Services",
@@ -34261,6 +34696,18 @@
   "fields":[{"name":"child", "allowUnsafeAccess":true}]
 },
 {
+  "name":"org.truffleruby.core.MainNodesFactory$MainUsingNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.MainNodesFactory$PrivateNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.MainNodesFactory$PublicNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.TruffleSystemNodes$HostOSNode",
   "allDeclaredFields":true,
   "fields":[{"name":"makeStringNode", "allowUnsafeAccess":true}]
@@ -34273,6 +34720,10 @@
 {
   "name":"org.truffleruby.core.TruffleSystemNodes$SynchronizedPrimitiveNode",
   "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.TruffleSystemNodesFactory$GetTruffleWorkingDirNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.core.TruffleSystemNodesFactory$HostOSNodeFactory",
@@ -34322,6 +34773,10 @@
 {
   "name":"org.truffleruby.core.VMPrimitiveNodes$VMWatchSignalNode",
   "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.VMPrimitiveNodesFactory$InitStackOverflowClassesEagerlyNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.core.VMPrimitiveNodesFactory$VMGetConfigItemNodeFactory",
@@ -36037,6 +36492,10 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.binding.BindingNodesFactory$CreateEmptyBindingNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.binding.BindingNodesFactory$ReceiverNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -36479,6 +36938,10 @@
     {"name":"encodingGetObjectEncodingRegexp_hasRegexpSource_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"org.truffleruby.core.encoding.EncodingNodesFactory$EnsureCompatibleNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.core.encoding.EncodingNodesFactory$GetActualEncodingNodeGen",
@@ -37686,6 +38149,10 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.kernel.KernelNodesFactory$CanonicalizePathNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.kernel.KernelNodesFactory$CaseCompareNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -37829,6 +38296,10 @@
     {"name":"findFile_notFoundProfile_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"org.truffleruby.core.kernel.KernelNodesFactory$GetCallerPathNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.core.kernel.KernelNodesFactory$GetMethodObjectNodeGen",
@@ -38051,6 +38522,10 @@
   "fields":[{"name":"arguments0_", "allowUnsafeAccess":true}]
 },
 {
+  "name":"org.truffleruby.core.kernel.KernelNodesFactory$PublicSendNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.kernel.KernelNodesFactory$RespondToMissingNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -38200,6 +38675,18 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.kernel.TruffleKernelNodesFactory$GetCallerSpecialVariableStorageFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.kernel.TruffleKernelNodesFactory$GetLastIOFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.kernel.TruffleKernelNodesFactory$GetRegexpMatchFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.kernel.TruffleKernelNodesFactory$ReadGlobalVariableNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -38227,6 +38714,14 @@
     {"name":"sameThreadProfile_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"org.truffleruby.core.kernel.TruffleKernelNodesFactory$SetLastIOFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.kernel.TruffleKernelNodesFactory$SetRegexpMatchFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.core.kernel.TruffleKernelNodesFactory$WriteGlobalVariableNodeFactory",
@@ -38745,6 +39240,10 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.module.ModuleNodesFactory$ConstDefinedNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.module.ModuleNodesFactory$ConstGetNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -38868,6 +39367,10 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.module.ModuleNodesFactory$ExtendedNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.module.ModuleNodesFactory$GenerateAccessorNodeGen",
   "allDeclaredFields":true,
   "fields":[
@@ -38927,6 +39430,14 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.module.ModuleNodesFactory$IsSubclassOfNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.module.ModuleNodesFactory$MethodDefinedNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.module.ModuleNodesFactory$ModuleFunctionNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -38939,6 +39450,10 @@
     {"name":"errorProfile_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"org.truffleruby.core.module.ModuleNodesFactory$ModuleUsingNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.core.module.ModuleNodesFactory$NameNodeFactory",
@@ -39020,6 +39535,10 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.module.ModuleNodesFactory$ProtectedNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.module.ModuleNodesFactory$PublicInstanceMethodsNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -39031,6 +39550,10 @@
     {"name":"module_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"org.truffleruby.core.module.ModuleNodesFactory$PublicNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.core.module.ModuleNodesFactory$RemoveConstNodeFactory",
@@ -39404,6 +39927,10 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.numeric.IntegerNodesFactory$ComplementNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.numeric.IntegerNodesFactory$EqualNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -39661,6 +40188,10 @@
     {"name":"rubyClass_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"org.truffleruby.core.range.RangeNodesFactory$NormalizedStartLengthPrimitiveNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.core.range.RangeNodesFactory$ToANodeFactory",
@@ -40636,6 +41167,10 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.string.StringNodesFactory$EndWithNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.string.StringNodesFactory$EqualNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -41221,6 +41756,14 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.support.IONodesFactory$IOFDNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.support.IONodesFactory$IOSetFDNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.support.IONodesFactory$IOWritePolyglotNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -41232,6 +41775,18 @@
     {"name":"arguments1_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"org.truffleruby.core.support.PRNGRandomizerNodesFactory$AllocateNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.support.PRNGRandomizerNodesFactory$RandomizerGenSeedNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.support.PRNGRandomizerNodesFactory$RandomizerSetSeedNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.core.support.RandomizerNodes$AllocateNode",
@@ -41318,6 +41873,10 @@
   "fields":[{"name":"respondToNode", "allowUnsafeAccess":true}]
 },
 {
+  "name":"org.truffleruby.core.support.TypeNodesFactory$AsBooleanNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.support.TypeNodesFactory$CanContainObjectNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -41358,6 +41917,10 @@
     {"name":"arguments0_", "allowUnsafeAccess":true}, 
     {"name":"arguments1_", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"org.truffleruby.core.support.TypeNodesFactory$IsNilNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.core.support.TypeNodesFactory$IsUndefinedNodeFactory",
@@ -41411,6 +41974,18 @@
     {"name":"arguments2_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"org.truffleruby.core.support.TypeNodesFactory$RbNum2IntPrimitiveNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.support.TypeNodesFactory$RbNum2LongPrimitiveNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.support.TypeNodesFactory$RbToIntNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.core.symbol.SymbolNodes$EqualNode",
@@ -41527,6 +42102,10 @@
   ]
 },
 {
+  "name":"org.truffleruby.core.thread.ThreadNodesFactory$ThreadDetectRecursionSingleNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.thread.ThreadNodesFactory$ThreadGetExceptionNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -41549,6 +42128,10 @@
     {"name":"getThreadNode_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"org.truffleruby.core.thread.ThreadNodesFactory$ThreadRecursiveObjectsPrimitiveNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.core.thread.ThreadNodesFactory$ThreadRunBlockingSystemCallNodeFactory",
@@ -41592,6 +42175,18 @@
     {"name":"arguments0_", "allowUnsafeAccess":true}, 
     {"name":"state_", "allowUnsafeAccess":true}
   ]
+},
+{
+  "name":"org.truffleruby.extra.TruffleGraalNodesFactory$NeverSplitNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.extra.TruffleRubyNodesFactory$NativeNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.extra.TruffleRubyNodesFactory$SynchronizedNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.extra.ffi.PointerNodes$AllocateNode",
@@ -43008,6 +43603,12 @@
   ]
 },
 {
+  "name":"org.truffleruby.language.library.RubyLibrary"
+},
+{
+  "name":"org.truffleruby.language.library.RubyStringLibrary"
+},
+{
   "name":"org.truffleruby.language.literal.BooleanLiteralNode",
   "allDeclaredFields":true,
   "fields":[{"name":"value", "allowUnsafeAccess":true}]
@@ -43980,7 +44581,55 @@
   "name":"short[]"
 },
 {
+  "name":"sun.management.ClassLoadingImpl",
+  "allPublicConstructors":true
+},
+{
+  "name":"sun.management.CompilationImpl",
+  "allPublicConstructors":true
+},
+{
+  "name":"sun.management.ManagementFactoryHelper$1",
+  "allPublicConstructors":true
+},
+{
+  "name":"sun.management.ManagementFactoryHelper$PlatformLoggingImpl",
+  "allPublicConstructors":true
+},
+{
+  "name":"sun.management.MemoryImpl",
+  "allPublicConstructors":true
+},
+{
+  "name":"sun.management.MemoryManagerImpl",
+  "allPublicConstructors":true
+},
+{
+  "name":"sun.management.MemoryPoolImpl",
+  "allPublicConstructors":true
+},
+{
+  "name":"sun.management.RuntimeImpl",
+  "allPublicConstructors":true
+},
+{
   "name":"sun.misc.Unsafe",
   "fields":[{"name":"theUnsafe"}]
+},
+{
+  "name":"sun.security.provider.MD5",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.security.provider.NativePRNG$NonBlocking",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.security.provider.SHA",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.security.provider.SHA2$SHA256",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
 }
 ]
