@@ -57,7 +57,7 @@ public class Interpreter {
         }
         System.out.println(" Done.");
 
-        final var engineLangList = Engine.create().getLanguages().keySet(); 
+        final var engineLangList = Engine.create().getLanguages().keySet();
         for (final String lang : Arrays.asList("js", "python", "ruby", "R")) {
             if (engineLangList.contains(lang))
                 languages.add(lang);
@@ -80,7 +80,7 @@ public class Interpreter {
         for (final String lang : languages) {
             builder = languageImplementations.get(lang).addParameters(builder);
         }
-        
+
         polyglot = builder.build();
         System.out.println(" Done.");
 
@@ -138,7 +138,7 @@ public class Interpreter {
         do {
             input = in.readLine();
         } while (!in.isEmpty() && (input.isEmpty() || input.charAt(0) == '#'));
-        
+
         if (input.isEmpty()) return;
 
         final StringBuilder sb = new StringBuilder(input).append('\n');
