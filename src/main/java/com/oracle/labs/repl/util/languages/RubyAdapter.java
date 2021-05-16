@@ -10,12 +10,16 @@ import org.graalvm.polyglot.Value;
 
 public class RubyAdapter implements LanguageAdapter {
 
-    public Builder addParameters(Builder builder) {
+    public String languageName() {
+        return "ruby";
+    }
+
+    public Builder addContextOptions(Builder builder) {
         String tmpDir = System.getProperty("java.io.tmpdir");
         String rubyHome = Paths.get(tmpDir, "ruby").toString();
         System.setProperty("ruby.home", rubyHome);
         System.setProperty("org.graalvm.language.ruby.home", rubyHome);
-        return builder;//.option("ruby.home",  rubyHome).option("log.level",  "CONFIG");
+        return builder; //.option("ruby.home",  rubyHome).option("log.level",  "CONFIG");
     }
 
     public void putBindings(Context context, IntSupplier clear, IntSupplier exit) {

@@ -1,0 +1,4 @@
+com.oracle.labs.repl.util.languages.JavaScriptAdapter
+com.oracle.labs.repl.util.languages.PythonAdapter
+com.oracle.labs.repl.util.languages.RAdapter
+com.oracle.labs.repl.util.languages.RubyAdapter

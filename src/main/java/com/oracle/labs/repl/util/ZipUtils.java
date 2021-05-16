@@ -4,9 +4,13 @@ import java.io.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
+/**
+ * Utility class required for unpacking language runtimes from zip in resources.
+ */
 public class ZipUtils {
 
     /**
+     * Unzips given InputStream to given File
      * @param source zip stream
      * @param target target directory
      * @throws IOException extraction failed
@@ -34,6 +38,12 @@ public class ZipUtils {
         }
     }
 
+    /**
+     * Copies given InputStream to OutputStream
+     * @param source
+     * @param target
+     * @throws IOException
+     */
     private static void copy(final InputStream source, final OutputStream target) throws IOException {
         final int bufferSize = 4 * 1024;
         final byte[] buffer = new byte[bufferSize];

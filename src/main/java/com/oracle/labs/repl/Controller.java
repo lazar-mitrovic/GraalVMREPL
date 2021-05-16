@@ -25,21 +25,33 @@ public class Controller {
 
     private static final PseudoClass LANDSCAPE = PseudoClass.getPseudoClass("landscape");
 
-    @FXML private VBox mainBox;
+    @FXML
+    private VBox mainBox;
 
-    @FXML private HBox buttonsBox;
-    @FXML private Button interpreterButton;
-    @FXML private Button codeButton;
+    @FXML
+    private HBox buttonsBox;
+    @FXML
+    private Button interpreterButton;
+    @FXML
+    private Button codeButton;
 
-    @FXML private VBox centerBox;
-    @FXML private StackPane codePane;
-    @FXML private TextArea codeBox;
-    @FXML private Button runCodeButton;
-    @FXML private StackPane interpreterPane;
-    @FXML private TextArea interpreterBox;
-    @FXML private Button switchLanguageButton;
+    @FXML
+    private VBox centerBox;
+    @FXML
+    private StackPane codePane;
+    @FXML
+    private TextArea codeBox;
+    @FXML
+    private Button runCodeButton;
+    @FXML
+    private StackPane interpreterPane;
+    @FXML
+    private TextArea interpreterBox;
+    @FXML
+    private Button switchLanguageButton;
 
-    @FXML private Pane keyboardPane;
+    @FXML
+    private Pane keyboardPane;
 
     private Interpreter interpreter;
     private TerminalComponent term;
@@ -55,25 +67,25 @@ public class Controller {
 
         term.writeLine("GraalVM REPL Prompt");
         term.writeLine(
-                "Copyright (c) 2013-" + String.valueOf(Year.now().getValue()) + ", Oracle and/or its affiliates");
+                "Copyright (c) 2019-" + Year.now().getValue() + ", Oracle and/or its affiliates");
 
-        term.writeLine("");
+        term.writeLine();
 
         interpreter = new Interpreter(term);
 
         switchLanguageButton.setOnAction(e -> {
             interpreter.nextLanguage();
-            term.writeLine("");
+            term.writeLine();
             interpreter.showPrompt();
         });
 
-        term.writeLine("");
+        term.writeLine();
         interpreter.showPrompt();
         interpreterBox.requestFocus();
         System.out.println("GUI init done.");
     }
 
-    public void doInterpreterEval() throws IOException {
+    public void doInterpreterEval() {
         term.updateStreams();
         if (!interpreter.isBlocked() || interpreter.isInputBlocked()) {
             term.in.flush();
@@ -104,8 +116,7 @@ public class Controller {
             } else if (event.getCode() == KeyCode.ESCAPE) {
                 event.consume();
                 interpreterBox.getParent().requestFocus();
-            }
-            else if (event.getCode() == KeyCode.UP) {
+            } else if (event.getCode() == KeyCode.UP) {
                 event.consume();
                 term.historyChange(+1);
             } else if (event.getCode() == KeyCode.DOWN) {

@@ -1,32 +1,31 @@
 package com.oracle.labs.repl.util;
 
+import com.oracle.labs.repl.streams.TerminalInputStream;
+import com.oracle.labs.repl.streams.TerminalOutputStream;
+import javafx.application.Platform;
+import javafx.scene.control.TextArea;
+
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import com.oracle.labs.repl.streams.FXInputStream;
-import com.oracle.labs.repl.streams.FXOutputStream;
-
-import java.lang.Thread;
-
-import javafx.application.Platform;
-import javafx.scene.control.TextArea;
-
+/**
+ * Class that encapsulates TextArea and adds terminal-like behaviour.
+ */
 public class TerminalComponent {
 
     private TextArea terminal;
 
     private String currentCode = "";
     private String terminalText = "";
-    private String oldVal = "";
 
-    private ArrayList<String> history;
+    private final ArrayList<String> history;
     private int historyPosition;
 
     private Boolean changed;
 
-    public FXOutputStream out, log, err;
-    public FXInputStream in;
+    public TerminalOutputStream out, log, err;
+    public TerminalInputStream in;
 
     public TerminalComponent(TextArea terminal) {
         this.terminal = terminal;
@@ -34,15 +33,13 @@ public class TerminalComponent {
         history = new ArrayList<>();
         historyPosition = 0;
 
-        in = new FXInputStream();
+        in = new TerminalInputStream();
 
-        terminal.textProperty().addListener(event -> {
-            checkInvalidState();
-        });
+        terminal.textProperty().addListener(event -> checkInvalidState());
 
-        out = new FXOutputStream();
-        log = new FXOutputStream();
-        err = new FXOutputStream();
+        out = new TerminalOutputStream();
+        log = new TerminalOutputStream();
+        err = new TerminalOutputStream();
 
         Timer timer = new Timer(true);
         TimerTask streamListener = new TimerTask() {
@@ -75,7 +72,7 @@ public class TerminalComponent {
             return;
         }
 
-       if (newVal.endsWith(System.lineSeparator()) && !terminalText.equals(newVal)) {
+        if (newVal.endsWith(System.lineSeparator()) && !terminalText.equals(newVal)) {
             safeUpdate(); // you cannot edit output!
             return;
         }
@@ -86,28 +83,32 @@ public class TerminalComponent {
 
     public synchronized void updateStreams() {
         if (!err.toString().isEmpty()) {
-            _guiWrite("err> " + err + System.lineSeparator());
+            guiWrite("err> " + err + System.lineSeparator());
             changed = true;
             err.reset();
         }
 
         if (!log.toString().isEmpty()) {
-            _guiWrite("log> " + log + System.lineSeparator());
+            guiWrite("log> " + log + System.lineSeparator());
             changed = true;
             log.reset();
         }
 
         if (!out.toString().isEmpty()) {
-            _guiWrite(out.toString());
+            guiWrite(out.toString());
             changed = true;
             out.reset();
         }
     }
 
-    private synchronized void _guiWrite(String s) {
+    private synchronized void guiWrite(String s) {
         terminalText += s;
         terminalText = terminalText.substring(Math.max(terminalText.length() - 1000, 0));
         changed = true;
+    }
+
+    public synchronized void writeLine() {
+        write(System.lineSeparator());
     }
 
     public synchronized void writeLine(String s) {
@@ -124,9 +125,10 @@ public class TerminalComponent {
     }
 
     private synchronized void update() {
-        if (!changed)
+        if (!changed) {
             return;
-        oldVal = terminalText + currentCode;
+        }
+        String oldVal = terminalText + currentCode;
         int pos = this.fixCaretPosition();
         terminal.setText(oldVal);
         terminal.positionCaret(pos);
@@ -135,12 +137,7 @@ public class TerminalComponent {
     }
 
     public void safeUpdate() {
-        Platform.runLater(new Runnable() {
-            @Override
-            public void run() {
-                update();
-            }
-        });
+        Platform.runLater(this::update);
     }
 
     public synchronized int fixCaretPosition() {
@@ -150,8 +147,9 @@ public class TerminalComponent {
     }
 
     public synchronized void commitCurrent() {
-        if (!currentCode.equals(""))
+        if (!currentCode.equals("")) {
             history.add(currentCode.trim());
+        }
         historyPosition = 0;
         currentCode = currentCode.replace(System.lineSeparator(), "");
         writeLine(currentCode);
@@ -166,10 +164,6 @@ public class TerminalComponent {
 
     public String getCurrentCode() {
         return currentCode;
-    }
-
-    public TextArea getTerminal() {
-        return terminal;
     }
 
     public void setTerminal(TextArea terminal) {

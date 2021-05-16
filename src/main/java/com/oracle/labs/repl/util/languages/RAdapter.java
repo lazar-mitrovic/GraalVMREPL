@@ -7,7 +7,12 @@ import org.graalvm.polyglot.Value;
 import java.util.function.IntSupplier;
 
 public class RAdapter implements LanguageAdapter {
-    public Builder addParameters(Builder builder) {
+
+    public String languageName() {
+        return "R";
+    }
+
+    public Builder addContextOptions(Builder builder) {
         return builder;
     }
 

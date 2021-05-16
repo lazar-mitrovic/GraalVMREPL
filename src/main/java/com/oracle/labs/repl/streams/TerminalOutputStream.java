@@ -4,7 +4,10 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
-public class FXOutputStream extends ByteArrayOutputStream {
+/**
+ * Custom OutputStream implementation that supports writing of String objects and toString method.
+ */
+public class TerminalOutputStream extends ByteArrayOutputStream {
 
     public void write(String s) {
         try {

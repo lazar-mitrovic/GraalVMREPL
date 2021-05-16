@@ -1,6 +1,7 @@
 {
   "resources":{
   "includes":[
+    {"pattern":"\\QMETA-INF/services/com.oracle.labs.repl.util.languages.LanguageAdapter\\E"}, 
     {"pattern":"\\QMETA-INF/services/com.oracle.truffle.api.TruffleLanguage$Provider\\E"}, 
     {"pattern":"\\QMETA-INF/services/com.oracle.truffle.api.instrumentation.TruffleInstrument$Provider\\E"}, 
     {"pattern":"\\QMETA-INF/services/com.oracle.truffle.js.runtime.Evaluator\\E"}, 
@@ -10,6 +11,7 @@
     {"pattern":"\\Qcom/ibm/icu/impl/data/icudt66b/ucase.icu\\E"}, 
     {"pattern":"\\Qcom/ibm/icu/impl/data/icudt66b/uprops.icu\\E"}, 
     {"pattern":"\\Qcom/oracle/graal/python/builtins/PythonBuiltins.class\\E"}, 
+    {"pattern":"\\Qcom/oracle/truffle/nfi/backend/libffi/LibFFILanguage.class\\E"}, 
     {"pattern":"\\Qcom/oracle/truffle/nfi/impl/NFILanguageImpl.class\\E"}, 
     {"pattern":"\\Qfilesystem.zip\\E"}, 
     {"pattern":"\\Qmain.fxml\\E"}, 

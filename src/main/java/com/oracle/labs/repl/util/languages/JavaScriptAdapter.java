@@ -7,8 +7,13 @@ import org.graalvm.polyglot.Value;
 import java.util.function.IntSupplier;
 
 public class JavaScriptAdapter implements LanguageAdapter {
-    public Builder addParameters(Builder builder) {
-        return builder;
+
+    public String languageName() {
+        return "js";
+    }
+
+    public Builder addContextOptions(Builder builder) {
+        return builder.option("engine.WarnInterpreterOnly", "false");
     }
 
     public void putBindings(Context context, IntSupplier clear, IntSupplier exit) {

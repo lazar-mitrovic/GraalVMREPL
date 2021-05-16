@@ -9,7 +9,11 @@ import java.nio.file.Paths;
 
 public class PythonAdapter implements LanguageAdapter {
 
-    public Builder addParameters(Builder builder) {
+    public String languageName() {
+        return "python";
+    }
+
+    public Builder addContextOptions(Builder builder) {
         String tmpDir = System.getProperty("java.io.tmpdir");
         return builder.option("python.CoreHome",   Paths.get(tmpDir, "python", "lib-graalpython").toString())
                       .option("python.SysPrefix",  Paths.get(tmpDir, "python").toString())

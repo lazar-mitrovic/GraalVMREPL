@@ -4,14 +4,17 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
-public class FXInputStream extends InputStream {
+/**
+ * Custom InputStream implementation that supports thread-safe reading and writing of String objects.
+ */
+public class TerminalInputStream extends InputStream {
     private byte[] buffer;
     private int pos;
-    private StringBuilder flushString;
+    private final StringBuilder flushString;
 
     private boolean inputBlocked = false;
 
-    public FXInputStream() {
+    public TerminalInputStream() {
         super();
         flushString = new StringBuilder();
         pos = -1;
@@ -51,7 +54,7 @@ public class FXInputStream extends InputStream {
                 if (c == '\r' || c == '\n')
                     break;
                 s.append(c);
-            } while (c != -1);
+            } while (c != ((char) -1));
             return s.toString();
         } catch (Exception e) {
             e.printStackTrace();
@@ -83,6 +86,6 @@ public class FXInputStream extends InputStream {
     }
 
     public Boolean isEmpty() {
-        return flushString.length()==0 && (buffer == null || pos == buffer.length);
+        return flushString.length() == 0 && (buffer == null || pos == buffer.length);
     }
-};
+}
