@@ -1,6 +1,8 @@
 {
   "resources":{
   "includes":[
+    {"pattern":"\\QFreeMono.ttf\\E"}, 
+    {"pattern":"\\QInconsolata-Regular.ttf\\E"}, 
     {"pattern":"\\QMETA-INF/services/com.oracle.labs.repl.util.languages.LanguageAdapter\\E"}, 
     {"pattern":"\\QMETA-INF/services/com.oracle.truffle.api.TruffleLanguage$Provider\\E"}, 
     {"pattern":"\\QMETA-INF/services/com.oracle.truffle.api.instrumentation.TruffleInstrument$Provider\\E"}, 
@@ -15,6 +17,7 @@
     {"pattern":"\\Qcom/oracle/truffle/nfi/impl/NFILanguageImpl.class\\E"}, 
     {"pattern":"\\Qfilesystem.zip\\E"}, 
     {"pattern":"\\Qmain.fxml\\E"}, 
+    {"pattern":"\\Qstyles.css\\E"}, 
     {"pattern":"\\Qtruffleruby/core/argf.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/array.rb\\E"}, 
     {"pattern":"\\Qtruffleruby/core/basic_object.rb\\E"}, 

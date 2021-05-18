@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.Pane?>
-<VBox fx:id="mainBox" styleClass="main-box" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oracle.labs.repl.Controller">
+<VBox fx:id="mainBox" styleClass="main-box" stylesheets="/styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oracle.labs.repl.Controller">
    <children>
       <HBox fx:id="buttonsBox" styleClass="top-box" minHeight="45" prefHeight="45" maxHeight="45">
          <children>

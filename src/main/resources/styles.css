@@ -4,7 +4,7 @@
 }
 
 @font-face {
-    font-family: 'Inconsolata';
+    font-family: 'Inconsolata-Regular';
     src: url('Inconsolata-Regular.ttf');
 }
 
@@ -38,7 +38,7 @@
     -fx-control-inner-background: #333;
     -fx-highlight-text-fill: #333;
     -fx-text-fill: #fff;
-    -fx-font-family: 'Inconsolata';
+    -fx-font-family: 'Inconsolata-Regular';
 }
 
 .context-menu {
@@ -54,7 +54,7 @@
     -fx-background-color: #03687f;
     -fx-text-fill: #fff;
     -fx-alignment: center;
-    -fx-font-family: 'Inconsolata';
+    -fx-font-family: 'Inconsolata-Regular';
 }
 
 .button:hover {
