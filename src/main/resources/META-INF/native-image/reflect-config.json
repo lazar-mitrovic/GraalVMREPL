@@ -17322,6 +17322,14 @@
   "name":"com.oracle.truffle.tools.profiler.MemoryTracer"
 },
 {
+  "name":"com.sun.crypto.provider.DHParameters",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.crypto.provider.TlsMasterSecretGenerator",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
   "name":"com.sun.glass.ui.Application"
 },
 {
@@ -17604,6 +17612,12 @@
   "methods":[{"name":"nativeOrder","parameterTypes":[] }]
 },
 {
+  "name":"java.security.AlgorithmParametersSpi"
+},
+{
+  "name":"java.security.KeyStoreSpi"
+},
+{
   "name":"java.security.MessageDigestSpi"
 },
 {
@@ -17809,6 +17823,11 @@
   "name":"javax.management.openmbean.TabularData"
 },
 {
+  "name":"javax.security.auth.x500.X500Principal",
+  "fields":[{"name":"thisX500Name"}],
+  "methods":[{"name":"<init>","parameterTypes":["sun.security.x509.X500Name"] }]
+},
+{
   "name":"jdk.management.jfr.ConfigurationInfo",
   "allPublicMethods":true
 },
@@ -17838,6 +17857,13 @@
 },
 {
   "name":"long[]"
+},
+{
+  "name":"org.graalvm.polyglot.Engine",
+  "methods":[{"name":"getImpl","parameterTypes":[] }]
+},
+{
+  "name":"org.graalvm.polyglot.io.IOHelper"
 },
 {
   "name":"org.truffleruby.builtins.CoreMethodArrayArgumentsNode",
@@ -17885,6 +17911,10 @@
 },
 {
   "name":"org.truffleruby.core.MainNodesFactory$PublicNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.MathNodesFactory$MinNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
@@ -18420,6 +18450,10 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$PopNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.array.ArrayNodesFactory$PushNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -18472,6 +18506,10 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$ShiftNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.array.ArrayNodesFactory$SizeNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -18502,6 +18540,10 @@
 {
   "name":"org.truffleruby.core.array.ArrayNodesFactory$StealArrayStorageNodeFactory$StealArrayStorageNodeGen$StealStorageData",
   "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.array.ArrayNodesFactory$ZipNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.core.array.ArrayOperationNodes$ArrayBoxedCopyNode",
@@ -19331,6 +19373,10 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.fiber.FiberNodesFactory$FiberThreadNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.format.FormatNode",
   "allDeclaredFields":true
 },
@@ -19523,6 +19569,10 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.hash.HashNodesFactory$EmptyNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.hash.HashNodesFactory$GetIndexNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -19547,12 +19597,20 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.hash.HashNodesFactory$InitializeCopyNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.hash.HashNodesFactory$InitializeNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.core.hash.HashNodesFactory$InitializeNodeFactory$InitializeNodeGen",
   "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.hash.HashNodesFactory$MapNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.core.hash.HashNodesFactory$SetDefaultValueNodeFactory",
@@ -20115,6 +20173,10 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.kernel.KernelNodesFactory$PublicMethodNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.kernel.KernelNodesFactory$PublicSendNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -20215,6 +20277,10 @@
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
+  "name":"org.truffleruby.core.kernel.TruffleKernelNodesFactory$GetProcSpecialVariableStorageFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.kernel.TruffleKernelNodesFactory$GetRegexpMatchFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -20240,6 +20306,10 @@
 },
 {
   "name":"org.truffleruby.core.kernel.TruffleKernelNodesFactory$SetRegexpMatchFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.kernel.TruffleKernelNodesFactory$ShareSpecialVariableStoageFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
@@ -21291,6 +21361,14 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.regexp.TruffleRegexpNodesFactory$InitializedNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.regexp.TruffleRegexpNodesFactory$MatchInRegionNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.regexp.TruffleRegexpNodesFactory$MatchNodeGen",
   "allDeclaredFields":true
 },
@@ -21787,6 +21865,10 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.string.StringNodesFactory$InitializeNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.string.StringNodesFactory$InvertAsciiCaseBytesNodeGen",
   "allDeclaredFields":true
 },
@@ -21891,6 +21973,14 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.string.StringNodesFactory$StringEscapePrimitiveNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.string.StringNodesFactory$StringFromByteArrayPrimitiveNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.string.StringNodesFactory$StringFromCodepointPrimitiveNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -21949,6 +22039,10 @@
 {
   "name":"org.truffleruby.core.string.StringNodesFactory$StringSubstringPrimitiveNodeFactory$StringSubstringPrimitiveNodeGen",
   "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.string.StringNodesFactory$StringToInumPrimitiveNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.core.string.StringNodesFactory$StringToNullTerminatedByteArrayNodeFactory",
@@ -22063,7 +22157,19 @@
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
+  "name":"org.truffleruby.core.support.IONodesFactory$IOReadPolyglotNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.support.IONodesFactory$IOSetFDNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.support.IONodesFactory$IOThreadBufferAllocateNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.core.support.IONodesFactory$IOThreadBufferFreeNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
@@ -22311,12 +22417,20 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.core.thread.ThreadNodesFactory$AllFibersBacktracesNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.core.thread.ThreadNodesFactory$CurrentNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.core.thread.ThreadNodesFactory$CurrentNodeFactory$CurrentNodeGen",
   "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.core.thread.ThreadNodesFactory$SetThreadLocalReturnCodeNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.core.thread.ThreadNodesFactory$ThreadDetectRecursionSingleNodeFactory",
@@ -22403,6 +22517,14 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.extra.ffi.PointerNodesFactory$PointerAddressNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.extra.ffi.PointerNodesFactory$PointerClearNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.extra.ffi.PointerNodesFactory$PointerFindTypeSizePrimitiveNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
@@ -22411,12 +22533,60 @@
   "allDeclaredFields":true
 },
 {
+  "name":"org.truffleruby.extra.ffi.PointerNodesFactory$PointerFreeNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.extra.ffi.PointerNodesFactory$PointerMallocPrimitiveNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.extra.ffi.PointerNodesFactory$PointerReadIntNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.extra.ffi.PointerNodesFactory$PointerReadStringToNullNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.extra.ffi.PointerNodesFactory$PointerReadUIntNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.extra.ffi.PointerNodesFactory$PointerReadULongNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
   "name":"org.truffleruby.extra.ffi.PointerNodesFactory$PointerSetAddressNodeFactory",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.extra.ffi.PointerNodesFactory$PointerSetAddressNodeFactory$PointerSetAddressNodeGen",
   "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.extra.ffi.PointerNodesFactory$PointerSetSizeNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.extra.ffi.PointerNodesFactory$PointerSizeNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.extra.ffi.PointerNodesFactory$PointerWriteBytesNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.extra.ffi.PointerNodesFactory$PointerWriteCharNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.extra.ffi.PointerNodesFactory$PointerWriteIntNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"org.truffleruby.extra.ffi.PointerNodesFactory$PointerWritePointerNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.interop.ForeignToRubyNode",
@@ -22465,6 +22635,10 @@
 {
   "name":"org.truffleruby.interop.InteropNodes$ReadNode",
   "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.interop.InteropNodesFactory$AsPointerNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.interop.InteropNodesFactory$ExecuteNodeFactory$ExecuteNodeGen",
@@ -22679,6 +22853,10 @@
 {
   "name":"org.truffleruby.language.TruffleBootNodes$RubyHomeNode",
   "allDeclaredFields":true
+},
+{
+  "name":"org.truffleruby.language.TruffleBootNodesFactory$BasicABIVersionNodeFactory",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
 },
 {
   "name":"org.truffleruby.language.TruffleBootNodesFactory$ExtraLoadPathsNodeFactory",
@@ -23610,7 +23788,31 @@
   "fields":[{"name":"theUnsafe"}]
 },
 {
+  "name":"sun.security.pkcs12.PKCS12KeyStore",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.security.pkcs12.PKCS12KeyStore$DualFormatPKCS12",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.security.provider.DSA$SHA224withDSA",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.security.provider.DSA$SHA256withDSA",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.security.provider.JavaKeyStore$JKS",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
   "name":"sun.security.provider.MD5",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.security.provider.NativePRNG",
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
@@ -23622,7 +23824,95 @@
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
+  "name":"sun.security.provider.SHA2$SHA224",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
   "name":"sun.security.provider.SHA2$SHA256",
   "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.security.provider.SHA5$SHA384",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.security.provider.SHA5$SHA512",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.security.provider.X509Factory",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.security.rsa.PSSParameters",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.security.rsa.RSAKeyFactory$Legacy",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.security.rsa.RSAPSSSignature",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.security.rsa.RSASignature$SHA224withRSA",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.security.ssl.SSLContextImpl$TLSContext",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.security.ssl.TrustManagerFactoryImpl$PKIXFactory",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.security.x509.AuthorityInfoAccessExtension",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.Boolean","java.lang.Object"] }]
+},
+{
+  "name":"sun.security.x509.AuthorityKeyIdentifierExtension",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.Boolean","java.lang.Object"] }]
+},
+{
+  "name":"sun.security.x509.BasicConstraintsExtension",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.Boolean","java.lang.Object"] }]
+},
+{
+  "name":"sun.security.x509.CRLDistributionPointsExtension",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.Boolean","java.lang.Object"] }]
+},
+{
+  "name":"sun.security.x509.CertificatePoliciesExtension",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.Boolean","java.lang.Object"] }]
+},
+{
+  "name":"sun.security.x509.ExtendedKeyUsageExtension",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.Boolean","java.lang.Object"] }]
+},
+{
+  "name":"sun.security.x509.IssuerAlternativeNameExtension",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.Boolean","java.lang.Object"] }]
+},
+{
+  "name":"sun.security.x509.KeyUsageExtension",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.Boolean","java.lang.Object"] }]
+},
+{
+  "name":"sun.security.x509.NetscapeCertTypeExtension",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.Boolean","java.lang.Object"] }]
+},
+{
+  "name":"sun.security.x509.PrivateKeyUsageExtension",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.Boolean","java.lang.Object"] }]
+},
+{
+  "name":"sun.security.x509.SubjectAlternativeNameExtension",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.Boolean","java.lang.Object"] }]
+},
+{
+  "name":"sun.security.x509.SubjectKeyIdentifierExtension",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.Boolean","java.lang.Object"] }]
 }
 ]

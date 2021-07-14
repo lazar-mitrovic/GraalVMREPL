@@ -64,6 +64,7 @@ public class RAdapter implements LanguageAdapter {
     }
 
     public String initCode() {
-        return "cat(R.version.string)\ncat('\n')";
+        return "print('FastR')";
+        // "cat(R.version.string)\ncat('\n')";
     }
 }

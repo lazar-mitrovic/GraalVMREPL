@@ -74,17 +74,17 @@ public class TerminalComponent {
         historyPosition = 0;
 
         in = new TerminalInputStream();
-
-        terminal.textProperty().addListener(event -> checkInvalidState());
-
         out = new TerminalOutputStream();
         log = new TerminalOutputStream();
         err = new TerminalOutputStream();
+
+        terminal.textProperty().addListener(event -> checkInvalidState());
 
         Timer timer = new Timer(true);
         TimerTask streamListener = new TimerTask() {
             @Override
             public void run() {
+                // We want the rendering task to have a maximum priority.
                 Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
                 updateStreams();
                 safeUpdate();
@@ -95,8 +95,9 @@ public class TerminalComponent {
 
     public void historyChange(int move) {
         historyPosition = Math.max(Math.min(historyPosition + move, history.size()), 0);
-        if (historyPosition > 0)
+        if (historyPosition > 0) {
             currentCode = history.get(history.size() - historyPosition);
+        }
         changed = true;
         safeUpdate();
         terminal.positionCaret(terminal.getText().length());

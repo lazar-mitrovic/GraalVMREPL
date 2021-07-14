@@ -70,7 +70,9 @@ public class RubyAdapter implements LanguageAdapter {
     }
 
     public String initCode() {
-        return "def quit() Polyglot.import('quit').call end;" + "def exit() Polyglot.import('exit').call end;"
-        + "def clear() Polyglot.import('clear').call end; print(RUBY_ENGINE + ' (like ruby ' + RUBY_VERSION + ')\n');";
+        return "print('TruffleRuby');";
+        // print(RUBY_ENGINE + ' (like ruby ' + RUBY_VERSION + ')\n');";
+        // "def quit() Polyglot.import('quit').call end;" + "def exit() Polyglot.import('exit').call end;"
+        // + "def clear() Polyglot.import('clear').call end;\n";
     }
 }

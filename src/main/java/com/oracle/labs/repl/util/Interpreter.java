@@ -115,7 +115,7 @@ public class Interpreter {
         }
 
         // Create builder
-        System.out.print("Creating context builder...");
+        System.out.print("Creating context builder... ");
 
         Builder builder = Context.newBuilder().in(term.in).out(term.out).logHandler(term.log)
                 .err(term.err).allowAllAccess(true);
@@ -128,7 +128,7 @@ public class Interpreter {
         System.out.println("Done.");
 
         // Now, add language bindings
-        System.out.print("Adding language bindings...");
+        System.out.println("Adding language bindings... ");
 
         final IntSupplier exit = () -> {
             Platform.exit();
@@ -142,14 +142,16 @@ public class Interpreter {
         };
 
         for (LanguageAdapter language : languageImplementations.values()) {
+            System.out.println("Language: " + language.languageName());
             language.putBindings(polyglot, clear, exit);
         }
         System.out.println("Done.");
 
         // Initialize languages
-        System.out.print("Initializing languages...");
+        System.out.println("Initializing languages... ");
 
         for (LanguageAdapter language : languageImplementations.values()) {
+            System.out.println("Language: " + language.languageName());
             evalInternal(language.initCode());
             nextLanguage();
         }

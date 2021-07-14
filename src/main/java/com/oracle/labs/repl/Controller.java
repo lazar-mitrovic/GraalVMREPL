@@ -154,6 +154,7 @@ public class Controller {
                     e.printStackTrace();
                 }
             } else if (event.getCode() == KeyCode.ESCAPE) {
+                // Android back key is remapped to ESCAPE in JavaFX
                 event.consume();
                 interpreterBox.getParent().requestFocus();
             } else if (event.getCode() == KeyCode.UP) {

@@ -69,6 +69,7 @@ public class PythonAdapter implements LanguageAdapter {
     }
 
     public String initCode() {
-        return "import sys,polyglot\n" + "print('GraalPython {}'.format(sys.version.split()[0]))";
+        return "print('GraalPython')";
+        // "import sys,polyglot\n" + {}'.format(sys.version.split()[0])
     }
 }
