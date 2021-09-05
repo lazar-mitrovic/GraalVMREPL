@@ -3,15 +3,14 @@ name: build-linux-gate
 on:
   push:
     paths:
-      - 'src/**'
+      - '**'
   pull_request:
     paths:
-      - 'src/**'
-  workflow_dispatch: [ ]
+      - '**'
+  workflow_dispatch:
 
 jobs:
   test-graalvm-junit5-feature:
-    name:
     runs-on: ubuntu-18.04
     strategy:
       fail-fast: false
